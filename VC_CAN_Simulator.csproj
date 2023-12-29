@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +33,30 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Kvaser.CanLib">
+      <HintPath>..\..\..\..\Program Files (x86)\Kvaser\Canlib\dotnet\x64\netstandard2.0\Kvaser.CanLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,14 +70,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Backend\Helpers.cs" />
+    <Compile Include="DataObjects\Ctrl_DataObject.cs" />
+    <Compile Include="UIz\Formz\CanSimForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UIz\Formz\CanSimForm.Designer.cs">
+      <DependentUpon>CanSimForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIz\Formz\TestingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\TestingForm.Designer.cs">
+      <DependentUpon>TestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\UControlz\BinNameRow_uc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\UControlz\BinNameRow_uc.Designer.cs">
+      <DependentUpon>BinNameRow_uc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\UControlz\BitNamesList_uc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\UControlz\BitNamesList_uc.Designer.cs">
+      <DependentUpon>BitNamesList_uc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\UControlz\Builders\CTRL_Builder_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\UControlz\Builders\CTRL_Builder_UC.Designer.cs">
+      <DependentUpon>CTRL_Builder_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\UControlz\Builders\PGN_Builder_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\UControlz\Builders\PGN_Builder_UC.Designer.cs">
+      <DependentUpon>PGN_Builder_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\UControlz\Builders\PROJECT_Builder_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\UControlz\Builders\PROJECT_Builder_UC.Designer.cs">
+      <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UIz\Formz\CanSimForm.resx">
+      <DependentUpon>CanSimForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +128,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIz\Formz\TestingForm.resx">
+      <DependentUpon>TestingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\UControlz\BinNameRow_uc.resx">
+      <DependentUpon>BinNameRow_uc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\UControlz\BitNamesList_uc.resx">
+      <DependentUpon>BitNamesList_uc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\UControlz\Builders\CTRL_Builder_UC.resx">
+      <DependentUpon>CTRL_Builder_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\UControlz\Builders\PGN_Builder_UC.resx">
+      <DependentUpon>PGN_Builder_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\UControlz\Builders\PROJECT_Builder_UC.resx">
+      <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,5 +159,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

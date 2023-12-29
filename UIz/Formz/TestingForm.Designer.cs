@@ -1,6 +1,6 @@
-﻿namespace VC_CAN_Simulator
+﻿namespace VC_CAN_Simulator.UIz.Formz
 {
-    partial class Form1
+    partial class TestingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // TestingForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(2872, 1701);
+            this.MaximumSize = new System.Drawing.Size(2900, 2000);
+            this.MinimumSize = new System.Drawing.Size(2900, 1680);
+            this.Name = "TestingForm";
+            this.Text = "TestingForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
