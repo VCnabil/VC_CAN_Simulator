@@ -24,6 +24,9 @@ namespace VC_CAN_Simulator.UIz.UControlz
             InitializeComponent();
             binNameRows = new List<BinNameRow_uc>();
             btn_addrow.Click += Btn_addrow_Click;
+
+            label_conflicts.Text = ".";
+            label_conflicts.ForeColor = Color.Black;
         }
         private void Btn_addrow_Click(object sender, EventArgs e)
         {
@@ -37,7 +40,7 @@ namespace VC_CAN_Simulator.UIz.UControlz
             {
                 var newRow = new BinNameRow_uc();
                 newRow.Location = new Point(0, startY + binNameRows.Count * rowHeight);
-                newRow.Btn_rem_was_Clicked_Event += BinNameRow_Removed;
+                newRow.Btn_rem_was_Clicked_Event += BitNameRow_Removed;
                 newRow.BitDescription = "";
                 Controls.Add(newRow);
                 binNameRows.Add(newRow);
@@ -50,14 +53,14 @@ namespace VC_CAN_Simulator.UIz.UControlz
 
             }
         }
-        private void BinNameRow_Removed(object sender, EventArgs e)
+        private void BitNameRow_Removed(object sender, EventArgs e)
         {
             var rowToRemove = sender as BinNameRow_uc;
             if (rowToRemove != null)
             {
                 Controls.Remove(rowToRemove);
                 binNameRows.Remove(rowToRemove);
-                rowToRemove.Btn_rem_was_Clicked_Event -= BinNameRow_Removed;
+                rowToRemove.Btn_rem_was_Clicked_Event -= BitNameRow_Removed;
 
                 // Adjust the location of remaining rows
                 for (int i = 0; i < binNameRows.Count; i++)
@@ -131,13 +134,20 @@ namespace VC_CAN_Simulator.UIz.UControlz
         {
             foreach (var row in binNameRows)
             {
-                row.Btn_rem_was_Clicked_Event -= BinNameRow_Removed;
+                row.Btn_rem_was_Clicked_Event -= BitNameRow_Removed;
                 Controls.Remove(row);
             }
 
             binNameRows.Clear();
 
-            btn_addrow.Enabled = true;
+           
+        }
+        public void Show_AddRowButton(bool argShow) {
+            btn_addrow.Enabled = argShow;
+            if(argShow)
+                btn_addrow.Show();
+            else
+                btn_addrow.Hide();
         }
         private int ParseBitNumber(string description)
         {

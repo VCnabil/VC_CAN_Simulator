@@ -41,21 +41,23 @@
             this.tb_remote3 = new System.Windows.Forms.TextBox();
             this.tb_remote4 = new System.Windows.Forms.TextBox();
             this.btn_rem = new System.Windows.Forms.Button();
-            this.label_conflicts = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label_groupconflicts = new System.Windows.Forms.Label();
+            this.btn_validategroups = new System.Windows.Forms.Button();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.bitNamesList_uc1 = new VC_CAN_Simulator.UIz.UControlz.BitNamesList_uc();
+            this.cb_isSlider = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // cb_CtrlType
             // 
-            this.cb_CtrlType.Font = new System.Drawing.Font("Miriam CLM", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.cb_CtrlType.Font = new System.Drawing.Font("Nirmala UI Semilight", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_CtrlType.FormattingEnabled = true;
             this.cb_CtrlType.Location = new System.Drawing.Point(0, 3);
             this.cb_CtrlType.Margin = new System.Windows.Forms.Padding(0);
             this.cb_CtrlType.MaximumSize = new System.Drawing.Size(100, 0);
             this.cb_CtrlType.MinimumSize = new System.Drawing.Size(100, 0);
             this.cb_CtrlType.Name = "cb_CtrlType";
-            this.cb_CtrlType.Size = new System.Drawing.Size(100, 35);
+            this.cb_CtrlType.Size = new System.Drawing.Size(100, 38);
             this.cb_CtrlType.TabIndex = 0;
             this.cb_CtrlType.Text = "8_bits";
             // 
@@ -189,26 +191,37 @@
             this.btn_rem.Text = "rem";
             this.btn_rem.UseVisualStyleBackColor = true;
             // 
-            // label_conflicts
+            // label_groupconflicts
             // 
-            this.label_conflicts.AutoSize = true;
-            this.label_conflicts.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_conflicts.ForeColor = System.Drawing.Color.Red;
-            this.label_conflicts.Location = new System.Drawing.Point(3, 405);
-            this.label_conflicts.Name = "label_conflicts";
-            this.label_conflicts.Size = new System.Drawing.Size(79, 23);
-            this.label_conflicts.TabIndex = 17;
-            this.label_conflicts.Text = "conflicts:";
+            this.label_groupconflicts.AutoSize = true;
+            this.label_groupconflicts.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label_groupconflicts.ForeColor = System.Drawing.Color.Red;
+            this.label_groupconflicts.Location = new System.Drawing.Point(3, 405);
+            this.label_groupconflicts.Name = "label_groupconflicts";
+            this.label_groupconflicts.Size = new System.Drawing.Size(79, 23);
+            this.label_groupconflicts.TabIndex = 17;
+            this.label_groupconflicts.Text = "conflicts:";
             // 
-            // button1
+            // btn_validategroups
             // 
-            this.button1.Font = new System.Drawing.Font("Miriam CLM", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button1.Location = new System.Drawing.Point(4, 431);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 66);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "validate groups ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_validategroups.Font = new System.Drawing.Font("Miriam CLM", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btn_validategroups.Location = new System.Drawing.Point(4, 431);
+            this.btn_validategroups.Name = "btn_validategroups";
+            this.btn_validategroups.Size = new System.Drawing.Size(90, 66);
+            this.btn_validategroups.TabIndex = 18;
+            this.btn_validategroups.Text = "validate groups ";
+            this.btn_validategroups.UseVisualStyleBackColor = true;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lbl_id.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbl_id.Location = new System.Drawing.Point(3, 181);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(28, 23);
+            this.lbl_id.TabIndex = 20;
+            this.lbl_id.Text = "id:";
             // 
             // bitNamesList_uc1
             // 
@@ -218,13 +231,26 @@
             this.bitNamesList_uc1.Size = new System.Drawing.Size(400, 422);
             this.bitNamesList_uc1.TabIndex = 19;
             // 
+            // cb_isSlider
+            // 
+            this.cb_isSlider.AutoSize = true;
+            this.cb_isSlider.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.cb_isSlider.Location = new System.Drawing.Point(7, 226);
+            this.cb_isSlider.Name = "cb_isSlider";
+            this.cb_isSlider.Size = new System.Drawing.Size(77, 27);
+            this.cb_isSlider.TabIndex = 21;
+            this.cb_isSlider.Text = "slid?";
+            this.cb_isSlider.UseVisualStyleBackColor = true;
+            // 
             // CTRL_Builder_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cb_isSlider);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.bitNamesList_uc1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label_conflicts);
+            this.Controls.Add(this.btn_validategroups);
+            this.Controls.Add(this.label_groupconflicts);
             this.Controls.Add(this.btn_rem);
             this.Controls.Add(this.tb_remote4);
             this.Controls.Add(this.tb_remote3);
@@ -260,8 +286,10 @@
         private System.Windows.Forms.TextBox tb_remote3;
         private System.Windows.Forms.TextBox tb_remote4;
         private System.Windows.Forms.Button btn_rem;
-        private System.Windows.Forms.Label label_conflicts;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label_groupconflicts;
+        private System.Windows.Forms.Button btn_validategroups;
         private BitNamesList_uc bitNamesList_uc1;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.CheckBox cb_isSlider;
     }
 }

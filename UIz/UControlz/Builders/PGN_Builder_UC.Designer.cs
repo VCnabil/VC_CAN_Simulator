@@ -36,6 +36,7 @@
             this.lbl_FullHexPgn = new System.Windows.Forms.Label();
             this.btn_AddCtrl = new System.Windows.Forms.Button();
             this.btn_delte = new System.Windows.Forms.Button();
+            this.lbl_IndexConflicts = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -90,12 +91,12 @@
             // tb_multiline
             // 
             this.tb_multiline.Font = new System.Drawing.Font("Miriam CLM", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tb_multiline.Location = new System.Drawing.Point(0, 68);
+            this.tb_multiline.Location = new System.Drawing.Point(0, 106);
             this.tb_multiline.Margin = new System.Windows.Forms.Padding(0);
             this.tb_multiline.MaxLength = 4;
             this.tb_multiline.Multiline = true;
             this.tb_multiline.Name = "tb_multiline";
-            this.tb_multiline.Size = new System.Drawing.Size(200, 364);
+            this.tb_multiline.Size = new System.Drawing.Size(200, 223);
             this.tb_multiline.TabIndex = 7;
             this.tb_multiline.Text = "Description";
             this.tb_multiline.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -104,7 +105,7 @@
             // 
             this.lbl_FullHexPgn.AutoSize = true;
             this.lbl_FullHexPgn.Font = new System.Drawing.Font("Miriam CLM", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lbl_FullHexPgn.Location = new System.Drawing.Point(23, 39);
+            this.lbl_FullHexPgn.Location = new System.Drawing.Point(23, 66);
             this.lbl_FullHexPgn.Name = "lbl_FullHexPgn";
             this.lbl_FullHexPgn.Size = new System.Drawing.Size(140, 29);
             this.lbl_FullHexPgn.TabIndex = 8;
@@ -130,11 +131,24 @@
             this.btn_delte.Text = "kill pgn";
             this.btn_delte.UseVisualStyleBackColor = true;
             // 
+            // lbl_IndexConflicts
+            // 
+            this.lbl_IndexConflicts.AutoSize = true;
+            this.lbl_IndexConflicts.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lbl_IndexConflicts.ForeColor = System.Drawing.Color.Red;
+            this.lbl_IndexConflicts.Location = new System.Drawing.Point(3, 348);
+            this.lbl_IndexConflicts.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_IndexConflicts.Name = "lbl_IndexConflicts";
+            this.lbl_IndexConflicts.Size = new System.Drawing.Size(187, 23);
+            this.lbl_IndexConflicts.TabIndex = 19;
+            this.lbl_IndexConflicts.Text = "conflictwwsvewvwewv";
+            // 
             // PGN_Builder_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
+            this.Controls.Add(this.lbl_IndexConflicts);
             this.Controls.Add(this.btn_delte);
             this.Controls.Add(this.btn_AddCtrl);
             this.Controls.Add(this.lbl_FullHexPgn);
@@ -161,5 +175,6 @@
         private System.Windows.Forms.Label lbl_FullHexPgn;
         private System.Windows.Forms.Button btn_AddCtrl;
         private System.Windows.Forms.Button btn_delte;
+        private System.Windows.Forms.Label lbl_IndexConflicts;
     }
 }
