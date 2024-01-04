@@ -31,6 +31,8 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Load = new System.Windows.Forms.Button();
             this.tb_filename = new System.Windows.Forms.TextBox();
+            this.btn_clearAll = new System.Windows.Forms.Button();
+            this.btn_add_testPgn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Save
@@ -58,11 +60,31 @@
             this.tb_filename.Size = new System.Drawing.Size(323, 35);
             this.tb_filename.TabIndex = 2;
             // 
+            // btn_clearAll
+            // 
+            this.btn_clearAll.Location = new System.Drawing.Point(800, 0);
+            this.btn_clearAll.Name = "btn_clearAll";
+            this.btn_clearAll.Size = new System.Drawing.Size(100, 50);
+            this.btn_clearAll.TabIndex = 3;
+            this.btn_clearAll.Text = "clear";
+            this.btn_clearAll.UseVisualStyleBackColor = true;
+            // 
+            // btn_add_testPgn
+            // 
+            this.btn_add_testPgn.Location = new System.Drawing.Point(1038, 8);
+            this.btn_add_testPgn.Name = "btn_add_testPgn";
+            this.btn_add_testPgn.Size = new System.Drawing.Size(171, 50);
+            this.btn_add_testPgn.TabIndex = 4;
+            this.btn_add_testPgn.Text = "add one";
+            this.btn_add_testPgn.UseVisualStyleBackColor = true;
+            // 
             // CreateOrModifyProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2872, 1721);
+            this.Controls.Add(this.btn_add_testPgn);
+            this.Controls.Add(this.btn_clearAll);
             this.Controls.Add(this.tb_filename);
             this.Controls.Add(this.btn_Load);
             this.Controls.Add(this.btn_Save);
@@ -80,5 +102,7 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Load;
         private System.Windows.Forms.TextBox tb_filename;
+        private System.Windows.Forms.Button btn_clearAll;
+        private System.Windows.Forms.Button btn_add_testPgn;
     }
 }

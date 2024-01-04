@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,6 +34,85 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
 
         string pgnDesc = string.Empty;
         int int_full_PGN = 0;
+
+        public PGN_Builder_UC(int argpgnid, int argpgn, string argpgnStr, string argDescpgn, List<Ctrl_DataObject> argCtrlDOlist)
+        {
+            InitializeComponent();
+            IndecesUsed = new bool[8];
+            ctrlBuilderList = new List<CTRL_Builder_UC>();
+            Array.Clear(IndecesUsed, 0, IndecesUsed.Length);
+            tb_multilineDesc.TextChanged += Tb_multilineDesc_TextChanged;
+            btn_AddCtrl.Click += Btn_AddCtrl_Click;
+            btn_delte.Click += Btn_deltePGN_Builder_Click;
+
+            tb_prio.TextChanged += Tb_prio_TextChanged;
+            tb_basepgn.TextChanged += Tb_basepgn_TextChanged;
+            tb_adrs.TextChanged += Tb_adrs_TextChanged;
+
+            if (argpgnStr.Length != 8)
+            {
+                throw new ArgumentException("Input string must be exactly 8 characters long.");
+            }
+
+            // Assuming the input format is always 2 characters for prio, 4 for pgn, and 2 for address
+            str_full_PGN = argpgnStr;
+            str_prio = str_full_PGN.Substring(0, 2);
+            str_basepgn = str_full_PGN.Substring(2, 4);
+            str_addres = str_full_PGN.Substring(6, 2);
+
+            tb_prio.Text = str_prio;
+            tb_basepgn.Text = str_basepgn;
+            tb_adrs.Text = str_addres;
+            _myPgnUcId = argpgnid;
+            lbl_pgnBuilder_ID.Text += _myPgnUcId;
+
+            tb_multilineDesc.Text = argDescpgn;
+            pgnDesc = argDescpgn;
+
+            if (flowLayoutPanel1.Controls.Count < MaxCtrls)
+            {
+                _ctrlrs_id++;
+                var newCtrlBuilder = new CTRL_Builder_UC(argCtrlDOlist[0]);
+
+                AddNewCtrlBuilder(newCtrlBuilder);
+            }
+        }
+        public PGN_Builder_UC(int argpgnid, int argpgn, string argpgnStr, string argDescpgn )
+        {
+            InitializeComponent();
+            IndecesUsed = new bool[8];
+            ctrlBuilderList = new List<CTRL_Builder_UC>();
+            Array.Clear(IndecesUsed, 0, IndecesUsed.Length);
+            tb_multilineDesc.TextChanged += Tb_multilineDesc_TextChanged;
+            btn_AddCtrl.Click += Btn_AddCtrl_Click;
+            btn_delte.Click += Btn_deltePGN_Builder_Click;
+
+            tb_prio.TextChanged += Tb_prio_TextChanged;
+            tb_basepgn.TextChanged += Tb_basepgn_TextChanged;
+            tb_adrs.TextChanged += Tb_adrs_TextChanged;
+
+            if (argpgnStr.Length != 8)
+            {
+                throw new ArgumentException("Input string must be exactly 8 characters long.");
+            }
+
+            // Assuming the input format is always 2 characters for prio, 4 for pgn, and 2 for address
+            str_full_PGN = argpgnStr;
+            str_prio = str_full_PGN.Substring(0, 2);
+            str_basepgn = str_full_PGN.Substring(2, 4);
+            str_addres = str_full_PGN.Substring(6, 2);
+
+            tb_prio.Text = str_prio;
+            tb_basepgn.Text = str_basepgn;
+            tb_adrs.Text = str_addres;
+            _myPgnUcId = argpgnid;
+            lbl_pgnBuilder_ID.Text += _myPgnUcId;
+
+            tb_multilineDesc.Text = argDescpgn;
+            pgnDesc = argDescpgn;
+
+          
+        }
         public PGN_Builder_UC(int argPgnUcId)
         {
             InitializeComponent();
@@ -205,6 +286,18 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             ValidateCtrlBuilders(); // Validate after removing
         }
 
+        public void RemoveAllCtrlBuilder()
+        {
+            for(int c = ctrlBuilderList.Count-1; c >=0; c--)
+            {
+                CTRL_Builder_UC ctrltoremove = ctrlBuilderList[c];
+                RemoveCtrlBuilder(ctrltoremove);
+            }
+            _ctrlrs_id = 0;
+
+
+
+        }
         public List<Ctrl_DataObject> Make_Listctrls() {
 
             List<Ctrl_DataObject> mylistOfCtrl_Objs = new List<Ctrl_DataObject>();

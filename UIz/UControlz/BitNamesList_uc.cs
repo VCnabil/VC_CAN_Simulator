@@ -20,6 +20,10 @@ namespace VC_CAN_Simulator.UIz.UControlz
 
         string _decription = string.Empty;
         public string Decription { get { return _decription; } private set { _decription = value; } }
+        public void SetDescription_fromBlueprint(string argDesc) {
+            _decription=argDesc;
+            textBox_description.Text = _decription;
+        }
         public BitNamesList_uc()
         {
             InitializeComponent();

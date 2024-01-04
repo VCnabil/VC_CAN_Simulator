@@ -36,6 +36,94 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
         int _indexLO;
         int _indexHI;
 
+        
+
+        public CTRL_Builder_UC(Ctrl_DataObject argCtrlDO)
+        {
+
+            InitializeComponent();
+            _id = argCtrlDO.ID;
+            _min = argCtrlDO.MIN;
+            _max = argCtrlDO.MAX;
+            _def = argCtrlDO.DEF;
+            _indexLO = argCtrlDO.INDEXLO;
+            _indexHI = argCtrlDO.INDEXHI;
+            _dec = argCtrlDO.DESC;
+            this.bitNamesList_uc1.SetDescription_fromBlueprint ( _dec);
+            is_slider_onlyFor_1byand2by = argCtrlDO.ISSLIDER;
+            cb_isSlider.Checked = is_slider_onlyFor_1byand2by;
+
+            _listGroup1 = argCtrlDO.Group1List;
+            _listGroup2 = argCtrlDO.Group2List;
+            _listRemotes = argCtrlDO.RemoteList;
+            if (_listGroup1 != null) {
+                if (_listGroup1.Count > 0) {
+                    tb_group1.Text = _listGroup1[0];
+                }
+            }
+            if (_listGroup2 != null)
+            {
+                if (_listGroup2.Count > 0)
+                {
+                    tb_group2.Text = _listGroup2[0];
+                }
+            }
+            if (_listRemotes != null)
+            {
+                if (_listRemotes.Count > 0)
+                {
+                    for (int r = 0; r < _listRemotes.Count; r++) {
+                        if (r == 0) {
+                            tb_remote1.Text = _listRemotes[r];
+                        }
+                        if (r == 1)
+                        {
+                            tb_remote2.Text = _listRemotes[r];
+                        }
+                        if (r == 2)
+                        {
+                            tb_remote3.Text = _listRemotes[r];
+                        }
+                        if (r == 3)
+                        {
+                            tb_remote4.Text = _listRemotes[r];
+                        }
+                    }
+                    
+                }
+            }
+
+            lbl_id.Text = _id.ToString();
+            PopulateComboBox();
+            Cur_ctrlType = StringToEnum(argCtrlDO.CTRL_TYOE_STR);
+            cb_CtrlType.SelectedItem = Cur_ctrlType;
+
+            _8_bs_relatedtextBoxes = new List<TextBox>();
+            _8_bG_relatedtextBoxes = new List<TextBox>();
+
+            _8_bG_relatedtextBoxes.Add(tb_group1);
+            _8_bG_relatedtextBoxes.Add(tb_group2);
+            _8_bs_relatedtextBoxes.Add(tb_remote1);
+            _8_bs_relatedtextBoxes.Add(tb_remote2);
+            _8_bs_relatedtextBoxes.Add(tb_remote3);
+            _8_bs_relatedtextBoxes.Add(tb_remote4);
+
+           
+            
+            
+
+            btn_validategroups.Click += Btn_validategroups_Click;
+            cb_CtrlType.SelectedIndexChanged += cb_CtrlType_SelectedIndexChanged;
+            btn_rem.Click += Btn_rem_Click;
+            tb_indexLO.TextChanged += Tb_indexLO_TextChanged;
+            tb_indexHI.TextChanged += Tb_indexHI_TextChanged;
+
+            cb_isSlider.CheckedChanged += Cb_isSlider_CheckedChanged;
+
+            Showhide_Uielements_by_curtypeSeletion();
+            PresetValues_by_curTypeSelection();
+            updateTextboxes();
+        }
         public CTRL_Builder_UC(int argID)
         {
           
