@@ -32,7 +32,7 @@
             this.tb_prio = new System.Windows.Forms.TextBox();
             this.tb_basepgn = new System.Windows.Forms.TextBox();
             this.tb_adrs = new System.Windows.Forms.TextBox();
-            this.tb_multiline = new System.Windows.Forms.TextBox();
+            this.tb_multilineDesc = new System.Windows.Forms.TextBox();
             this.lbl_FullHexPgn = new System.Windows.Forms.Label();
             this.btn_AddCtrl = new System.Windows.Forms.Button();
             this.btn_delte = new System.Windows.Forms.Button();
@@ -89,18 +89,18 @@
             this.tb_adrs.Text = "00";
             this.tb_adrs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tb_multiline
+            // tb_multilineDesc
             // 
-            this.tb_multiline.Font = new System.Drawing.Font("Miriam CLM", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tb_multiline.Location = new System.Drawing.Point(0, 128);
-            this.tb_multiline.Margin = new System.Windows.Forms.Padding(0);
-            this.tb_multiline.MaxLength = 40;
-            this.tb_multiline.Multiline = true;
-            this.tb_multiline.Name = "tb_multiline";
-            this.tb_multiline.Size = new System.Drawing.Size(200, 223);
-            this.tb_multiline.TabIndex = 7;
-            this.tb_multiline.Text = "Description";
-            this.tb_multiline.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_multilineDesc.Font = new System.Drawing.Font("Miriam CLM", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tb_multilineDesc.Location = new System.Drawing.Point(0, 128);
+            this.tb_multilineDesc.Margin = new System.Windows.Forms.Padding(0);
+            this.tb_multilineDesc.MaxLength = 40;
+            this.tb_multilineDesc.Multiline = true;
+            this.tb_multilineDesc.Name = "tb_multilineDesc";
+            this.tb_multilineDesc.Size = new System.Drawing.Size(200, 223);
+            this.tb_multilineDesc.TabIndex = 7;
+            this.tb_multilineDesc.Text = "Description";
+            this.tb_multilineDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbl_FullHexPgn
             // 
@@ -166,7 +166,7 @@
             this.Controls.Add(this.btn_delte);
             this.Controls.Add(this.btn_AddCtrl);
             this.Controls.Add(this.lbl_FullHexPgn);
-            this.Controls.Add(this.tb_multiline);
+            this.Controls.Add(this.tb_multilineDesc);
             this.Controls.Add(this.tb_adrs);
             this.Controls.Add(this.tb_basepgn);
             this.Controls.Add(this.tb_prio);
@@ -185,7 +185,7 @@
         private System.Windows.Forms.TextBox tb_prio;
         private System.Windows.Forms.TextBox tb_basepgn;
         private System.Windows.Forms.TextBox tb_adrs;
-        private System.Windows.Forms.TextBox tb_multiline;
+        private System.Windows.Forms.TextBox tb_multilineDesc;
         private System.Windows.Forms.Label lbl_FullHexPgn;
         private System.Windows.Forms.Button btn_AddCtrl;
         private System.Windows.Forms.Button btn_delte;

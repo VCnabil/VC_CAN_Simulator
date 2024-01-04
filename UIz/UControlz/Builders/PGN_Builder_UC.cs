@@ -8,12 +8,15 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VC_CAN_Simulator.DataObjects;
 using static VC_CAN_Simulator.Backend.Helpers;
 
 namespace VC_CAN_Simulator.UIz.UControlz.Builders
 {
     public partial class PGN_Builder_UC : UserControl
     {
+        int _myPgnUcId = 0;
+        public int MyPgnUcId { get { return _myPgnUcId; } private set { _myPgnUcId = value; } }
         bool[] IndecesUsed;
         int _ctrlrs_id = 0;
         public event EventHandler Btn_delete_was_Clicked_Event;
@@ -26,12 +29,16 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
         string str_basepgn = string.Empty;
         string str_addres= string.Empty;
         string str_full_PGN= string.Empty;
-        public PGN_Builder_UC()
+
+        string pgnDesc = string.Empty;
+        int int_full_PGN = 0;
+        public PGN_Builder_UC(int argPgnUcId)
         {
             InitializeComponent();
             IndecesUsed = new bool[8];
             ctrlBuilderList = new List<CTRL_Builder_UC>();
             Array.Clear(IndecesUsed, 0, IndecesUsed.Length);
+            tb_multilineDesc.TextChanged += Tb_multilineDesc_TextChanged;
             btn_AddCtrl.Click += Btn_AddCtrl_Click;
             btn_delte.Click += Btn_deltePGN_Builder_Click;
 
@@ -42,6 +49,12 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             tb_prio.Text = str_prio;
             tb_basepgn.Text = str_basepgn;
             tb_adrs.Text = str_addres;
+            _myPgnUcId = argPgnUcId;
+        }
+
+        private void Tb_multilineDesc_TextChanged(object sender, EventArgs e)
+        {
+            pgnDesc = tb_multilineDesc.Text;
         }
 
         private void Tb_adrs_TextChanged(object sender, EventArgs e)
@@ -68,8 +81,8 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             lbl_FullHexPgn.Text = "0x"+ str_full_PGN;
             if (tb_prio.Text != string.Empty && tb_basepgn.Text != string.Empty && tb_adrs.Text != string.Empty)
             {
-                int tempPgn = HexStringToDecimal(str_full_PGN);
-                lbl_FullPGN_DEC.Text = "d " + tempPgn.ToString();
+                int_full_PGN = HexStringToDecimal(str_full_PGN);
+                lbl_FullPGN_DEC.Text = "d " + int_full_PGN.ToString();
                 lbl_FullPGN_DEC.ForeColor = Color.Black;
             }
             else {
@@ -111,38 +124,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             }    
         }
         #endregion
-
-        public void AddNewCtrlBuilder(CTRL_Builder_UC newCtrlBuilder)
-        {
-            // Subscribe to events
-            newCtrlBuilder.IndexChanged += CtrlBuilder_IndexChanged;
-            newCtrlBuilder.Type_CTRL_Changed += CtrlBuilder_CtrlTypeChanged;
-            newCtrlBuilder.Remove_CTRL_ButtonClicked += Ctrl_RemoveButtonClicked;
- 
-            // Add to the list
-            ctrlBuilderList.Add(newCtrlBuilder);
-            // Add to the UI if needed
-            flowLayoutPanel1.Controls.Add(newCtrlBuilder);
-            ValidateCtrlBuilders(); // Validate after adding
-        }
-
-        public void RemoveCtrlBuilder(CTRL_Builder_UC ctrlBuilder)
-        {
-            // Unsubscribe from events
-            ctrlBuilder.IndexChanged -= CtrlBuilder_IndexChanged;
-            ctrlBuilder.Type_CTRL_Changed -= CtrlBuilder_CtrlTypeChanged;
-            ctrlBuilder.Remove_CTRL_ButtonClicked -= Ctrl_RemoveButtonClicked;
-
-            // Remove from the list
-            ctrlBuilderList.Remove(ctrlBuilder);
-
-            // Remove from the UI if needed
-            flowLayoutPanel1.Controls.Remove(ctrlBuilder);
-
-            btn_AddCtrl.Enabled = true;
-
-            ValidateCtrlBuilders(); // Validate after removing
-        }
         private void ValidateCtrlBuilders()
         {
             var indexSet = new HashSet<int>();
@@ -174,7 +155,8 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                         lbl_IndexConflicts.ForeColor = Color.Black;
                     }
                 }
-                else {
+                else
+                {
                     if (!indexSet.Add(ctrlBuilder.IndexLO))
                     {
                         // Handle index conflict for IndexLO
@@ -187,8 +169,58 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                         lbl_IndexConflicts.ForeColor = Color.Black;
                     }
                 }
-             
+
             }
+        }
+        public void AddNewCtrlBuilder(CTRL_Builder_UC newCtrlBuilder)
+        {
+            // Subscribe to events
+            newCtrlBuilder.IndexChanged += CtrlBuilder_IndexChanged;
+            newCtrlBuilder.Type_CTRL_Changed += CtrlBuilder_CtrlTypeChanged;
+            newCtrlBuilder.Remove_CTRL_ButtonClicked += Ctrl_RemoveButtonClicked;
+ 
+            // Add to the list
+            ctrlBuilderList.Add(newCtrlBuilder);
+            // Add to the UI if needed
+            flowLayoutPanel1.Controls.Add(newCtrlBuilder);
+            ValidateCtrlBuilders(); // Validate after adding
+        }
+
+        public void RemoveCtrlBuilder(CTRL_Builder_UC ctrlBuilder)
+        {
+            // Unsubscribe from events
+            ctrlBuilder.IndexChanged -= CtrlBuilder_IndexChanged;
+            ctrlBuilder.Type_CTRL_Changed -= CtrlBuilder_CtrlTypeChanged;
+            ctrlBuilder.Remove_CTRL_ButtonClicked -= Ctrl_RemoveButtonClicked;
+
+            // Remove from the list
+            ctrlBuilderList.Remove(ctrlBuilder);
+
+            // Remove from the UI if needed
+            flowLayoutPanel1.Controls.Remove(ctrlBuilder);
+
+            btn_AddCtrl.Enabled = true;
+
+            ValidateCtrlBuilders(); // Validate after removing
+        }
+
+        public List<Ctrl_DataObject> Make_Listctrls() {
+
+            List<Ctrl_DataObject> mylistOfCtrl_Objs = new List<Ctrl_DataObject>();
+
+            for (int i = 0; i < ctrlBuilderList.Count; i++) {
+                mylistOfCtrl_Objs.Add(ctrlBuilderList[i].Make_ctrlDataObject());
+            }
+
+
+            return mylistOfCtrl_Objs;
+        }
+
+        public Pgn_DataObject Make_PGNDataObj() {
+
+            Pgn_DataObject tempPgnDataobj = new Pgn_DataObject(_myPgnUcId, int_full_PGN,str_full_PGN, pgnDesc, Make_Listctrls());
+
+            return tempPgnDataobj;
         }
     }
 }

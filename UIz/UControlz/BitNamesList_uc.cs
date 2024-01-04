@@ -18,16 +18,24 @@ namespace VC_CAN_Simulator.UIz.UControlz
         private const int rowHeight = 20;
         private const int startY = 30;
 
-
+        string _decription = string.Empty;
+        public string Decription { get { return _decription; } private set { _decription = value; } }
         public BitNamesList_uc()
         {
             InitializeComponent();
             binNameRows = new List<BinNameRow_uc>();
             btn_addrow.Click += Btn_addrow_Click;
+            textBox_description.TextChanged += TextBox_description_TextChanged;
 
             label_conflicts.Text = ".";
             label_conflicts.ForeColor = Color.Black;
         }
+
+        private void TextBox_description_TextChanged(object sender, EventArgs e)
+        {
+            _decription = textBox_description.Text;
+        }
+
         private void Btn_addrow_Click(object sender, EventArgs e)
         {
             AddNewRow();

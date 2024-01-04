@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VC_CAN_Simulator.DataObjects;
 using static VC_CAN_Simulator.Backend.Helpers;
 
 namespace VC_CAN_Simulator.UIz.UControlz.Builders
@@ -19,8 +21,13 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
         bool is_slider_onlyFor_1byand2by;
         List<TextBox> _8_bs_relatedtextBoxes;
         List<TextBox> _8_bG_relatedtextBoxes;
+        List<string> listGroup1;
+        List<string> listGroup2;
+        List<string> listRemotes;
         int _id;
         public int ID { get { return _id; } private set { _id = value; } }
+
+        string _dec = string.Empty;
         int _min;
         int _max;
         int _def;
@@ -37,6 +44,9 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             PopulateComboBox();
             _8_bs_relatedtextBoxes = new List<TextBox>();
             _8_bG_relatedtextBoxes = new List<TextBox>();
+            listGroup1 = new List<string>();
+            listGroup2 = new List<string>();
+            listRemotes = new List<string>();
             _8_bG_relatedtextBoxes.Add(tb_group1);
             _8_bG_relatedtextBoxes.Add(tb_group2);
             _8_bs_relatedtextBoxes.Add(tb_remote1);
@@ -50,7 +60,7 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             btn_rem.Click += Btn_rem_Click;
             tb_indexLO.TextChanged += Tb_indexLO_TextChanged;
             tb_indexHI.TextChanged += Tb_indexHI_TextChanged;
-
+            
             cb_isSlider.CheckedChanged += Cb_isSlider_CheckedChanged;
 
             Showhide_Uielements_by_curtypeSeletion();
@@ -263,6 +273,20 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 updateTextboxes();
                 OnCtrlTypeChanged();
             }
+        }
+
+        public Ctrl_DataObject Make_ctrlDataObject() {
+
+            string strtype = EnumToString(Cur_ctrlType);
+            string descript = this.bitNamesList_uc1.Decription;
+            Ctrl_DataObject temp = new Ctrl_DataObject(_id, descript, 
+                                                        _min, _max, _def,
+                                                        IndexLO, IndexHI, 
+                                                        strtype, is_slider_onlyFor_1byand2by,
+                                                        this.bitNamesList_uc1.GetBitNameDescriptions(), listGroup1, listGroup2, listRemotes);
+
+            return temp;
+
         }
     }
 }

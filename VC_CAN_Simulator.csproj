@@ -72,6 +72,8 @@
   <ItemGroup>
     <Compile Include="Backend\Helpers.cs" />
     <Compile Include="DataObjects\Ctrl_DataObject.cs" />
+    <Compile Include="DataObjects\Pgn_DataObject.cs" />
+    <Compile Include="DataObjects\Project_DataObject.cs" />
     <Compile Include="UIz\Formz\CanSimForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +82,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIz\Formz\CreateOrModifyProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\CreateOrModifyProject.Designer.cs">
+      <DependentUpon>CreateOrModifyProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIz\Formz\TestingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +136,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIz\Formz\CreateOrModifyProject.resx">
+      <DependentUpon>CreateOrModifyProject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\TestingForm.resx">
       <DependentUpon>TestingForm.cs</DependentUpon>
     </EmbeddedResource>
