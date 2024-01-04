@@ -18,19 +18,23 @@ namespace VC_CAN_Simulator.DataObjects
         public string PGN_strHEX { get { return _pgnStrhex; } private set { _pgnStrhex = value; } }
         public string DESCpgn { get { return _pgndesc; } private set { _pgndesc = value; } }
 
-        List<Ctrl_DataObject> _listOfCtrls = new List<Ctrl_DataObject>();
-        public List<Ctrl_DataObject> Get_ctrlList() { return _listOfCtrls; }
-        public Pgn_DataObject(int argpgnid, int argpgn,string argpgnStr, string argDescpgn, List<Ctrl_DataObject> argListCtrls) { 
+       // List<Ctrl_DataObject> _listOfCtrls = new List<Ctrl_DataObject>();
+        public List<Ctrl_DataObject> CtrlList { get; private set; }
+
+        
+        public Pgn_DataObject(int argpgnid, int argpgn,string argpgnStr, string argDescpgn, List<Ctrl_DataObject> argListCtrls) {
             _pgnid = argpgnid;
             _pgn = argpgn;
             _pgndesc = argDescpgn;
-            if(argListCtrls != null)
-            {
-                for(int i = 0; i < argListCtrls.Count; i++)
-                {
-                    _listOfCtrls.Add(argListCtrls[i]);
-                }
+            _pgnStrhex = argpgnStr;
+            CtrlList = new List<Ctrl_DataObject>(); // Initialize CtrlList
 
+            if (argListCtrls != null)
+            {
+                foreach (var ctrl in argListCtrls)
+                {
+                    CtrlList.Add(ctrl); // Add to CtrlList instead of _listOfCtrls
+                }
             }
         }
     }

@@ -34,11 +34,11 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 _pgnIdcnt++;
                 fl_verticalpannel.Controls.Add(newPGN);
                 newPGN.Btn_delete_was_Clicked_Event += NewPGN_RemoveButtonClicked;
+                listOf_PGN_UCs_InProject.Add(newPGN);
                 if (fl_verticalpannel.Controls.Count >= MaxPGNs)
                 {
                     btn_AddPGN.Enabled = false;
                 }
-                listOf_PGN_UCs_InProject.Add(newPGN);
             }
         }
 

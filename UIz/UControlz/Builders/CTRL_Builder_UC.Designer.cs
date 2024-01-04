@@ -44,8 +44,8 @@
             this.label_groupconflicts = new System.Windows.Forms.Label();
             this.btn_validategroups = new System.Windows.Forms.Button();
             this.lbl_id = new System.Windows.Forms.Label();
-            this.bitNamesList_uc1 = new VC_CAN_Simulator.UIz.UControlz.BitNamesList_uc();
             this.cb_isSlider = new System.Windows.Forms.CheckBox();
+            this.bitNamesList_uc1 = new VC_CAN_Simulator.UIz.UControlz.BitNamesList_uc();
             this.SuspendLayout();
             // 
             // cb_CtrlType
@@ -125,20 +125,20 @@
             // 
             this.tb_group1.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.tb_group1.Location = new System.Drawing.Point(0, 335);
+            this.tb_group1.MaxLength = 16;
             this.tb_group1.Name = "tb_group1";
             this.tb_group1.Size = new System.Drawing.Size(91, 32);
             this.tb_group1.TabIndex = 10;
-            this.tb_group1.Text = "0,2,4,6";
             this.tb_group1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_group2
             // 
             this.tb_group2.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.tb_group2.Location = new System.Drawing.Point(3, 373);
+            this.tb_group2.MaxLength = 16;
             this.tb_group2.Name = "tb_group2";
             this.tb_group2.Size = new System.Drawing.Size(91, 32);
             this.tb_group2.TabIndex = 11;
-            this.tb_group2.Text = "1,3,5,7";
             this.tb_group2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_remote1
@@ -148,7 +148,6 @@
             this.tb_remote1.Name = "tb_remote1";
             this.tb_remote1.Size = new System.Drawing.Size(91, 32);
             this.tb_remote1.TabIndex = 12;
-            this.tb_remote1.Text = "1,3,5,7";
             this.tb_remote1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_remote2
@@ -158,7 +157,6 @@
             this.tb_remote2.Name = "tb_remote2";
             this.tb_remote2.Size = new System.Drawing.Size(91, 32);
             this.tb_remote2.TabIndex = 13;
-            this.tb_remote2.Text = "1,3,5,7";
             this.tb_remote2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_remote3
@@ -168,7 +166,6 @@
             this.tb_remote3.Name = "tb_remote3";
             this.tb_remote3.Size = new System.Drawing.Size(91, 32);
             this.tb_remote3.TabIndex = 14;
-            this.tb_remote3.Text = "1,3,5,7";
             this.tb_remote3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_remote4
@@ -178,7 +175,6 @@
             this.tb_remote4.Name = "tb_remote4";
             this.tb_remote4.Size = new System.Drawing.Size(91, 32);
             this.tb_remote4.TabIndex = 15;
-            this.tb_remote4.Text = "1,3,5,7";
             this.tb_remote4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_rem
@@ -223,14 +219,6 @@
             this.lbl_id.TabIndex = 20;
             this.lbl_id.Text = "id:";
             // 
-            // bitNamesList_uc1
-            // 
-            this.bitNamesList_uc1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.bitNamesList_uc1.Location = new System.Drawing.Point(100, 3);
-            this.bitNamesList_uc1.Name = "bitNamesList_uc1";
-            this.bitNamesList_uc1.Size = new System.Drawing.Size(400, 422);
-            this.bitNamesList_uc1.TabIndex = 19;
-            // 
             // cb_isSlider
             // 
             this.cb_isSlider.AutoSize = true;
@@ -241,6 +229,14 @@
             this.cb_isSlider.TabIndex = 21;
             this.cb_isSlider.Text = "slid?";
             this.cb_isSlider.UseVisualStyleBackColor = true;
+            // 
+            // bitNamesList_uc1
+            // 
+            this.bitNamesList_uc1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.bitNamesList_uc1.Location = new System.Drawing.Point(100, 3);
+            this.bitNamesList_uc1.Name = "bitNamesList_uc1";
+            this.bitNamesList_uc1.Size = new System.Drawing.Size(400, 422);
+            this.bitNamesList_uc1.TabIndex = 19;
             // 
             // CTRL_Builder_UC
             // 

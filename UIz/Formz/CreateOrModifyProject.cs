@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,14 @@ namespace VC_CAN_Simulator.UIz.Formz
         private void Btn_Save_Click(object sender, EventArgs e)
         {
             Project_DataObject PROJECTTOSAVE= _PROJbUILDER_UC.Make_ProjectDataObject();
+
+            string _filename_objbuilder = "TEST01";
+            string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";
+            string path_filenameFromMain= PATH_dIR + _filename_objbuilder + ".json";
+      
+            string json = JsonConvert.SerializeObject(PROJECTTOSAVE, Formatting.Indented);
+
+            System.IO.File.WriteAllText(path_filenameFromMain, json);
         }
 
         private void Btn_Load_Click(object sender, EventArgs e)

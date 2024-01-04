@@ -21,9 +21,9 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
         bool is_slider_onlyFor_1byand2by;
         List<TextBox> _8_bs_relatedtextBoxes;
         List<TextBox> _8_bG_relatedtextBoxes;
-        List<string> listGroup1;
-        List<string> listGroup2;
-        List<string> listRemotes;
+        List<string> _listGroup1;
+        List<string> _listGroup2;
+        List<string> _listRemotes;
         int _id;
         public int ID { get { return _id; } private set { _id = value; } }
 
@@ -44,9 +44,7 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             PopulateComboBox();
             _8_bs_relatedtextBoxes = new List<TextBox>();
             _8_bG_relatedtextBoxes = new List<TextBox>();
-            listGroup1 = new List<string>();
-            listGroup2 = new List<string>();
-            listRemotes = new List<string>();
+   
             _8_bG_relatedtextBoxes.Add(tb_group1);
             _8_bG_relatedtextBoxes.Add(tb_group2);
             _8_bs_relatedtextBoxes.Add(tb_remote1);
@@ -79,14 +77,18 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
         private void OnCtrlTypeChanged()
         {
             Type_CTRL_Changed?.Invoke(this, EventArgs.Empty);
-            if (Cur_ctrlType != CtrlType._8_bs) {
+
+            if (Cur_ctrlType == CtrlType._8_bs || Cur_ctrlType == CtrlType._8_bG) {
+                this.bitNamesList_uc1.Show_AddRowButton(true);
+            }
+           
+            else
+
+            {
                 this.bitNamesList_uc1.ClearAll();
                 this.bitNamesList_uc1.Show_AddRowButton(false);
             }
-            else
-            {
-                this.bitNamesList_uc1.Show_AddRowButton(true);
-            }
+           
         }
         public CtrlType CUR_TYPECtrl { get { return Cur_ctrlType; } private set { Cur_ctrlType = value; } }
         public int IndexLO { get { return _indexLO; } private set { _indexLO = value; } }
@@ -279,11 +281,32 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
 
             string strtype = EnumToString(Cur_ctrlType);
             string descript = this.bitNamesList_uc1.Decription;
+            _listGroup1 = new List<string>();
+            _listGroup2 = new List<string>();
+            _listRemotes = new List<string>();
+
+            if ( Cur_ctrlType == CtrlType._8_bG) {
+                if(tb_group1.Text != "")
+                _listGroup1.Add(tb_group1.Text);
+                if (tb_group2.Text != "")
+                    _listGroup2.Add(tb_group2.Text);
+            }
+            if (Cur_ctrlType == CtrlType._8_bs) {
+                if (tb_remote1.Text != "")
+                    _listRemotes.Add(tb_remote1.Text);
+                if (tb_remote2.Text != "")
+                    _listRemotes.Add(tb_remote2.Text);
+                if (tb_remote3.Text != "")
+                    _listRemotes.Add(tb_remote3.Text);
+                if (tb_remote4.Text != "")
+                    _listRemotes.Add(tb_remote4.Text);
+            }
+
             Ctrl_DataObject temp = new Ctrl_DataObject(_id, descript, 
                                                         _min, _max, _def,
                                                         IndexLO, IndexHI, 
                                                         strtype, is_slider_onlyFor_1byand2by,
-                                                        this.bitNamesList_uc1.GetBitNameDescriptions(), listGroup1, listGroup2, listRemotes);
+                                                        this.bitNamesList_uc1.GetBitNameDescriptions(), _listGroup1, _listGroup2, _listRemotes);
 
             return temp;
 

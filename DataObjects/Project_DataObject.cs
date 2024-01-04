@@ -12,14 +12,19 @@ namespace VC_CAN_Simulator.DataObjects
         public string Title { get { return _title; } private set { _title = value; } }
 
         List<Pgn_DataObject> _allpgns= new List<Pgn_DataObject>();
-        public List<Pgn_DataObject> GetPGNlist() { return _allpgns; }
-        public Project_DataObject(string argtitle, List<Pgn_DataObject> argPgnlist ) { 
+        public List<Pgn_DataObject> AllPgnList { get; private set; }
+
+
+        public Project_DataObject(string argtitle, List<Pgn_DataObject> argPgnlist)
+        {
             _title = argtitle;
-            if( argPgnlist != null )
+            AllPgnList = argPgnlist ?? new List<Pgn_DataObject>();
+
+            if (argPgnlist != null)
             {
-                for( int i = 0; i < argPgnlist.Count; i++ )
+                for (int i = 0; i < argPgnlist.Count; i++)
                 {
-                    _allpgns.Add(_allpgns[i]);
+                    _allpgns.Add(argPgnlist[i]);
                 }
             }
         }

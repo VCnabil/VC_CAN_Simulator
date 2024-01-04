@@ -29,15 +29,19 @@ namespace VC_CAN_Simulator.DataObjects
         public bool ISSLIDER { get { return _isSlider; } private set { _isSlider = value; } }
 
         List<string> _8bitsList= new List<string>();
-        public List<string> GET_8bitsList() { return _8bitsList; }
+        public List<string> BitsList { get; private set; }
 
         List<string> _group1List = new List<string>();
-        public List<string> GET_Group1List() { return _group1List; }
+        public List<string> Group1List { get; private set; }
+       
         List<string> _group2List = new List<string>();
-        public List<string> GET_Group2List() { return _group2List; }
+        public List<string> Group2List { get; private set; }
+
         List<string> _remoteList = new List<string>();
-        public List<string> GET_RemoteList() { return _remoteList; }
-        public Ctrl_DataObject(int argid,string argDesc, int argmin, int argmax, int argdef, int argLO, int argHI, string argType, bool argisSlider, List<string> argBitlist, List<string> arggroup1list, List<string> arggroup2list, List<string> argremotelist) {
+        public List<string> RemoteList { get; private set; }
+      
+        public Ctrl_DataObject(int argid,string argDesc, int argmin, int argmax, int argdef, int argLO, int argHI, string argType, bool argisSlider,
+            List<string> argBitlist, List<string> arggroup1list, List<string> arggroup2list, List<string> argremotelist) {
             _id= argid;
             _desc= argDesc;
             _min= argmin;
@@ -48,34 +52,12 @@ namespace VC_CAN_Simulator.DataObjects
             _ctrlType_str = argType;
             _isSlider = argisSlider;
 
-            if (argBitlist != null) {
-                for (int i = 0; i < argBitlist.Count; i++) {
-                    _8bitsList.Add(argBitlist[i]);
-                }
-            }
+            BitsList = argBitlist ?? new List<string>();
+            Group1List = arggroup1list ?? new List<string>();
+            Group2List = arggroup2list ?? new List<string>();
+            RemoteList = argremotelist ?? new List<string>();
 
-            if (arggroup1list != null)
-            {
-                for (int i = 0; i < arggroup1list.Count; i++)
-                {
-                    _group1List.Add(arggroup1list[i]);
-                }
-            }
-
-            if (arggroup2list != null)
-            {
-                for (int i = 0; i < arggroup2list.Count; i++)
-                {
-                    _group2List.Add(arggroup2list[i]);
-                }
-            }
-            if (argremotelist != null)
-            {
-                for (int i = 0; i < argremotelist.Count; i++)
-                {
-                    _remoteList.Add(argremotelist[i]);
-                }
-            }
+         
 
         }
     }
