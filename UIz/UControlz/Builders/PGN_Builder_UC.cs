@@ -21,6 +21,11 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
         int ctrl_builder_Width = 0;
         int ctrl_builder_Height = 0;
         List<CTRL_Builder_UC> ctrlBuilderList;
+
+        string str_prio = string.Empty;
+        string str_basepgn = string.Empty;
+        string str_addres= string.Empty;
+        string str_full_PGN= string.Empty;
         public PGN_Builder_UC()
         {
             InitializeComponent();
@@ -29,6 +34,49 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             Array.Clear(IndecesUsed, 0, IndecesUsed.Length);
             btn_AddCtrl.Click += Btn_AddCtrl_Click;
             btn_delte.Click += Btn_deltePGN_Builder_Click;
+
+            tb_prio.TextChanged += Tb_prio_TextChanged;
+            tb_basepgn.TextChanged += Tb_basepgn_TextChanged;
+            tb_adrs.TextChanged += Tb_adrs_TextChanged;
+
+            tb_prio.Text = str_prio;
+            tb_basepgn.Text = str_basepgn;
+            tb_adrs.Text = str_addres;
+        }
+
+        private void Tb_adrs_TextChanged(object sender, EventArgs e)
+        {
+            str_addres = tb_adrs.Text;
+            Update_PGNstr();
+        }
+
+        private void Tb_basepgn_TextChanged(object sender, EventArgs e)
+        {
+            str_basepgn = tb_basepgn.Text;
+            Update_PGNstr();
+        }
+
+        private void Tb_prio_TextChanged(object sender, EventArgs e)
+        {
+            str_prio= tb_prio.Text;
+            Update_PGNstr();
+        }
+
+        void Update_PGNstr() {
+
+            str_full_PGN = str_prio + str_basepgn + str_addres;
+            lbl_FullHexPgn.Text = "0x"+ str_full_PGN;
+            if (tb_prio.Text != string.Empty && tb_basepgn.Text != string.Empty && tb_adrs.Text != string.Empty)
+            {
+                int tempPgn = HexStringToDecimal(str_full_PGN);
+                lbl_FullPGN_DEC.Text = "d " + tempPgn.ToString();
+                lbl_FullPGN_DEC.ForeColor = Color.Black;
+            }
+            else {
+                lbl_FullPGN_DEC.Text = "PGN ERROR ";
+                lbl_FullPGN_DEC.ForeColor = Color.Red;
+            }
+          
         }
 
         #region Events
@@ -41,8 +89,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
   
                 AddNewCtrlBuilder(newCtrlBuilder);  
             }
-          
-
         }
         private void Btn_deltePGN_Builder_Click(object sender, EventArgs e)
         {
@@ -64,8 +110,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 RemoveCtrlBuilder(ctrl);
             }    
         }
-
-
         #endregion
 
         public void AddNewCtrlBuilder(CTRL_Builder_UC newCtrlBuilder)
@@ -75,13 +119,10 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             newCtrlBuilder.Type_CTRL_Changed += CtrlBuilder_CtrlTypeChanged;
             newCtrlBuilder.Remove_CTRL_ButtonClicked += Ctrl_RemoveButtonClicked;
  
-
             // Add to the list
             ctrlBuilderList.Add(newCtrlBuilder);
-
             // Add to the UI if needed
             flowLayoutPanel1.Controls.Add(newCtrlBuilder);
-
             ValidateCtrlBuilders(); // Validate after adding
         }
 

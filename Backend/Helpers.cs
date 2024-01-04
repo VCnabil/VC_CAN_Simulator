@@ -32,5 +32,23 @@ namespace VC_CAN_Simulator.Backend
                 throw new ArgumentException("Invalid string for ctrl_type enum conversion");
             }
         }
+
+        public static int HexStringToDecimal(string hexString)
+        {
+            try
+            {
+                return Convert.ToInt32(hexString, 16);
+            }
+            catch (FormatException)
+            {
+                //Console.WriteLine("The string is not a valid hexadecimal number.");
+                return 0;
+            }
+            catch (OverflowException)
+            {
+                //Console.WriteLine("The hexadecimal number is too large to fit in a long.");
+                return 0;
+            }
+        }
     }
 }
