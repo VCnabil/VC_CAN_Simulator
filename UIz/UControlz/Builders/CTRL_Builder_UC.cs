@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VC_CAN_Simulator.DataObjects;
 using static VC_CAN_Simulator.Backend.Helpers;
+using System.Text.RegularExpressions;
 
 namespace VC_CAN_Simulator.UIz.UControlz.Builders
 {
@@ -277,6 +278,22 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             }
         }
 
+        bool Valide_GroupText(string grouptext) {
+
+            //if(grouptext.null or empty )
+            if (String.IsNullOrEmpty(grouptext)) { return false; }
+
+            // Regular expression for matching a comma-separated list of numbers
+            // Pattern explanation:
+            // ^ - Start of the string
+            // \d+ - One or more digits
+            // (,\d+)* - Zero or more occurrences of a comma followed by one or more digits
+            // $ - End of the string
+            string pattern = @"^\d+(,\d+)*$";
+
+            return Regex.IsMatch(grouptext, pattern);
+
+        }
         public Ctrl_DataObject Make_ctrlDataObject() {
 
             string strtype = EnumToString(Cur_ctrlType);
@@ -286,20 +303,16 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             _listRemotes = new List<string>();
 
             if ( Cur_ctrlType == CtrlType._8_bG) {
-                if(tb_group1.Text != "")
-                _listGroup1.Add(tb_group1.Text);
-                if (tb_group2.Text != "")
-                    _listGroup2.Add(tb_group2.Text);
+                if(Valide_GroupText(tb_group1.Text)) _listGroup1.Add(tb_group1.Text);
+                if (Valide_GroupText(tb_group2.Text)) _listGroup2.Add(tb_group2.Text);
+
+               
             }
             if (Cur_ctrlType == CtrlType._8_bs) {
-                if (tb_remote1.Text != "")
-                    _listRemotes.Add(tb_remote1.Text);
-                if (tb_remote2.Text != "")
-                    _listRemotes.Add(tb_remote2.Text);
-                if (tb_remote3.Text != "")
-                    _listRemotes.Add(tb_remote3.Text);
-                if (tb_remote4.Text != "")
-                    _listRemotes.Add(tb_remote4.Text);
+                if (Valide_GroupText(tb_remote1.Text)) _listRemotes.Add(tb_remote1.Text);
+                if (Valide_GroupText(tb_remote2.Text)) _listRemotes.Add(tb_remote2.Text);
+                if (Valide_GroupText(tb_remote3.Text)) _listRemotes.Add(tb_remote3.Text);
+                if (Valide_GroupText(tb_remote4.Text)) _listRemotes.Add(tb_remote4.Text);
             }
 
             Ctrl_DataObject temp = new Ctrl_DataObject(_id, descript, 

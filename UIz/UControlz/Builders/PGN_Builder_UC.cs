@@ -50,6 +50,7 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             tb_basepgn.Text = str_basepgn;
             tb_adrs.Text = str_addres;
             _myPgnUcId = argPgnUcId;
+            lbl_pgnBuilder_ID.Text += _myPgnUcId;
         }
 
         private void Tb_multilineDesc_TextChanged(object sender, EventArgs e)

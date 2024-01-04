@@ -38,6 +38,7 @@
             this.btn_delte = new System.Windows.Forms.Button();
             this.lbl_IndexConflicts = new System.Windows.Forms.Label();
             this.lbl_FullPGN_DEC = new System.Windows.Forms.Label();
+            this.lbl_pgnBuilder_ID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -137,7 +138,7 @@
             this.lbl_IndexConflicts.AutoSize = true;
             this.lbl_IndexConflicts.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lbl_IndexConflicts.ForeColor = System.Drawing.Color.Red;
-            this.lbl_IndexConflicts.Location = new System.Drawing.Point(0, 363);
+            this.lbl_IndexConflicts.Location = new System.Drawing.Point(0, 400);
             this.lbl_IndexConflicts.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_IndexConflicts.Name = "lbl_IndexConflicts";
             this.lbl_IndexConflicts.Size = new System.Drawing.Size(187, 23);
@@ -156,11 +157,24 @@
             this.lbl_FullPGN_DEC.TabIndex = 20;
             this.lbl_FullPGN_DEC.Text = "Dec";
             // 
+            // lbl_pgnBuilder_ID
+            // 
+            this.lbl_pgnBuilder_ID.AutoSize = true;
+            this.lbl_pgnBuilder_ID.Font = new System.Drawing.Font("Miriam CLM", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lbl_pgnBuilder_ID.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.lbl_pgnBuilder_ID.Location = new System.Drawing.Point(0, 365);
+            this.lbl_pgnBuilder_ID.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_pgnBuilder_ID.Name = "lbl_pgnBuilder_ID";
+            this.lbl_pgnBuilder_ID.Size = new System.Drawing.Size(36, 23);
+            this.lbl_pgnBuilder_ID.TabIndex = 21;
+            this.lbl_pgnBuilder_ID.Text = "id: ";
+            // 
             // PGN_Builder_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
+            this.Controls.Add(this.lbl_pgnBuilder_ID);
             this.Controls.Add(this.lbl_FullPGN_DEC);
             this.Controls.Add(this.lbl_IndexConflicts);
             this.Controls.Add(this.btn_delte);
@@ -191,5 +205,6 @@
         private System.Windows.Forms.Button btn_delte;
         private System.Windows.Forms.Label lbl_IndexConflicts;
         private System.Windows.Forms.Label lbl_FullPGN_DEC;
+        private System.Windows.Forms.Label lbl_pgnBuilder_ID;
     }
 }
