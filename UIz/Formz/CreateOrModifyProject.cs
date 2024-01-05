@@ -62,16 +62,14 @@ namespace VC_CAN_Simulator.UIz.Formz
             //remotelist_1_0.Add("1,0,1,0");
             //remotelist_1_0.Add("1,1,2,2");
 
-            string _filename_objbuilder = "TEST014";
+            string _filename_objbuilder = "TEST016";
             string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";
             string path_filenameFromMain = PATH_dIR + _filename_objbuilder + ".json";
             Project_DataObject PROJECTTOSAVE  = LoadJsonFile(path_filenameFromMain);
 
-            int howmnaypgns = PROJECTTOSAVE.AllPgnList.Count;
-
-            for (int i = 0; i < howmnaypgns; i++)
+            for (int i = 0; i < PROJECTTOSAVE.AllPgnList.Count; i++)
             {
-                _PROJbUILDER_UC.AddFromBlueprint(PROJECTTOSAVE.AllPgnList[i].IDpgn, PROJECTTOSAVE.AllPgnList[i].PGN_int, PROJECTTOSAVE.AllPgnList[i].PGN_strHEX, PROJECTTOSAVE.AllPgnList[i].DESCpgn, PROJECTTOSAVE.AllPgnList[0].CtrlList);
+                _PROJbUILDER_UC.AddFromBlueprint(PROJECTTOSAVE.AllPgnList[i].IDpgn, PROJECTTOSAVE.AllPgnList[i].PGN_int, PROJECTTOSAVE.AllPgnList[i].PGN_strHEX, PROJECTTOSAVE.AllPgnList[i].DESCpgn, PROJECTTOSAVE.AllPgnList[i].CtrlList);
 
             }
         }
@@ -101,7 +99,7 @@ namespace VC_CAN_Simulator.UIz.Formz
         {
             Project_DataObject PROJECTTOSAVE= _PROJbUILDER_UC.Make_ProjectDataObject();
 
-            string _filename_objbuilder = "TEST014";
+            string _filename_objbuilder = "TEST016";
             string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";
             string path_filenameFromMain= PATH_dIR + _filename_objbuilder + ".json";
       

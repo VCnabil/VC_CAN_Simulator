@@ -46,9 +46,9 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             if (fl_verticalpannel.Controls.Count < MaxPGNs)
             {
                 var newPGN = new PGN_Builder_UC( argpgnid,  argpgn,  argpgnStr,  argDescpgn, argCtrlDOlist);
-                fl_verticalpannel.Controls.Add(newPGN);
                 newPGN.Btn_delete_was_Clicked_Event += NewPGN_RemoveButtonClicked;
                 listOf_PGN_UCs_InProject.Add(newPGN);
+                fl_verticalpannel.Controls.Add(newPGN);
                 if (fl_verticalpannel.Controls.Count >= MaxPGNs)
                 {
                     btn_AddPGN.Enabled = false;

@@ -44,7 +44,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             tb_multilineDesc.TextChanged += Tb_multilineDesc_TextChanged;
             btn_AddCtrl.Click += Btn_AddCtrl_Click;
             btn_delte.Click += Btn_deltePGN_Builder_Click;
-
             tb_prio.TextChanged += Tb_prio_TextChanged;
             tb_basepgn.TextChanged += Tb_basepgn_TextChanged;
             tb_adrs.TextChanged += Tb_adrs_TextChanged;
@@ -69,13 +68,15 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             tb_multilineDesc.Text = argDescpgn;
             pgnDesc = argDescpgn;
 
-            if (flowLayoutPanel1.Controls.Count < MaxCtrls)
-            {
-                _ctrlrs_id++;
-                var newCtrlBuilder = new CTRL_Builder_UC(argCtrlDOlist[0]);
+            for (int ctrlI = 0; ctrlI < argCtrlDOlist.Count; ctrlI++) {
+                if (flowLayoutPanel1.Controls.Count < MaxCtrls)
+                {
+                    var newCtrlBuilder = new CTRL_Builder_UC(argCtrlDOlist[ctrlI]);
 
-                AddNewCtrlBuilder(newCtrlBuilder);
+                    AddNewCtrlBuilder(newCtrlBuilder);
+                }
             }
+         
         }
         public PGN_Builder_UC(int argpgnid, int argpgn, string argpgnStr, string argDescpgn )
         {
@@ -284,6 +285,7 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
         public Pgn_DataObject Make_PGNDataObj() {
             Pgn_DataObject tempPgnDataobj = new Pgn_DataObject();
             tempPgnDataobj.IDpgn = _myPgnUcId;
+            tempPgnDataobj.DESCpgn = pgnDesc;
             tempPgnDataobj.PGN_int = int_full_PGN;
             tempPgnDataobj.PGN_strHEX = str_full_PGN;
             tempPgnDataobj.CtrlList = Make_Listctrls();
