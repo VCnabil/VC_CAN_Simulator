@@ -16,28 +16,24 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
 {
     public partial class CTRL_Builder_UC : UserControl
     {
-
-
+        int _id;
+        public int ID { get { return _id; } private set { _id = value; } }
+        string _dec = string.Empty;
+        int _min;
+        int _max;
+        int _def;
+        int _indexLO;
+        int _indexHI;
         CtrlType Cur_ctrlType;
+        public CtrlType CUR_TYPECtrl { get { return Cur_ctrlType; } private set { Cur_ctrlType = value; } }
         bool is_slider_onlyFor_1byand2by;
         List<TextBox> _8_bs_relatedtextBoxes;
         List<TextBox> _8_bG_relatedtextBoxes;
         List<string> _listGroup1;
         List<string> _listGroup2;
         List<string> _listRemotes;
-        int _id;
-        public int ID { get { return _id; } private set { _id = value; } }
-
-        string _dec = string.Empty;
-        int _min;
-        int _max;
-        int _def;
-
-        int _indexLO;
-        int _indexHI;
-
-        
-
+        public int IndexLO { get { return _indexLO; } private set { _indexLO = value; } }
+        public int IndexHI { get { return _indexHI; } private set { _indexHI = value; } }
         public CTRL_Builder_UC(Ctrl_DataObject argCtrlDO)
         {
 
@@ -155,13 +151,10 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             updateTextboxes();
         }
 
-        private void Cb_isSlider_CheckedChanged(object sender, EventArgs e)
-        {
-            is_slider_onlyFor_1byand2by = cb_isSlider.Checked;
-        }
+        #region EventsAndHandlers
 
         public event EventHandler Remove_CTRL_ButtonClicked;
-
+        public event EventHandler IndexChanged;
         public event EventHandler Type_CTRL_Changed;
         private void OnCtrlTypeChanged()
         {
@@ -179,22 +172,10 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             }
            
         }
-        public CtrlType CUR_TYPECtrl { get { return Cur_ctrlType; } private set { Cur_ctrlType = value; } }
-        public int IndexLO { get { return _indexLO; } private set { _indexLO = value; } }
-        public void Rectify_indexLO(int arg)
+        private void Cb_isSlider_CheckedChanged(object sender, EventArgs e)
         {
-            _indexLO = arg;
-            updateTextboxes();
+            is_slider_onlyFor_1byand2by = cb_isSlider.Checked;
         }
-        public void Rectify_indexHI(int arg)
-        {
-            _indexHI = arg;
-            updateTextboxes();
-        }
-        public int IndexHI { get { return _indexHI; } private set { _indexHI = value; } }
-
-        public event EventHandler IndexChanged;
-
         private void OnIndexChanged()
         {
             IndexChanged?.Invoke(this, EventArgs.Empty);
@@ -211,7 +192,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 OnIndexChanged();
             }
         }
-
         private void Tb_indexLO_TextChanged(object sender, EventArgs e)
         {
             _indexLO = int.TryParse(tb_indexLO.Text, out int result) ? result : 0;
@@ -221,17 +201,16 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             }
             OnIndexChanged();
         }
-
         private void Btn_validategroups_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
-
         private void Btn_rem_Click(object sender, EventArgs e)
         {
             Remove_CTRL_ButtonClicked?.Invoke(this, e);
         }
 
+        #endregion
         private void PopulateComboBox()
         {
             cb_CtrlType.Items.Clear();
@@ -240,7 +219,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 cb_CtrlType.Items.Add(ctrlType.ToString());
             }
         }
-
         private void updateTextboxes()
         {
             tb_min.Text = _min.ToString();
@@ -358,7 +336,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             if (cb_CtrlType.SelectedItem != null)
             {
                 Cur_ctrlType = (CtrlType)Enum.Parse(typeof(CtrlType), cb_CtrlType.SelectedItem.ToString());
-
                 Showhide_Uielements_by_curtypeSeletion();
                 PresetValues_by_curTypeSelection();
                 updateTextboxes();
@@ -367,8 +344,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
         }
 
         bool Valide_GroupText(string grouptext) {
-
-            //if(grouptext.null or empty )
             if (String.IsNullOrEmpty(grouptext)) { return false; }
 
             // Regular expression for matching a comma-separated list of numbers
@@ -380,10 +355,8 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             string pattern = @"^\d+(,\d+)*$";
 
             return Regex.IsMatch(grouptext, pattern);
-
         }
         public Ctrl_DataObject Make_ctrlDataObject() {
-
             string strtype = EnumToString(Cur_ctrlType);
             string descript = this.bitNamesList_uc1.Decription;
             _listGroup1 = new List<string>();
@@ -393,8 +366,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             if ( Cur_ctrlType == CtrlType._8_bG) {
                 if(Valide_GroupText(tb_group1.Text)) _listGroup1.Add(tb_group1.Text);
                 if (Valide_GroupText(tb_group2.Text)) _listGroup2.Add(tb_group2.Text);
-
-               
             }
             if (Cur_ctrlType == CtrlType._8_bs) {
                 if (Valide_GroupText(tb_remote1.Text)) _listRemotes.Add(tb_remote1.Text);
@@ -402,15 +373,34 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 if (Valide_GroupText(tb_remote3.Text)) _listRemotes.Add(tb_remote3.Text);
                 if (Valide_GroupText(tb_remote4.Text)) _listRemotes.Add(tb_remote4.Text);
             }
-
-            Ctrl_DataObject temp = new Ctrl_DataObject(_id, descript, 
-                                                        _min, _max, _def,
-                                                        IndexLO, IndexHI, 
-                                                        strtype, is_slider_onlyFor_1byand2by,
-                                                        this.bitNamesList_uc1.GetBitNameDescriptions(), _listGroup1, _listGroup2, _listRemotes);
-
+ 
+            Ctrl_DataObject temp = new Ctrl_DataObject();
+            temp.ID = _id;
+            temp.DESC = descript;
+            temp.MIN = _min;
+            temp.MAX = _max;
+            temp.DEF = _def;
+            temp.INDEXLO = IndexLO;
+            temp.INDEXHI = IndexHI;
+            temp.CTRL_TYOE_STR = strtype;
+            temp.ISSLIDER = is_slider_onlyFor_1byand2by;
+            temp.BitsList = this.bitNamesList_uc1.GetBitNameDescriptions();
+            temp.Group1List = _listGroup1;
+            temp.Group2List = _listGroup2;
+            temp.RemoteList = _listRemotes;
             return temp;
-
         }
     }
 }
+/*
+         public void Rectify_indexLO(int arg)
+        {
+            _indexLO = arg;
+            updateTextboxes();
+        }
+        public void Rectify_indexHI(int arg)
+        {
+            _indexHI = arg;
+            updateTextboxes();
+        }
+ */

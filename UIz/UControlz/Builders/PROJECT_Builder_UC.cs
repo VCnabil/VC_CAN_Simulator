@@ -41,14 +41,11 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 }
             }
         }
-        //public void AddFromBlueprint(int argpgnid, int argpgn, string argpgnStr, string argDescpgn, List<Ctrl_DataObject> argListCtrls)
         public void AddFromBlueprint(int argpgnid, int argpgn, string argpgnStr, string argDescpgn, List<Ctrl_DataObject> argCtrlDOlist ) {
 
             if (fl_verticalpannel.Controls.Count < MaxPGNs)
             {
-
                 var newPGN = new PGN_Builder_UC( argpgnid,  argpgn,  argpgnStr,  argDescpgn, argCtrlDOlist);
-                 
                 fl_verticalpannel.Controls.Add(newPGN);
                 newPGN.Btn_delete_was_Clicked_Event += NewPGN_RemoveButtonClicked;
                 listOf_PGN_UCs_InProject.Add(newPGN);
@@ -57,10 +54,7 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                     btn_AddPGN.Enabled = false;
                 }
             }
-           
         }
-
-
         private void NewPGN_RemoveButtonClicked(object sender, EventArgs e)
         {
             var pgn = sender as PGN_Builder_UC;
@@ -76,7 +70,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             btn_AddPGN.Enabled = true;
             listOf_PGN_UCs_InProject.Remove(argPgnBuilder);
         }
-
         public void ClearAllPGNSRecursive() {
 
             for (int i = 0; i < listOf_PGN_UCs_InProject.Count; i++)
@@ -88,7 +81,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 RemovePGNbuilder(listOf_PGN_UCs_InProject[r]);
             }
             _pgnIdcnt = 0;
-
         }
         public Project_DataObject Make_ProjectDataObject() {
 
@@ -97,7 +89,9 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             for (int i = 0; i < listOf_PGN_UCs_InProject.Count; i++) {
                 templistargPgnlist.Add(listOf_PGN_UCs_InProject[i].Make_PGNDataObj());
             }
-            Project_DataObject temp_Project_DataObj = new Project_DataObject("ssrs", templistargPgnlist);
+            Project_DataObject temp_Project_DataObj = new Project_DataObject();
+            temp_Project_DataObj.Title = "ssrs k12";
+            temp_Project_DataObj.AllPgnList = templistargPgnlist;
 
             return temp_Project_DataObj;
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,42 +36,51 @@ namespace VC_CAN_Simulator.UIz.Formz
 
         private void Btn_add_testPgn_Click(object sender, EventArgs e)
         {
-            int pgnId_1= 0;
-            string pgnHex_1 = "12FF1229";
-            int pgnint_1 = 318706217;
-            string pgndescription_1 = "testing load";
+            //int pgnId_1= 0;
+            //string pgnHex_1 = "12FF1229";
+            //int pgnint_1 = 318706217;
+            //string pgndescription_1 = "testing load";
 
-            int ctrl_ID_1_0 = 0;
-            string strl_desc_1_0 = " an 8 bitter";
-            string ctrl_1_0_type = "_8_bs";
-            CtrlType theenum_1_0 = StringToEnum(ctrl_1_0_type);
-            int min_1_0 = 0;
-            int max_1_0 = 255;
-            int def_1_0 = 8;
-            int indexlo_1_0 = 0;
-            int indexhi_1_0 = 0;
-            bool isslider_1_0 = false;
-            List<string> bitslist_1_0 = new List<string>();
-            bitslist_1_0.Add("1. bit1");
-            bitslist_1_0.Add("2. bit2");
-            bitslist_1_0.Add("5. bit5");
+            //int ctrl_ID_1_0 = 0;
+            //string strl_desc_1_0 = " an 8 bitter";
+            //string ctrl_1_0_type = "_8_bs";
+            //CtrlType theenum_1_0 = StringToEnum(ctrl_1_0_type);
+            //int min_1_0 = 0;
+            //int max_1_0 = 255;
+            //int def_1_0 = 8;
+            //int indexlo_1_0 = 0;
+            //int indexhi_1_0 = 0;
+            //bool isslider_1_0 = false;
+            //List<string> bitslist_1_0 = new List<string>();
+            //bitslist_1_0.Add("1. bit1");
+            //bitslist_1_0.Add("2. bit2");
+            //bitslist_1_0.Add("5. bit5");
 
-            List<string> group1list_1_0 = new List<string>();
-            List<string> group1list_2_0 = new List<string>();
-            List<string> remotelist_1_0 = new List<string>();
-            remotelist_1_0.Add("1,0,1,0");
-            remotelist_1_0.Add("1,1,2,2");
+            //List<string> group1list_1_0 = new List<string>();
+            //List<string> group1list_2_0 = new List<string>();
+            //List<string> remotelist_1_0 = new List<string>();
+            //remotelist_1_0.Add("1,0,1,0");
+            //remotelist_1_0.Add("1,1,2,2");
 
+            string _filename_objbuilder = "TEST014";
+            string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";
+            string path_filenameFromMain = PATH_dIR + _filename_objbuilder + ".json";
+            Project_DataObject PROJECTTOSAVE  = LoadJsonFile(path_filenameFromMain);
 
-            Ctrl_DataObject temp = new Ctrl_DataObject(ctrl_ID_1_0, strl_desc_1_0,
-                                                     min_1_0, max_1_0, def_1_0,
-                                                     indexlo_1_0, indexhi_1_0,
-                                                     ctrl_1_0_type, isslider_1_0,
-                                                     bitslist_1_0, group1list_1_0, group1list_2_0, remotelist_1_0);
-            List<Ctrl_DataObject> listctrlDo = new List<Ctrl_DataObject>();
-            listctrlDo.Add(temp);
+            int howmnaypgns = PROJECTTOSAVE.AllPgnList.Count;
 
-            _PROJbUILDER_UC.AddFromBlueprint(pgnId_1, pgnint_1, pgnHex_1, pgndescription_1, listctrlDo);
+            for (int i = 0; i < howmnaypgns; i++)
+            {
+                _PROJbUILDER_UC.AddFromBlueprint(PROJECTTOSAVE.AllPgnList[i].IDpgn, PROJECTTOSAVE.AllPgnList[i].PGN_int, PROJECTTOSAVE.AllPgnList[i].PGN_strHEX, PROJECTTOSAVE.AllPgnList[i].DESCpgn, PROJECTTOSAVE.AllPgnList[0].CtrlList);
+
+            }
+        }
+
+        private Project_DataObject LoadJsonFile(string path_filenameFromMain)
+        {
+            string json = System.IO.File.ReadAllText(path_filenameFromMain);
+            Project_DataObject myPgnList = JsonConvert.DeserializeObject<Project_DataObject>(json);
+            return myPgnList;
         }
 
         private void Btn_clearAll_Click(object sender, EventArgs e)
@@ -91,7 +101,7 @@ namespace VC_CAN_Simulator.UIz.Formz
         {
             Project_DataObject PROJECTTOSAVE= _PROJbUILDER_UC.Make_ProjectDataObject();
 
-            string _filename_objbuilder = "TEST01";
+            string _filename_objbuilder = "TEST014";
             string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";
             string path_filenameFromMain= PATH_dIR + _filename_objbuilder + ".json";
       
