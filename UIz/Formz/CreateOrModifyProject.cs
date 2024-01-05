@@ -36,31 +36,6 @@ namespace VC_CAN_Simulator.UIz.Formz
 
         private void Btn_add_testPgn_Click(object sender, EventArgs e)
         {
-            //int pgnId_1= 0;
-            //string pgnHex_1 = "12FF1229";
-            //int pgnint_1 = 318706217;
-            //string pgndescription_1 = "testing load";
-
-            //int ctrl_ID_1_0 = 0;
-            //string strl_desc_1_0 = " an 8 bitter";
-            //string ctrl_1_0_type = "_8_bs";
-            //CtrlType theenum_1_0 = StringToEnum(ctrl_1_0_type);
-            //int min_1_0 = 0;
-            //int max_1_0 = 255;
-            //int def_1_0 = 8;
-            //int indexlo_1_0 = 0;
-            //int indexhi_1_0 = 0;
-            //bool isslider_1_0 = false;
-            //List<string> bitslist_1_0 = new List<string>();
-            //bitslist_1_0.Add("1. bit1");
-            //bitslist_1_0.Add("2. bit2");
-            //bitslist_1_0.Add("5. bit5");
-
-            //List<string> group1list_1_0 = new List<string>();
-            //List<string> group1list_2_0 = new List<string>();
-            //List<string> remotelist_1_0 = new List<string>();
-            //remotelist_1_0.Add("1,0,1,0");
-            //remotelist_1_0.Add("1,1,2,2");
 
             string _filename_objbuilder = "TEST016";
             string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";

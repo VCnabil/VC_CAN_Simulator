@@ -71,6 +71,7 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             tb_indexLO.Text = _indexLO.ToString();
             tb_indexHI.Text = _indexHI.ToString();
             this.bitNamesList_uc1.SetDescription_fromBlueprint(_dec);
+            this.bitNamesList_uc1.SetBitNameDescriptions(argCtrlDO.BitsList);
 
             _listGroup1 = argCtrlDO.Group1List;
             _listGroup2 = argCtrlDO.Group2List;
@@ -126,7 +127,9 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             cb_CtrlType.SelectedIndex = (int)Cur_ctrlType;
 
            Showhide_Uielements_by_curtypeSeletion();
-           //PresetValues_by_curTypeSelection();
+            this.bitNamesList_uc1.Show_AddRowButton(false);
+            if (CUR_TYPECtrl == CtrlType._8_bs || CUR_TYPECtrl == CtrlType._8_bG)
+                this.bitNamesList_uc1.Show_AddRowButton(true);
             updateTextboxes();
 
 
