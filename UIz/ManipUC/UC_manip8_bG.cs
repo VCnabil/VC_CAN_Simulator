@@ -9,22 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VC_CAN_Simulator.Backend;
 using VC_CAN_Simulator.DataObjects;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static VC_CAN_Simulator.Backend.Helpers;
 
 namespace VC_CAN_Simulator.UIz.ManipUC
 {
     public partial class UC_manip8_bG : UserControl
     {
+        bool[] ByteRepresentation;
         Color borderColor;
         int _cur_INT_Value;
         byte[] my2bytes;
         #region _8_bG
-
+        List<System.Windows.Forms.RadioButton> radioButtons;
         private int maxWidth = 250;
         private int rbHeight = 15;
         private int maxHeight = 80;
         private int groupeUIwidth;
-        private RadioButton lastCheckedRadioButton;
+        private System.Windows.Forms.RadioButton lastCheckedRadioButton;
 
         List<CustomGroupObj> customGroupData;
         CustomGroupObj group1;
@@ -34,23 +36,29 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         // List<int> allGroups_bits_used;
 
         CustGroupdata_Validator validator;
+        
 
         #endregion
 
         public UC_manip8_bG()
         {
             InitializeComponent();
+            textBox_error.Text = "no error";
+            textBox_error.Hide();
             my2bytes = new byte[2];
             
-            InitGroups(2, 2);
+            //InitGroups(2, 2);
             Init(3);
         }
 
         public UC_manip8_bG(Ctrl_DataObject argCtrlData)
         {
             InitializeComponent();
+            textBox_error.Text = "no error";
+            textBox_error.Hide();
             my2bytes = new byte[2];
-           
+            ByteRepresentation= new bool[8];
+            radioButtons = new List<System.Windows.Forms.RadioButton>();
 
             if (argCtrlData == null)
             {
@@ -112,13 +120,27 @@ namespace VC_CAN_Simulator.UIz.ManipUC
                 return;
             }
 
-            validator = new CustGroupdata_Validator(argCtrlData.BitsList, customGroupData, this.lbl_Desc);
+            validator = new CustGroupdata_Validator(argCtrlData.BitsList, customGroupData);
 
-            if (!validator.These_Groups_are_VALID) { return; }
+            if (!validator.These_Groups_are_VALID) {
 
+                textBox_error.Text = validator.TheProblemString;
+                textBox_error.Show();
+                return; }
+
+            int numberofGroups = validator.GetListofGroup_bitList_ints().Count();
+            if (numberofGroups == 0)
+            {
+                MessageBox.Show("no groups");
+                return;
+            }
+            //for(int g=0; g< numberofGroups; g++)
+            //{
+                 
+            //}
 
             //get rbs and events and calcvalue
-            //InitGroups(numberofGroups, 2);
+            InitGroups(validator.GetDic_bitlist(),validator.GetValid_GroupObjects());
             Init(3);
         }
         public void Init(int argBorderColor)
@@ -144,9 +166,11 @@ namespace VC_CAN_Simulator.UIz.ManipUC
 
 
         }
-        public void InitGroups(int argNumberofGroups, int numberofRBperGroup)
+        public void InitGroups( Dictionary<int, string> argdictbitnames, List<CustomGroupObj> arglistGroupObjs)
         {
+            int argNumberofGroups = arglistGroupObjs.Count();
             if (argNumberofGroups == 0) return;
+
 
             groupeUIwidth = CalgGroupWidth(argNumberofGroups);
             lbl_Bval.Text = groupeUIwidth.ToString();
@@ -157,39 +181,116 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             string fontFamily = GetFontByIndex(0);// Desired font family
             for (int i = 0; i < argNumberofGroups; i++)
             {
-                GroupBox groupBox = new GroupBox
+                System.Windows.Forms.GroupBox groupBox = new System.Windows.Forms.GroupBox
                 {
-                    Text = "gb_"+i.ToString(),
+                    Text = arglistGroupObjs[i].GroupName,  
                     Width = groupeUIwidth,
                     Height = maxHeight,
                     Location = new Point(groupeUIwidth * i+ marginLeft, marginTop)
                 };
                 this.Controls.Add(groupBox);
                 groupBox.Font = new Font(fontFamily, fontSize); // Set font size
+                int numberofRBperGroup = arglistGroupObjs[i].Group_bitList_ints().Count();
                 for (int j = 0; j < numberofRBperGroup; j++)
                 {
-                    RadioButton radioButton = new RadioButton
+                    System.Windows.Forms.RadioButton radioButton = new System.Windows.Forms.RadioButton
                     {
-                        Text = $"rb{j + 1}",
+                        Text = argdictbitnames[arglistGroupObjs[i].Group_bitList_ints()[j]],
+                        Name = "rg_" +  arglistGroupObjs[i].Group_bitList_ints()[j] ,  //  $"rb{j }",
                         Location = new Point(2, rbHeight + j * rbHeight),
                         AutoSize = true,
                         Checked = j == 0 // First radio button enabled
                     };
+                    if (j == 0) {
+                        string lastChar = radioButton.Name.Substring(radioButton.Name.Length - 1);
+                        int number = int.Parse(lastChar); 
+                        ByteRepresentation[number] = true;
+                    }
                     radioButton.Font = new Font(fontFamily, fontSize); // Set font size
-                    radioButton.CheckedChanged += RadioButton_CheckedChanged;
+                    radioButtons.Add(radioButton);
+                    
                     groupBox.Controls.Add(radioButton);
                 }
             }
+            Ipdate_cur_INT_Value();
+            this.lbl_Desc.Text = _cur_INT_Value.ToString();
         }
+
+        void Ipdate_cur_INT_Value() { 
+            _cur_INT_Value = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                if (ByteRepresentation[i])
+                {
+                    _cur_INT_Value += (int)Math.Pow(2, i);
+                }
+            }
+        
+        }
+
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton radioButton = sender as RadioButton;
+            System.Windows.Forms.RadioButton radioButton = sender as System.Windows.Forms.RadioButton;
             if (radioButton != null && radioButton.Checked)
             {
                 lastCheckedRadioButton = radioButton;
                 // Handle the radio button change here
                 // For example, you can use lastCheckedRadioButton to get the currently selected radio button
+                string input = radioButton.Name;
+                int result = -1;
+
+                if (input.Length > 0)
+                {
+                    string lastChar = input.Substring(input.Length - 1);
+                    if (int.TryParse(lastChar, out result))
+                    {
+                       // this.lbl_Desc.Text = result.ToString();
+                        ByteRepresentation[result] = true;
+                        // Successfully parsed the last character as an integer
+                        //Console.WriteLine($"The extracted integer is: {result}");
+                    }
+                    else
+                    {
+                        // Console.WriteLine("The last character is not a number.");
+                        this.lbl_Desc.Text = "NAN.";
+                    }
+                }
+                else
+                {
+                    this.lbl_Desc.Text = "mpty";
+                    //Console.WriteLine("The input string is empty.");
+                }
+               // this.lbl_Desc.Text = lastCheckedRadioButton.Name;
+            }else
+            if (radioButton != null && !radioButton.Checked) {
+                string input = radioButton.Name;
+                int result = -1;
+                if (input.Length > 0)
+                {
+                    string lastChar = input.Substring(input.Length - 1);
+                    if (int.TryParse(lastChar, out result))
+                    {
+                        //this.lbl_Desc.Text += "!"+ result.ToString();
+                        ByteRepresentation[result] = false;
+                        // Successfully parsed the last character as an integer
+                        //Console.WriteLine($"The extracted integer is: {result}");
+                    }
+                    else
+                    {
+                        // Console.WriteLine("The last character is not a number.");
+                        this.lbl_Desc.Text = "NAN.";
+                    }
+                }
+                else
+                {
+                    this.lbl_Desc.Text = "mpty";
+                    //Console.WriteLine("The input string is empty.");
+                }
+
+
             }
+            Ipdate_cur_INT_Value();
+            this.lbl_Desc.Text = _cur_INT_Value.ToString();
         }
         #endregion
         
@@ -226,6 +327,10 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             control.MouseEnter += UC_manip8_bs_MouseEnter;
             control.MouseLeave += UC_manip8_bs_MouseLeave;
 
+            foreach(System.Windows.Forms.RadioButton rb in radioButtons)
+            {
+                rb.CheckedChanged += RadioButton_CheckedChanged;
+            }
             foreach (Control child in control.Controls)
             {
                 SubscribeHoverEvents(child);
@@ -237,7 +342,10 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             btn_reset.Click -= Btn_reset_Click;
             control.MouseEnter -= UC_manip8_bs_MouseEnter;
             control.MouseLeave -= UC_manip8_bs_MouseLeave;
-
+            foreach (System.Windows.Forms.RadioButton rb in radioButtons)
+            {
+                rb.CheckedChanged -= RadioButton_CheckedChanged;
+            }
             foreach (Control child in control.Controls)
             {
                 UnsubscribeHoverEvents(child);

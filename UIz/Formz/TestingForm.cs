@@ -65,18 +65,20 @@ namespace VC_CAN_Simulator.UIz.Formz
 
 
             List<string> BilList_A = new List<string>();
-            BilList_A.Add("0. bit0 alarm");
-            BilList_A.Add("1. bit1 alarm");
+            BilList_A.Add("0. bit0 yo");
+            BilList_A.Add("1. bit1 idk");
           //  BilList_A.Add("2. bit2 alarm");
-            BilList_A.Add("3. bit3 alarm");
-            BilList_A.Add("4. bit4 alarm");
+            BilList_A.Add("3. bit3 mama");
+            BilList_A.Add("4. bit4 man");
            // BilList_A.Add("5. bit5 alarm");
-            BilList_A.Add("6. bit6 alarm");
-            BilList_A.Add("7. bit7 alarm");
+            BilList_A.Add("6. bit6 sofat");
+            BilList_A.Add("7. bit7 whatever");
             List<string> Groups1 = new List<string>();
-            Groups1.Add("0,4,6");
+            Groups1.Add("0,3");
+            //Groups1.Add("");
             List<string> Groups2 = new List<string>();
-            Groups2.Add("1,4,7");
+            Groups2.Add("1,4");
+            Groups2.Add("6,7");
 
             Ctrl_DataObject _bitsA_ = new Ctrl_DataObject();
             _bitsA_.ID = 0;

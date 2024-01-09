@@ -31,6 +31,7 @@
             this.lbl_Desc = new System.Windows.Forms.Label();
             this.lbl_Bval = new System.Windows.Forms.Label();
             this.btn_reset = new System.Windows.Forms.Button();
+            this.textBox_error = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl_Desc
@@ -62,10 +63,22 @@
             this.btn_reset.Text = "reset";
             this.btn_reset.UseVisualStyleBackColor = true;
             // 
+            // textBox_error
+            // 
+            this.textBox_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.textBox_error.Location = new System.Drawing.Point(8, 3);
+            this.textBox_error.Multiline = true;
+            this.textBox_error.Name = "textBox_error";
+            this.textBox_error.Size = new System.Drawing.Size(480, 163);
+            this.textBox_error.TabIndex = 13;
+            this.textBox_error.Text = "Description there was an error on one or more components. please check value at g" +
+    "roup1 and bits entered ";
+            // 
             // UC_manip8_bG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox_error);
             this.Controls.Add(this.lbl_Desc);
             this.Controls.Add(this.lbl_Bval);
             this.Controls.Add(this.btn_reset);
@@ -81,5 +94,6 @@
         private System.Windows.Forms.Label lbl_Desc;
         private System.Windows.Forms.Label lbl_Bval;
         private System.Windows.Forms.Button btn_reset;
+        private System.Windows.Forms.TextBox textBox_error;
     }
 }

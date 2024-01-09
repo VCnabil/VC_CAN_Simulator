@@ -105,6 +105,12 @@
     <Compile Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.Designer.cs">
       <DependentUpon>UC_PGN_Controller.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIz\ManipUC\MicroUnits\uc_microRadioButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\MicroUnits\uc_microRadioButton.Designer.cs">
+      <DependentUpon>uc_microRadioButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIz\ManipUC\UC_DataDisplayCTRL.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.resx">
       <DependentUpon>UC_PGN_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\MicroUnits\uc_microRadioButton.resx">
+      <DependentUpon>uc_microRadioButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\ManipUC\UC_DataDisplayCTRL.resx">
       <DependentUpon>UC_DataDisplayCTRL.cs</DependentUpon>
