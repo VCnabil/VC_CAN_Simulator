@@ -73,6 +73,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\CustGroupdata_Validator.cs" />
+    <Compile Include="Backend\CustomGroupObj.cs" />
     <Compile Include="Backend\Helpers.cs" />
     <Compile Include="DataObjects\Ctrl_DataObject.cs" />
     <Compile Include="DataObjects\Pgn_DataObject.cs" />
@@ -96,6 +98,42 @@
     </Compile>
     <Compile Include="UIz\Formz\TestingForm.Designer.cs">
       <DependentUpon>TestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.Designer.cs">
+      <DependentUpon>UC_PGN_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_DataDisplayCTRL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_DataDisplayCTRL.Designer.cs">
+      <DependentUpon>UC_DataDisplayCTRL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip8_bG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip8_bG.Designer.cs">
+      <DependentUpon>UC_manip8_bG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip8_bs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip8_bs.Designer.cs">
+      <DependentUpon>UC_manip8_bs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip_LABEL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip_LABEL.Designer.cs">
+      <DependentUpon>UC_manip_LABEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip_SLIDER.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip_SLIDER.Designer.cs">
+      <DependentUpon>UC_manip_SLIDER.cs</DependentUpon>
     </Compile>
     <Compile Include="UIz\UControlz\BinNameRow_uc.cs">
       <SubType>UserControl</SubType>
@@ -144,6 +182,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\TestingForm.resx">
       <DependentUpon>TestingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.resx">
+      <DependentUpon>UC_PGN_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_DataDisplayCTRL.resx">
+      <DependentUpon>UC_DataDisplayCTRL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_manip8_bG.resx">
+      <DependentUpon>UC_manip8_bG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_manip8_bs.resx">
+      <DependentUpon>UC_manip8_bs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_manip_LABEL.resx">
+      <DependentUpon>UC_manip_LABEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_manip_SLIDER.resx">
+      <DependentUpon>UC_manip_SLIDER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\UControlz\BinNameRow_uc.resx">
       <DependentUpon>BinNameRow_uc.cs</DependentUpon>

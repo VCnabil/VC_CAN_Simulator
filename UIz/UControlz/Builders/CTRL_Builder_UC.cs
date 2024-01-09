@@ -117,11 +117,6 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 }
             }
 
-
-       
-
-
-
             PopulateComboBox();
             Cur_ctrlType = StringToEnum(argCtrlDO.CTRL_TYOE_STR);
             cb_CtrlType.SelectedIndex = (int)Cur_ctrlType;

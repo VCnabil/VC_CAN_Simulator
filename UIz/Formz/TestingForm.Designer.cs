@@ -38,7 +38,7 @@
             this.MaximumSize = new System.Drawing.Size(2900, 2000);
             this.MinimumSize = new System.Drawing.Size(2900, 1680);
             this.Name = "TestingForm";
-            this.Text = "TestingForm";
+            this.Text = "1";
             this.ResumeLayout(false);
 
         }
