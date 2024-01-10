@@ -34,6 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_MKV = new System.Windows.Forms.Button();
+            this.btn_ERAF = new System.Windows.Forms.Button();
+            this.btn_WSKI = new System.Windows.Forms.Button();
+            this.btn_KA27 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_load
@@ -82,18 +85,48 @@
             // 
             // btn_MKV
             // 
-            this.btn_MKV.Location = new System.Drawing.Point(12, 386);
+            this.btn_MKV.Location = new System.Drawing.Point(6, 249);
             this.btn_MKV.Name = "btn_MKV";
             this.btn_MKV.Size = new System.Drawing.Size(146, 52);
             this.btn_MKV.TabIndex = 24;
             this.btn_MKV.Text = "run MKV";
             this.btn_MKV.UseVisualStyleBackColor = true;
             // 
+            // btn_ERAF
+            // 
+            this.btn_ERAF.Location = new System.Drawing.Point(6, 317);
+            this.btn_ERAF.Name = "btn_ERAF";
+            this.btn_ERAF.Size = new System.Drawing.Size(150, 52);
+            this.btn_ERAF.TabIndex = 25;
+            this.btn_ERAF.Text = "run ERAF";
+            this.btn_ERAF.UseVisualStyleBackColor = true;
+            // 
+            // btn_WSKI
+            // 
+            this.btn_WSKI.Location = new System.Drawing.Point(2, 386);
+            this.btn_WSKI.Name = "btn_WSKI";
+            this.btn_WSKI.Size = new System.Drawing.Size(150, 52);
+            this.btn_WSKI.TabIndex = 26;
+            this.btn_WSKI.Text = "run WSKI";
+            this.btn_WSKI.UseVisualStyleBackColor = true;
+            // 
+            // btn_KA27
+            // 
+            this.btn_KA27.Location = new System.Drawing.Point(6, 191);
+            this.btn_KA27.Name = "btn_KA27";
+            this.btn_KA27.Size = new System.Drawing.Size(150, 52);
+            this.btn_KA27.TabIndex = 27;
+            this.btn_KA27.Text = "run KA27";
+            this.btn_KA27.UseVisualStyleBackColor = true;
+            // 
             // CustomCanGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_KA27);
+            this.Controls.Add(this.btn_WSKI);
+            this.Controls.Add(this.btn_ERAF);
             this.Controls.Add(this.btn_MKV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -114,5 +147,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_MKV;
+        private System.Windows.Forms.Button btn_ERAF;
+        private System.Windows.Forms.Button btn_WSKI;
+        private System.Windows.Forms.Button btn_KA27;
     }
 }

@@ -106,11 +106,65 @@
     <Compile Include="UIz\Formz\CustomCanGUI.Designer.cs">
       <DependentUpon>CustomCanGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIz\Formz\SingleForm\MKV_GUI.cs">
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\ERAF_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIz\Formz\SingleForm\MKV_GUI.Designer.cs">
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\ERAF_GUI.Designer.cs">
+      <DependentUpon>ERAF_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF34_ClutchCom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF34_ClutchCom.Designer.cs">
+      <DependentUpon>UC_ERAF_PGN_FF34_ClutchCom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF50_Helm_TakeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF50_Helm_TakeCtrl.Designer.cs">
+      <DependentUpon>UC_ERAF_PGN_FF50_Helm_TakeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF51_LeverPos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF51_LeverPos.Designer.cs">
+      <DependentUpon>UC_ERAF_PGN_FF51_LeverPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\Ka2700Gui\KA27_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\Ka2700Gui\KA27_GUI.Designer.cs">
+      <DependentUpon>KA27_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\MKV_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\MKV_GUI.Designer.cs">
       <DependentUpon>MKV_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_AzimthSliders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_AzimthSliders.Designer.cs">
+      <DependentUpon>UC_WSKI_AzimthSliders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_CANMessageOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_CANMessageOut.Designer.cs">
+      <DependentUpon>UC_WSKI_CANMessageOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_SteerEnginSliders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_SteerEnginSliders.Designer.cs">
+      <DependentUpon>UC_WSKI_SteerEnginSliders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.Designer.cs">
+      <DependentUpon>WSKI_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIz\Formz\TestingForm.cs">
       <SubType>Form</SubType>
@@ -211,8 +265,35 @@
     <EmbeddedResource Include="UIz\Formz\CustomCanGUI.resx">
       <DependentUpon>CustomCanGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIz\Formz\SingleForm\MKV_GUI.resx">
+    <EmbeddedResource Include="UIz\Formz\SingleForm\ErafGui\ERAF_GUI.resx">
+      <DependentUpon>ERAF_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF34_ClutchCom.resx">
+      <DependentUpon>UC_ERAF_PGN_FF34_ClutchCom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF50_Helm_TakeCtrl.resx">
+      <DependentUpon>UC_ERAF_PGN_FF50_Helm_TakeCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF51_LeverPos.resx">
+      <DependentUpon>UC_ERAF_PGN_FF51_LeverPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\Ka2700Gui\KA27_GUI.resx">
+      <DependentUpon>KA27_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\MKV_GUI.resx">
       <DependentUpon>MKV_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_AzimthSliders.resx">
+      <DependentUpon>UC_WSKI_AzimthSliders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_CANMessageOut.resx">
+      <DependentUpon>UC_WSKI_CANMessageOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_SteerEnginSliders.resx">
+      <DependentUpon>UC_WSKI_SteerEnginSliders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.resx">
+      <DependentUpon>WSKI_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\TestingForm.resx">
       <DependentUpon>TestingForm.cs</DependentUpon>
