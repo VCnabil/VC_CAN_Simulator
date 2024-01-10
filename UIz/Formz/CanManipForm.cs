@@ -139,7 +139,6 @@ namespace VC_CAN_Simulator.UIz.Formz
             this.flowLayoutPanel1.Controls.Add(pgntest5);
 
 
-
             this.flowLayoutPanel1.Width = this.Width-50;
             this.flowLayoutPanel1.Height = pgntest.Height+10;
         }
