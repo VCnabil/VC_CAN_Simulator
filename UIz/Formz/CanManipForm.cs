@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -22,6 +23,8 @@ namespace VC_CAN_Simulator.UIz.Formz
         CanManager canManager;
         public CanManipForm()
         {
+            #region TEST
+            /*
             Ctrl_DataObject _8bit_Label = new Ctrl_DataObject();
             _8bit_Label.ID = 0;
             _8bit_Label.MIN = 0;
@@ -108,7 +111,22 @@ namespace VC_CAN_Simulator.UIz.Formz
             pgnobj.CtrlList.Add(_8bit_Slider);
             pgnobj.CtrlList.Add(_16bit_Slider);
             pgnobj.CtrlList.Add(_bitsA_);
+            */
+            #endregion
 
+
+
+            //Pgn_DataObject pgnobj = new Pgn_DataObject();
+            //pgnobj.IDpgn = 0;
+            //pgnobj.PGN_int = 0x18FEF100;
+            //pgnobj.PGN_strHEX = "18FEF100";
+            //pgnobj.DESCpgn = "Engine 1";
+            //pgnobj.CtrlList = new List<Ctrl_DataObject>();
+            //pgnobj.CtrlList.Add(_8bit_Label);
+            //pgnobj.CtrlList.Add(_16bit_Label);
+            //pgnobj.CtrlList.Add(_8bit_Slider);
+            //pgnobj.CtrlList.Add(_16bit_Slider);
+            //pgnobj.CtrlList.Add(_bitsA_);
 
             InitializeComponent();
             this.Width = 2400/2;
@@ -126,21 +144,32 @@ namespace VC_CAN_Simulator.UIz.Formz
             btn_StartStop.Click += Btn_StartStop_Click;
             _loopIsRunning = false;
 
-            UC_PGN_Controller pgntest = new UC_PGN_Controller(pgnobj);
-           // pgntest.Location = new Point(0, 0);
-            this.flowLayoutPanel1.Controls.Add(pgntest);
-            UC_PGN_Controller pgntest2= new UC_PGN_Controller(pgnobj);
-            this.flowLayoutPanel1.Controls.Add(pgntest2);
-            UC_PGN_Controller pgntest3 = new UC_PGN_Controller(pgnobj);
-            this.flowLayoutPanel1.Controls.Add(pgntest3);
-            UC_PGN_Controller pgntest4 = new UC_PGN_Controller(pgnobj);
-            this.flowLayoutPanel1.Controls.Add(pgntest4);
-            UC_PGN_Controller pgntest5 = new UC_PGN_Controller(pgnobj);
-            this.flowLayoutPanel1.Controls.Add(pgntest5);
+
+           // string _filename_objbuilder = "TEST016";
+         //   string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";
+         //   string path_filenameFromMain = PATH_dIR + _filename_objbuilder + ".json";
+            Project_DataObject PROJECTTOSAVE = LoadJsonFile(Get_FullFilePAth());
+            int apgntestheight = 0;
+            for (int i = 0; i < PROJECTTOSAVE.AllPgnList.Count; i++)
+            {
+                Pgn_DataObject pgnobj = PROJECTTOSAVE.AllPgnList[i];
+                UC_PGN_Controller pgntest = new UC_PGN_Controller(pgnobj);
+                apgntestheight = pgntest.Height;
+                this.flowLayoutPanel1.Controls.Add(pgntest);
+            }
+
+         
 
 
             this.flowLayoutPanel1.Width = this.Width-50;
-            this.flowLayoutPanel1.Height = pgntest.Height+10;
+            this.flowLayoutPanel1.Height = apgntestheight+10;
+        }
+
+        private Project_DataObject LoadJsonFile(string path_filenameFromMain)
+        {
+            string json = System.IO.File.ReadAllText(path_filenameFromMain);
+            Project_DataObject myPgnList = JsonConvert.DeserializeObject<Project_DataObject>(json);
+            return myPgnList;
         }
 
         private void Btn_StartStop_Click(object sender, EventArgs e)

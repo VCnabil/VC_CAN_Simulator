@@ -17,7 +17,8 @@ namespace VC_CAN_Simulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CanManipForm());
+            Application.Run(new CustomCanGUI());
+            //Application.Run(new CanManipForm());
             //Application.Run(new TestingForm());
             // Application.Run(new CanSimForm());
             //Application.Run(new CreateOrModifyProject());

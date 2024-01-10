@@ -18,6 +18,15 @@ namespace VC_CAN_Simulator.Backend
             _1_By = 2,
             _2_by = 3
         }
+        static string _saveFileName = "TEST016";
+        public static string SaveFileName { get { return _saveFileName; } set { _saveFileName = value; } }
+
+        static string _saveDirPath = @"C:\___Root_VCI_Projects\Generic_VC_PGN_SIMULATOR\genericSim\GENERICSIM_FILES\JsonCanSim\";
+        public static string SaveDirPath { get { return _saveDirPath; } private set { _saveDirPath = value; } }
+
+        static string _saveFullFilePath="";
+        public static string Get_FullFilePAth() { return _saveFullFilePath; }
+        public static void Set_FullFilePAth(  string argFullFilePath) {   _saveFullFilePath= argFullFilePath; }
         private static readonly Color[] colors = new Color[]
         {
                 Color.FromArgb(255, 0, 0, 0),       // Black
@@ -54,6 +63,7 @@ namespace VC_CAN_Simulator.Backend
             "Segoe UI",
             "Niagara Solid",
         };
+        private static string saveFileName;
 
         public static string GetFontByIndex(int index)
         {
