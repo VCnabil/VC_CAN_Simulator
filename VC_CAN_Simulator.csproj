@@ -106,6 +106,12 @@
     <Compile Include="UIz\Formz\CustomCanGUI.Designer.cs">
       <DependentUpon>CustomCanGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MKV_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MKV_GUI.Designer.cs">
+      <DependentUpon>MKV_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIz\Formz\TestingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\CustomCanGUI.resx">
       <DependentUpon>CustomCanGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MKV_GUI.resx">
+      <DependentUpon>MKV_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\TestingForm.resx">
       <DependentUpon>TestingForm.cs</DependentUpon>

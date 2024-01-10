@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VC_CAN_Simulator.UIz.Formz.SingleForm;
 using static VC_CAN_Simulator.Backend.Helpers;
 namespace VC_CAN_Simulator.UIz.Formz
 {
@@ -25,7 +26,16 @@ namespace VC_CAN_Simulator.UIz.Formz
 
             btn_load.Click += Btn_loadManip_Click;
             btn_modify.Click += Btn_modCreate_Click;
+            btn_MKV.Click += Btn_run_MKV_Click;
             textBox_fileName.TextChanged += TextBox_fileName_TextChanged;
+        }
+
+        private void Btn_run_MKV_Click(object sender, EventArgs e)
+        {
+            using (MKV_GUI form1 = new MKV_GUI())
+            {
+                form1.ShowDialog();
+            }
         }
 
         private void TextBox_fileName_TextChanged(object sender, EventArgs e)

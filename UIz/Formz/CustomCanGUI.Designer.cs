@@ -33,6 +33,7 @@
             this.textBox_fileName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_MKV = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_load
@@ -79,11 +80,21 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "label2";
             // 
+            // btn_MKV
+            // 
+            this.btn_MKV.Location = new System.Drawing.Point(12, 386);
+            this.btn_MKV.Name = "btn_MKV";
+            this.btn_MKV.Size = new System.Drawing.Size(146, 52);
+            this.btn_MKV.TabIndex = 24;
+            this.btn_MKV.Text = "run MKV";
+            this.btn_MKV.UseVisualStyleBackColor = true;
+            // 
             // CustomCanGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_MKV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_fileName);
@@ -102,5 +113,6 @@
         private System.Windows.Forms.TextBox textBox_fileName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_MKV;
     }
 }
