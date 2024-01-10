@@ -32,13 +32,13 @@
             this.lbl_Bval = new System.Windows.Forms.Label();
             this.btn_reset = new System.Windows.Forms.Button();
             this.tlp_hori = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_def = new System.Windows.Forms.Label();
             this.tb_RawVAL = new System.Windows.Forms.TextBox();
             this.lbl_byteLOVal = new System.Windows.Forms.Label();
             this.lbl_byteHIVal = new System.Windows.Forms.Label();
             this.lbl_decVal = new System.Windows.Forms.Label();
             this.lbl_min = new System.Windows.Forms.Label();
             this.lbl_max = new System.Windows.Forms.Label();
-            this.lbl_def = new System.Windows.Forms.Label();
             this.tlp_hori.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +97,18 @@
             this.tlp_hori.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlp_hori.Size = new System.Drawing.Size(400, 140);
             this.tlp_hori.TabIndex = 14;
+            // 
+            // lbl_def
+            // 
+            this.lbl_def.AutoSize = true;
+            this.lbl_def.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_def.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.lbl_def.Location = new System.Drawing.Point(202, 1);
+            this.lbl_def.Name = "lbl_def";
+            this.lbl_def.Size = new System.Drawing.Size(92, 33);
+            this.lbl_def.TabIndex = 18;
+            this.lbl_def.Text = "0";
+            this.lbl_def.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tb_RawVAL
             // 
@@ -163,18 +175,6 @@
             this.lbl_max.TabIndex = 12;
             this.lbl_max.Text = "1000";
             this.lbl_max.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_def
-            // 
-            this.lbl_def.AutoSize = true;
-            this.lbl_def.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_def.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.lbl_def.Location = new System.Drawing.Point(202, 1);
-            this.lbl_def.Name = "lbl_def";
-            this.lbl_def.Size = new System.Drawing.Size(92, 33);
-            this.lbl_def.TabIndex = 18;
-            this.lbl_def.Text = "0";
-            this.lbl_def.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // UC_manip_LABEL
             // 

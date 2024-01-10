@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VC_CAN_Simulator.DataObjects;
+using VC_CAN_Simulator.UIz.ManipUC.BuildersManips;
 using static VC_CAN_Simulator.Backend.Helpers;
 
 namespace VC_CAN_Simulator.UIz.ManipUC
@@ -22,17 +23,25 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         int _myMax = 65535;
         int _myMidVal;
         int _myDefVal;
-        public UC_manip_LABEL()
+        UC_PGN_Controller _myUC_PGN_BASE;
+        int my_lo_indx;
+        int my_hi_indx;
+        public int ID_ctrl { get; private set; }
+        //public UC_manip_LABEL()
+        //{
+        //    InitializeComponent();
+        //    _is16bits = true;
+        //    my2bytes = new byte[2];
+        //    Init(3);
+        //}
+        //  
+        public UC_manip_LABEL(int argid,Ctrl_DataObject argCtrlData, UC_PGN_Controller argUC_PGN_BASE)
         {
             InitializeComponent();
-            _is16bits = true;
-            my2bytes = new byte[2];
-            Init(3);
-        }
-
-        public UC_manip_LABEL(Ctrl_DataObject argCtrlData)
-        {
-            InitializeComponent();
+            _myUC_PGN_BASE = argUC_PGN_BASE;
+            ID_ctrl = argid;
+            my_lo_indx = argCtrlData.INDEXLO;
+            my_hi_indx = argCtrlData.INDEXHI;
             if (argCtrlData == null)
             {
                 MessageBox.Show("null dataobj");
@@ -57,10 +66,44 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             {
                 _is16bits = true;
             }
-           
+
             my2bytes = new byte[2];
+            
             Init(argCtrlData);
         }
+        /*
+           public UC_manip_LABEL(Ctrl_DataObject argCtrlData)
+          {
+              InitializeComponent();
+              if (argCtrlData == null)
+              {
+                  MessageBox.Show("null dataobj");
+                  return;
+              }
+              if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._8_bs))
+              {
+                  MessageBox.Show("cannot be bs");
+                  return;
+              }
+
+              if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._8_bG))
+              {
+                  MessageBox.Show("cannot be bG");
+                  return;
+              }
+              if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._1_By))
+              {
+                  _is16bits = false;
+              }
+              if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._2_by))
+              {
+                  _is16bits = true;
+              }
+
+              my2bytes = new byte[2];
+              Init(argCtrlData);
+          }
+         */
 
         public void Init(Ctrl_DataObject argCtrlData)
         {
@@ -178,7 +221,14 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             if (arg_indexByteLo > 7) arg_indexByteLo = 7;
             if (arg_indexByteLo < 0) arg_indexByteLo = 0;
             borderColor = GetColorByIndex(arg_indexByteLo);
-
+            if (!_is16bits)
+            {
+                _myUC_PGN_BASE.Set_Display_LblColorsCodes(my_lo_indx, my_lo_indx, borderColor);
+            }
+            else
+            {
+                _myUC_PGN_BASE.Set_Display_LblColorsCodes(my_lo_indx, my_hi_indx, borderColor);
+            }
 
 
 

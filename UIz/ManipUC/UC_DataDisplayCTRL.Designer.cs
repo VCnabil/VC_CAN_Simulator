@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_7 = new System.Windows.Forms.Label();
+            this.lbl_6 = new System.Windows.Forms.Label();
+            this.lbl_5 = new System.Windows.Forms.Label();
+            this.lbl_4 = new System.Windows.Forms.Label();
+            this.lbl_3 = new System.Windows.Forms.Label();
+            this.lbl_2 = new System.Windows.Forms.Label();
+            this.lbl_1 = new System.Windows.Forms.Label();
             this.mlbl_B7 = new System.Windows.Forms.Label();
             this.mlbl_B6 = new System.Windows.Forms.Label();
             this.mlbl_B5 = new System.Windows.Forms.Label();
@@ -39,14 +46,7 @@
             this.mlbl_B0 = new System.Windows.Forms.Label();
             this.mcb_SEND = new System.Windows.Forms.CheckBox();
             this.mlbl_Title = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_0 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,13 +62,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Controls.Add(this.label8, 7, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_7, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_6, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_5, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_4, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_3, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_2, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.mlbl_B7, 7, 1);
             this.tableLayoutPanel1.Controls.Add(this.mlbl_B6, 6, 1);
             this.tableLayoutPanel1.Controls.Add(this.mlbl_B5, 5, 1);
@@ -79,7 +79,7 @@
             this.tableLayoutPanel1.Controls.Add(this.mlbl_B0, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.mcb_SEND, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.mlbl_Title, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_0, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -89,6 +89,90 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 140);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // lbl_7
+            // 
+            this.lbl_7.AutoSize = true;
+            this.lbl_7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_7.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_7.Location = new System.Drawing.Point(435, 123);
+            this.lbl_7.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_7.Name = "lbl_7";
+            this.lbl_7.Size = new System.Drawing.Size(64, 16);
+            this.lbl_7.TabIndex = 36;
+            // 
+            // lbl_6
+            // 
+            this.lbl_6.AutoSize = true;
+            this.lbl_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_6.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_6.Location = new System.Drawing.Point(373, 123);
+            this.lbl_6.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_6.Name = "lbl_6";
+            this.lbl_6.Size = new System.Drawing.Size(61, 16);
+            this.lbl_6.TabIndex = 35;
+            // 
+            // lbl_5
+            // 
+            this.lbl_5.AutoSize = true;
+            this.lbl_5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_5.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_5.Location = new System.Drawing.Point(311, 123);
+            this.lbl_5.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_5.Name = "lbl_5";
+            this.lbl_5.Size = new System.Drawing.Size(61, 16);
+            this.lbl_5.TabIndex = 34;
+            // 
+            // lbl_4
+            // 
+            this.lbl_4.AutoSize = true;
+            this.lbl_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_4.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_4.Location = new System.Drawing.Point(249, 123);
+            this.lbl_4.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_4.Name = "lbl_4";
+            this.lbl_4.Size = new System.Drawing.Size(61, 16);
+            this.lbl_4.TabIndex = 33;
+            // 
+            // lbl_3
+            // 
+            this.lbl_3.AutoSize = true;
+            this.lbl_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_3.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_3.Location = new System.Drawing.Point(187, 123);
+            this.lbl_3.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_3.Name = "lbl_3";
+            this.lbl_3.Size = new System.Drawing.Size(61, 16);
+            this.lbl_3.TabIndex = 32;
+            // 
+            // lbl_2
+            // 
+            this.lbl_2.AutoSize = true;
+            this.lbl_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_2.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_2.Location = new System.Drawing.Point(125, 123);
+            this.lbl_2.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_2.Name = "lbl_2";
+            this.lbl_2.Size = new System.Drawing.Size(61, 16);
+            this.lbl_2.TabIndex = 31;
+            // 
+            // lbl_1
+            // 
+            this.lbl_1.AutoSize = true;
+            this.lbl_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_1.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_1.Location = new System.Drawing.Point(63, 123);
+            this.lbl_1.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_1.Name = "lbl_1";
+            this.lbl_1.Size = new System.Drawing.Size(61, 16);
+            this.lbl_1.TabIndex = 30;
             // 
             // mlbl_B7
             // 
@@ -212,101 +296,17 @@
             this.mlbl_Title.Text = "title pgn 0x18ff2000";
             this.mlbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lbl_0
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 123);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
-            this.label1.TabIndex = 29;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 123);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
-            this.label2.TabIndex = 30;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(125, 123);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
-            this.label3.TabIndex = 31;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(187, 123);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 16);
-            this.label4.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(249, 123);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 16);
-            this.label5.TabIndex = 33;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(311, 123);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 16);
-            this.label6.TabIndex = 34;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(373, 123);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 16);
-            this.label7.TabIndex = 35;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(435, 123);
-            this.label8.Margin = new System.Windows.Forms.Padding(0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 16);
-            this.label8.TabIndex = 36;
+            this.lbl_0.AutoSize = true;
+            this.lbl_0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_0.Font = new System.Drawing.Font("Microsoft Uighur", 2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_0.Location = new System.Drawing.Point(1, 123);
+            this.lbl_0.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_0.Name = "lbl_0";
+            this.lbl_0.Size = new System.Drawing.Size(61, 16);
+            this.lbl_0.TabIndex = 29;
             // 
             // UC_DataDisplayCTRL
             // 
@@ -335,13 +335,13 @@
         private System.Windows.Forms.Label mlbl_B0;
         private System.Windows.Forms.CheckBox mcb_SEND;
         private System.Windows.Forms.Label mlbl_Title;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_7;
+        private System.Windows.Forms.Label lbl_6;
+        private System.Windows.Forms.Label lbl_5;
+        private System.Windows.Forms.Label lbl_4;
+        private System.Windows.Forms.Label lbl_3;
+        private System.Windows.Forms.Label lbl_2;
+        private System.Windows.Forms.Label lbl_1;
+        private System.Windows.Forms.Label lbl_0;
     }
 }

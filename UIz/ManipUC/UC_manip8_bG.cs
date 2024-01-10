@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VC_CAN_Simulator.Backend;
 using VC_CAN_Simulator.DataObjects;
+using VC_CAN_Simulator.UIz.ManipUC.BuildersManips;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static VC_CAN_Simulator.Backend.Helpers;
 
@@ -36,22 +37,24 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         // List<int> allGroups_bits_used;
 
         CustGroupdata_Validator validator;
-        
 
+        int my_lo_indx;
+        int my_hi_indx;
         #endregion
-
+        UC_PGN_Controller _myUC_PGN_BASE;
+        public int ID_ctrl { get; private set; }
         public UC_manip8_bG()
         {
             InitializeComponent();
             textBox_error.Text = "no error";
             textBox_error.Hide();
             my2bytes = new byte[2];
-            
+       
             //InitGroups(2, 2);
             Init(3);
         }
-
-        public UC_manip8_bG(Ctrl_DataObject argCtrlData)
+        /*
+                 public UC_manip8_bG(Ctrl_DataObject argCtrlData)
         {
             InitializeComponent();
             textBox_error.Text = "no error";
@@ -59,7 +62,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             my2bytes = new byte[2];
             ByteRepresentation= new bool[8];
             radioButtons = new List<System.Windows.Forms.RadioButton>();
-
+            lbl_Desc.Text = argCtrlData.DESC;
             if (argCtrlData == null)
             {
                 MessageBox.Show("null dataobj");
@@ -143,6 +146,108 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             InitGroups(validator.GetDic_bitlist(),validator.GetValid_GroupObjects());
             Init(3);
         }
+  
+         */
+
+        public UC_manip8_bG(int argid, Ctrl_DataObject argCtrlData, UC_PGN_Controller argUC_PGN_BASE)
+        {
+            InitializeComponent();
+            ID_ctrl = argid;
+            _myUC_PGN_BASE = argUC_PGN_BASE;
+            textBox_error.Text = "no error";
+            textBox_error.Hide();
+            my2bytes = new byte[2];
+            ByteRepresentation = new bool[8];
+            radioButtons = new List<System.Windows.Forms.RadioButton>();
+            lbl_Desc.Text = argCtrlData.DESC;
+            my_lo_indx = argCtrlData.INDEXLO;
+            my_hi_indx = argCtrlData.INDEXHI;
+            if (argCtrlData == null)
+            {
+                MessageBox.Show("null dataobj");
+                return;
+            }
+            if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._1_By))
+            {
+                MessageBox.Show("cannot be 1by");
+                return;
+            }
+
+            if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._2_by))
+            {
+                MessageBox.Show("cannot be 2by ");
+                return;
+            }
+            if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._8_bs))
+            {
+                MessageBox.Show("cannot be bs ");
+                return;
+            }
+
+
+            if (argCtrlData.Group1List == null)
+            {
+                MessageBox.Show("grouplist 1 is null!");
+                return;
+            }
+            if (argCtrlData.Group2List == null)
+            {
+                MessageBox.Show("grouplist 2 is null!");
+                return;
+            }
+            if (argCtrlData.Group1List.Count() > 0)
+            {
+                group1 = new CustomGroupObj(1, "gro 1", argCtrlData.Group1List[0]);
+
+
+            }
+            if (argCtrlData.Group2List.Count() > 0)
+            {
+                group2 = new CustomGroupObj(2, "gro 2", argCtrlData.Group2List[0]);
+            }
+
+            customGroupData = new List<CustomGroupObj>();
+            if (group1 != null)
+                customGroupData.Add(group1);
+            if (group2 != null)
+                customGroupData.Add(group2);
+            if (group3 != null)
+                customGroupData.Add(group3);
+            if (group4 != null)
+                customGroupData.Add(group4);
+
+            if (argCtrlData.BitsList == null)
+            {
+                MessageBox.Show("Bitlist is null!");
+                return;
+            }
+
+            validator = new CustGroupdata_Validator(argCtrlData.BitsList, customGroupData);
+
+            if (!validator.These_Groups_are_VALID)
+            {
+
+                textBox_error.Text = validator.TheProblemString;
+                textBox_error.Show();
+                return;
+            }
+
+            int numberofGroups = validator.GetListofGroup_bitList_ints().Count();
+            if (numberofGroups == 0)
+            {
+                MessageBox.Show("no groups");
+                return;
+            }
+            //for(int g=0; g< numberofGroups; g++)
+            //{
+
+            //}
+
+            //get rbs and events and calcvalue
+            InitGroups(validator.GetDic_bitlist(), validator.GetValid_GroupObjects());
+            Init(my_lo_indx);
+        }
+
         public void Init(int argBorderColor)
         {
             SetBorderColor(argBorderColor);
@@ -173,7 +278,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
 
 
             groupeUIwidth = CalgGroupWidth(argNumberofGroups);
-            lbl_Bval.Text = groupeUIwidth.ToString();
+           
 
             int marginLeft= 2;
             int marginTop= 4;
@@ -213,7 +318,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
                 }
             }
             Ipdate_cur_INT_Value();
-            this.lbl_Desc.Text = _cur_INT_Value.ToString();
+            this.lbl_Bval.Text = _cur_INT_Value.ToString();
         }
 
         void Ipdate_cur_INT_Value() { 
@@ -290,7 +395,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
 
             }
             Ipdate_cur_INT_Value();
-            this.lbl_Desc.Text = _cur_INT_Value.ToString();
+            this.lbl_Bval.Text = _cur_INT_Value.ToString();
         }
         #endregion
         
@@ -306,7 +411,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             if (arg_indexByteLo < 0) arg_indexByteLo = 0;
             borderColor = GetColorByIndex(arg_indexByteLo);
 
-
+            _myUC_PGN_BASE.Set_Display_LblColorsCodes(my_lo_indx, my_lo_indx, borderColor);
 
 
             this.Invalidate();

@@ -73,12 +73,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\CanManager.cs" />
     <Compile Include="Backend\CustGroupdata_Validator.cs" />
     <Compile Include="Backend\CustomGroupObj.cs" />
     <Compile Include="Backend\Helpers.cs" />
     <Compile Include="DataObjects\Ctrl_DataObject.cs" />
     <Compile Include="DataObjects\Pgn_DataObject.cs" />
     <Compile Include="DataObjects\Project_DataObject.cs" />
+    <Compile Include="UIz\Formz\CanManipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\CanManipForm.Designer.cs">
+      <DependentUpon>CanManipForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIz\Formz\CanSimForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +178,9 @@
     <Compile Include="UIz\UControlz\Builders\PROJECT_Builder_UC.Designer.cs">
       <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIz\Formz\CanManipForm.resx">
+      <DependentUpon>CanManipForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\CanSimForm.resx">
       <DependentUpon>CanSimForm.cs</DependentUpon>
     </EmbeddedResource>

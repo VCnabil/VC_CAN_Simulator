@@ -21,7 +21,7 @@ namespace VC_CAN_Simulator.Backend
         private static readonly Color[] colors = new Color[]
         {
                 Color.FromArgb(255, 0, 0, 0),       // Black
-                Color.FromArgb(255, 165, 42, 42),   // Brown
+                Color.FromArgb(255, 150, 60, 60),   // Brown
                 Color.FromArgb(255, 255, 0, 0),     // Red
                 Color.FromArgb(255, 255, 165, 0),   // Orange
                 Color.FromArgb(255, 255, 255, 0),   // Yellow
