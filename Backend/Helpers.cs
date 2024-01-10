@@ -27,7 +27,7 @@ namespace VC_CAN_Simulator.Backend
                 Color.FromArgb(255, 255, 255, 0),   // Yellow
                 Color.FromArgb(255, 0, 128, 0),     // Green
                 Color.FromArgb(255, 0, 0, 255),     // Blue
-                Color.FromArgb(255, 128, 0, 128),   // Purple
+                Color.FromArgb(255, 120, 0, 120),   // Purple
                 Color.FromArgb(255, 128, 128, 128)  // Gray
         };
         public static Color GetColorByIndex(int index)

@@ -56,7 +56,7 @@
             // 
             this.lbl_Bval.AutoSize = true;
             this.lbl_Bval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lbl_Bval.Location = new System.Drawing.Point(3, 55);
+            this.lbl_Bval.Location = new System.Drawing.Point(12, 100);
             this.lbl_Bval.Name = "lbl_Bval";
             this.lbl_Bval.Size = new System.Drawing.Size(65, 29);
             this.lbl_Bval.TabIndex = 11;
@@ -87,7 +87,7 @@
             this.tlp_hori.Controls.Add(this.lbl_min, 0, 0);
             this.tlp_hori.Controls.Add(this.lbl_max, 3, 0);
             this.tlp_hori.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tlp_hori.Location = new System.Drawing.Point(95, 75);
+            this.tlp_hori.Location = new System.Drawing.Point(90, 70);
             this.tlp_hori.Margin = new System.Windows.Forms.Padding(0);
             this.tlp_hori.Name = "tlp_hori";
             this.tlp_hori.RowCount = 3;

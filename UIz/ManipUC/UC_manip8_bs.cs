@@ -16,7 +16,9 @@ namespace VC_CAN_Simulator.UIz.ManipUC
     public partial class UC_manip8_bs : UserControl
     {
         Color borderColor;
-        int _cur_INT_Value;
+        public int CU_VALUE_INT { get; private set; }
+
+         
         bool _isHexFormat;
         byte[] my2bytes;
         #region _8_bs
@@ -26,49 +28,8 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         int my_hi_indx;
         public int ID_ctrl { get; private set; }
         #endregion
-        //public UC_manip8_bs()
-        //{
-        //    InitializeComponent();
-        //    _isHexFormat = true;
-        //    my2bytes= new byte[2];
-           
-           
+       
 
-        //    Init(3);
-        //}
-        //public UC_manip8_bs(Ctrl_DataObject argCtrlData)
-        //{
-        //    InitializeComponent();
-        //    if (argCtrlData == null)
-        //    {
-        //        MessageBox.Show("null dataobj");
-        //        return;
-        //    }
-        //    if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._1_By))
-        //    {
-        //        MessageBox.Show("cannot be 1by");
-        //        return;
-        //    }
-
-        //    if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._2_by))
-        //    {
-        //        MessageBox.Show("cannot be 2by ");
-        //        return;
-        //    }
-        //    if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._8_bG))
-        //    {
-        //        MessageBox.Show("cannot be bG ");
-        //        return;
-        //    }
-
-
-        //    _isHexFormat = true;
-        //    my2bytes = new byte[2];
-
-
-
-        //    Init(argCtrlData);
-        //}
 
         public UC_manip8_bs(int argid, Ctrl_DataObject argCtrlData, UC_PGN_Controller argUC_PGN_BASE)
         {
@@ -140,26 +101,26 @@ namespace VC_CAN_Simulator.UIz.ManipUC
                 myCbs[bitnumber].Text = bitDescriptor;
             }
         }
-        public void Init(int argBorderColor) {
+        //public void Init(int argBorderColor) {
 
-            SetBorderColor(argBorderColor);
-            // Subscribe to hover events for this control and all child controls
-            SubscribeHoverEvents(this);
-            Update_Bval_label();
-            Update_my2bytes();
-        }
+        //    SetBorderColor(argBorderColor);
+        //    // Subscribe to hover events for this control and all child controls
+        //    SubscribeHoverEvents(this);
+        //    Update_Bval_label();
+        //    Update_my2bytes();
+        //}
         void cb_bit_changed(object sender, EventArgs e)
         {
             // _cur_INT_Value is the value of the byte set by the cb_b0 to cb_b7 representing bit 0 to bit 8 of the byte    
-            _cur_INT_Value = 0;
-            if (cb_b0.Checked) { _cur_INT_Value += 1; }
-            if (cb_b1.Checked) { _cur_INT_Value += 2; }
-            if (cb_b2.Checked) { _cur_INT_Value += 4; }
-            if (cb_b3.Checked) { _cur_INT_Value += 8; }
-            if (cb_b4.Checked) { _cur_INT_Value += 16; }
-            if (cb_b5.Checked) { _cur_INT_Value += 32; }
-            if (cb_b6.Checked) { _cur_INT_Value += 64; }
-            if (cb_b7.Checked) { _cur_INT_Value += 128; }
+            CU_VALUE_INT = 0;
+            if (cb_b0.Checked) { CU_VALUE_INT += 1; }
+            if (cb_b1.Checked) { CU_VALUE_INT += 2; }
+            if (cb_b2.Checked) { CU_VALUE_INT += 4; }
+            if (cb_b3.Checked) { CU_VALUE_INT += 8; }
+            if (cb_b4.Checked) { CU_VALUE_INT += 16; }
+            if (cb_b5.Checked) { CU_VALUE_INT += 32; }
+            if (cb_b6.Checked) { CU_VALUE_INT += 64; }
+            if (cb_b7.Checked) { CU_VALUE_INT += 128; }
             Update_Bval_label();
             Update_my2bytes();
 
@@ -174,7 +135,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
                     myCbs[x].Checked = false;
             }
 
-            _cur_INT_Value = 0;
+            CU_VALUE_INT = 0;
 
             Update_Bval_label();
             Update_my2bytes();
@@ -184,19 +145,19 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         {
             if (_isHexFormat)
             {
-                lbl_Bval.Text = _cur_INT_Value.ToString("X2");
+                lbl_Bval.Text = CU_VALUE_INT.ToString("X2");
             }
             else
             {
-                lbl_Bval.Text = _cur_INT_Value.ToString("D3");
+                lbl_Bval.Text = CU_VALUE_INT.ToString("D3");
             }
         }
         void Update_my2bytes()
         {
-            my2bytes[0] = (byte)_cur_INT_Value;
-            my2bytes[1] = (byte)_cur_INT_Value;
-            
-           // my_refTOCTRL.PlugYourByteHere(_myByteIndexInPayload, my2bytes[0], _myType, _myByteIndexInPayload_secondary, my2bytes[1]);
+            my2bytes[0] = (byte)CU_VALUE_INT;
+            my2bytes[1] = (byte)CU_VALUE_INT;
+             
+            _myUC_PGN_BASE.Set_2bytes(my_lo_indx, my_lo_indx, my2bytes[0], my2bytes[0]);
         }
         void SetBorderColor(int arg_indexByteLo)
         {
@@ -211,9 +172,9 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         }
         private void UC_manip8_bs_Paint(object sender, PaintEventArgs e)
         {
-            using (Pen borderPen = new Pen(borderColor, 2))
+            using (Pen borderPen = new Pen(borderColor, 4))
             {
-                e.Graphics.DrawRectangle(borderPen, 0, 0, this.Width - 1, this.Height - 1);
+                e.Graphics.DrawRectangle(borderPen, 0, 0, this.Width, this.Height);
             }
 
         }

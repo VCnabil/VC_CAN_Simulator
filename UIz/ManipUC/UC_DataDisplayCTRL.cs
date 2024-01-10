@@ -69,6 +69,13 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             lbl_colors[argIndex].BackColor = argColor;
             lbl_colors[argindex2].BackColor = argColor;
         }   
+
+        public void Set_2_Bytes(int argIndex1, int argIndex2, byte argByte1, byte argByte2)
+        {
+            bytes[argIndex1] = argByte1;
+            bytes[argIndex2] = argByte2;
+            UpdateDisplay(bytes);
+        }
         public void SetTitle_intPgnHex(int argPgn)
         {
             mlbl_Title.Text = "0x " + argPgn.ToString("X");

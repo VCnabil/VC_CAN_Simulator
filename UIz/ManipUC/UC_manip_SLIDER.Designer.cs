@@ -34,11 +34,11 @@
             this.lbl_min = new System.Windows.Forms.Label();
             this.lbl_max = new System.Windows.Forms.Label();
             this.tlp_hori = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_def = new System.Windows.Forms.Label();
             this.lbl_byteLOVal = new System.Windows.Forms.Label();
             this.lbl_byteHIVal = new System.Windows.Forms.Label();
             this.lbl_decVal = new System.Windows.Forms.Label();
             this.lbl_Bval = new System.Windows.Forms.Label();
-            this.lbl_def = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Slider)).BeginInit();
             this.tlp_hori.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +123,18 @@
             this.tlp_hori.Size = new System.Drawing.Size(400, 140);
             this.tlp_hori.TabIndex = 13;
             // 
+            // lbl_def
+            // 
+            this.lbl_def.AutoSize = true;
+            this.lbl_def.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_def.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.lbl_def.Location = new System.Drawing.Point(202, 1);
+            this.lbl_def.Name = "lbl_def";
+            this.lbl_def.Size = new System.Drawing.Size(92, 33);
+            this.lbl_def.TabIndex = 14;
+            this.lbl_def.Text = "0";
+            this.lbl_def.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // lbl_byteLOVal
             // 
             this.lbl_byteLOVal.AutoSize = true;
@@ -159,23 +171,11 @@
             // 
             this.lbl_Bval.AutoSize = true;
             this.lbl_Bval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lbl_Bval.Location = new System.Drawing.Point(3, 55);
+            this.lbl_Bval.Location = new System.Drawing.Point(12, 100);
             this.lbl_Bval.Name = "lbl_Bval";
             this.lbl_Bval.Size = new System.Drawing.Size(65, 29);
             this.lbl_Bval.TabIndex = 7;
             this.lbl_Bval.Text = "2556";
-            // 
-            // lbl_def
-            // 
-            this.lbl_def.AutoSize = true;
-            this.lbl_def.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_def.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.lbl_def.Location = new System.Drawing.Point(202, 1);
-            this.lbl_def.Name = "lbl_def";
-            this.lbl_def.Size = new System.Drawing.Size(92, 33);
-            this.lbl_def.TabIndex = 14;
-            this.lbl_def.Text = "0";
-            this.lbl_def.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // UC_manip_SLIDER
             // 

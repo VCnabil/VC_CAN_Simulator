@@ -32,6 +32,7 @@
             this.btn_StartStop = new System.Windows.Forms.Button();
             this.lbl_status = new System.Windows.Forms.Label();
             this.timer1_Loop = new System.Windows.Forms.Timer(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // btn_StartStop
@@ -52,11 +53,22 @@
             this.lbl_status.TabIndex = 1;
             this.lbl_status.Text = "is_stopped";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 68);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(2309, 1341);
+            this.flowLayoutPanel1.TabIndex = 6;
+            this.flowLayoutPanel1.WrapContents = false;
+            // 
             // CanManipForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2091, 1367);
+            this.ClientSize = new System.Drawing.Size(2372, 1421);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.btn_StartStop);
             this.Name = "CanManipForm";
@@ -71,5 +83,6 @@
         private System.Windows.Forms.Button btn_StartStop;
         private System.Windows.Forms.Label lbl_status;
         private System.Windows.Forms.Timer timer1_Loop;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

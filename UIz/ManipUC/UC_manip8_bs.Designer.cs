@@ -187,7 +187,7 @@
             // 
             this.lbl_Bval.AutoSize = true;
             this.lbl_Bval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lbl_Bval.Location = new System.Drawing.Point(3, 139);
+            this.lbl_Bval.Location = new System.Drawing.Point(12, 100);
             this.lbl_Bval.Name = "lbl_Bval";
             this.lbl_Bval.Size = new System.Drawing.Size(65, 29);
             this.lbl_Bval.TabIndex = 5;

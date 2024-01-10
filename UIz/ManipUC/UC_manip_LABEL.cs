@@ -17,7 +17,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
     {
         Color borderColor;
         bool _is16bits;
-        int _cur_INT_Value;
+        int CU_VALUE_INT;
         byte[] my2bytes;
         int _myMin = 0;
         int _myMax = 65535;
@@ -151,39 +151,41 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         {
             if (_is16bits)
             {
-                byte lowbyte = (byte)(_cur_INT_Value & 0x00FF);
-                byte highbyte = (byte)((_cur_INT_Value & 0xFF00) >> 8);
+                byte lowbyte = (byte)(CU_VALUE_INT & 0x00FF);
+                byte highbyte = (byte)((CU_VALUE_INT & 0xFF00) >> 8);
                 my2bytes[0] = lowbyte;
                 my2bytes[1] = highbyte;
 
-                lbl_byteLOVal.Text = (_cur_INT_Value & 0x00FF).ToString("X2");
-                lbl_byteHIVal.Text = ((_cur_INT_Value & 0xFF00) >> 8).ToString("X2");
+                lbl_byteLOVal.Text = (CU_VALUE_INT & 0x00FF).ToString("X2");
+                lbl_byteHIVal.Text = ((CU_VALUE_INT & 0xFF00) >> 8).ToString("X2");
             }
             else
             {
 
-                my2bytes[0] = (byte)_cur_INT_Value;
-                my2bytes[1] = (byte)_cur_INT_Value;
-                lbl_byteLOVal.Text = _cur_INT_Value.ToString("X2");
+                my2bytes[0] = (byte)CU_VALUE_INT;
+                my2bytes[1] = (byte)CU_VALUE_INT;
+                lbl_byteLOVal.Text = CU_VALUE_INT.ToString("X2");
             }
 
-            lbl_Bval.Text = _cur_INT_Value.ToString("X2");
-            lbl_decVal.Text = _cur_INT_Value.ToString("D3");
+            lbl_Bval.Text = CU_VALUE_INT.ToString("X2");
+            lbl_decVal.Text = CU_VALUE_INT.ToString("D3");
         }
         void Update_my2bytes()
         {
             if (_is16bits)
             {
-                byte lowbyte = (byte)(_cur_INT_Value & 0x00FF);
-                byte highbyte = (byte)((_cur_INT_Value & 0xFF00) >> 8);
+                byte lowbyte = (byte)(CU_VALUE_INT & 0x00FF);
+                byte highbyte = (byte)((CU_VALUE_INT & 0xFF00) >> 8);
                 my2bytes[0] = lowbyte;
                 my2bytes[1] = highbyte;
+                _myUC_PGN_BASE.Set_2bytes(my_lo_indx, my_hi_indx, my2bytes[0], my2bytes[1]);
             }
             else
             {
 
-                my2bytes[0] = (byte)_cur_INT_Value;
-                my2bytes[1] = (byte)_cur_INT_Value;
+                my2bytes[0] = (byte)CU_VALUE_INT;
+                my2bytes[1] = (byte)CU_VALUE_INT;
+                _myUC_PGN_BASE.Set_2bytes(my_lo_indx, my_lo_indx, my2bytes[0], my2bytes[0]);
             }
         }
         private void Tb_RawNum_TextChanged(object sender, EventArgs e)
@@ -194,13 +196,13 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             if (result)
             {
 
-                _cur_INT_Value = number;
+                CU_VALUE_INT = number;
                 Update_Bval_label();
                 Update_my2bytes();
             }
             else
             {
-                _cur_INT_Value = 0;
+                CU_VALUE_INT = 0;
             }
         }
         void ChangeLayout_16or8Bits()
@@ -211,8 +213,8 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         private void Btn_reset_Click(object sender, EventArgs e)
         {
 
-            _cur_INT_Value = _myDefVal;
-            tb_RawVAL.Text = _cur_INT_Value.ToString();
+            CU_VALUE_INT = _myDefVal;
+            tb_RawVAL.Text = CU_VALUE_INT.ToString();
             Update_Bval_label();
             Update_my2bytes();
         }
@@ -236,9 +238,9 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         }
         private void UC_manip8_bs_Paint(object sender, PaintEventArgs e)
         {
-            using (Pen borderPen = new Pen(borderColor, 2))
+            using (Pen borderPen = new Pen(borderColor, 4))
             {
-                e.Graphics.DrawRectangle(borderPen, 0, 0, this.Width - 1, this.Height - 1);
+                e.Graphics.DrawRectangle(borderPen, 0, 0, this.Width , this.Height );
             }
 
         }

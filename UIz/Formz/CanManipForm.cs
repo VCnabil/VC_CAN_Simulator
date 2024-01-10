@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -51,19 +52,19 @@ namespace VC_CAN_Simulator.UIz.Formz
             _8bit_Slider.DESC = "8 bit slider";
             _8bit_Slider.ISSLIDER = true;
             _8bit_Slider.CTRL_TYOE_STR = EnumToString(CtrlType._1_By);
-            _8bit_Slider.INDEXLO = 2;
-            _8bit_Slider.INDEXHI = 2;
+            _8bit_Slider.INDEXLO = 3;
+            _8bit_Slider.INDEXHI = 3;
 
             Ctrl_DataObject _16bit_Slider = new Ctrl_DataObject();
-            _16bit_Slider.ID = 0;
+            _16bit_Slider.ID = 3;
             _16bit_Slider.MIN = 0;
             _16bit_Slider.MAX = 1000;
             _16bit_Slider.DEF = 521;
             _16bit_Slider.DESC = "16 bit slider";
             _16bit_Slider.ISSLIDER = true;
             _16bit_Slider.CTRL_TYOE_STR = EnumToString(CtrlType._2_by);
-            _16bit_Slider.INDEXLO = 1;
-            _16bit_Slider.INDEXHI = 2;
+            _16bit_Slider.INDEXLO = 4;
+            _16bit_Slider.INDEXHI = 5;
 
 
             List<string> BilList_A = new List<string>();
@@ -83,7 +84,7 @@ namespace VC_CAN_Simulator.UIz.Formz
 
 
             Ctrl_DataObject _bitsA_ = new Ctrl_DataObject();
-            _bitsA_.ID = 0;
+            _bitsA_.ID = 4;
             _bitsA_.MIN = 0;
             _bitsA_.MAX = 255;
             _bitsA_.DEF = 0;
@@ -102,14 +103,16 @@ namespace VC_CAN_Simulator.UIz.Formz
             pgnobj.PGN_strHEX = "18FEF100";
             pgnobj.DESCpgn = "Engine 1";
             pgnobj.CtrlList = new List<Ctrl_DataObject>();
-            //pgnobj.CtrlList.Add(_8bit_Label);
-             pgnobj.CtrlList.Add(_16bit_Label);
+            pgnobj.CtrlList.Add(_8bit_Label);
+            pgnobj.CtrlList.Add(_16bit_Label);
             pgnobj.CtrlList.Add(_8bit_Slider);
-           // pgnobj.CtrlList.Add(_16bit_Slider);
-           // pgnobj.CtrlList.Add(_bitsA_);
+            pgnobj.CtrlList.Add(_16bit_Slider);
+            pgnobj.CtrlList.Add(_bitsA_);
 
 
             InitializeComponent();
+            this.Width = 2400/2;
+            this.Height = 1500/2;
 
             canManager = new CanManager();
             canManager.ListChannels();
@@ -124,8 +127,21 @@ namespace VC_CAN_Simulator.UIz.Formz
             _loopIsRunning = false;
 
             UC_PGN_Controller pgntest = new UC_PGN_Controller(pgnobj);
-            pgntest.Location = new Point(0, 40);
-            Controls.Add(pgntest);
+           // pgntest.Location = new Point(0, 0);
+            this.flowLayoutPanel1.Controls.Add(pgntest);
+            UC_PGN_Controller pgntest2= new UC_PGN_Controller(pgnobj);
+            this.flowLayoutPanel1.Controls.Add(pgntest2);
+            UC_PGN_Controller pgntest3 = new UC_PGN_Controller(pgnobj);
+            this.flowLayoutPanel1.Controls.Add(pgntest3);
+            UC_PGN_Controller pgntest4 = new UC_PGN_Controller(pgnobj);
+            this.flowLayoutPanel1.Controls.Add(pgntest4);
+            UC_PGN_Controller pgntest5 = new UC_PGN_Controller(pgnobj);
+            this.flowLayoutPanel1.Controls.Add(pgntest5);
+
+
+
+            this.flowLayoutPanel1.Width = this.Width-50;
+            this.flowLayoutPanel1.Height = pgntest.Height+10;
         }
 
         private void Btn_StartStop_Click(object sender, EventArgs e)

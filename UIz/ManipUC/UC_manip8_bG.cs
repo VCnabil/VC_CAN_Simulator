@@ -17,9 +17,10 @@ namespace VC_CAN_Simulator.UIz.ManipUC
 {
     public partial class UC_manip8_bG : UserControl
     {
+        bool _isHexFormat;
         bool[] ByteRepresentation;
         Color borderColor;
-        int _cur_INT_Value;
+        int CU_VALUE_INT;
         byte[] my2bytes;
         #region _8_bG
         List<System.Windows.Forms.RadioButton> radioButtons;
@@ -43,112 +44,8 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         #endregion
         UC_PGN_Controller _myUC_PGN_BASE;
         public int ID_ctrl { get; private set; }
-        public UC_manip8_bG()
-        {
-            InitializeComponent();
-            textBox_error.Text = "no error";
-            textBox_error.Hide();
-            my2bytes = new byte[2];
-       
-            //InitGroups(2, 2);
-            Init(3);
-        }
-        /*
-                 public UC_manip8_bG(Ctrl_DataObject argCtrlData)
-        {
-            InitializeComponent();
-            textBox_error.Text = "no error";
-            textBox_error.Hide();
-            my2bytes = new byte[2];
-            ByteRepresentation= new bool[8];
-            radioButtons = new List<System.Windows.Forms.RadioButton>();
-            lbl_Desc.Text = argCtrlData.DESC;
-            if (argCtrlData == null)
-            {
-                MessageBox.Show("null dataobj");
-                return;
-            }
-            if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._1_By))
-            {
-                MessageBox.Show("cannot be 1by");
-                return;
-            }
-
-            if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._2_by))
-            {
-                MessageBox.Show("cannot be 2by ");
-                return;
-            }
-            if (argCtrlData.CTRL_TYOE_STR == EnumToString(CtrlType._8_bs))
-            {
-                MessageBox.Show("cannot be bs ");
-                return;
-            }
-        
-
-            if (argCtrlData.Group1List == null)
-            {
-                MessageBox.Show("grouplist 1 is null!");
-                return;
-            }
-            if (argCtrlData.Group2List == null)
-            {
-                MessageBox.Show("grouplist 2 is null!");
-                return;
-            }
-            if (argCtrlData.Group1List.Count() > 0)
-            {
-                group1 = new CustomGroupObj(1,"gro 1", argCtrlData.Group1List[0]);
-                
-                
-            }
-            if (argCtrlData.Group2List.Count() > 0)
-            {
-                group2 = new CustomGroupObj(2,"gro 2", argCtrlData.Group2List[0]);
-            }
-           
-            customGroupData = new List<CustomGroupObj>();
-            if(group1 != null)
-                customGroupData.Add(group1);
-            if(group2 != null)
-                customGroupData.Add(group2);
-            if(group3 != null)
-                customGroupData.Add(group3);
-            if(group4 != null)
-                customGroupData.Add(group4);
-
-            if (argCtrlData.BitsList == null)
-            {
-                MessageBox.Show("Bitlist is null!");
-                return;
-            }
-
-            validator = new CustGroupdata_Validator(argCtrlData.BitsList, customGroupData);
-
-            if (!validator.These_Groups_are_VALID) {
-
-                textBox_error.Text = validator.TheProblemString;
-                textBox_error.Show();
-                return; }
-
-            int numberofGroups = validator.GetListofGroup_bitList_ints().Count();
-            if (numberofGroups == 0)
-            {
-                MessageBox.Show("no groups");
-                return;
-            }
-            //for(int g=0; g< numberofGroups; g++)
-            //{
-                 
-            //}
-
-            //get rbs and events and calcvalue
-            InitGroups(validator.GetDic_bitlist(),validator.GetValid_GroupObjects());
-            Init(3);
-        }
   
-         */
-
+   
         public UC_manip8_bG(int argid, Ctrl_DataObject argCtrlData, UC_PGN_Controller argUC_PGN_BASE)
         {
             InitializeComponent();
@@ -156,6 +53,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             _myUC_PGN_BASE = argUC_PGN_BASE;
             textBox_error.Text = "no error";
             textBox_error.Hide();
+            _isHexFormat = true;
             my2bytes = new byte[2];
             ByteRepresentation = new bool[8];
             radioButtons = new List<System.Windows.Forms.RadioButton>();
@@ -253,6 +151,8 @@ namespace VC_CAN_Simulator.UIz.ManipUC
             SetBorderColor(argBorderColor);
             // Subscribe to hover events for this control and all child controls
             SubscribeHoverEvents(this);
+            Update_Bval_label();
+            Update_my2bytes();
         }
 
         #region _8_bGFuncs
@@ -318,19 +218,21 @@ namespace VC_CAN_Simulator.UIz.ManipUC
                 }
             }
             Ipdate_cur_INT_Value();
-            this.lbl_Bval.Text = _cur_INT_Value.ToString();
+            this.lbl_Bval.Text = CU_VALUE_INT.ToString();
         }
 
         void Ipdate_cur_INT_Value() { 
-            _cur_INT_Value = 0;
+            CU_VALUE_INT = 0;
             for (int i = 0; i < 8; i++)
             {
                 if (ByteRepresentation[i])
                 {
-                    _cur_INT_Value += (int)Math.Pow(2, i);
+                    CU_VALUE_INT += (int)Math.Pow(2, i);
                 }
             }
-        
+
+            Update_Bval_label();
+            Update_my2bytes();
         }
 
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
@@ -395,15 +297,38 @@ namespace VC_CAN_Simulator.UIz.ManipUC
 
             }
             Ipdate_cur_INT_Value();
-            this.lbl_Bval.Text = _cur_INT_Value.ToString();
+            this.lbl_Bval.Text = CU_VALUE_INT.ToString();
         }
         #endregion
         
         #region Commons
         private void Btn_reset_Click(object sender, EventArgs e)
         {
+    
 
+            CU_VALUE_INT = 0;
 
+            Update_Bval_label();
+            Update_my2bytes();
+
+        }
+        void Update_Bval_label()
+        {
+            if (_isHexFormat)
+            {
+                lbl_Bval.Text = CU_VALUE_INT.ToString("X2");
+            }
+            else
+            {
+                lbl_Bval.Text = CU_VALUE_INT.ToString("D3");
+            }
+        }
+        void Update_my2bytes()
+        {
+            my2bytes[0] = (byte)CU_VALUE_INT;
+            my2bytes[1] = (byte)CU_VALUE_INT;
+
+            _myUC_PGN_BASE.Set_2bytes(my_lo_indx, my_lo_indx, my2bytes[0], my2bytes[0]);
         }
         void SetBorderColor(int arg_indexByteLo)
         {
@@ -418,9 +343,9 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         }
         private void UC_manip8_bs_Paint(object sender, PaintEventArgs e)
         {
-            using (Pen borderPen = new Pen(borderColor, 2))
+            using (Pen borderPen = new Pen(borderColor, 4))
             {
-                e.Graphics.DrawRectangle(borderPen, 0, 0, this.Width - 1, this.Height - 1);
+                e.Graphics.DrawRectangle(borderPen, 0, 0, this.Width, this.Height);
             }
 
         }

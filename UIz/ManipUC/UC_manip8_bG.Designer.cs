@@ -37,7 +37,7 @@
             // lbl_Desc
             // 
             this.lbl_Desc.AutoSize = true;
-            this.lbl_Desc.Location = new System.Drawing.Point(99, 188);
+            this.lbl_Desc.Location = new System.Drawing.Point(100, 180);
             this.lbl_Desc.Name = "lbl_Desc";
             this.lbl_Desc.Size = new System.Drawing.Size(135, 29);
             this.lbl_Desc.TabIndex = 12;
@@ -48,7 +48,7 @@
             // 
             this.lbl_Bval.AutoSize = true;
             this.lbl_Bval.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.lbl_Bval.Location = new System.Drawing.Point(3, 188);
+            this.lbl_Bval.Location = new System.Drawing.Point(10, 180);
             this.lbl_Bval.Name = "lbl_Bval";
             this.lbl_Bval.Size = new System.Drawing.Size(65, 29);
             this.lbl_Bval.TabIndex = 11;
@@ -56,9 +56,9 @@
             // 
             // btn_reset
             // 
-            this.btn_reset.Location = new System.Drawing.Point(407, 168);
+            this.btn_reset.Location = new System.Drawing.Point(407, 172);
             this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(90, 49);
+            this.btn_reset.Size = new System.Drawing.Size(90, 45);
             this.btn_reset.TabIndex = 10;
             this.btn_reset.Text = "reset";
             this.btn_reset.UseVisualStyleBackColor = true;
