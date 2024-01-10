@@ -104,6 +104,8 @@ namespace VC_CAN_Simulator.UIz.Formz.SingleForm.ErafGui
             {
                 isRunning = true;
                 timer_runCanSend.Start();
+                //button color is green
+                btn_Start.BackColor = Color.Green;
             }
         }
         void btn_Stop_Click(object sender, EventArgs e)
@@ -112,6 +114,8 @@ namespace VC_CAN_Simulator.UIz.Formz.SingleForm.ErafGui
             {
                 isRunning = false;
                 timer_runCanSend.Stop();
+                //button color is red
+                btn_Start.BackColor = Color.Red;
             }
         }
         void checkBox_stopRX_CheckedChanged(object sender, EventArgs e)

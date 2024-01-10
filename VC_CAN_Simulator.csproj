@@ -160,6 +160,15 @@
     <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_SteerEnginSliders.Designer.cs">
       <DependentUpon>UC_WSKI_SteerEnginSliders.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\AxioShell.cs" />
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\CTRL_PannelData.cs" />
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\INDIC_PannelData.cs" />
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\NOMAD_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\NOMAD_GUI.Designer.cs">
+      <DependentUpon>NOMAD_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_SteerEnginSliders.resx">
       <DependentUpon>UC_WSKI_SteerEnginSliders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\NomadGui\NOMAD_GUI.resx">
+      <DependentUpon>NOMAD_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.resx">
       <DependentUpon>WSKI_GUI.cs</DependentUpon>

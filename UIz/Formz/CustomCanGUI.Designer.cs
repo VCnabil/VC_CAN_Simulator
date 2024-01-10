@@ -37,6 +37,7 @@
             this.btn_ERAF = new System.Windows.Forms.Button();
             this.btn_WSKI = new System.Windows.Forms.Button();
             this.btn_KA27 = new System.Windows.Forms.Button();
+            this.btn_NOMAD = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_load
@@ -119,11 +120,22 @@
             this.btn_KA27.Text = "run KA27";
             this.btn_KA27.UseVisualStyleBackColor = true;
             // 
+            // btn_NOMAD
+            // 
+            this.btn_NOMAD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NOMAD.Location = new System.Drawing.Point(2, 463);
+            this.btn_NOMAD.Name = "btn_NOMAD";
+            this.btn_NOMAD.Size = new System.Drawing.Size(150, 52);
+            this.btn_NOMAD.TabIndex = 28;
+            this.btn_NOMAD.Text = "run NOMAD";
+            this.btn_NOMAD.UseVisualStyleBackColor = true;
+            // 
             // CustomCanGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 573);
+            this.Controls.Add(this.btn_NOMAD);
             this.Controls.Add(this.btn_KA27);
             this.Controls.Add(this.btn_WSKI);
             this.Controls.Add(this.btn_ERAF);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Button btn_ERAF;
         private System.Windows.Forms.Button btn_WSKI;
         private System.Windows.Forms.Button btn_KA27;
+        private System.Windows.Forms.Button btn_NOMAD;
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using VC_CAN_Simulator.UIz.Formz.SingleForm;
 using VC_CAN_Simulator.UIz.Formz.SingleForm.ErafGui;
 using VC_CAN_Simulator.UIz.Formz.SingleForm.Ka2700Gui;
+using VC_CAN_Simulator.UIz.Formz.SingleForm.NomadGui;
 using VC_CAN_Simulator.UIz.Formz.SingleForm.WskiGui;
 using static VC_CAN_Simulator.Backend.Helpers;
 namespace VC_CAN_Simulator.UIz.Formz
@@ -33,7 +34,15 @@ namespace VC_CAN_Simulator.UIz.Formz
             btn_ERAF.Click += Btn_run_ERAF_Click;
             btn_WSKI.Click += Btn_run_WSKI_Click;
             btn_KA27.Click += Btn_run_KA27_Click;
+            btn_NOMAD.Click += Btn_run_NOMAD_Click;     
             textBox_fileName.TextChanged += TextBox_fileName_TextChanged;
+        }
+
+        private void Btn_run_NOMAD_Click(object sender, EventArgs e)
+        {
+            using (NOMAD_GUI form1 = new NOMAD_GUI()) {
+                form1.ShowDialog();
+            }
         }
 
         private void Btn_run_KA27_Click(object sender, EventArgs e)

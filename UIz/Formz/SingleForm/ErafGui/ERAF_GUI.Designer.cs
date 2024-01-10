@@ -65,9 +65,9 @@
             this.cb_sendFF54.AutoSize = true;
             this.cb_sendFF54.Location = new System.Drawing.Point(220, 151);
             this.cb_sendFF54.Name = "cb_sendFF54";
-            this.cb_sendFF54.Size = new System.Drawing.Size(144, 33);
+            this.cb_sendFF54.Size = new System.Drawing.Size(142, 33);
             this.cb_sendFF54.TabIndex = 22;
-            this.cb_sendFF54.Text = "dend ff54";
+            this.cb_sendFF54.Text = "send ff54";
             this.cb_sendFF54.UseVisualStyleBackColor = true;
             // 
             // checkBox_stopRX
