@@ -8,25 +8,37 @@ namespace VC_CAN_Simulator.DataObjects
 {
     public  class Pgn_DataObject
     {
-        int _pgnid = 0;
-        public int IDpgn { get { return _pgnid; } private set { _pgnid = value; } }
-        int _pgn;
-        public int PGN_int { get { return _pgn; } private set { _pgn = value; } }
-        string _pgndesc = string.Empty;
+        public int IDpgn { get; set; }
+        public int PGN_int { get; set; }
+        public string PGN_strHEX { get; set; }
+        public string DESCpgn { get; set; }
+        public List<Ctrl_DataObject> CtrlList { get; set; }
+    }
+}
 
-        string _pgnStrhex = string.Empty;
-        public string PGN_strHEX { get { return _pgnStrhex; } private set { _pgnStrhex = value; } }
-        public string DESCpgn { get { return _pgndesc; } private set { _pgndesc = value; } }
+/*
+        //int _pgnid = 0;
+        public int IDpgn { get; private set; }
+        //int _pgn;
+        public int PGN_int { get; private set; }
+        //string _pgndesc = string.Empty;
 
-       // List<Ctrl_DataObject> _listOfCtrls = new List<Ctrl_DataObject>();
+        //string _pgnStrhex = string.Empty;
+        public string PGN_strHEX { get; private set; }
+        public string DESCpgn { get; private set; }
+
+        // List<Ctrl_DataObject> _listOfCtrls = new List<Ctrl_DataObject>();
         public List<Ctrl_DataObject> CtrlList { get; private set; }
 
-        
+        public Pgn_DataObject( )
+        {
+             
+        }
         public Pgn_DataObject(int argpgnid, int argpgn,string argpgnStr, string argDescpgn, List<Ctrl_DataObject> argListCtrls) {
-            _pgnid = argpgnid;
-            _pgn = argpgn;
-            _pgndesc = argDescpgn;
-            _pgnStrhex = argpgnStr;
+            IDpgn = argpgnid;
+            PGN_int = argpgn;
+            PGN_strHEX = argDescpgn;
+            DESCpgn = argpgnStr;
             CtrlList = new List<Ctrl_DataObject>(); // Initialize CtrlList
 
             if (argListCtrls != null)
@@ -37,5 +49,4 @@ namespace VC_CAN_Simulator.DataObjects
                 }
             }
         }
-    }
-}
+ */

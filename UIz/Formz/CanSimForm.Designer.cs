@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -46,8 +45,9 @@
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,14 +61,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(-2, 353);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(200, 101);
-            this.trackBar1.TabIndex = 1;
             // 
             // checkBox1
             // 
@@ -264,6 +256,14 @@
             this.radioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(-2, 353);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(200, 101);
+            this.trackBar1.TabIndex = 1;
+            // 
             // CanSimForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -289,9 +289,9 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "CanSimForm";
             this.Text = "CANsim";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,7 +300,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
@@ -317,6 +316,7 @@
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 

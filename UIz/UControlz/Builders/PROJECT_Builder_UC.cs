@@ -41,19 +41,47 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
                 }
             }
         }
+        public void AddFromBlueprint(int argpgnid, int argpgn, string argpgnStr, string argDescpgn, List<Ctrl_DataObject> argCtrlDOlist ) {
 
+            if (fl_verticalpannel.Controls.Count < MaxPGNs)
+            {
+                var newPGN = new PGN_Builder_UC( argpgnid,  argpgn,  argpgnStr,  argDescpgn, argCtrlDOlist);
+                newPGN.Btn_delete_was_Clicked_Event += NewPGN_RemoveButtonClicked;
+                listOf_PGN_UCs_InProject.Add(newPGN);
+                fl_verticalpannel.Controls.Add(newPGN);
+                if (fl_verticalpannel.Controls.Count >= MaxPGNs)
+                {
+                    btn_AddPGN.Enabled = false;
+                }
+            }
+        }
         private void NewPGN_RemoveButtonClicked(object sender, EventArgs e)
         {
             var pgn = sender as PGN_Builder_UC;
             if (pgn != null)
             {
-                 fl_verticalpannel.Controls.Remove(pgn);
-                pgn.Btn_delete_was_Clicked_Event -= NewPGN_RemoveButtonClicked;
-                btn_AddPGN.Enabled = true;
-                listOf_PGN_UCs_InProject.Remove(pgn);
+                RemovePGNbuilder(pgn);
+                
             }
         }
+        void RemovePGNbuilder(PGN_Builder_UC argPgnBuilder) {
+            fl_verticalpannel.Controls.Remove(argPgnBuilder);
+            argPgnBuilder.Btn_delete_was_Clicked_Event -= NewPGN_RemoveButtonClicked;
+            btn_AddPGN.Enabled = true;
+            listOf_PGN_UCs_InProject.Remove(argPgnBuilder);
+        }
+        public void ClearAllPGNSRecursive() {
 
+            for (int i = 0; i < listOf_PGN_UCs_InProject.Count; i++)
+            {
+                listOf_PGN_UCs_InProject[i].RemoveAllCtrlBuilder();
+            }
+            for (int r = listOf_PGN_UCs_InProject.Count-1;r>=0; r--)
+            {
+                RemovePGNbuilder(listOf_PGN_UCs_InProject[r]);
+            }
+            _pgnIdcnt = 0;
+        }
         public Project_DataObject Make_ProjectDataObject() {
 
             List<Pgn_DataObject> templistargPgnlist = new List<Pgn_DataObject>();
@@ -61,7 +89,9 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             for (int i = 0; i < listOf_PGN_UCs_InProject.Count; i++) {
                 templistargPgnlist.Add(listOf_PGN_UCs_InProject[i].Make_PGNDataObj());
             }
-            Project_DataObject temp_Project_DataObj = new Project_DataObject("ssrs", templistargPgnlist);
+            Project_DataObject temp_Project_DataObj = new Project_DataObject();
+            temp_Project_DataObj.Title = "ssrs k12";
+            temp_Project_DataObj.AllPgnList = templistargPgnlist;
 
             return temp_Project_DataObj;
         }

@@ -73,10 +73,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\CanManager.cs" />
+    <Compile Include="Backend\CustGroupdata_Validator.cs" />
+    <Compile Include="Backend\CustomGroupObj.cs" />
     <Compile Include="Backend\Helpers.cs" />
     <Compile Include="DataObjects\Ctrl_DataObject.cs" />
     <Compile Include="DataObjects\Pgn_DataObject.cs" />
     <Compile Include="DataObjects\Project_DataObject.cs" />
+    <Compile Include="UIz\Formz\CanManipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\CanManipForm.Designer.cs">
+      <DependentUpon>CanManipForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIz\Formz\CanSimForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +100,128 @@
     <Compile Include="UIz\Formz\CreateOrModifyProject.Designer.cs">
       <DependentUpon>CreateOrModifyProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIz\Formz\CustomCanGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\CustomCanGUI.Designer.cs">
+      <DependentUpon>CustomCanGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\ERAF_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\ERAF_GUI.Designer.cs">
+      <DependentUpon>ERAF_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF34_ClutchCom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF34_ClutchCom.Designer.cs">
+      <DependentUpon>UC_ERAF_PGN_FF34_ClutchCom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF50_Helm_TakeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF50_Helm_TakeCtrl.Designer.cs">
+      <DependentUpon>UC_ERAF_PGN_FF50_Helm_TakeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF51_LeverPos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF51_LeverPos.Designer.cs">
+      <DependentUpon>UC_ERAF_PGN_FF51_LeverPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\Ka2700Gui\KA27_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\Ka2700Gui\KA27_GUI.Designer.cs">
+      <DependentUpon>KA27_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\MKV_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\MKV_GUI.Designer.cs">
+      <DependentUpon>MKV_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_AzimthSliders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_AzimthSliders.Designer.cs">
+      <DependentUpon>UC_WSKI_AzimthSliders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_CANMessageOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_CANMessageOut.Designer.cs">
+      <DependentUpon>UC_WSKI_CANMessageOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_SteerEnginSliders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_SteerEnginSliders.Designer.cs">
+      <DependentUpon>UC_WSKI_SteerEnginSliders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\AxioShell.cs" />
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\CTRL_PannelData.cs" />
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\INDIC_PannelData.cs" />
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\NOMAD_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\NomadGui\NOMAD_GUI.Designer.cs">
+      <DependentUpon>NOMAD_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.Designer.cs">
+      <DependentUpon>WSKI_GUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIz\Formz\TestingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UIz\Formz\TestingForm.Designer.cs">
       <DependentUpon>TestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.Designer.cs">
+      <DependentUpon>UC_PGN_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\MicroUnits\uc_microRadioButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\MicroUnits\uc_microRadioButton.Designer.cs">
+      <DependentUpon>uc_microRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_DataDisplayCTRL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_DataDisplayCTRL.Designer.cs">
+      <DependentUpon>UC_DataDisplayCTRL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip8_bG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip8_bG.Designer.cs">
+      <DependentUpon>UC_manip8_bG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip8_bs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip8_bs.Designer.cs">
+      <DependentUpon>UC_manip8_bs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip_LABEL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip_LABEL.Designer.cs">
+      <DependentUpon>UC_manip_LABEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip_SLIDER.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\ManipUC\UC_manip_SLIDER.Designer.cs">
+      <DependentUpon>UC_manip_SLIDER.cs</DependentUpon>
     </Compile>
     <Compile Include="UIz\UControlz\BinNameRow_uc.cs">
       <SubType>UserControl</SubType>
@@ -127,6 +253,9 @@
     <Compile Include="UIz\UControlz\Builders\PROJECT_Builder_UC.Designer.cs">
       <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIz\Formz\CanManipForm.resx">
+      <DependentUpon>CanManipForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\CanSimForm.resx">
       <DependentUpon>CanSimForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,8 +271,65 @@
     <EmbeddedResource Include="UIz\Formz\CreateOrModifyProject.resx">
       <DependentUpon>CreateOrModifyProject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\CustomCanGUI.resx">
+      <DependentUpon>CustomCanGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\ErafGui\ERAF_GUI.resx">
+      <DependentUpon>ERAF_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF34_ClutchCom.resx">
+      <DependentUpon>UC_ERAF_PGN_FF34_ClutchCom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF50_Helm_TakeCtrl.resx">
+      <DependentUpon>UC_ERAF_PGN_FF50_Helm_TakeCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\ErafGui\UC_ERAF_PGN_FF51_LeverPos.resx">
+      <DependentUpon>UC_ERAF_PGN_FF51_LeverPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\Ka2700Gui\KA27_GUI.resx">
+      <DependentUpon>KA27_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\MKV_GUI.resx">
+      <DependentUpon>MKV_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_AzimthSliders.resx">
+      <DependentUpon>UC_WSKI_AzimthSliders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_CANMessageOut.resx">
+      <DependentUpon>UC_WSKI_CANMessageOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\MkvGui\UC_WSKI_SteerEnginSliders.resx">
+      <DependentUpon>UC_WSKI_SteerEnginSliders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\NomadGui\NOMAD_GUI.resx">
+      <DependentUpon>NOMAD_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.resx">
+      <DependentUpon>WSKI_GUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\TestingForm.resx">
       <DependentUpon>TestingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.resx">
+      <DependentUpon>UC_PGN_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\MicroUnits\uc_microRadioButton.resx">
+      <DependentUpon>uc_microRadioButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_DataDisplayCTRL.resx">
+      <DependentUpon>UC_DataDisplayCTRL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_manip8_bG.resx">
+      <DependentUpon>UC_manip8_bG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_manip8_bs.resx">
+      <DependentUpon>UC_manip8_bs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_manip_LABEL.resx">
+      <DependentUpon>UC_manip_LABEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\ManipUC\UC_manip_SLIDER.resx">
+      <DependentUpon>UC_manip_SLIDER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\UControlz\BinNameRow_uc.resx">
       <DependentUpon>BinNameRow_uc.cs</DependentUpon>
