@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace VC_CAN_Simulator.UIz.Formz.SingleForm.NomadGui
 {
+    //CLR_dot_NEt_FRAMEWORK
     public partial class NOMAD_GUI : Form
     {
  

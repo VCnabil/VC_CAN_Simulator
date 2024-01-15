@@ -21,6 +21,7 @@ namespace VC_CAN_Simulator.UIz.Formz
     {
         bool _loopIsRunning;
         CanManager canManager;
+        Dictionary<int, UC_PGN_Controller> Dict_active_PGNcontroller;
         public CanManipForm()
         {
             #region TEST
@@ -130,7 +131,7 @@ namespace VC_CAN_Simulator.UIz.Formz
 
             InitializeComponent();
             this.Width = 2400/2;
-            this.Height = 1500/2;
+            this.Height = 1580/2;
 
             canManager = new CanManager();
             canManager.ListChannels();
@@ -144,23 +145,19 @@ namespace VC_CAN_Simulator.UIz.Formz
             btn_StartStop.Click += Btn_StartStop_Click;
             _loopIsRunning = false;
 
+            Dict_active_PGNcontroller = new Dictionary<int, UC_PGN_Controller>();
 
-           // string _filename_objbuilder = "TEST016";
-         //   string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";
-         //   string path_filenameFromMain = PATH_dIR + _filename_objbuilder + ".json";
             Project_DataObject PROJECTTOSAVE = LoadJsonFile(Get_FullFilePAth());
             int apgntestheight = 0;
             for (int i = 0; i < PROJECTTOSAVE.AllPgnList.Count; i++)
             {
                 Pgn_DataObject pgnobj = PROJECTTOSAVE.AllPgnList[i];
                 UC_PGN_Controller pgntest = new UC_PGN_Controller(pgnobj);
+                int PGNint = pgntest.MyPGN_INT;
+                Dict_active_PGNcontroller.Add(PGNint, pgntest);
                 apgntestheight = pgntest.Height;
                 this.flowLayoutPanel1.Controls.Add(pgntest);
             }
-
-         
-
-
             this.flowLayoutPanel1.Width = this.Width-50;
             this.flowLayoutPanel1.Height = apgntestheight+10;
         }
@@ -192,15 +189,14 @@ namespace VC_CAN_Simulator.UIz.Formz
 
         private void Timer1_Loop_Tick(object sender, EventArgs e)
         {
-            //Dictionary<int, VC_PGN_ColCtrlr_UC> _localDict = object_BuilderReader.GetDICT_forCAN();
 
-            //foreach (KeyValuePair<int, VC_PGN_ColCtrlr_UC> entry in _localDict)
-            //{
-            //    int pgn = entry.Key;
-            //    byte[] data = entry.Value.Get_CAN_payload();
-
-            //    canManager.SendMessage(pgn, data);
-            //}
+            foreach (KeyValuePair<int, UC_PGN_Controller> entry in Dict_active_PGNcontroller)
+            {
+                int pgn = entry.Key;
+                byte[] data = entry.Value.MYdata_bytes;
+                if(entry.Value.AllowSending)
+                canManager.SendMessage(pgn, data);
+            }
         }
     }
 }

@@ -26,6 +26,8 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         UC_PGN_Controller _myUC_PGN_BASE;
         int my_lo_indx;
         int my_hi_indx;
+        int my_Defaultval;
+        bool[] my_bitsStates;
         public int ID_ctrl { get; private set; }
         #endregion
        
@@ -34,6 +36,7 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         public UC_manip8_bs(int argid, Ctrl_DataObject argCtrlData, UC_PGN_Controller argUC_PGN_BASE)
         {
             InitializeComponent();
+            my_bitsStates= new bool[8];
             ID_ctrl = argid;
             _myUC_PGN_BASE = argUC_PGN_BASE;
             my_lo_indx = argCtrlData.INDEXLO;
@@ -99,16 +102,10 @@ namespace VC_CAN_Simulator.UIz.ManipUC
                 myCbs[bitnumber].Show();
                 myCbs[bitnumber].Enabled = true;
                 myCbs[bitnumber].Text = bitDescriptor;
+                my_bitsStates[bitnumber] = true; //to be used to reset the cbs 
             }
         }
-        //public void Init(int argBorderColor) {
-
-        //    SetBorderColor(argBorderColor);
-        //    // Subscribe to hover events for this control and all child controls
-        //    SubscribeHoverEvents(this);
-        //    Update_Bval_label();
-        //    Update_my2bytes();
-        //}
+  
         void cb_bit_changed(object sender, EventArgs e)
         {
             // _cur_INT_Value is the value of the byte set by the cb_b0 to cb_b7 representing bit 0 to bit 8 of the byte    
@@ -129,13 +126,19 @@ namespace VC_CAN_Simulator.UIz.ManipUC
         #region Commons
         private void Btn_reset_Click(object sender, EventArgs e)
         {
-            for (int x = 0; x < 8; x++)
+            //for (int x = 0; x < 8; x++)
+            //{
+            //    if (myCbs[x].Enabled)
+            //        myCbs[x].Checked = false;
+            //}
+            for(int i=0; i < my_bitsStates.Length; i++)
             {
-                if (myCbs[x].Enabled)
-                    myCbs[x].Checked = false;
-            }
 
-            CU_VALUE_INT = 0;
+                if (myCbs[i].Enabled)
+                    myCbs[i].Checked =  my_bitsStates[i]  ;
+            }   
+
+            //CU_VALUE_INT = 0;
 
             Update_Bval_label();
             Update_my2bytes();

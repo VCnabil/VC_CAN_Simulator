@@ -409,8 +409,6 @@ namespace VC_CAN_Simulator.Backend
             byte[] testarra = new byte[8] { 0, 1, 2, 3, 4, 5, 6, 7 };
             var status = Canlib.canWrite(handle, 0x18BAAD00, testarra, 8, Canlib.canMSG_EXT);
 
-
-
         }
         private void CheckStatussold(Canlib.canStatus status, string method)
         {

@@ -59,7 +59,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Desktop;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 68);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(2309, 1341);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(2309, 1400);
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2372, 1421);
+            this.ClientSize = new System.Drawing.Size(2372, 1501);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lbl_status);
             this.Controls.Add(this.btn_StartStop);

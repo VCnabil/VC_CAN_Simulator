@@ -1359,25 +1359,9 @@ namespace VC_CAN_Simulator.UIz.Formz.SingleForm
 
             else
             {
-
                 canManager.SendMessage(_png_FF8C_cuINctrl_StaInctrl_throttle_01, _bar_FF8C_cuINctrl_StaInctrl_throttle_01);
                 canManager.SendMessage(_png_FF8C_cuINctrl_StaInctrl_throttle_00, _bar_FF8C_cuINctrl_StaInctrl_throttle_00);
-
             }
-
-
-            //if (_selectedUnitInControl != UnitInControl.Unknown && _selectedStationInControl != StationInControl.Unknown)
-            //{
-
-            //}
-            //else
-            //{
-
-
-            //}
-            // Your sendData implementation here
-
-
 
         }
 

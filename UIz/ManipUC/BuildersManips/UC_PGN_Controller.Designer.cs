@@ -42,13 +42,15 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 140);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(540, 1315);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(540, 1400);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
             // cb_allowSend
             // 
             this.cb_allowSend.AutoSize = true;
+            this.cb_allowSend.Checked = true;
+            this.cb_allowSend.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_allowSend.Location = new System.Drawing.Point(506, 3);
             this.cb_allowSend.Name = "cb_allowSend";
             this.cb_allowSend.Size = new System.Drawing.Size(28, 27);
@@ -67,7 +69,7 @@
             // 
             this.lbl_debug.AutoSize = true;
             this.lbl_debug.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_debug.Location = new System.Drawing.Point(3, 1455);
+            this.lbl_debug.Location = new System.Drawing.Point(3, 1546);
             this.lbl_debug.Name = "lbl_debug";
             this.lbl_debug.Size = new System.Drawing.Size(70, 25);
             this.lbl_debug.TabIndex = 3;
@@ -82,7 +84,7 @@
             this.Controls.Add(this.uC_DataDisplayCTRL1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "UC_PGN_Controller";
-            this.Size = new System.Drawing.Size(542, 1480);
+            this.Size = new System.Drawing.Size(542, 1580);
             this.ResumeLayout(false);
             this.PerformLayout();
 

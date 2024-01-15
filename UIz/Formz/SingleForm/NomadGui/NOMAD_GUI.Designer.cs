@@ -305,7 +305,7 @@
             // 
             // tb_sysinfo_byt3_100
             // 
-            this.tb_sysinfo_byt3_100.Location = new System.Drawing.Point(214, 11);
+            this.tb_sysinfo_byt3_100.Location = new System.Drawing.Point(213, 11);
             this.tb_sysinfo_byt3_100.Name = "tb_sysinfo_byt3_100";
             this.tb_sysinfo_byt3_100.Size = new System.Drawing.Size(403, 35);
             this.tb_sysinfo_byt3_100.TabIndex = 86;
@@ -313,7 +313,7 @@
             // lbl_sysinfo_byt3_val
             // 
             this.lbl_sysinfo_byt3_val.AutoSize = true;
-            this.lbl_sysinfo_byt3_val.Location = new System.Drawing.Point(651, 8);
+            this.lbl_sysinfo_byt3_val.Location = new System.Drawing.Point(649, 8);
             this.lbl_sysinfo_byt3_val.Name = "lbl_sysinfo_byt3_val";
             this.lbl_sysinfo_byt3_val.Size = new System.Drawing.Size(39, 29);
             this.lbl_sysinfo_byt3_val.TabIndex = 90;
@@ -324,7 +324,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.54546F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.45454F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel7.Controls.Add(this.label_sysinfo_byt4, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.tb_sysinfo_byt4_100, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.lbl_sysinfo_byt4_val, 2, 1);
@@ -348,7 +348,7 @@
             // 
             // tb_sysinfo_byt4_100
             // 
-            this.tb_sysinfo_byt4_100.Location = new System.Drawing.Point(214, 11);
+            this.tb_sysinfo_byt4_100.Location = new System.Drawing.Point(213, 11);
             this.tb_sysinfo_byt4_100.Name = "tb_sysinfo_byt4_100";
             this.tb_sysinfo_byt4_100.Size = new System.Drawing.Size(403, 35);
             this.tb_sysinfo_byt4_100.TabIndex = 86;
@@ -356,7 +356,7 @@
             // lbl_sysinfo_byt4_val
             // 
             this.lbl_sysinfo_byt4_val.AutoSize = true;
-            this.lbl_sysinfo_byt4_val.Location = new System.Drawing.Point(651, 8);
+            this.lbl_sysinfo_byt4_val.Location = new System.Drawing.Point(649, 8);
             this.lbl_sysinfo_byt4_val.Name = "lbl_sysinfo_byt4_val";
             this.lbl_sysinfo_byt4_val.Size = new System.Drawing.Size(39, 29);
             this.lbl_sysinfo_byt4_val.TabIndex = 90;
@@ -425,7 +425,7 @@
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.54546F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.45454F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel9.Controls.Add(this.label_sysinfo_byt6, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.tb_sysinfo_byt6_100, 1, 1);
             this.tableLayoutPanel9.Controls.Add(this.lbl_sysinfo_byt6_val, 2, 1);
@@ -449,7 +449,7 @@
             // 
             // tb_sysinfo_byt6_100
             // 
-            this.tb_sysinfo_byt6_100.Location = new System.Drawing.Point(214, 11);
+            this.tb_sysinfo_byt6_100.Location = new System.Drawing.Point(213, 11);
             this.tb_sysinfo_byt6_100.Name = "tb_sysinfo_byt6_100";
             this.tb_sysinfo_byt6_100.Size = new System.Drawing.Size(403, 35);
             this.tb_sysinfo_byt6_100.TabIndex = 86;
@@ -457,7 +457,7 @@
             // lbl_sysinfo_byt6_val
             // 
             this.lbl_sysinfo_byt6_val.AutoSize = true;
-            this.lbl_sysinfo_byt6_val.Location = new System.Drawing.Point(651, 8);
+            this.lbl_sysinfo_byt6_val.Location = new System.Drawing.Point(649, 8);
             this.lbl_sysinfo_byt6_val.Name = "lbl_sysinfo_byt6_val";
             this.lbl_sysinfo_byt6_val.Size = new System.Drawing.Size(39, 29);
             this.lbl_sysinfo_byt6_val.TabIndex = 90;
@@ -551,7 +551,7 @@
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.54546F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.45454F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel6.Controls.Add(this.label_sysinfo_byt3, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.tb_sysinfo_byt3_100, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.lbl_sysinfo_byt3_val, 2, 1);
@@ -568,7 +568,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.54546F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.45454F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
             this.tableLayoutPanel3.Controls.Add(this.label_sysinfo_byt2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tb_sysinfo_byt2_100, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.lbl_sysinfo_byt2_val, 2, 1);
@@ -592,7 +592,7 @@
             // 
             // tb_sysinfo_byt2_100
             // 
-            this.tb_sysinfo_byt2_100.Location = new System.Drawing.Point(214, 11);
+            this.tb_sysinfo_byt2_100.Location = new System.Drawing.Point(213, 11);
             this.tb_sysinfo_byt2_100.Name = "tb_sysinfo_byt2_100";
             this.tb_sysinfo_byt2_100.Size = new System.Drawing.Size(403, 35);
             this.tb_sysinfo_byt2_100.TabIndex = 86;
@@ -600,7 +600,7 @@
             // lbl_sysinfo_byt2_val
             // 
             this.lbl_sysinfo_byt2_val.AutoSize = true;
-            this.lbl_sysinfo_byt2_val.Location = new System.Drawing.Point(651, 8);
+            this.lbl_sysinfo_byt2_val.Location = new System.Drawing.Point(649, 8);
             this.lbl_sysinfo_byt2_val.Name = "lbl_sysinfo_byt2_val";
             this.lbl_sysinfo_byt2_val.Size = new System.Drawing.Size(39, 29);
             this.lbl_sysinfo_byt2_val.TabIndex = 90;
@@ -1194,7 +1194,7 @@
             this.tableLayoutPanel11.Controls.Add(this.lbl_noz1_val, 3, 2);
             this.tableLayoutPanel11.Controls.Add(this.tkb_indic_buk0, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.lbl_eng1_val, 5, 2);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(880, 1177);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(880, 1197);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 3;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.16751F));
@@ -1278,7 +1278,7 @@
             this.tableLayoutPanel12.Controls.Add(this.lbl_noz3_val, 3, 2);
             this.tableLayoutPanel12.Controls.Add(this.tkb_indic_buk2, 0, 1);
             this.tableLayoutPanel12.Controls.Add(this.lbl_eng3_val, 5, 2);
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(1708, 1177);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(1708, 1197);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 3;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.16751F));
@@ -1307,7 +1307,7 @@
             this.tableLayoutPanel2.Controls.Add(this.lbl_Selection, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbx_ActiveSystem, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.cmbx_OperatingMode, 0, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(730, 865);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(724, 909);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.02564F));
@@ -1349,9 +1349,10 @@
             // lbl_Selection
             // 
             this.lbl_Selection.AutoSize = true;
+            this.lbl_Selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Selection.Location = new System.Drawing.Point(3, 0);
             this.lbl_Selection.Name = "lbl_Selection";
-            this.lbl_Selection.Size = new System.Drawing.Size(153, 29);
+            this.lbl_Selection.Size = new System.Drawing.Size(135, 25);
             this.lbl_Selection.TabIndex = 79;
             this.lbl_Selection.Text = "lbl_Selection";
             // 
@@ -1413,7 +1414,7 @@
             // lbl_SteerVal_S_IB
             // 
             this.lbl_SteerVal_S_IB.AutoSize = true;
-            this.lbl_SteerVal_S_IB.Location = new System.Drawing.Point(3, 22);
+            this.lbl_SteerVal_S_IB.Location = new System.Drawing.Point(3, 29);
             this.lbl_SteerVal_S_IB.Name = "lbl_SteerVal_S_IB";
             this.lbl_SteerVal_S_IB.Size = new System.Drawing.Size(65, 29);
             this.lbl_SteerVal_S_IB.TabIndex = 28;
@@ -1472,7 +1473,7 @@
             // lbl_SteerFBval_S_IB
             // 
             this.lbl_SteerFBval_S_IB.AutoSize = true;
-            this.lbl_SteerFBval_S_IB.Location = new System.Drawing.Point(3, 88);
+            this.lbl_SteerFBval_S_IB.Location = new System.Drawing.Point(3, 117);
             this.lbl_SteerFBval_S_IB.Name = "lbl_SteerFBval_S_IB";
             this.lbl_SteerFBval_S_IB.Size = new System.Drawing.Size(65, 29);
             this.lbl_SteerFBval_S_IB.TabIndex = 27;
@@ -1484,7 +1485,7 @@
             this.label_steer_S_IB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_steer_S_IB.Location = new System.Drawing.Point(121, 0);
             this.label_steer_S_IB.Name = "label_steer_S_IB";
-            this.label_steer_S_IB.Size = new System.Drawing.Size(88, 22);
+            this.label_steer_S_IB.Size = new System.Drawing.Size(88, 25);
             this.label_steer_S_IB.TabIndex = 25;
             this.label_steer_S_IB.Text = "Steer SI";
             // 
@@ -1492,7 +1493,7 @@
             // 
             this.label_steerFb_S_IB.AutoSize = true;
             this.label_steerFb_S_IB.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_steerFb_S_IB.Location = new System.Drawing.Point(121, 134);
+            this.label_steerFb_S_IB.Location = new System.Drawing.Point(121, 163);
             this.label_steerFb_S_IB.Name = "label_steerFb_S_IB";
             this.label_steerFb_S_IB.Size = new System.Drawing.Size(33, 22);
             this.label_steerFb_S_IB.TabIndex = 26;
@@ -1508,9 +1509,9 @@
             // tkb_Steer_S_IB
             // 
             this.tkb_Steer_S_IB.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tkb_Steer_S_IB.Location = new System.Drawing.Point(121, 25);
+            this.tkb_Steer_S_IB.Location = new System.Drawing.Point(121, 32);
             this.tkb_Steer_S_IB.Name = "tkb_Steer_S_IB";
-            this.tkb_Steer_S_IB.Size = new System.Drawing.Size(494, 60);
+            this.tkb_Steer_S_IB.Size = new System.Drawing.Size(494, 82);
             this.tkb_Steer_S_IB.TabIndex = 2;
             this.tkb_Steer_S_IB.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -1573,7 +1574,7 @@
             // 
             this.tkb_Steer_fb_S_IB.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tkb_Steer_fb_S_IB.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tkb_Steer_fb_S_IB.Location = new System.Drawing.Point(121, 91);
+            this.tkb_Steer_fb_S_IB.Location = new System.Drawing.Point(121, 120);
             this.tkb_Steer_fb_S_IB.Name = "tkb_Steer_fb_S_IB";
             this.tkb_Steer_fb_S_IB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tkb_Steer_fb_S_IB.Size = new System.Drawing.Size(494, 40);
@@ -1593,7 +1594,7 @@
             // 
             this.tkb_Steer_fb_P_IB.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tkb_Steer_fb_P_IB.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tkb_Steer_fb_P_IB.Location = new System.Drawing.Point(3, 91);
+            this.tkb_Steer_fb_P_IB.Location = new System.Drawing.Point(3, 120);
             this.tkb_Steer_fb_P_IB.Name = "tkb_Steer_fb_P_IB";
             this.tkb_Steer_fb_P_IB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tkb_Steer_fb_P_IB.Size = new System.Drawing.Size(494, 40);
@@ -1603,9 +1604,9 @@
             // tkb_Steer_P_IB
             // 
             this.tkb_Steer_P_IB.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tkb_Steer_P_IB.Location = new System.Drawing.Point(3, 25);
+            this.tkb_Steer_P_IB.Location = new System.Drawing.Point(3, 32);
             this.tkb_Steer_P_IB.Name = "tkb_Steer_P_IB";
-            this.tkb_Steer_P_IB.Size = new System.Drawing.Size(496, 60);
+            this.tkb_Steer_P_IB.Size = new System.Drawing.Size(496, 82);
             this.tkb_Steer_P_IB.TabIndex = 2;
             this.tkb_Steer_P_IB.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -1645,7 +1646,7 @@
             this.label_steer_P_IB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_steer_P_IB.Location = new System.Drawing.Point(3, 0);
             this.label_steer_P_IB.Name = "label_steer_P_IB";
-            this.label_steer_P_IB.Size = new System.Drawing.Size(88, 22);
+            this.label_steer_P_IB.Size = new System.Drawing.Size(88, 25);
             this.label_steer_P_IB.TabIndex = 3;
             this.label_steer_P_IB.Text = "Steer PI";
             // 
@@ -1653,7 +1654,7 @@
             // 
             this.label_steerFb_P_IB.AutoSize = true;
             this.label_steerFb_P_IB.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_steerFb_P_IB.Location = new System.Drawing.Point(3, 134);
+            this.label_steerFb_P_IB.Location = new System.Drawing.Point(3, 163);
             this.label_steerFb_P_IB.Name = "label_steerFb_P_IB";
             this.label_steerFb_P_IB.Size = new System.Drawing.Size(33, 22);
             this.label_steerFb_P_IB.TabIndex = 4;
@@ -1808,7 +1809,7 @@
             // lbl_SteerVal_P_IB
             // 
             this.lbl_SteerVal_P_IB.AutoSize = true;
-            this.lbl_SteerVal_P_IB.Location = new System.Drawing.Point(546, 22);
+            this.lbl_SteerVal_P_IB.Location = new System.Drawing.Point(546, 29);
             this.lbl_SteerVal_P_IB.Name = "lbl_SteerVal_P_IB";
             this.lbl_SteerVal_P_IB.Size = new System.Drawing.Size(65, 29);
             this.lbl_SteerVal_P_IB.TabIndex = 16;
@@ -1817,7 +1818,7 @@
             // lbl_SteerFBval_P_IB
             // 
             this.lbl_SteerFBval_P_IB.AutoSize = true;
-            this.lbl_SteerFBval_P_IB.Location = new System.Drawing.Point(546, 88);
+            this.lbl_SteerFBval_P_IB.Location = new System.Drawing.Point(546, 117);
             this.lbl_SteerFBval_P_IB.Name = "lbl_SteerFBval_P_IB";
             this.lbl_SteerFBval_P_IB.Size = new System.Drawing.Size(65, 29);
             this.lbl_SteerFBval_P_IB.TabIndex = 15;
@@ -2146,21 +2147,21 @@
             this.table_HORI_SO.Controls.Add(this.lbl_SteerVal_S_OB, 0, 1);
             this.table_HORI_SO.Controls.Add(this.label_steerFb_S_OB, 1, 3);
             this.table_HORI_SO.Controls.Add(this.lbl_SteerFBval_S_OB, 0, 2);
-            this.table_HORI_SO.Location = new System.Drawing.Point(1209, 865);
+            this.table_HORI_SO.Location = new System.Drawing.Point(1209, 894);
             this.table_HORI_SO.Name = "table_HORI_SO";
             this.table_HORI_SO.RowCount = 4;
             this.table_HORI_SO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.table_HORI_SO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.table_HORI_SO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.table_HORI_SO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.table_HORI_SO.Size = new System.Drawing.Size(621, 160);
+            this.table_HORI_SO.Size = new System.Drawing.Size(621, 213);
             this.table_HORI_SO.TabIndex = 124;
             // 
             // tkb_Steer_fb_S_OB
             // 
             this.tkb_Steer_fb_S_OB.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tkb_Steer_fb_S_OB.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tkb_Steer_fb_S_OB.Location = new System.Drawing.Point(122, 91);
+            this.tkb_Steer_fb_S_OB.Location = new System.Drawing.Point(122, 144);
             this.tkb_Steer_fb_S_OB.Name = "tkb_Steer_fb_S_OB";
             this.tkb_Steer_fb_S_OB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tkb_Steer_fb_S_OB.Size = new System.Drawing.Size(494, 40);
@@ -2170,9 +2171,9 @@
             // tkb_Steer_S_OB
             // 
             this.tkb_Steer_S_OB.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tkb_Steer_S_OB.Location = new System.Drawing.Point(122, 25);
+            this.tkb_Steer_S_OB.Location = new System.Drawing.Point(122, 38);
             this.tkb_Steer_S_OB.Name = "tkb_Steer_S_OB";
-            this.tkb_Steer_S_OB.Size = new System.Drawing.Size(494, 60);
+            this.tkb_Steer_S_OB.Size = new System.Drawing.Size(494, 100);
             this.tkb_Steer_S_OB.TabIndex = 2;
             this.tkb_Steer_S_OB.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -2182,14 +2183,14 @@
             this.label_steer_S_OB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_steer_S_OB.Location = new System.Drawing.Point(122, 0);
             this.label_steer_S_OB.Name = "label_steer_S_OB";
-            this.label_steer_S_OB.Size = new System.Drawing.Size(99, 22);
+            this.label_steer_S_OB.Size = new System.Drawing.Size(99, 25);
             this.label_steer_S_OB.TabIndex = 58;
             this.label_steer_S_OB.Text = "Steer SO";
             // 
             // lbl_SteerVal_S_OB
             // 
             this.lbl_SteerVal_S_OB.AutoSize = true;
-            this.lbl_SteerVal_S_OB.Location = new System.Drawing.Point(3, 22);
+            this.lbl_SteerVal_S_OB.Location = new System.Drawing.Point(3, 35);
             this.lbl_SteerVal_S_OB.Name = "lbl_SteerVal_S_OB";
             this.lbl_SteerVal_S_OB.Size = new System.Drawing.Size(65, 29);
             this.lbl_SteerVal_S_OB.TabIndex = 61;
@@ -2199,7 +2200,7 @@
             // 
             this.label_steerFb_S_OB.AutoSize = true;
             this.label_steerFb_S_OB.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_steerFb_S_OB.Location = new System.Drawing.Point(122, 134);
+            this.label_steerFb_S_OB.Location = new System.Drawing.Point(122, 187);
             this.label_steerFb_S_OB.Name = "label_steerFb_S_OB";
             this.label_steerFb_S_OB.Size = new System.Drawing.Size(33, 22);
             this.label_steerFb_S_OB.TabIndex = 59;
@@ -2208,7 +2209,7 @@
             // lbl_SteerFBval_S_OB
             // 
             this.lbl_SteerFBval_S_OB.AutoSize = true;
-            this.lbl_SteerFBval_S_OB.Location = new System.Drawing.Point(3, 88);
+            this.lbl_SteerFBval_S_OB.Location = new System.Drawing.Point(3, 141);
             this.lbl_SteerFBval_S_OB.Name = "lbl_SteerFBval_S_OB";
             this.lbl_SteerFBval_S_OB.Size = new System.Drawing.Size(65, 29);
             this.lbl_SteerFBval_S_OB.TabIndex = 60;
@@ -2232,7 +2233,7 @@
             this.table_HORI_PI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.table_HORI_PI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.table_HORI_PI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.table_HORI_PI.Size = new System.Drawing.Size(621, 160);
+            this.table_HORI_PI.Size = new System.Drawing.Size(621, 189);
             this.table_HORI_PI.TabIndex = 118;
             // 
             // table_HORI_SI
@@ -2253,7 +2254,7 @@
             this.table_HORI_SI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.table_HORI_SI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.table_HORI_SI.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.table_HORI_SI.Size = new System.Drawing.Size(621, 160);
+            this.table_HORI_SI.Size = new System.Drawing.Size(621, 189);
             this.table_HORI_SI.TabIndex = 120;
             // 
             // label_STBD_OB
@@ -2287,7 +2288,7 @@
             // 
             this.label_steerFb_P_OB.AutoSize = true;
             this.label_steerFb_P_OB.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_steerFb_P_OB.Location = new System.Drawing.Point(3, 134);
+            this.label_steerFb_P_OB.Location = new System.Drawing.Point(3, 187);
             this.label_steerFb_P_OB.Name = "label_steerFb_P_OB";
             this.label_steerFb_P_OB.Size = new System.Drawing.Size(33, 22);
             this.label_steerFb_P_OB.TabIndex = 54;
@@ -2296,7 +2297,7 @@
             // lbl_SteerFBval_P_OB
             // 
             this.lbl_SteerFBval_P_OB.AutoSize = true;
-            this.lbl_SteerFBval_P_OB.Location = new System.Drawing.Point(546, 88);
+            this.lbl_SteerFBval_P_OB.Location = new System.Drawing.Point(546, 141);
             this.lbl_SteerFBval_P_OB.Name = "lbl_SteerFBval_P_OB";
             this.lbl_SteerFBval_P_OB.Size = new System.Drawing.Size(65, 29);
             this.lbl_SteerFBval_P_OB.TabIndex = 55;
@@ -2309,7 +2310,7 @@
             this.label_steer_P_OB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_steer_P_OB.Location = new System.Drawing.Point(3, 0);
             this.label_steer_P_OB.Name = "label_steer_P_OB";
-            this.label_steer_P_OB.Size = new System.Drawing.Size(99, 22);
+            this.label_steer_P_OB.Size = new System.Drawing.Size(99, 25);
             this.label_steer_P_OB.TabIndex = 53;
             this.label_steer_P_OB.Text = "Steer PO";
             // 
@@ -2324,21 +2325,21 @@
             this.table_HORI_PO.Controls.Add(this.label_steerFb_P_OB, 0, 3);
             this.table_HORI_PO.Controls.Add(this.lbl_SteerVal_P_OB, 1, 1);
             this.table_HORI_PO.Controls.Add(this.lbl_SteerFBval_P_OB, 1, 2);
-            this.table_HORI_PO.Location = new System.Drawing.Point(58, 869);
+            this.table_HORI_PO.Location = new System.Drawing.Point(58, 898);
             this.table_HORI_PO.Name = "table_HORI_PO";
             this.table_HORI_PO.RowCount = 4;
             this.table_HORI_PO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.table_HORI_PO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.table_HORI_PO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.table_HORI_PO.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.table_HORI_PO.Size = new System.Drawing.Size(621, 160);
+            this.table_HORI_PO.Size = new System.Drawing.Size(621, 213);
             this.table_HORI_PO.TabIndex = 117;
             // 
             // tkb_Steer_fb_P_OB
             // 
             this.tkb_Steer_fb_P_OB.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tkb_Steer_fb_P_OB.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.tkb_Steer_fb_P_OB.Location = new System.Drawing.Point(3, 91);
+            this.tkb_Steer_fb_P_OB.Location = new System.Drawing.Point(3, 144);
             this.tkb_Steer_fb_P_OB.Name = "tkb_Steer_fb_P_OB";
             this.tkb_Steer_fb_P_OB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tkb_Steer_fb_P_OB.Size = new System.Drawing.Size(494, 40);
@@ -2348,16 +2349,16 @@
             // tkb_Steer_P_OB
             // 
             this.tkb_Steer_P_OB.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tkb_Steer_P_OB.Location = new System.Drawing.Point(3, 25);
+            this.tkb_Steer_P_OB.Location = new System.Drawing.Point(3, 38);
             this.tkb_Steer_P_OB.Name = "tkb_Steer_P_OB";
-            this.tkb_Steer_P_OB.Size = new System.Drawing.Size(496, 60);
+            this.tkb_Steer_P_OB.Size = new System.Drawing.Size(496, 100);
             this.tkb_Steer_P_OB.TabIndex = 2;
             this.tkb_Steer_P_OB.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
             // lbl_SteerVal_P_OB
             // 
             this.lbl_SteerVal_P_OB.AutoSize = true;
-            this.lbl_SteerVal_P_OB.Location = new System.Drawing.Point(546, 22);
+            this.lbl_SteerVal_P_OB.Location = new System.Drawing.Point(546, 35);
             this.lbl_SteerVal_P_OB.Name = "lbl_SteerVal_P_OB";
             this.lbl_SteerVal_P_OB.Size = new System.Drawing.Size(65, 29);
             this.lbl_SteerVal_P_OB.TabIndex = 56;

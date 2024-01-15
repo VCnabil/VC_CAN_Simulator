@@ -28,6 +28,8 @@ namespace VC_CAN_Simulator.UIz.ManipUC.BuildersManips
         {
             InitializeComponent();
             cb_allowSend.CheckedChanged += Cb_allowSend_CheckedChanged;
+            cb_allowSend.Checked = true;
+            AllowSending = true;
             MYdata_bytes= new byte[8];
             _mycopy_PGN_DO = argPGN_DO;
             MyPGN_ID = argPGN_DO.IDpgn;
