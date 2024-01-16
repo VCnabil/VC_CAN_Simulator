@@ -19,6 +19,9 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
     {
         string sourceFilePath;
         string targetFilePath;
+        string originalformatFilePath;
+        string originalformatFilePathFull;
+
         List<List<string>> ListOfTextPgnBlocks;
         List<VC_PGN_Text_Object> mylistFromText;
         public VC_PGNjsonGUI()
@@ -26,16 +29,99 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
             InitializeComponent();
             sourceFilePath = Path.Combine(_vcPgnDirPath, _vcreadonly_samplepgnTXT_FileName);
             targetFilePath = Path.Combine(_vcPgnDirPath, _vcWrite_samplepgnTXT_FileName);
+            originalformatFilePath = Path.Combine(_vcPgnDirPath, _vcErite_textCanOriginalFormat_FileName);
+            originalformatFilePathFull = Path.Combine(_vcPgnDirPath, _vcErite_textCanOriginal_FULL_Format_FileName);
             btn_run.Click += Btn_run_Click;
+            btn_run_makeText.Click += Btn_run_makeText_Click;
             textBox1.Text = "";
             textBox1.Text = sourceFilePath;
         }
 
+        private void AddByteDescriptionAndBits(List<string> list, string description, List<string> bits)
+        {
+            list.Add("            - " + description);
+            if (bits.Count == 0)
+            {
+                list.Add(" ");
+                return;
+            }
+
+            int bitIndex = 0;
+            foreach (var bitLine in bits)
+            {
+                string fullBitLine = "                    - b" + bitIndex.ToString() + " : " + bitLine;
+                list.Add(fullBitLine);
+                bitIndex++;
+            }
+
+            list.Add(" ");
+        }
+
+        void Do_SimpleHEaderFormat() {
+            Root_VC_PGN_Text_Object root_VC_PGN_Text_Object = JsonConvert.DeserializeObject<Root_VC_PGN_Text_Object>(File.ReadAllText(targetFilePath));
+            List<string> listOfAllLinesToBeWrittenToText = new List<string>();
+
+            foreach (VC_PGN_Text_Object vcpgnt in root_VC_PGN_Text_Object.VC_PGN_Text_Object)
+            {
+                listOfAllLinesToBeWrittenToText.Add("============================================================================");
+                listOfAllLinesToBeWrittenToText.Add("( " + vcpgnt.vC_PGN.From + "  )");
+                listOfAllLinesToBeWrittenToText.Add("============================================================================");
+                listOfAllLinesToBeWrittenToText.Add("    " + vcpgnt.vC_PGNData.PGN + "    ( " + vcpgnt.vC_PGNData.DescritionPGN + " )");
+                listOfAllLinesToBeWrittenToText.Add("");
+
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte0 : " + vcpgnt.vC_PGNData.DescritionByte0, vcpgnt.vC_PGNData.Byte0);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte1 : " + vcpgnt.vC_PGNData.DescritionByte1, vcpgnt.vC_PGNData.Byte1);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte2 : " + vcpgnt.vC_PGNData.DescritionByte2, vcpgnt.vC_PGNData.Byte2);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte3 : " + vcpgnt.vC_PGNData.DescritionByte3, vcpgnt.vC_PGNData.Byte3);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte4 : " + vcpgnt.vC_PGNData.DescritionByte4, vcpgnt.vC_PGNData.Byte4);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte5 : " + vcpgnt.vC_PGNData.DescritionByte5, vcpgnt.vC_PGNData.Byte5);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte6 : " + vcpgnt.vC_PGNData.DescritionByte6, vcpgnt.vC_PGNData.Byte6);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte7 : " + vcpgnt.vC_PGNData.DescritionByte7, vcpgnt.vC_PGNData.Byte7);
+            }
+
+            // Write to file
+            File.WriteAllLines(originalformatFilePath, listOfAllLinesToBeWrittenToText);
+        }
+        void Do_fullHEaderFormat() {
+            Root_VC_PGN_Text_Object root_VC_PGN_Text_Object = JsonConvert.DeserializeObject<Root_VC_PGN_Text_Object>(File.ReadAllText(targetFilePath));
+            List<string> listOfAllLinesToBeWrittenToText = new List<string>();
+
+            foreach (VC_PGN_Text_Object vcpgnt in root_VC_PGN_Text_Object.VC_PGN_Text_Object)
+            {
+                listOfAllLinesToBeWrittenToText.Add("============================================================================");
+                listOfAllLinesToBeWrittenToText.Add("CAN Messages From : " + vcpgnt.vC_PGN.From );
+                listOfAllLinesToBeWrittenToText.Add("address Port: " + vcpgnt.vC_PGN.adrs_Port);
+                listOfAllLinesToBeWrittenToText.Add("address Stbd: " + vcpgnt.vC_PGN.adrs_Stbd);
+                listOfAllLinesToBeWrittenToText.Add("priority    : " + vcpgnt.vC_PGN.priority);
+                listOfAllLinesToBeWrittenToText.Add("Sending_Unit_Software_version : " + vcpgnt.vC_PGN.Sending_Unit_Software_version);
+                listOfAllLinesToBeWrittenToText.Add("info: " + vcpgnt.vC_PGN.info);
+                listOfAllLinesToBeWrittenToText.Add("Configuration : " + vcpgnt.vC_PGN.Configuration);
+                listOfAllLinesToBeWrittenToText.Add("============================================================================");
+                listOfAllLinesToBeWrittenToText.Add("    " + vcpgnt.vC_PGNData.PGN + "    ( " + vcpgnt.vC_PGNData.DescritionPGN + " )");
+                listOfAllLinesToBeWrittenToText.Add("");
+
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte0 : " + vcpgnt.vC_PGNData.DescritionByte0, vcpgnt.vC_PGNData.Byte0);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte1 : " + vcpgnt.vC_PGNData.DescritionByte1, vcpgnt.vC_PGNData.Byte1);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte2 : " + vcpgnt.vC_PGNData.DescritionByte2, vcpgnt.vC_PGNData.Byte2);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte3 : " + vcpgnt.vC_PGNData.DescritionByte3, vcpgnt.vC_PGNData.Byte3);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte4 : " + vcpgnt.vC_PGNData.DescritionByte4, vcpgnt.vC_PGNData.Byte4);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte5 : " + vcpgnt.vC_PGNData.DescritionByte5, vcpgnt.vC_PGNData.Byte5);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte6 : " + vcpgnt.vC_PGNData.DescritionByte6, vcpgnt.vC_PGNData.Byte6);
+                AddByteDescriptionAndBits(listOfAllLinesToBeWrittenToText, "Byte7 : " + vcpgnt.vC_PGNData.DescritionByte7, vcpgnt.vC_PGNData.Byte7);
+            }
+
+            // Write to file
+            File.WriteAllLines(originalformatFilePathFull, listOfAllLinesToBeWrittenToText);
+
+        }
+        private void Btn_run_makeText_Click(object sender, EventArgs e)
+        {
+            Do_fullHEaderFormat();
+            Do_SimpleHEaderFormat();
+        }
         private void Btn_run_Click(object sender, EventArgs e)
         {
             ListOfTextPgnBlocks = Run_test1MyBLockCounting();
-            //Display_block_atIndex(1,ListOfTextPgnBlocks);
-            //TurnBlockToDataObject(ListOfTextPgnBlocks[0]);
             Root_VC_PGN_Text_Object root_VC_PGN_Text_Object = new Root_VC_PGN_Text_Object();
             root_VC_PGN_Text_Object.ProjectName = "VC_PGN";
             root_VC_PGN_Text_Object.VC_PGN_Text_Object = new List<VC_PGN_Text_Object>();
@@ -65,51 +151,6 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
             }
             return lines;
         }
-
-        List<List<string>> Run_test1MyBLockCountingbad()
-        {
-            List<string> allLines = GetAllLines(sourceFilePath);
-            string DelimiterBlock = "============================================================================";
-            List<List<string>> ALLblocks = new List<List<string>>();
-            List<string> _cur_block = new List<string>();
-            bool blockStarted = false;
-
-            foreach (var line in allLines)
-            {
-                if (line == DelimiterBlock)
-                {
-                    if (blockStarted)
-                    {
-                        // End of current block
-                        ALLblocks.Add(new List<string>(_cur_block));
-                        _cur_block.Clear();
-                    }
-                    else
-                    {
-                        // Start of a new block
-                        blockStarted = true;
-                    }
-                }
-                else if (blockStarted)
-                {
-                    // Add line to current block if it's not empty
-                    if (!String.IsNullOrWhiteSpace(line))
-                    {
-                        _cur_block.Add(line.Trim());
-                    }
-                }
-            }
-
-            // Add the last block if it's not empty
-            if (_cur_block.Count > 0)
-            {
-                ALLblocks.Add(_cur_block);
-            }
-
-            label2.Text = ALLblocks.Count.ToString();
-            return ALLblocks;
-        }
-
         List<List<string>> Run_test1MyBLockCounting()
         {
             List<string> allLines = GetAllLines(sourceFilePath);
@@ -179,31 +220,6 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
             label2.Text = ALLblocks.Count().ToString();
             return ALLblocks;
         }
-
-
-        void DisplayBlocks(List<List<string>> argALLblocks)
-        {
-            string _cur_block = "";
-            foreach (var block in argALLblocks)
-            {
-                foreach (var line in block)
-                {
-                    _cur_block += line + "\r\n";
-                }
-                _cur_block += "\r\n";
-            }
-            textBox1.Text = _cur_block;
-        }
-
-        void Display_block_atIndex(int argBlockindex, List<List<string>> argALLblocks)
-        {
-            string _cur_block = "";
-            foreach (var line in argALLblocks[argBlockindex])
-            {
-                _cur_block += line + "\r\n";
-            }
-            textBox1.Text = _cur_block;
-        }
         VC_PGN_Text_Object TurnBlockToDataObject(List<string> argBlock)
         {
             VC_PGN_Text_Object vC_PGN_Text_Object = new VC_PGN_Text_Object();
@@ -264,7 +280,6 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
             }
             return vC_PGN_Text_Object;
         }
-
         void AssignByteData2(VC_PGNData vC_PGNData, string argbytedescription, List<string> bitTitles, int argbytenumber)
         {
             switch (argbytenumber)
@@ -308,48 +323,32 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
     }
 
 
-    public class Root_VC_PGN_Text_Object
-    {
-        public string ProjectName { get; set; }
-        public List<VC_PGN_Text_Object> VC_PGN_Text_Object { get; set; }
-    }
-    public class VC_PGN_Text_Object {
-        public VC_PGN vC_PGN { get; set; }
-        public VC_PGNData vC_PGNData { get; set; }
-    }
-
-    public class VC_PGN
-    {
-        public string From { get; set; }
-        public string adrs_Port { get; set; }
-        public string adrs_Stbd { get; set; }
-        public string priority { get; set; }
-        public string Sending_Unit_Software_version { get; set; }
-        public string info { get; set; }
-        public string Configuration { get; set; }
-
-    }
-    public class VC_PGNData
-    {
-        public string PGN { get; set; }
-        public string DescritionPGN { get; set; }
-        public string DescritionByte0 { get; set; }
-        public List<string> Byte0 { get; set; }
-        public string DescritionByte1 { get; set; }
-        public List<string> Byte1 { get; set; }
-        public string DescritionByte2 { get; set; }
-        public List<string> Byte2 { get; set; }
-        public string DescritionByte3 { get; set; }
-        public List<string> Byte3 { get; set; }
-        public string DescritionByte4 { get; set; }
-        public List<string> Byte4 { get; set; }
-        public string DescritionByte5 { get; set; }
-        public List<string> Byte5 { get; set; }
-        public string DescritionByte6 { get; set; }
-        public List<string> Byte6 { get; set; }
-        public string DescritionByte7 { get; set; }
-        public List<string> Byte7 { get; set; }
-
-
-    }
 }
+
+
+/*  
+ *  
+        void DisplayBlocks(List<List<string>> argALLblocks)
+        {
+            string _cur_block = "";
+            foreach (var block in argALLblocks)
+            {
+                foreach (var line in block)
+                {
+                    _cur_block += line + "\r\n";
+                }
+                _cur_block += "\r\n";
+            }
+            textBox1.Text = _cur_block;
+        }
+
+        void Display_block_atIndex(int argBlockindex, List<List<string>> argALLblocks)
+        {
+            string _cur_block = "";
+            foreach (var line in argALLblocks[argBlockindex])
+            {
+                _cur_block += line + "\r\n";
+            }
+            textBox1.Text = _cur_block;
+        }
+*/

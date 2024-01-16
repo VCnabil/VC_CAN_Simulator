@@ -19,8 +19,11 @@ namespace VC_CAN_Simulator.Backend
             _2_by = 3
         }
 
+        public static string _vcErite_textCanOriginalFormat_FileName = "_OriginalCanTextFormat.txt";
+        public static string _vcErite_textCanOriginal_FULL_Format_FileName = "_OriginalCanTextFormatFullDescription.txt";
+
         public static string _vcWrite_samplepgnTXT_FileName = "__AllCleanPGNS_Written.json"; //   "__ALLjsonTxt_AllPgn_.json";
-        public static string _vcreadonly_samplepgnTXT_FileName = "__AllCleanPGNS_READONLY3.txt";// "_Sample_3pgns_READONLY.txt";
+        public static string _vcreadonly_samplepgnTXT_FileName = "____sourceStandardYatchClean_READONLY.txt";// "_Sample_3pgns_READONLY.txt";
         public static string _vcPgnDirPath = @"C:\___Root_VCI_Projects\Generic_VC_PGN_SIMULATOR\genericSim\GENERICSIM_FILES\JsonCanSim\VC_PGNJsonBuilds\";
 
 

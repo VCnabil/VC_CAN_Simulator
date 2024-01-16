@@ -80,6 +80,7 @@
     <Compile Include="DataObjects\Ctrl_DataObject.cs" />
     <Compile Include="DataObjects\Pgn_DataObject.cs" />
     <Compile Include="DataObjects\Project_DataObject.cs" />
+    <Compile Include="ProjectContexts\Projects_PGNDefinitions.cs" />
     <Compile Include="UIz\Formz\CanManipForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +254,7 @@
     <Compile Include="UIz\UControlz\Builders\PROJECT_Builder_UC.Designer.cs">
       <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="VC_PGNS_DIR\VC_UI\Formatter_BasicIO.cs" />
     <Compile Include="VC_PGNS_DIR\VC_UI\VC_PGNjsonGUI.cs">
       <SubType>Form</SubType>
     </Compile>
