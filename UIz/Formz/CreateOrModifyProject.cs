@@ -99,9 +99,7 @@ namespace VC_CAN_Simulator.UIz.Formz
             SaveFileName = _filename;
             FULL__PATH_FILENAME_EXT = SaveDirPath + jsonFileName_noExtension + jsonFileName_Exten;
             Set_FullFilePAth(FULL__PATH_FILENAME_EXT);
-            //string _filename_objbuilder = "TEST016";
-            //string PATH_dIR = "C:\\___Root_VCI_Projects\\Generic_VC_PGN_SIMULATOR\\genericSim\\GENERICSIM_FILES\\";
-            //string path_filenameFromMain = PATH_dIR + _filename_objbuilder + ".json";
+          
             Project_DataObject PROJECTTOSAVE = LoadJsonFile(Get_FullFilePAth());
 
             for (int i = 0; i < PROJECTTOSAVE.AllPgnList.Count; i++)

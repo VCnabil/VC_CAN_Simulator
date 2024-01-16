@@ -48,7 +48,7 @@ namespace VC_CAN_Simulator.UIz.UControlz.Builders
             tb_basepgn.TextChanged += Tb_basepgn_TextChanged;
             tb_adrs.TextChanged += Tb_adrs_TextChanged;
 
-            if (argpgnStr.Length != 8)
+            if (argpgnStr.Length != 10)
             {
                 throw new ArgumentException("Input string must be exactly 8 characters long.");
             }

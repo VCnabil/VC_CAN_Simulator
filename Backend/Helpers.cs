@@ -18,6 +18,12 @@ namespace VC_CAN_Simulator.Backend
             _1_By = 2,
             _2_by = 3
         }
+
+        public static string _vcWrite_samplepgnTXT_FileName = "__AllCleanPGNS_Written.json"; //   "__ALLjsonTxt_AllPgn_.json";
+        public static string _vcreadonly_samplepgnTXT_FileName = "__AllCleanPGNS_READONLY.txt";// "_Sample_3pgns_READONLY.txt";
+        public static string _vcPgnDirPath = @"C:\___Root_VCI_Projects\Generic_VC_PGN_SIMULATOR\genericSim\GENERICSIM_FILES\JsonCanSim\VC_PGNJsonBuilds\";
+
+
         static string _saveFileName = "TEST016";
         public static string SaveFileName { get { return _saveFileName; } set { _saveFileName = value; } }
 
@@ -102,99 +108,7 @@ namespace VC_CAN_Simulator.Backend
 
             return (number, text);
         }
-        /*
-         * or value tuples named
-             public (int Number, string Text) ParseString(string input)
-            {
-                // ... function implementation remains the same
-            }
-
-            // Usage
-            var result = ParseString("2. engine 3 on");
-            Console.WriteLine($"Number: {result.Number}, Text: {result.Text}");
-
-         */
-
-        //public static List<int> ConvertToListOfInts(List<string> stringList)
-        //{
-        //    List<int> fullInts = new List<int>();
-        //    HashSet<int> seenInts = new HashSet<int>();
-
-        //    foreach (var item in stringList)
-        //    {
-        //        var stringParts = item.Split(',');
-
-        //        foreach (var part in stringParts)
-        //        {
-        //            if (int.TryParse(part, out int number))
-        //            {
-        //                if (seenInts.Contains(number))
-        //                {
-        //                   //Console.WriteLine($"Duplicate number found: {number}");
-        //                    // Handle duplicate number as needed
-        //                    MessageBox.Show($"Duplicate number found: {number}");
-        //                }
-        //                else
-        //                {
-        //                    fullInts.Add(number);
-        //                    seenInts.Add(number);
-        //                }
-        //            }
-        //            else
-        //            {
-        //                //Console.WriteLine($"Invalid number: {part}");
-        //                MessageBox.Show($"Invalid number: {part}");
-        //                // Handle invalid number as needed
-        //            }
-        //        }
-        //    }
-
-        //    return fullInts;
-        //}
-
-        /*
-        public static List<int> ConvertToListOfInts(List<string> stringList, out int argErrorNumber)
-        {
-            List<int> fullInts = new List<int>();
-            HashSet<int> seenInts = new HashSet<int>();
-            argErrorNumber = -1; // Initialize with a default value indicating no error
-
-            foreach (var item in stringList)
-            {
-                var stringParts = item.Split(',');
-
-                foreach (var part in stringParts)
-                {
-                    if (int.TryParse(part, out int number))
-                    {
-                        if (seenInts.Contains(number))
-                        {
-                            if (argErrorNumber == -1) // Set argErrorNumber only if it hasn't been set before
-                            {
-                                argErrorNumber = number;
-                            }
-                            MessageBox.Show($"Duplicate number found: {number}");
-                        }
-                        else
-                        {
-                            fullInts.Add(number);
-                            seenInts.Add(number);
-                        }
-                    }
-                    else
-                    {
-                        if (argErrorNumber == -1) // Set argErrorNumber only if it hasn't been set before
-                        {
-                            // Assuming the error number for invalid input is different, e.g., -2
-                            argErrorNumber = -2;
-                        }
-                        MessageBox.Show($"Invalid number: {part}");
-                    }
-                }
-            }
-
-            return fullInts;
-        }*/
+      
         public static List<int> ConvertToListOfInts(List<string> stringList, out int argErrorNumber, out string errorType)
         {
             List<int> fullInts = new List<int>();

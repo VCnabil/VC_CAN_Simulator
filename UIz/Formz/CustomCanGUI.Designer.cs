@@ -38,6 +38,9 @@
             this.btn_WSKI = new System.Windows.Forms.Button();
             this.btn_KA27 = new System.Windows.Forms.Button();
             this.btn_NOMAD = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_runSsrs3 = new System.Windows.Forms.Button();
+            this.btn_run_PGNjson = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_load
@@ -130,11 +133,44 @@
             this.btn_NOMAD.Text = "run NOMAD";
             this.btn_NOMAD.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(2, 532);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 52);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "run NOMAD";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btn_runSsrs3
+            // 
+            this.btn_runSsrs3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_runSsrs3.Location = new System.Drawing.Point(236, 193);
+            this.btn_runSsrs3.Name = "btn_runSsrs3";
+            this.btn_runSsrs3.Size = new System.Drawing.Size(150, 52);
+            this.btn_runSsrs3.TabIndex = 30;
+            this.btn_runSsrs3.Text = "run SSRSk12";
+            this.btn_runSsrs3.UseVisualStyleBackColor = true;
+            // 
+            // btn_run_PGNjson
+            // 
+            this.btn_run_PGNjson.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_run_PGNjson.Location = new System.Drawing.Point(469, 191);
+            this.btn_run_PGNjson.Name = "btn_run_PGNjson";
+            this.btn_run_PGNjson.Size = new System.Drawing.Size(150, 52);
+            this.btn_run_PGNjson.TabIndex = 31;
+            this.btn_run_PGNjson.Text = "pgn json";
+            this.btn_run_PGNjson.UseVisualStyleBackColor = true;
+            // 
             // CustomCanGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 573);
+            this.ClientSize = new System.Drawing.Size(853, 728);
+            this.Controls.Add(this.btn_run_PGNjson);
+            this.Controls.Add(this.btn_runSsrs3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_NOMAD);
             this.Controls.Add(this.btn_KA27);
             this.Controls.Add(this.btn_WSKI);
@@ -163,5 +199,8 @@
         private System.Windows.Forms.Button btn_WSKI;
         private System.Windows.Forms.Button btn_KA27;
         private System.Windows.Forms.Button btn_NOMAD;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_runSsrs3;
+        private System.Windows.Forms.Button btn_run_PGNjson;
     }
 }

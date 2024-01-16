@@ -253,6 +253,12 @@
     <Compile Include="UIz\UControlz\Builders\PROJECT_Builder_UC.Designer.cs">
       <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="VC_PGNS_DIR\VC_UI\VC_PGNjsonGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VC_PGNS_DIR\VC_UI\VC_PGNjsonGUI.Designer.cs">
+      <DependentUpon>VC_PGNjsonGUI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UIz\Formz\CanManipForm.resx">
       <DependentUpon>CanManipForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +352,9 @@
     <EmbeddedResource Include="UIz\UControlz\Builders\PROJECT_Builder_UC.resx">
       <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VC_PGNS_DIR\VC_UI\VC_PGNjsonGUI.resx">
+      <DependentUpon>VC_PGNjsonGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -360,6 +369,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="VC_PGNS_DIR\VC_Backend\" />
+    <Folder Include="VC_PGNS_DIR\VC_DataObjects\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

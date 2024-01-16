@@ -12,6 +12,7 @@ using VC_CAN_Simulator.UIz.Formz.SingleForm.ErafGui;
 using VC_CAN_Simulator.UIz.Formz.SingleForm.Ka2700Gui;
 using VC_CAN_Simulator.UIz.Formz.SingleForm.NomadGui;
 using VC_CAN_Simulator.UIz.Formz.SingleForm.WskiGui;
+using VC_CAN_Simulator.VC_PGNS_DIR.VC_UI;
 using static VC_CAN_Simulator.Backend.Helpers;
 namespace VC_CAN_Simulator.UIz.Formz
 {
@@ -35,8 +36,32 @@ namespace VC_CAN_Simulator.UIz.Formz
             btn_WSKI.Click += Btn_run_WSKI_Click;
             btn_KA27.Click += Btn_run_KA27_Click;
             btn_NOMAD.Click += Btn_run_NOMAD_Click;     
+            btn_runSsrs3.Click += Btn_runSsrs3_Click;
+            btn_run_PGNjson.Click += Btn_run_PGNjsonGUI_Click;
             textBox_fileName.TextChanged += TextBox_fileName_TextChanged;
         }
+
+        private void Btn_runSsrs3_Click(object sender, EventArgs e)
+        {
+            textBox_fileName.Text = "ssrs3";
+            jsonFileName_noExtension = textBox_fileName.Text;
+            FULL__PATH_FILENAME_EXT = SaveDirPath + jsonFileName_noExtension + jsonFileName_Exten;
+            label1.Text = jsonFileName_noExtension;
+            label2.Text = FULL__PATH_FILENAME_EXT;
+            Set_FullFilePAth(FULL__PATH_FILENAME_EXT);
+            using (CanManipForm form1 = new CanManipForm())
+            {
+                form1.ShowDialog();
+            }
+        }
+        private void Btn_run_PGNjsonGUI_Click(object sender, EventArgs e)
+        {
+            using (VC_PGNjsonGUI form1 = new VC_PGNjsonGUI())
+            {
+                form1.ShowDialog();
+            }
+        }
+
 
         private void Btn_run_NOMAD_Click(object sender, EventArgs e)
         {
