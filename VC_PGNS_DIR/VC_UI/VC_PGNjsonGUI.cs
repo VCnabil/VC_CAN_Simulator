@@ -44,6 +44,8 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
                 VC_PGN_Text_Object vC_PGN_Text_Object = TurnBlockToDataObject(block);
                 root_VC_PGN_Text_Object.VC_PGN_Text_Object.Add(vC_PGN_Text_Object);
             }
+
+            label1.Text= root_VC_PGN_Text_Object.VC_PGN_Text_Object.Count().ToString();
             string json = JsonConvert.SerializeObject(root_VC_PGN_Text_Object, Formatting.Indented);
             textBox1.Text = json;
             File.WriteAllText(targetFilePath, json);
@@ -64,6 +66,50 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
             return lines;
         }
 
+        List<List<string>> Run_test1MyBLockCountingbad()
+        {
+            List<string> allLines = GetAllLines(sourceFilePath);
+            string DelimiterBlock = "============================================================================";
+            List<List<string>> ALLblocks = new List<List<string>>();
+            List<string> _cur_block = new List<string>();
+            bool blockStarted = false;
+
+            foreach (var line in allLines)
+            {
+                if (line == DelimiterBlock)
+                {
+                    if (blockStarted)
+                    {
+                        // End of current block
+                        ALLblocks.Add(new List<string>(_cur_block));
+                        _cur_block.Clear();
+                    }
+                    else
+                    {
+                        // Start of a new block
+                        blockStarted = true;
+                    }
+                }
+                else if (blockStarted)
+                {
+                    // Add line to current block if it's not empty
+                    if (!String.IsNullOrWhiteSpace(line))
+                    {
+                        _cur_block.Add(line.Trim());
+                    }
+                }
+            }
+
+            // Add the last block if it's not empty
+            if (_cur_block.Count > 0)
+            {
+                ALLblocks.Add(_cur_block);
+            }
+
+            label2.Text = ALLblocks.Count.ToString();
+            return ALLblocks;
+        }
+
         List<List<string>> Run_test1MyBLockCounting()
         {
             List<string> allLines = GetAllLines(sourceFilePath);
@@ -75,16 +121,23 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
             for (int l = 0; l < allLines.Count; l++)
             {
 
-                if (l < allLines.Count - 1)
+                if (l < allLines.Count )
                 {
-                    if (allLines[l] == DelimiterBlock && allLines[l + 1].StartsWith("CAN Messages"))
-                    {
-                        blockStarted = true;
-                    }
+                    if (l < allLines.Count - 1) {
+                        if (allLines[l] == DelimiterBlock && allLines[l + 1].StartsWith("CAN Messages"))
+                        {
+                            blockStarted = true;
+                        }
 
-                    if (allLines[l] == "" && allLines[l + 1].StartsWith("==========="))
+                        if (String.IsNullOrWhiteSpace(allLines[l]) && allLines[l + 1].StartsWith("==========="))
+                        {
+                            blockStarted = false;
+                        }
+
+                    }
+                    if (l == allLines.Count - 1)
                     {
-                        blockStarted = false;
+                            blockStarted = false;
                     }
                 }
                 else
@@ -118,9 +171,12 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
                     }
                 }
             }
+            if (_cur_block.Count > 0)
+            {
+                ALLblocks.Add(_cur_block);
+            }
 
-
-
+            label2.Text = ALLblocks.Count().ToString();
             return ALLblocks;
         }
 
