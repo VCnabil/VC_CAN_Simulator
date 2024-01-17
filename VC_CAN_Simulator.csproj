@@ -255,6 +255,7 @@
       <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="VC_PGNS_DIR\VC_UI\Formatter_BasicIO.cs" />
+    <Compile Include="VC_PGNS_DIR\VC_UI\SeriDeseriSort_BasicIO.cs" />
     <Compile Include="VC_PGNS_DIR\VC_UI\VC_PGNjsonGUI.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -21,6 +21,8 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
     public class VC_PGN
     {
         public string From { get; set; }
+        public int VC_PGN_ID { get; set; }
+        public uint PGN_32bit { get; set; }
         public string adrs_Port { get; set; }
         public string adrs_Stbd { get; set; }
         public string priority { get; set; }
