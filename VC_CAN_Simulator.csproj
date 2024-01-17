@@ -377,6 +377,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PGNSourceOfTruth.txt" />
+    <Content Include="PGNS_EDP2.txt" />
+    <Content Include="PGNS_extraCAN.txt" />
+    <Content Include="PGNS_MKV.txt" />
+    <Content Include="PGNS_notSy.txt" />
+    <Content Include="PGNS_SSRS_K12.txt" />
+    <Content Include="PGNS_StandardYatchet.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

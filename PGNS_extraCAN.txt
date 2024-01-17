@@ -1,0 +1,135 @@
+﻿============================================================================
+CAN Messages From : Alarm and Monitoring Unit
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source address is 0x01 for Port A&M Unit,  0x02 for the Stbd A&M Unit
+Configuration : Standard Yach EXTRA CAN
+Project : N/A
+============================================================================
+    0xFFA0    (  Alarm and Monitoring Unit )
+
+            - Byte0 : Major SW Version LO
+
+            - Byte1 : Major SW Version HI
+
+            - Byte2 : Minor SW Version LO
+
+            - Byte3 : Minor SW Version HI
+
+            - Byte4 : SVN Revision LO
+
+            - Byte5 : SVN Revision HI
+
+            - Byte6 : N/A
+
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Alarms ?
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source address is 0x01 for Port A&M Unit,  0x02 for the Stbd A&M Unit
+Configuration : Standard Yach EXTRA CAN
+Project : N/A
+============================================================================
+    0xFFA1    ( Alarms )
+
+            - Byte0 : Alarms
+                    - b0 : Pre-High Oil Temperature
+                    - b1 : High Oil Temperature
+                    - b2 : Pre-Low Oil Level
+                    - b3 : Low Oil Level
+                    - b4 : Main Return Filter
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+            - Byte1 : N/A
+                    - b0 : N/A
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+            - Byte2 : N/A
+                    - b0 : Station 2 Port Clutch Enable
+                    - b1 : Station 2 Stbd Clutch Enable
+                    - b2 : Station 1 Port Clutch Enable
+                    - b3 : Station 1 Stbd Clutch Enable
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+
+            - Byte3 : Station 1 Idle Knob LO
+
+            - Byte4 : Station 1 Idle Knob HI
+
+            - Byte5 : Station 2 Idle Knob LO
+
+            - Byte6 : Station 2 Idle Knob LO
+
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : station 1
+address Port: 80
+address Stbd: 80
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source address of these messages  0x80   Open and Closed Bridge SKIM Module  !!!!!!!!
+Configuration : Standard Yach EXTRA CAN
+Project : N/A
+============================================================================
+    0xFFB0    (  Open and Closed Bridge SKIM Module )
+
+            - Byte0 : Closed Bridge (Station 1) Dimming Knob Analog Input  (Range is 0=0V to 250=32V)
+
+            - Byte1 : N/A
+
+            - Byte2 : N/A
+
+            - Byte3 : N/A
+
+            - Byte4 : N/A
+
+            - Byte5 : N/A
+
+            - Byte6 : N/A
+
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : station 2
+address Port: 80
+address Stbd: 80
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source address of these messages  0x80   Open and Closed Bridge SKIM Module  !!!!!!!!
+Configuration : Standard Yach EXTRA CAN
+Project : N/A
+============================================================================
+    0xFFB1    (  Open and Closed Bridge SKIM Module )
+
+            - Byte0 : Closed Bridge (Station 2) Dimming Knob Analog Input  (Range is 0=0V to 250=32V)
+
+            - Byte1 : N/A
+
+            - Byte2 : N/A
+
+            - Byte3 : N/A
+
+            - Byte4 : N/A
+
+            - Byte5 : N/A
+
+            - Byte6 : N/A
+
+            - Byte7 : N/A

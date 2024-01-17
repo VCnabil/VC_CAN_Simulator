@@ -1,0 +1,504 @@
+﻿============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01 sent by MKV_GUI
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFEFC    (  FeedBacks From Control Unit  )
+
+            - Byte0 : Port Bucket Feedback
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Stbd Nozzle Feedback
+ 
+            - Byte3 : Port Nozzle Feedback
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : Stbd Bucket Feedback
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFF15    (  Cal FeedBacks From Control Unit  )
+
+            - Byte0 : Calibration Feedback message
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01 sent by MKV_GUI  Port and Stbd Enumerated Clutch Command are 3bit b.012 and b.456
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFF8C    (   Station in control and clutch info and engin speed  )
+
+            - Byte0 : clutch info
+                    - b0 : Port Clutch Cmd DIS
+                    - b1 : Port Clutch Cmd AHD
+                    - b2 : Port Clutch Cmd REV
+                    - b3 : Stbd Clutch Cmd DIS
+                    - b4 : Stbd Clutch Cmd AHD
+                    - b5 : Stbd Clutch Cmd REV
+                    - b6 : PORT Clutch Engagement is BLOCKED
+                    - b7 : STBD Clutch Engagement is BLOCKED
+ 
+            - Byte1 : MDS
+                    - b0 : Command to Switch Relay Module
+                    - b1 : Active Unit in Control
+                    - b2 : Station 2 Port Clutch Enable
+                    - b3 : Station 2 Stbd Clutch Enable
+                    - b4 : Station 1 Port Clutch Enable
+                    - b5 : Station 1 StbdClutch Enable
+                    - b6 : Steer_Mode_Station_2
+                    - b7 : Throttle_Mode_Station_2
+ 
+            - Byte2 : Port Engin Speed Command
+ 
+            - Byte3 : Stbd Engin Speed Command
+ 
+            - Byte4 : Idle Level
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : Station-in-Control
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01 sent by MKV_GUI
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFF8D    (   Faults   )
+
+            - Byte0 : CU Faults
+                    - b0 : Calibration fault
+                    - b1 : Control Unit to Closed-Bridge Dimming Panel Comm
+                    - b2 : Control Unit to Open-Bridge Dimming Panel Comm
+                    - b3 : Control Unit - Alarm & Monitoring Unit Comm
+                    - b4 : Clutch Enable Switches Disconnected
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Station 1 Faults
+                    - b0 : Helm Signal fault
+                    - b1 : Port Azimuth Lever Signal fault
+                    - b2 : Stbd Azimuth Lever Signal fault
+                    - b3 : PORT Azimuth Steer Signal fault
+                    - b4 : Stbd Azimuth Steer Signal fault
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Station 2 Faults
+                    - b0 : Helm Fault
+                    - b1 : PORT Control Lever Fault
+                    - b2 : STBD Control Lever Fault
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Feedback Sensor Faults
+                    - b0 : PORT Nozzle Feedback Fault
+                    - b1 : STBD Nozzle Feedback Fault
+                    - b2 : PORT Bucket Feedback Fault
+                    - b3 : STBD Bucket Feedback Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Non-Follow-Up Faults
+                    - b0 : PORT Nozzle Non-Follow-Up
+                    - b1 : STBD Nozzle Non-Follow-Up
+                    - b2 : PORT Bucket Non-Follow-Up
+                    - b3 : STBD Bucket Non-Follow-Up
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : MTU Signal Faults
+                    - b0 : Port A&M MTU Signals CAN Timeout
+                    - b1 : Stbd A&M MTU Signals CAN Timeout
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFF8E    (  Station 1 Commands  )
+
+            - Byte0 : Port Azimuth Steer CMD
+ 
+            - Byte1 : Stbd Azimuth Steer CMD
+ 
+            - Byte2 : Helm CMD
+ 
+            - Byte3 : Port Azimuth Lever CMD
+ 
+            - Byte4 : Stbd Azimuth Lever CMD
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Station REQ
+                    - b0 : Requesting Control
+                    - b1 : Allowing Transfer
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFF8F    (  Station 2 Commands  )
+
+            - Byte0 : Port Azimuth Steer CMD
+ 
+            - Byte1 : Stbd Azimuth Steer CMD
+ 
+            - Byte2 : Helm CMD
+ 
+            - Byte3 : Port Azimuth Lever CMD
+ 
+            - Byte4 : Stbd Azimuth Lever CMD
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Station REQ
+                    - b0 : Requesting Control
+                    - b1 : Allowing Transfer
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01 sent by MKV_GUI
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFF90    (   Software Version   )
+
+            - Byte0 : Sofware Version Major
+ 
+            - Byte1 : Sofware Version Minor LO
+ 
+            - Byte2 : Sofware Version Minor HI
+ 
+            - Byte3 : Sofware Revision LO
+ 
+            - Byte4 : Sofware Revision HI
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : A&M
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 01 stbd is 02 sent by MKV_GUI
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFFA0    (  A&M Software Version  )
+
+            - Byte0 : A&M Software Major LO
+ 
+            - Byte1 : A&M Software Major HI
+ 
+            - Byte2 : A&M Software Minor LO
+ 
+            - Byte3 : A&M Software Minor HI
+ 
+            - Byte4 : A&M Software Revision LO
+ 
+            - Byte5 : A&M Software Revision HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : A&M
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 01 stbd is 02 sent by MKV_GUI
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFFA1    (  A&M HPU Faults and Switch States  )
+
+            - Byte0 : HPU Faults
+                    - b0 : Change Over Press
+                    - b1 : Low Hydraulic Press
+                    - b2 : High Temp
+                    - b3 : Low Oil Flow
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : HPU Faults
+                    - b0 : Low Oil Level
+                    - b1 : Low Lube Oil Press
+                    - b2 : LO Pump Running
+                    - b3 : LO Pump Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : HPU Faults
+                    - b0 : Changeover Valve Activated
+                    - b1 : LO Pump Running Wirebreak
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : A&M Unit
+address Port: 01
+address Stbd: 02
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 01 stbd is 02 sent by MKV_GUI
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFFA2    (  A&M MkV MTU Signals  )
+
+            - Byte0 : HPU Faults
+                    - b0 : Engine running
+                    - b1 : Engine local_remote
+                    - b2 : Clutch window
+                    - b3 : Low Oil Flow
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : CIM
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: address is 00 sent by MKV_GUI
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFFAA    (   CIM Software Version   )
+
+            - Byte0 : CAN1/2 Buffer - Historic Max Size Since Powerup
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Dimming Knob Level
+ 
+            - Byte3 : Sofware Version Major
+ 
+            - Byte4 : Sofware Version Minor LO
+ 
+            - Byte5 : Sofware Version Minor HI
+ 
+            - Byte6 : Sofware Version Revision LO
+ 
+            - Byte7 : Sofware Version Revision HI
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01  This one is for station 1 using cu 00 or cu 01
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFFB2    (   Station 1 Dimming Commands   )
+
+            - Byte0 : Station 1 Dimming Command
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01   This one is for station 2 using cu 00 or cu 01
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFFB3    (   Station 2 Dimming Commands   )
+
+            - Byte0 : Station 2 Dimming Command
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Debug
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: port is 00 stbd is 01
+Configuration : INFPB
+Project : INFPB_MkV_101_1000
+============================================================================
+    0xFFFF    (   Debugging messages   )
+
+            - Byte0 : D0&D1 LO
+ 
+            - Byte1 : D0&D1 HI
+ 
+            - Byte2 : D2&D3 LO
+ 
+            - Byte3 : D2&D3 HI
+ 
+            - Byte4 : D4&D5 LO
+ 
+            - Byte5 : D4&D5 HI
+ 
+            - Byte6 : D6&D7 LO
+ 
+            - Byte7 : D6&D7 HI
+ 

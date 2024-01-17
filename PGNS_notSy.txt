@@ -1,0 +1,56 @@
+﻿============================================================================
+CAN Messages From : Control Unit Guage Brightness
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : not SY
+Project : not sure what projects
+============================================================================
+    0xFEA2    ( Guage Brightness )
+
+            - Byte0 : Gauge Brigthness (0 to 100)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit !sy
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : not SY
+Project : N/A
+============================================================================
+    0xFEFC    ( FeedBacks From Control Unit )
+
+            - Byte0 : Port Bucket Feedback (0 to 250)
+ 
+            - Byte1 : Port Bucket Feedback (0 to 100)
+ 
+            - Byte2 : Stbd Nozzle Feedback (0 to 250)
+ 
+            - Byte3 : Port Nozzle Feedback (0 to 250)
+ 
+            - Byte4 : Stbd Engin Feedback (0 to 100)
+ 
+            - Byte5 : Stbd Bucket Feedback (0 to 250)
+ 
+            - Byte6 : Port Engin Feedback (0 to 100)
+ 
+            - Byte7 : Stbd Bucket Feedback (0 to 100)
+ 

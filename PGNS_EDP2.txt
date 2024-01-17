@@ -1,0 +1,292 @@
+﻿============================================================================
+CAN Messages From : Control Unit !sy
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source adreess 21
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFEFC    ( FeedBacks From Control Unit )
+
+            - Byte0 : Port Bucket Feedback (0 to 250)
+ 
+            - Byte1 : Port Interceptor Feedback (0 to 100)
+ 
+            - Byte2 : Stbd Nozzle Feedback (0 to 250)
+ 
+            - Byte3 : Port Nozzle Feedback (0 to 250)
+ 
+            - Byte4 : Stbd Interceptor Feedback (0 to 100)
+ 
+            - Byte5 : Stbd Bucket Feedback (0 to 250)
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: .
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFEFC    ( FeedBacks From Control Unit )
+
+            - Byte0 : Port Bucket Feedback
+ 
+            - Byte1 : Port Tab Feedback
+ 
+            - Byte2 : Stbd Nozzle Feedback
+ 
+            - Byte3 : Port Nozzle Feedback
+ 
+            - Byte4 : Stbd Tab Feedback
+ 
+            - Byte5 : Stbd Bucket Feedback
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: .
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFF30    ( Clutch Permissives, “Clutch Station” in Control, SW Versions )
+
+            - Byte0 : Clutch Engagement Permissives
+                    - b0 : Stbd Bucket in Neutral Position 0 = Stbd buc not innewutral  1= Stbd buc in newutral zone
+                    - b1 : Port Bucket in Neutral Position 0 = port buc not innewutral  1= port buc in newutral zone
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Clutch Station in Control (1,2 or 3)
+ 
+            - Byte2 : Control Unit Major Software Version
+ 
+            - Byte3 : Control Unit Minor Software Version LO
+ 
+            - Byte4 : Control Unit Minor Software Version HI
+ 
+            - Byte5 : Control Unit Software Revision LO
+ 
+            - Byte6 : Control Unit Software Revision HI
+ 
+            - Byte7 : Station in Control Single-byte variable (1 to 3)
+ 
+============================================================================
+CAN Messages From : Clutch Panel
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 0.000
+info: .
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFF31    ( Clutch command From Clutch Panel )
+
+            - Byte0 : Clutch Commands
+                    - b0 : Stbd Clutch Engaged Ahead Fdbk (or Cmd if local feedback)
+                    - b1 : Port Clutch Engaged Ahead Fdbk (or Cmd if local feedback)
+                    - b2 : Stbd Backflush Fdbk (or Cmd if local feedback)
+                    - b3 : Port Backflush Ahead Fdbk (or Cmd if local feedback)
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Software Version (major)
+ 
+            - Byte2 : Idle Setting HI
+ 
+            - Byte3 : Idle Setting LO
+ 
+            - Byte4 : CAN Fault Status 1=can fault
+ 
+            - Byte5 : Software Version (minor)
+ 
+            - Byte6 : Revision HI
+ 
+            - Byte7 : Revision LO
+ 
+============================================================================
+CAN Messages From : Clutch Panel #3
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 0.000
+info: Same configuration is found in the standardYachet_info_ .txt files
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFF34    ( Clutch command From Clutch Panel3 )
+
+            - Byte0 : Buttons pressed
+                    - b0 : Port Engage
+                    - b1 : Port Dis-Engage
+                    - b2 : Port Backflush
+                    - b3 : Stbd Engage
+                    - b4 : Stbd Dis-Engage
+                    - b5 : Stbd Backflush
+                    - b6 : Bright
+                    - b7 : Dim
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Clutch Panel #2 Idle Knob Raw Value LO
+ 
+            - Byte3 : Clutch Panel #2 Idle Knob Raw Value HI
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Remote Station Controller
+address Port: 34
+address Stbd: 34
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: .
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFF50    (  Helm Position and req ctrl )
+
+            - Byte0 : Helm Position LO (0-1000)
+ 
+            - Byte1 : Helm Position HI (0-1000)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+                    - b0 : sta 3 Take Control Request 0 = is req 1 is NOT req
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Remote Station Controller
+address Port: 34
+address Stbd: 34
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: .
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFF51    ( Lever position  )
+
+            - Byte0 : Port Lever position LO (0 - 1000)
+ 
+            - Byte1 : Port Lever position HI (0 - 1000)
+ 
+            - Byte2 : Stbd Lever position LO (0 - 1000)
+ 
+            - Byte3 : Stbd Lever position HI (0 - 1000)
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: .diff?
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFF53    ( Station in Control )
+
+            - Byte0 : station in control
+                    - b0 : sta 3 Take Control status  0 = NOT in ctr 1 is in ctrl
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Station in Control (1=Local Station, 3=Remote Station)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : TOL_AD parameter (0 to 255)
+ 
+            - Byte7 : Calibration Status ( 0=CAL_FINISHED_OK, 1=CAL_ONGOING, 2=CAL_ABORTED)
+
+============================================================================
+CAN Messages From : Remote Station Controller
+address Port: 34
+address Stbd: 34
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: .
+Configuration : Standard J1939 Interface P2 ED
+Project : N/A
+============================================================================
+    0xFF54    ( beacon )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 

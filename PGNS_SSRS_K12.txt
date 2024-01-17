@@ -1,0 +1,480 @@
+﻿============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFEFC    (  Indication  )
+
+            - Byte0 : Port BucketPos
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Stbd NozzlePos
+ 
+            - Byte3 : Port NozzlePos
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : Stbd BucketPos
+ 
+            - Byte6 : Port EngineCmd
+ 
+            - Byte7 : Stbd EngineCmd
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF53    (  System Information  )
+
+            - Byte0 : sta in ctrl 01 , 11 aka a 1 or a 3
+ 
+            - Byte1 : tolad 0x46 d70
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF49    (  Faults  )
+
+            - Byte0 : Sensor Faults
+                    - b0 : Stbd Bucket
+                    - b1 : Port Bucket
+                    - b2 : Stbd Nozzle
+                    - b3 : Port Nozzle
+                    - b4 : Stbd Tab
+                    - b5 : Port Tab
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Non Follow Up Faults
+                    - b0 : Stbd Bucket NFU
+                    - b1 : Port Bucket NFU
+                    - b2 : Stbd Nozzle NFU
+                    - b3 : Port Nozzle NFU
+                    - b4 : Stbd Tab NFU
+                    - b5 : Port Tab NFU
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Local Station 1 Comm Faults
+                    - b0 : LocalSta 1 Idle Knob Fault
+                    - b1 : LocalSta 1 JoyStick Z Fault
+                    - b2 : LocalSta 1 Stbd Lever Fault
+                    - b3 : LocalSta 1 Port Lever Fault
+                    - b4 : LocalSta 1 Joy-Y Fault
+                    - b5 : LocalSta 1 Joy-X Fault
+                    - b6 : LocalSta 1 Tiller 2 Fault
+                    - b7 : N/A
+ 
+            - Byte3 : Local Station 2 comm Faults
+                    - b0 : LocalSta 2 Idle Knob Fault
+                    - b1 : LocalSta 2 JoyStick Z Fault
+                    - b2 : LocalSta 2 Stbd Lever Fault
+                    - b3 : LocalSta 2 Port Lever Fault
+                    - b4 : LocalSta 2 Joy-Y Fault
+                    - b5 : LocalSta 2 Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Remote Station Faults
+                    - b0 : RemoteSta Idle Knob Fault
+                    - b1 : RemoteSta JoyStick Z Fault
+                    - b2 : RemoteSta Stbd Lever Fault
+                    - b3 : RemoteSta Port Lever Fault
+                    - b4 : RemoteSta Joy-Y Fault
+                    - b5 : RemoteSta Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : General Faults
+                    - b0 : Port Trim Fault
+                    - b1 : Port Roll Fault
+                    - b2 : AutoCal Fault
+                    - b3 : Autopilot Out of Range Fault
+                    - b4 : Stbd Trim Joystick Fault
+                    - b5 : Stbd Roll Joystick Fault
+                    - b6 : Hardware Fault
+                    - b7 : N/A
+ 
+            - Byte6 : Docking Faults
+                    - b0 : Docking Mode Interlock Fault
+                    - b1 : Docking_Mode Clutch Mismatch
+                    - b2 : Docking_Mode Inboard Clutch Interlock
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Communication Faults
+                    - b0 : CAN Fault
+                    - b1 : Station 1 Clutch Panel CAN Fault
+                    - b2 : Station 2 Clutch Panel CAN Fault
+                    - b3 : Station 3 Clutch Panel CAN Fault
+                    - b4 : N/A
+                    - b5 : DP LCD CAN Fault
+                    - b6 : Remote Station Controller CAN Fault
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Should look into how Calstatus is generated
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF64    (  Calibration  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : CalStatus
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : A&M
+address Port: 00
+address Stbd: 00
+priority    : 0C
+Sending_Unit_Software_version : 1.0000
+info: THIS IS NOT USED ANYMORE, JUST BIRDON, cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF54    (  AM Version  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF30    ( CU Version  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : MajorVer
+ 
+            - Byte3 : MinorVer LO
+ 
+            - Byte4 : MinorVer HI
+ 
+            - Byte5 : Rev LO
+ 
+            - Byte6 : Rev HI
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : A&M
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: looks unused looka t ControlUnit code in pv780 -> ParseData is never used
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF8E    (  Station 1 Control Inputs  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : A&M
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: looks unused looka t ControlUnit code in pv780 -> ParseData is never used
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF8F    (  Station 2 Control Inputs  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF59    (  Raw Switch states  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : BowthrusterPos LO
+ 
+            - Byte3 : BowthrusterPos HI
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : bucket status
+                    - b0 : N/A
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : Port Bucket status
+                    - b7 : Stbd Bucket status
+ 
+            - Byte7 : tillerselect
+                    - b0 : N/A
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : TillerSelection
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : Flip_Dutycycle
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF65    (  Dynamic Positioning  )
+
+            - Byte0 : DPState
+                    - b0 : DPState
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : DPOverride thed divided by 2 and takes bit0 bit1
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+address Port: 7F
+address Stbd: 7F
+priority    : 09
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34, heading = heading * 180 / PI / 10000
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xF112    (  GPS HEADING  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : Heading LO
+ 
+            - Byte2 : Heading HI
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+address Port: 7F
+address Stbd: 7F
+priority    : 09
+Sending_Unit_Software_version : 1.0000
+info: cu adrress is 29 A&M 34 GPS is 7f
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xF801    (  GPS POSITION  )
+
+            - Byte0 : pos_32bit_byte0
+ 
+            - Byte1 : pos_32bit_byte1
+ 
+            - Byte2 : pos_32bit_byte2
+ 
+            - Byte3 : pos_32bit_byte3
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF66    (  DP Diagnostics 1  )
+
+            - Byte0 : JoyX LO
+ 
+            - Byte1 : JoyX HI
+ 
+            - Byte2 : JoyY LO
+ 
+            - Byte3 : JoyY HI
+ 
+            - Byte4 : Helm LO
+ 
+            - Byte5 : Helm HI
+ 
+            - Byte6 : IdleRPM LO
+ 
+            - Byte7 : IdleRPM HI
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 29
+address Stbd: 29
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: the pv connection is setup using a mask for all pgns, the adress is defined in code and this should be 29
+Configuration : SSRS_K12
+Project : PV780_102_1000
+============================================================================
+    0xFF67    (  DP Diagnostics 2  )
+
+            - Byte0 : Xi_32bit_byte0
+ 
+            - Byte1 : Xi_32bit_byte1
+ 
+            - Byte2 : Xi_32bit_byte2
+ 
+            - Byte3 : Xi_32bit_byte3
+ 
+            - Byte4 : Eta_32bit_byte0
+ 
+            - Byte5 : Eta_32bit_byte1
+ 
+            - Byte6 : Eta_32bit_byte2
+ 
+            - Byte7 : Eta_32bit_byte3
+ 

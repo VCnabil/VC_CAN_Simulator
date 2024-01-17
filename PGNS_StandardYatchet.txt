@@ -1,0 +1,1388 @@
+﻿============================================================================
+CAN Messages From : Indication Module - GPSI
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF00    ( Port Nozzle Feedback Raw Value From Indication Module - GPSI  )
+
+            - Byte0 : Port Nozzle Feedback Raw Value (0-450) LO
+ 
+            - Byte1 : Port Nozzle Feedback Raw Value (0-450) HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Indication Module - GPSI
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF01    ( Stbd Nozzle Feedback Raw Value  From Indication Module - GPSI  )
+
+            - Byte0 : Stbd Nozzle Feedback Raw Value (0-450) LO
+ 
+            - Byte1 : Stbd Nozzle Feedback Raw Value (0-450) HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Indication Module - GPSI
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF02    ( Port Bucket Feedback Raw Value  From Indication Module - GPSI  )
+
+            - Byte0 : Port Bucket Feedback Raw Value (0-450) LO
+ 
+            - Byte1 : Port Bucket Feedback Raw Value (0-450) HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Indication Module - GPSI
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF03    ( Stbd Bucket Feedback Raw Value  From Indication Module - GPSI  )
+
+            - Byte0 : Stbd Bucket Feedback Raw Value (0-450) LO
+ 
+            - Byte1 : Stbd Bucket Feedback Raw Value (0-450) HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Indication Module - GPSI
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF04    ( Port Tab Feedback Raw Value  From Indication Module - GPSI  )
+
+            - Byte0 : Port Tab Feedback Raw Value (0-450) LO
+ 
+            - Byte1 : Port Tab Feedback Raw Value (0-450) HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Indication Module - GPSI
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 1.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF05    ( Stbd Tab Feedback Raw Value  From Indication Module - GPSI  )
+
+            - Byte0 : Stbd Tab Feedback Raw Value (0-450) LO
+ 
+            - Byte1 : Stbd Tab Feedback Raw Value (0-450) HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : LCD  FF11
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 00.000
+info: 0=None, 1=Station 1, 2=Station 2
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF11    (  Open and Closed Bridge SKIM Module )
+
+            - Byte0 : Broacast the Station that is in Control on both CAN channels
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : LCD  FF12
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 00.000
+info: N/A
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF12    (  Open and Closed Bridge SKIM Module )
+
+            - Byte0 : Ack all HPU faults on other LCD 1=YES
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : LCD  FF12
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 00.000
+info: N/A
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF12    (  Open and Closed Bridge SKIM Module )
+
+            - Byte0 : Ack all HPU faults on other LCD (1=YES)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : LCD  ff13
+address Port: 21
+address Stbd: 21
+priority    : 18
+Sending_Unit_Software_version : 00.000
+info: N/A
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF13    (    Open and Closed Bridge SKIM Module )
+
+            - Byte0 : Ack all propulsion faults on other LCD (1=YES)
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit calibration
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 00.000
+info: 0x00 for Port and 0x01 for Stbd.0=Innactive 1=Moving to Stbd  2=Moving to Port  3=Finish/Abort  4=Move to Detent
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF15    ( Calibration Feedback )
+
+            - Byte0 : Calibration Feedback
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF17    ( Tab Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Port Tab Up
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF18    ( Tab Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Port Tab down
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF19    ( Tab Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Stbd Tab Up
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF20    ( Tab Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Stbd Tab down
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF21    ( Tab Backup Panel / WJ Backup Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Port Tab Auto/Backup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF22    ( Tab Backup Panel / WJ Backup Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Stbd Tab Auto/Backup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF23    ( WJ Backup Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Port Nozzle Auto/Backup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF24    ( WJ Backup Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Port Bucket Auto/Backup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF25    ( Engine Backup Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Port Engine Auto/Backup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF26    ( Engine Backup Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Stbd Nozzle Auto/Backup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF27    ( WJ Backup Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Stbd Bucket Auto/Backup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 2.0000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF28    ( WJ Backup Panel CAN Messages From SKIM Modules )
+
+            - Byte0 : Stbd Engine Auto/Backup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF30    ( CU Info From Control Unit )
+
+            - Byte0 : Clutch Engagement Permissives
+                    - b0 : Stbd Bucket in Neutral Position
+                    - b1 : Port Bucket in Neutral Position
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Clutch Station in Control (1,2 or 3)
+ 
+            - Byte2 : Control Unit Major Software Version
+ 
+            - Byte3 : Control Unit Minor Software Version LO
+ 
+            - Byte4 : Control Unit Minor Software Version HI
+ 
+            - Byte5 : Control Unit Software Revision LO
+ 
+            - Byte6 : Control Unit Software Revision HI
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Clutch Panel
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 0.000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF31    ( Clutch command From Clutch Panel )
+
+            - Byte0 : Clutch Commands
+                    - b0 : Stbd Clutch Engaged Ahead Fdbk (or Cmd if local feedback)
+                    - b1 : Port Clutch Engaged Ahead Fdbk (or Cmd if local feedback)
+                    - b2 : Stbd Backflush Fdbk (or Cmd if local feedback)
+                    - b3 : Port Backflush Ahead Fdbk (or Cmd if local feedback)
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Clutch Panel #1 Idle Knob Raw Value LO
+ 
+            - Byte3 : Clutch Panel #1 Idle Knob Raw Value HI
+ 
+            - Byte4 : No CAN Messages Received
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Clutch Panel #2
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 0.000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF32    ( Clutch command From Clutch Panel 2 )
+
+            - Byte0 : Buttons pressed
+                    - b0 : Port Engage
+                    - b1 : Port Dis-Engage
+                    - b2 : Port Backflush
+                    - b3 : Stbd Engage
+                    - b4 : Stbd Dis-Engage
+                    - b5 : Stbd Backflush
+                    - b6 : Bright
+                    - b7 : Dim
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Clutch Panel #2 Idle Knob Raw Value LO
+ 
+            - Byte3 : Clutch Panel #2 Idle Knob Raw Value HI
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Clutch Panel #2
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 0.000
+info: StandardTachet_info_2.txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF32    ( Clutch command From Clutch Panel 2 )
+
+            - Byte0 : Buttons pressed
+                    - b0 : Port Engage
+                    - b1 : Port Dis-Engage
+                    - b2 : Port Backflush
+                    - b3 : Stbd Engage
+                    - b4 : Stbd Dis-Engage
+                    - b5 : Stbd Backflush
+                    - b6 : Bright
+                    - b7 : Dim
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Clutch Panel #2 Idle Knob Raw Value LO
+ 
+            - Byte3 : Clutch Panel #2 Idle Knob Raw Value HI
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Clutch Panel #1
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 0.000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF32    ( LED From Clutch Panel 1 )
+
+            - Byte0 : Port Engage LED
+ 
+            - Byte1 : Stbd Engage LED
+ 
+            - Byte2 : Port Backflush LED
+ 
+            - Byte3 : Stbd Backflush LED
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Clutch Panel #1
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 0.000
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF33    ( LED From Clutch Panel 1 )
+
+            - Byte0 : Port Engage LED
+ 
+            - Byte1 : Stbd Engage LED
+ 
+            - Byte2 : Port Backflush LED
+ 
+            - Byte3 : Stbd Backflush LED
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Remote Station Controller
+address Port: 34
+address Stbd: 34
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF36    ( Raw values From Remote Station Controller )
+
+            - Byte0 : Helm scaled value LO
+ 
+            - Byte1 : Helm scaled value HI
+ 
+            - Byte2 : Helm raw analog input value LO
+ 
+            - Byte3 : Helm raw analog input value HI
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+                    - b0 : Take Control Request
+                    - b1 : N/A
+                    - b2 : Remote Station Controller Calibration State
+                    - b3 : Remote Station Controller to Control Unit CAN Communication Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF49    ( From Control Unit )
+
+            - Byte0 : Sensor Faults
+                    - b0 : Stbd Bucket
+                    - b1 : Port Bucket
+                    - b2 : Stbd Nozzle
+                    - b3 : Port Nozzle
+                    - b4 : Stbd Tab
+                    - b5 : Port Tab
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Non Follow Up Faults
+                    - b0 : Stbd Bucket NFU
+                    - b1 : Port Bucket NFU
+                    - b2 : Stbd Nozzle NFU
+                    - b3 : Port Nozzle NFU
+                    - b4 : Stbd Tab NFU
+                    - b5 : Port Tab NFU
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Local Station 1 Faults
+                    - b0 : LocalSta 1 Idle Knob Fault
+                    - b1 : LocalSta 1 Helm Fault
+                    - b2 : LocalSta 1 Stbd Lever Fault
+                    - b3 : LocalSta 1 Port Lever Fault
+                    - b4 : LocalSta 1 Joy-Y Fault
+                    - b5 : LocalSta 1 Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Local Station 2 Faults
+                    - b0 : LocalSta 2 Idle Knob Fault
+                    - b1 : LocalSta 2 Helm Fault
+                    - b2 : LocalSta 2 Stbd Lever Fault
+                    - b3 : LocalSta 2 Port Lever Fault
+                    - b4 : LocalSta 2 Joy-Y Fault
+                    - b5 : LocalSta 2 Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Remote Station Faults
+                    - b0 : RemoteSta Idle Knob Fault
+                    - b1 : RemoteSta Helm Fault
+                    - b2 : RemoteSta Stbd Lever Fault
+                    - b3 : RemoteSta Port Lever Fault
+                    - b4 : RemoteSta Joy-Y Fault
+                    - b5 : RemoteSta Joy-X Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : General Faults
+                    - b0 : LocalSta 1 Trim Joystick Fault
+                    - b1 : LocalSta 1 Roll Joystick Fault
+                    - b2 : AutoCal Fault
+                    - b3 : Autopilot Command Fault
+                    - b4 : LocalSta 2 Trim Joystick Fault
+                    - b5 : LocalSta 2 Roll Joystick Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte6 : Docking Faults
+                    - b0 : Docking Fault
+                    - b1 : Port Clutch and Stbd Clutch Mismatched State Fault
+                    - b2 : Quad-Jet only Inboard clutch engaged Fault
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Communication Faults
+                    - b0 : CAN Fault
+                    - b1 : Clutch Panel #1 Communication Fault
+                    - b2 : Clutch Panel #2 Communication Fault
+                    - b3 : Remote Station Clutch Panel Communication Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : Remote Station Controller Communication Fault
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Remote Station Controller
+address Port: 34
+address Stbd: 34
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF50    ( Scaled Values From Remote Station Controller )
+
+            - Byte0 : Helm scaled value LO
+ 
+            - Byte1 : Helm scaled value HI
+ 
+            - Byte2 : Helm raw analog input value LO
+ 
+            - Byte3 : Helm raw analog input value HI
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+                    - b0 : Take Control Request
+                    - b1 : Transit (0)  / Docking (1) Mode Command
+                    - b2 : Remote Station Controller Calibration State
+                    - b3 : Remote Station Controller to Control Unit CAN Communication Fault
+                    - b4 : Calibration Fault
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Remote Station Controller
+address Port: 34
+address Stbd: 34
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF51    ( Scaled Lever values From Remote Station Controller  )
+
+            - Byte0 : Port Lever scaled value LO
+ 
+            - Byte1 : Port Lever scaled value HI
+ 
+            - Byte2 : Stbd Lever scaled value LO
+ 
+            - Byte3 : Stbd Lever scaled value HI
+ 
+            - Byte4 : Port Lever raw analog input value LO
+ 
+            - Byte5 : Port Lever raw analog input value HI
+ 
+            - Byte6 : Stbd Lever raw analog input value LO
+ 
+            - Byte7 : Stbd Lever raw analog input value HI
+
+============================================================================
+CAN Messages From : Control Unit
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF53    ( From Control Unit )
+
+            - Byte0 : Remote Station LED (0=OFF, 1=ON)
+ 
+            - Byte1 : Station in Control (1=Local Station, 3=Remote Station)
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : TOL_AD parameter (0 to 255)
+ 
+            - Byte7 : Calibration Status ( 0=CAL_FINISHED_OK, 1=CAL_ONGOING, 2=CAL_ABORTED)
+
+============================================================================
+CAN Messages From : Remote Station Controller
+address Port: 34
+address Stbd: 34
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF54    ( From Remote Station Controller )
+
+            - Byte0 : Helm minimum raw analog input value LO
+ 
+            - Byte1 : Helm minimum raw analog input value HI
+ 
+            - Byte2 : Helm maximum raw analog input value LO
+ 
+            - Byte3 : Helm maximum raw analog input value HI
+ 
+            - Byte4 : Remote Station Controller Major Software Version
+ 
+            - Byte5 : Remote Station Controller Minor Software Version
+ 
+            - Byte6 : Remote Station Controller Software Revision LO
+ 
+            - Byte7 : Remote Station Controller Software Revision HI
+
+============================================================================
+CAN Messages From : Remote Station Controller
+address Port: 34
+address Stbd: 34
+priority    : 18
+Sending_Unit_Software_version : ?
+info: Standard Yach txt file
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF55    ( From Remote Station Controller  )
+
+            - Byte0 : Port Lever minimum raw analog input value LO
+ 
+            - Byte1 : Port Lever minimum raw analog input value HI
+ 
+            - Byte2 : Port Lever maximum raw analog input value LO
+ 
+            - Byte3 : Port Lever maximum raw analog input value HI
+ 
+            - Byte4 : Stbd Lever minimum raw analog input value LO
+ 
+            - Byte5 : Stbd Lever minimum raw analog input value HI
+ 
+            - Byte6 : Stbd Lever maximum raw analog input value LO
+ 
+            - Byte7 : Stbd Lever maximum raw analog input value HI
+ 
+============================================================================
+CAN Messages From : Control Unit Clutch
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF8C    ( Clutch Command )
+
+            - Byte0 : Clutch Command
+                    - b0 : Port Clutch Command Disengage
+                    - b1 : Port Clutch Command Ahead
+                    - b2 : Port Clutch Command Reverse
+                    - b3 : Stbd Clutch Command Disengage
+                    - b4 : Stbd Clutch Command Ahead
+                    - b5 : Stbd Clutch Command Reverse
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Switching Relay
+                    - b0 : Switching Relay Control to "B" Control Unit
+                    - b1 : Is Control Unit Active (1=Yes)
+                    - b2 : Station 2 Port Clutch Enable (1=YES)
+                    - b3 : Station 2 Stbd Clutch Enable (1=YES)
+                    - b4 : Station 1 Port Clutch Enable (1=YES)
+                    - b5 : Station 1 Stbd Clutch Enable (1=YES)
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Port Engine Command AHD (0 to 100)
+ 
+            - Byte3 : Port Engine Command REV (0 to 100)
+ 
+            - Byte4 : Stbd Engine Command AHD (0 to 100)
+ 
+            - Byte5 : Stbd Engine Command REV (0 to 100)
+ 
+            - Byte6 : Station in Control (0=None, 1=Closed Bridge, 2=Open Bridge)
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit  Station 1 CMC
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF8E    ( Station 1 CMD )
+
+            - Byte0 : Station 1 P Trim CMD (0 to 100)
+ 
+            - Byte1 : Station 1 S Trim CMD (0 to 100)
+ 
+            - Byte2 : Station 1 Helm (0 to 100)
+ 
+            - Byte3 : Station 1 P Throttle AHD CMD (0 to 100)
+ 
+            - Byte4 : Station 1 P Throttle REV CMD (0 to 100)
+ 
+            - Byte5 : Station 1 S Throttle AHD CMD (0 to 100)
+ 
+            - Byte6 : Station 1 S Throttle REV CMD (0 to 100)
+ 
+            - Byte7 : control
+                    - b0 : Station 1 is Requesting Control
+                    - b1 : Station 1 is Allowing Transfer
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit  Station 2 CMC
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF8F    ( Station 2 CMD )
+
+            - Byte0 : Station 2 P Trim CMD (0 to 100)
+ 
+            - Byte1 : Station 2 S Trim CMD (0 to 100)
+ 
+            - Byte2 : Station 2 Helm (0 to 100)
+ 
+            - Byte3 : Station 2 P Throttle AHD CMD (0 to 100)
+ 
+            - Byte4 : Station 2 P Throttle REV CMD (0 to 100)
+ 
+            - Byte5 : Station 2 S Throttle AHD CMD (0 to 100)
+ 
+            - Byte6 : Station 2 S Throttle REV CMD (0 to 100)
+ 
+            - Byte7 : control
+                    - b0 : Station 2 is Requesting Control
+                    - b1 : Station 2 is Allowing Transfer
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit  Software Version
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF90    ( Software Version )
+
+            - Byte0 : Sofware Version Major
+ 
+            - Byte1 : Sofware Version Minor LO
+ 
+            - Byte2 : Sofware Version Minor HI
+ 
+            - Byte3 : Sofware Revision LO
+ 
+            - Byte4 : Sofware Revision HI
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit faults
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFF8D    ( Faults )
+
+            - Byte0 : Faults
+                    - b0 : Calibration Fault
+                    - b1 : Station 1 Dimming Panel Communication
+                    - b2 : Station 2 Dimming Panel Communication
+                    - b3 : Alarm and Monitoring Unit Communication
+                    - b4 : Clutch Enable Switches Disconnected
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Station 1 faults
+                    - b0 : Station 1 Helm Fault
+                    - b1 : Station 1 Port Throttle Lever Fault
+                    - b2 : Station 1 Stbd Throttle Lever Fault
+                    - b3 : Station 1 Port Trim Lever Fault
+                    - b4 : Station 1 Stbd Trim Lever Fault
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Station 2 faults
+                    - b0 : Station 2 Helm Fault
+                    - b1 : Station 2 Port Throttle Lever Fault
+                    - b2 : Station 2 Stbd Throttle Lever Fault
+                    - b3 : Station 2 Port Trim Lever Fault
+                    - b4 : Station 2 Stbd Trim Lever Fault
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Nozzel Bucket faults
+                    - b0 : Stbd Nozzle Sensor Fault
+                    - b1 : Port Nozzle Sensor Fault
+                    - b2 : Stbd Bucket Sensor Fault
+                    - b3 : Port Bucket Sensor Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Nozzel Bucket NFU faults
+                    - b0 : Stbd Nozzle Non-Follow-Up Fault
+                    - b1 : Port Nozzle Non-Follow-Up Fault
+                    - b2 : Stbd Bucket Non-Follow-Up Fault
+                    - b3 : Port Bucket Non-Follow-Up Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+
+============================================================================
+CAN Messages From : Control Unit Clutch Panel Brigthness station 1
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1054
+info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFFB2    ( Clutch Panel Brigthness sta 1 )
+
+            - Byte0 : Station 1 PAHD Clutch Panel Brigthness (0 to 250)
+ 
+            - Byte1 : Station 1 PREV Clutch Panel Brigthness (0 to 250)
+ 
+            - Byte2 : Station 1 SAHD Clutch Panel Brigthness (0 to 250)
+ 
+            - Byte3 : Station 1 SREV Clutch Panel Brigthness (0 to 250)
+ 
+            - Byte4 : Station 1 LCD Brightness (0 to 100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit Clutch Panel Brigthness station 2
+address Port: 00
+address Stbd: 01
+priority    : 18
+Sending_Unit_Software_version : 18.1052
+info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
+Configuration : Standard Yach
+Project : N/A
+============================================================================
+    0xFFB3    ( Clutch Panel Brigthness sta 2 )
+
+            - Byte0 : Station 2 PAHD Clutch Panel Brigthness (0 to 250)
+ 
+            - Byte1 : Station 2 PREV Clutch Panel Brigthness (0 to 250)
+ 
+            - Byte2 : Station 2 SAHD Clutch Panel Brigthness (0 to 250)
+ 
+            - Byte3 : Station 2 SREV Clutch Panel Brigthness (0 to 250)
+ 
+            - Byte4 : Station 2 LCD Brightness (0 to 100)
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
