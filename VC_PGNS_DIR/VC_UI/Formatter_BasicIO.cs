@@ -27,6 +27,7 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
         public string Sending_Unit_Software_version { get; set; }
         public string info { get; set; }
         public string Configuration { get; set; }
+        public string Project { get; set; }
 
     }
     public class VC_PGNData

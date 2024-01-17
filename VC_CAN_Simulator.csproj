@@ -375,5 +375,8 @@
     <Folder Include="VC_PGNS_DIR\VC_Backend\" />
     <Folder Include="VC_PGNS_DIR\VC_DataObjects\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="PGNSourceOfTruth.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

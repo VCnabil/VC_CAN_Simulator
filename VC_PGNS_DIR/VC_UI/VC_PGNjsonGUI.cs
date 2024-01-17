@@ -96,6 +96,8 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
                 listOfAllLinesToBeWrittenToText.Add("Sending_Unit_Software_version : " + vcpgnt.vC_PGN.Sending_Unit_Software_version);
                 listOfAllLinesToBeWrittenToText.Add("info: " + vcpgnt.vC_PGN.info);
                 listOfAllLinesToBeWrittenToText.Add("Configuration : " + vcpgnt.vC_PGN.Configuration);
+                listOfAllLinesToBeWrittenToText.Add("Project : " + vcpgnt.vC_PGN.Project);
+              //  listOfAllLinesToBeWrittenToText.Add("Project : N/A");
                 listOfAllLinesToBeWrittenToText.Add("============================================================================");
                 listOfAllLinesToBeWrittenToText.Add("    " + vcpgnt.vC_PGNData.PGN + "    ( " + vcpgnt.vC_PGNData.DescritionPGN + " )");
                 listOfAllLinesToBeWrittenToText.Add("");
@@ -238,13 +240,14 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
                 vC_PGN.Sending_Unit_Software_version =  argBlock[5].Split(':')[1].Trim();
                 vC_PGN.info =                           argBlock[6].Split(':')[1].Trim();
                 vC_PGN.Configuration =                  argBlock[7].Split(':')[1].Trim();
+                vC_PGN.Project =                        argBlock[8].Split(':')[1].Trim();
                 //=============================================
-                vC_PGNData.PGN =                        argBlock[9].Split('(')[0].Trim();
+                vC_PGNData.PGN =                        argBlock[10].Split('(')[0].Trim();
                 string pattern = @"\(([^)]*)\)";
-                Match match = Regex.Match(argBlock[9], pattern);
+                Match match = Regex.Match(argBlock[10], pattern);
                 vC_PGNData.DescritionPGN = match.Success ? match.Groups[1].Value : ""; ;
            
-                int index = 10;
+                int index = 11;
                 while (index < argBlock.Count)
                 {
                     string line = argBlock[index].Trim();

@@ -1254,7 +1254,7 @@ namespace VC_CAN_Simulator.UIz.Formz.SingleForm
         // 7 PORT Lube Oil Change Over Activated
         //double d_A_Port_Hydro;
         //smRead( VariableIDs.J1939_INFPB___Port_A_M_Unit_Low_Hydraulic_Press, d_A_Port_Hydro );
-        //sending 18FFA100      D0                          D1      D2                                  D3                          D4  D5  D6 D7
+        //sending 18FFA101      D0                          D1      D2                                  D3                          D4  D5  D6 D7
         //                      3 2 1 0  <-bits                     3 2 1 0  <-bits                     2 1 0  <-bits         
         //                      | | | |_ Change Over Press          | | | |_ Low Oil Level              | | |_ Changeover Valve Activated 
         //                      | | |___ LowHydraulicPress          | | |___ Low Lube Oil Press         | |___ LO Pump Running Wirebreak
@@ -1274,7 +1274,7 @@ namespace VC_CAN_Simulator.UIz.Formz.SingleForm
         // 5 STBD Hydraulic Oil Temp High
         // 6 STBD Lube Oil Pressure Low
         // 7 STBD Lube Oil Change Over Activated
-        //sending 18FFA101      D0                          D1      D2                                  D3                          D4  D5  D6 D7
+        //sending 18FFA102      D0                          D1      D2                                  D3                          D4  D5  D6 D7
         //                      3 2 1 0  <-bits                     3 2 1 0  <-bits                     2 1 0  <-bits         
         //                      | | | |_ Change Over Press          | | | |_ Low Oil Level              | | |_ Changeover Valve Activated 
         //                      | | |___ LowHydraulicPress          | | |___ Low Lube Oil Press         | |___ LO Pump Running Wirebreak
