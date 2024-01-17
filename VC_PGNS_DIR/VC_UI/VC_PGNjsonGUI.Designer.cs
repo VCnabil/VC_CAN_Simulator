@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VC_PGNjsonGUI));
-            this.btn_run = new System.Windows.Forms.Button();
+            this.btn_Gzero_toJson = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_run_makeText = new System.Windows.Forms.Button();
+            this.btn_makeText_fromJson = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btn_run
+            // btn_Gzero_toJson
             // 
-            this.btn_run.Location = new System.Drawing.Point(58, 68);
-            this.btn_run.Name = "btn_run";
-            this.btn_run.Size = new System.Drawing.Size(172, 71);
-            this.btn_run.TabIndex = 0;
-            this.btn_run.Text = "run";
-            this.btn_run.UseVisualStyleBackColor = true;
+            this.btn_Gzero_toJson.Location = new System.Drawing.Point(12, 68);
+            this.btn_Gzero_toJson.Name = "btn_Gzero_toJson";
+            this.btn_Gzero_toJson.Size = new System.Drawing.Size(218, 109);
+            this.btn_Gzero_toJson.TabIndex = 0;
+            this.btn_Gzero_toJson.Text = "unpack groundZero";
+            this.btn_Gzero_toJson.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -60,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 205);
+            this.label1.Location = new System.Drawing.Point(30, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 29);
             this.label1.TabIndex = 2;
@@ -69,20 +69,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 302);
+            this.label2.Location = new System.Drawing.Point(30, 230);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "blocks Read";
             // 
-            // btn_run_makeText
+            // btn_makeText_fromJson
             // 
-            this.btn_run_makeText.Location = new System.Drawing.Point(1319, 141);
-            this.btn_run_makeText.Name = "btn_run_makeText";
-            this.btn_run_makeText.Size = new System.Drawing.Size(172, 71);
-            this.btn_run_makeText.TabIndex = 4;
-            this.btn_run_makeText.Text = "make txt";
-            this.btn_run_makeText.UseVisualStyleBackColor = true;
+            this.btn_makeText_fromJson.Location = new System.Drawing.Point(1319, 141);
+            this.btn_makeText_fromJson.Name = "btn_makeText_fromJson";
+            this.btn_makeText_fromJson.Size = new System.Drawing.Size(172, 71);
+            this.btn_makeText_fromJson.TabIndex = 4;
+            this.btn_makeText_fromJson.Text = "Build TExt from JSON";
+            this.btn_makeText_fromJson.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -101,11 +101,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2672, 1637);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.btn_run_makeText);
+            this.Controls.Add(this.btn_makeText_fromJson);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btn_run);
+            this.Controls.Add(this.btn_Gzero_toJson);
             this.Name = "VC_PGNjsonGUI";
             this.Text = "VC_PGNjsonGUI";
             this.ResumeLayout(false);
@@ -115,11 +115,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_run;
+        private System.Windows.Forms.Button btn_Gzero_toJson;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_run_makeText;
+        private System.Windows.Forms.Button btn_makeText_fromJson;
         private System.Windows.Forms.TextBox textBox2;
     }
 }
