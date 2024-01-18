@@ -47,68 +47,11 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
 
         }
 
-        List<VC_PGN_Text_Object> GetFilteredPGNTextObjects(uint argLow, uint argHigh)
-        {
-            var filteredList = vC_PGN_Text_Objects
-                .Where(item => item.vC_PGN.PGN_32bit > argLow && item.vC_PGN.PGN_32bit < argHigh)
-                .ToList();
-
-            return filteredList;
-        }
-
-        List<VC_PGN_Text_Object> GetFilteredPGNTextObjects_HexPgcContains(string argPGNcontains)
-        {
-            var filteredList = vC_PGN_Text_Objects
-                .Where(item => item.vC_PGNData.PGN.Contains(argPGNcontains)  )
-                .ToList();
-
-            return filteredList;
-        }
-        List<VC_PGN_Text_Object> GetFilteredPGNTextObjects(uint argLow, uint argHigh, string argPGNcontains)
-        {
-            var filteredList = vC_PGN_Text_Objects
-                .Where(item => item.vC_PGN.PGN_32bit > argLow && item.vC_PGN.PGN_32bit < argHigh)
-                .Where(item => item.vC_PGNData.PGN.Contains(argPGNcontains))
-                .ToList();
-
-            return filteredList;
-        }
+   
+         
 
         #region Filters
-
-        List<VC_PGN_Text_Object> GetFilteredby_PgnContains(string argPGNcontains)
-        {
-            var filteredList = vC_PGN_Text_Objects
-                .Where(item => item.vC_PGNData.PGN.Contains(argPGNcontains))
-                .ToList();
-
-            return filteredList;
-        }
-
-        List<VC_PGN_Text_Object> GetFilteredby_FromContains(string argPGNcontains)
-        {
-            var filteredList = vC_PGN_Text_Objects
-                .Where(item => item.vC_PGN.From.Contains(argPGNcontains))
-                .ToList();
-
-            return filteredList;
-        }
-        List<VC_PGN_Text_Object> GetFilteredby_ConfigurationContains(string argPGNcontains)
-        {
-            var filteredList = vC_PGN_Text_Objects
-                .Where(item => item.vC_PGN.Configuration.Contains(argPGNcontains))
-                .ToList();
-
-            return filteredList;
-        }
-        List<VC_PGN_Text_Object> GetFilteredby_Projectontains(string argPGNcontains)
-        {
-            var filteredList = vC_PGN_Text_Objects
-                .Where(item => item.vC_PGN.Project.Contains(argPGNcontains))
-                .ToList();
-
-            return filteredList;
-        }
+ 
          List<VC_PGN_Text_Object> GetFilteredby_Boolean( bool arg_byPGN, string argPGNcontains, bool arg_byFrom, string argFROMcontains, bool arg_byConfiguration, string argCONFIGcontains, bool arg_byProject, string argPROJECTcontains)
         {
             IEnumerable<VC_PGN_Text_Object> filteredList = vC_PGN_Text_Objects;
@@ -239,7 +182,7 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
 
         public string Get_StringOutPut(bool argShowDate, bool argshowHEAVYFormat, bool argShowByteDetail) {
             StringBuilder sbOut   = new StringBuilder();
-            List < VC_PGN_Text_Object > filteredList= GetFilteredPGNTextObjects_HexPgcContains("FE");
+             
             if (argShowDate) {
                 string year = DateTime.Now.Year.ToString();
                 string month = DateTime.Now.Month.ToString();
@@ -265,7 +208,7 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
                 sbOut.AppendLine("============================================================================");
             }
 
-            foreach (VC_PGN_Text_Object vcpgnt in filteredList)
+            foreach (VC_PGN_Text_Object vcpgnt in vC_PGN_Text_Objects)
             {
 
                 if (argshowHEAVYFormat)

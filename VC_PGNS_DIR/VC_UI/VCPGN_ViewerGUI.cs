@@ -14,19 +14,23 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
 {
     public partial class VCPGN_ViewerGUI : Form
     {
-        bool UserIs_NOTNabil = true;
+        bool UserIs_NOTNabil = false;
 
         DetailDisplayData structDisplay;
 
         FilterData structFilter;
         VCPGN_listCTRL vCPGN_ListCTRL;
+
+        string _newSavedTextFileName_plusExt = "";
+        string _fullpathTo_SavedTextFile = "";
+   
         public VCPGN_ViewerGUI()
         {
             InitializeComponent();
             structDisplay = new DetailDisplayData();
             structFilter = new FilterData();
 
-           
+          
             string _targetFilePath_JSON = Get_Local_JSON_pgnDfinitions_fullpath();
             vCPGN_ListCTRL = new VCPGN_listCTRL(_targetFilePath_JSON);
             label_totalPgnsInDb.Text = vCPGN_ListCTRL.TotalPgnsInJSON.ToString();
@@ -46,28 +50,21 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
             checkBox_BytesShowVerbos.CheckedChanged += CheckBoxs_CheckedChanged;
             checkBox_BitsShowVerbos.CheckedChanged += CheckBoxs_CheckedChanged;
 
-           // checkBox_FilterbySendingUnit.CheckedChanged += cb_CheckedChanged;
-         //   checkBox_FilterbyPGN.CheckedChanged += cb_CheckedChanged;
-          //  checkBox_FilterbyConfiguration.CheckedChanged += cb_CheckedChanged;
-          //  checkBox_FilterbyProject.CheckedChanged += cb_CheckedChanged;
-
             textBox_Contains_str_Sendingunit.TextChanged += TextBox_From_TextChanged;
             textBox_Contains_str_PGN.TextChanged += TextBox_PGN_TextChanged;
             textBox_Contains_str_Configuration.TextChanged += TextBox_Config_TextChanged;
             textBox_Contains_str_Project.TextChanged += TextBox_Proj_TextChanged;
 
             checkBox_ShowFrom.Checked = true;
-           // checkBox_ShowID.Checked = true;
-           // checkBox_Show32bitpgn.Checked = true;
-           // checkBox_ShowAddresses.Checked = true;
-           // checkBox_ShowPriority.Checked = true;
             checkBox_Configuration.Checked = true;
             checkBox_Project.Checked = true;
-           // checkBox_Info.Checked = true;
             checkBox_BytesShowVerbos.Checked = true;
             checkBox_BitsShowVerbos.Checked = true;
-           
 
+
+            textBox_saveFileName.TextChanged += TextBox_saveFileName_TextChanged;
+
+            button_Save_File.Click += Button_Save_File_Click;
             button_Display.Click += Button_Display_Click;
             button_Display.Hide();
 
@@ -78,7 +75,72 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
                 checkBox_Show32bitpgn.Hide();
                 checkBox_ShowAddresses.Hide();
                 checkBox_ShowPriority.Hide();
+
+                textBox_saveFileName.Hide();
+                label_saveFilename.Hide();
+                X3_label_saveFilename.Hide();
+                textBox_FilePath.Hide();
+                button_Save_File.Hide();
             }
+
+            BuildSaveFileName();
+
+
+
+        }
+
+        private void Button_Save_File_Click(object sender, EventArgs e)
+        {
+            string _textToSave = textBox_Display.Text;
+
+            //if file _fullpathTo_SavedTextFile  already exist show textmessage
+            if (File.Exists(_fullpathTo_SavedTextFile))
+            {
+
+                string _date = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss");
+                string _newname = "new_" + _date + ".txt";
+                string message = "the file name " + _newSavedTextFileName_plusExt + " already exist. new name is  " + _newname;
+
+                _newSavedTextFileName_plusExt = _newname;
+                _fullpathTo_SavedTextFile = Path.Combine(Application.StartupPath, Get_Local_SaveTextDir_path(), _newSavedTextFileName_plusExt);
+                textBox_FilePath.Text = _fullpathTo_SavedTextFile;
+                // Write text to file if it does not exist
+                File.WriteAllText(_fullpathTo_SavedTextFile, _textToSave);
+            }
+            else
+            {
+             
+                // Write text to file if it does not exist
+                File.WriteAllText(_fullpathTo_SavedTextFile, _textToSave);
+            }
+        }
+
+        void BuildSaveFileName() {
+            if (textBox_saveFileName.Text.Length > 0)
+            {
+                _newSavedTextFileName_plusExt = "_"+ textBox_saveFileName.Text + ".txt";
+
+            }
+            else
+            {
+                string _date = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss");
+                _newSavedTextFileName_plusExt = "rand_" + _date + ".txt";
+            }
+
+            label_saveFilename.Text = _newSavedTextFileName_plusExt;
+
+
+            _fullpathTo_SavedTextFile = Path.Combine(Application.StartupPath, Get_Local_SaveTextDir_path(), _newSavedTextFileName_plusExt);
+       
+       
+            textBox_FilePath.Text = _fullpathTo_SavedTextFile;
+        }
+
+        private void TextBox_saveFileName_TextChanged(object sender, EventArgs e)
+        {
+            BuildSaveFileName();
+
+
         }
 
         private void TextBox_From_TextChanged(object sender, EventArgs e)

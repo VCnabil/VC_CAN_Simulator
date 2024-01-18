@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VCPGN_ViewerGUI));
             this.X1_label1 = new System.Windows.Forms.Label();
             this.label_totalPgnsInDb = new System.Windows.Forms.Label();
             this.checkBox_ShowDate = new System.Windows.Forms.CheckBox();
@@ -39,16 +40,11 @@
             this.checkBox_Configuration = new System.Windows.Forms.CheckBox();
             this.checkBox_Project = new System.Windows.Forms.CheckBox();
             this.X1_label2 = new System.Windows.Forms.Label();
-            this.radioButton_FilterbyPGN = new System.Windows.Forms.RadioButton();
-            this.radioButton_FilterbyConfiguration = new System.Windows.Forms.RadioButton();
-            this.radioButton_FilterbyProject = new System.Windows.Forms.RadioButton();
-            this.radioButton_FilterbySendingUnit = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox_Contains = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.X1_label4 = new System.Windows.Forms.Label();
+            this.textBox_saveFileName = new System.Windows.Forms.TextBox();
+            this.X3_label_saveFilename = new System.Windows.Forms.Label();
             this.textBox_Display = new System.Windows.Forms.TextBox();
-            this.button_Save = new System.Windows.Forms.Button();
+            this.button_Save_File = new System.Windows.Forms.Button();
             this.X1_label3 = new System.Windows.Forms.Label();
             this.label_MatchesFound = new System.Windows.Forms.Label();
             this.button_Display = new System.Windows.Forms.Button();
@@ -61,17 +57,18 @@
             this.textBox_Contains_str_PGN = new System.Windows.Forms.TextBox();
             this.textBox_Contains_str_Configuration = new System.Windows.Forms.TextBox();
             this.textBox_Contains_str_Project = new System.Windows.Forms.TextBox();
-            this.checkBox_FilterbyProject = new System.Windows.Forms.CheckBox();
-            this.checkBox_FilterbyConfiguration = new System.Windows.Forms.CheckBox();
-            this.checkBox_FilterbyPGN = new System.Windows.Forms.CheckBox();
-            this.checkBox_FilterbySendingUnit = new System.Windows.Forms.CheckBox();
-            this.groupBox1.SuspendLayout();
+            this.X2_lbl_TxUnit = new System.Windows.Forms.Label();
+            this.X2_lbl_PGN = new System.Windows.Forms.Label();
+            this.X2_lbl_Config = new System.Windows.Forms.Label();
+            this.X2_lbl_Project = new System.Windows.Forms.Label();
+            this.textBox_FilePath = new System.Windows.Forms.TextBox();
+            this.label_saveFilename = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // X1_label1
             // 
             this.X1_label1.AutoSize = true;
-            this.X1_label1.Location = new System.Drawing.Point(10, 10);
+            this.X1_label1.Location = new System.Drawing.Point(95, 10);
             this.X1_label1.Name = "X1_label1";
             this.X1_label1.Size = new System.Drawing.Size(383, 29);
             this.X1_label1.TabIndex = 0;
@@ -80,7 +77,7 @@
             // label_totalPgnsInDb
             // 
             this.label_totalPgnsInDb.AutoSize = true;
-            this.label_totalPgnsInDb.Location = new System.Drawing.Point(400, 10);
+            this.label_totalPgnsInDb.Location = new System.Drawing.Point(485, 10);
             this.label_totalPgnsInDb.Name = "label_totalPgnsInDb";
             this.label_totalPgnsInDb.Size = new System.Drawing.Size(24, 29);
             this.label_totalPgnsInDb.TabIndex = 1;
@@ -89,18 +86,18 @@
             // checkBox_ShowDate
             // 
             this.checkBox_ShowDate.AutoSize = true;
-            this.checkBox_ShowDate.Location = new System.Drawing.Point(15, 50);
+            this.checkBox_ShowDate.Location = new System.Drawing.Point(100, 50);
             this.checkBox_ShowDate.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_ShowDate.Name = "checkBox_ShowDate";
-            this.checkBox_ShowDate.Size = new System.Drawing.Size(95, 33);
+            this.checkBox_ShowDate.Size = new System.Drawing.Size(162, 33);
             this.checkBox_ShowDate.TabIndex = 2;
-            this.checkBox_ShowDate.Text = "Date";
+            this.checkBox_ShowDate.Text = "Show Date";
             this.checkBox_ShowDate.UseVisualStyleBackColor = true;
             // 
             // checkBox_PgnShowVerbos
             // 
             this.checkBox_PgnShowVerbos.AutoSize = true;
-            this.checkBox_PgnShowVerbos.Location = new System.Drawing.Point(300, 50);
+            this.checkBox_PgnShowVerbos.Location = new System.Drawing.Point(385, 50);
             this.checkBox_PgnShowVerbos.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_PgnShowVerbos.Name = "checkBox_PgnShowVerbos";
             this.checkBox_PgnShowVerbos.Size = new System.Drawing.Size(189, 33);
@@ -111,7 +108,7 @@
             // checkBox_BitsShowVerbos
             // 
             this.checkBox_BitsShowVerbos.AutoSize = true;
-            this.checkBox_BitsShowVerbos.Location = new System.Drawing.Point(15, 400);
+            this.checkBox_BitsShowVerbos.Location = new System.Drawing.Point(100, 400);
             this.checkBox_BitsShowVerbos.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_BitsShowVerbos.Name = "checkBox_BitsShowVerbos";
             this.checkBox_BitsShowVerbos.Size = new System.Drawing.Size(140, 33);
@@ -122,7 +119,7 @@
             // checkBox_BytesShowVerbos
             // 
             this.checkBox_BytesShowVerbos.AutoSize = true;
-            this.checkBox_BytesShowVerbos.Location = new System.Drawing.Point(15, 350);
+            this.checkBox_BytesShowVerbos.Location = new System.Drawing.Point(100, 350);
             this.checkBox_BytesShowVerbos.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_BytesShowVerbos.Name = "checkBox_BytesShowVerbos";
             this.checkBox_BytesShowVerbos.Size = new System.Drawing.Size(159, 33);
@@ -133,7 +130,7 @@
             // checkBox_ShowFrom
             // 
             this.checkBox_ShowFrom.AutoSize = true;
-            this.checkBox_ShowFrom.Location = new System.Drawing.Point(15, 100);
+            this.checkBox_ShowFrom.Location = new System.Drawing.Point(100, 100);
             this.checkBox_ShowFrom.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_ShowFrom.Name = "checkBox_ShowFrom";
             this.checkBox_ShowFrom.Size = new System.Drawing.Size(183, 33);
@@ -144,7 +141,7 @@
             // checkBox_Info
             // 
             this.checkBox_Info.AutoSize = true;
-            this.checkBox_Info.Location = new System.Drawing.Point(15, 200);
+            this.checkBox_Info.Location = new System.Drawing.Point(100, 200);
             this.checkBox_Info.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_Info.Name = "checkBox_Info";
             this.checkBox_Info.Size = new System.Drawing.Size(133, 33);
@@ -155,7 +152,7 @@
             // checkBox_Configuration
             // 
             this.checkBox_Configuration.AutoSize = true;
-            this.checkBox_Configuration.Location = new System.Drawing.Point(15, 250);
+            this.checkBox_Configuration.Location = new System.Drawing.Point(100, 250);
             this.checkBox_Configuration.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_Configuration.Name = "checkBox_Configuration";
             this.checkBox_Configuration.Size = new System.Drawing.Size(188, 33);
@@ -166,7 +163,7 @@
             // checkBox_Project
             // 
             this.checkBox_Project.AutoSize = true;
-            this.checkBox_Project.Location = new System.Drawing.Point(15, 300);
+            this.checkBox_Project.Location = new System.Drawing.Point(100, 300);
             this.checkBox_Project.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_Project.Name = "checkBox_Project";
             this.checkBox_Project.Size = new System.Drawing.Size(121, 33);
@@ -177,78 +174,16 @@
             // X1_label2
             // 
             this.X1_label2.AutoSize = true;
-            this.X1_label2.Location = new System.Drawing.Point(15, 500);
+            this.X1_label2.Location = new System.Drawing.Point(100, 500);
             this.X1_label2.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
             this.X1_label2.Name = "X1_label2";
             this.X1_label2.Size = new System.Drawing.Size(80, 29);
             this.X1_label2.TabIndex = 10;
             this.X1_label2.Text = "Filters";
             // 
-            // radioButton_FilterbyPGN
-            // 
-            this.radioButton_FilterbyPGN.AutoSize = true;
-            this.radioButton_FilterbyPGN.Location = new System.Drawing.Point(25, 86);
-            this.radioButton_FilterbyPGN.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton_FilterbyPGN.Name = "radioButton_FilterbyPGN";
-            this.radioButton_FilterbyPGN.Size = new System.Drawing.Size(127, 33);
-            this.radioButton_FilterbyPGN.TabIndex = 11;
-            this.radioButton_FilterbyPGN.TabStop = true;
-            this.radioButton_FilterbyPGN.Text = "by PGN";
-            this.radioButton_FilterbyPGN.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_FilterbyConfiguration
-            // 
-            this.radioButton_FilterbyConfiguration.AutoSize = true;
-            this.radioButton_FilterbyConfiguration.Location = new System.Drawing.Point(25, 128);
-            this.radioButton_FilterbyConfiguration.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton_FilterbyConfiguration.Name = "radioButton_FilterbyConfiguration";
-            this.radioButton_FilterbyConfiguration.Size = new System.Drawing.Size(145, 33);
-            this.radioButton_FilterbyConfiguration.TabIndex = 12;
-            this.radioButton_FilterbyConfiguration.TabStop = true;
-            this.radioButton_FilterbyConfiguration.Text = "by Config";
-            this.radioButton_FilterbyConfiguration.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_FilterbyProject
-            // 
-            this.radioButton_FilterbyProject.AutoSize = true;
-            this.radioButton_FilterbyProject.Location = new System.Drawing.Point(25, 171);
-            this.radioButton_FilterbyProject.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton_FilterbyProject.Name = "radioButton_FilterbyProject";
-            this.radioButton_FilterbyProject.Size = new System.Drawing.Size(151, 33);
-            this.radioButton_FilterbyProject.TabIndex = 13;
-            this.radioButton_FilterbyProject.TabStop = true;
-            this.radioButton_FilterbyProject.Text = "by Project";
-            this.radioButton_FilterbyProject.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_FilterbySendingUnit
-            // 
-            this.radioButton_FilterbySendingUnit.AutoSize = true;
-            this.radioButton_FilterbySendingUnit.Location = new System.Drawing.Point(29, 44);
-            this.radioButton_FilterbySendingUnit.Margin = new System.Windows.Forms.Padding(0);
-            this.radioButton_FilterbySendingUnit.Name = "radioButton_FilterbySendingUnit";
-            this.radioButton_FilterbySendingUnit.Size = new System.Drawing.Size(150, 33);
-            this.radioButton_FilterbySendingUnit.TabIndex = 14;
-            this.radioButton_FilterbySendingUnit.TabStop = true;
-            this.radioButton_FilterbySendingUnit.Text = "by Tx Unit";
-            this.radioButton_FilterbySendingUnit.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton_FilterbySendingUnit);
-            this.groupBox1.Controls.Add(this.radioButton_FilterbyProject);
-            this.groupBox1.Controls.Add(this.radioButton_FilterbyPGN);
-            this.groupBox1.Controls.Add(this.radioButton_FilterbyConfiguration);
-            this.groupBox1.Location = new System.Drawing.Point(405, 1294);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(218, 232);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filters";
-            this.groupBox1.Visible = false;
-            // 
             // textBox_Contains
             // 
-            this.textBox_Contains.Location = new System.Drawing.Point(85, 1442);
+            this.textBox_Contains.Location = new System.Drawing.Point(20, 1654);
             this.textBox_Contains.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Contains.MaxLength = 16;
             this.textBox_Contains.Name = "textBox_Contains";
@@ -257,49 +192,51 @@
             this.textBox_Contains.Text = "XXXX____XXXX____";
             this.textBox_Contains.Visible = false;
             // 
-            // textBox1
+            // textBox_saveFileName
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 906);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.MaxLength = 16;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 35);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "outFileName";
+            this.textBox_saveFileName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_saveFileName.Location = new System.Drawing.Point(204, 1231);
+            this.textBox_saveFileName.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox_saveFileName.MaxLength = 16;
+            this.textBox_saveFileName.Name = "textBox_saveFileName";
+            this.textBox_saveFileName.Size = new System.Drawing.Size(274, 28);
+            this.textBox_saveFileName.TabIndex = 18;
+            this.textBox_saveFileName.Text = "outFile";
             // 
-            // X1_label4
+            // X3_label_saveFilename
             // 
-            this.X1_label4.AutoSize = true;
-            this.X1_label4.Location = new System.Drawing.Point(13, 866);
-            this.X1_label4.Name = "X1_label4";
-            this.X1_label4.Size = new System.Drawing.Size(196, 29);
-            this.X1_label4.TabIndex = 19;
-            this.X1_label4.Text = "save filename .txt";
+            this.X3_label_saveFilename.AutoSize = true;
+            this.X3_label_saveFilename.Location = new System.Drawing.Point(4, 1231);
+            this.X3_label_saveFilename.Name = "X3_label_saveFilename";
+            this.X3_label_saveFilename.Size = new System.Drawing.Size(193, 29);
+            this.X3_label_saveFilename.TabIndex = 19;
+            this.X3_label_saveFilename.Text = "New File Name :";
             // 
             // textBox_Display
             // 
+            this.textBox_Display.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBox_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Display.Location = new System.Drawing.Point(685, 52);
+            this.textBox_Display.Location = new System.Drawing.Point(672, 0);
             this.textBox_Display.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Display.Multiline = true;
             this.textBox_Display.Name = "textBox_Display";
             this.textBox_Display.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_Display.Size = new System.Drawing.Size(1536, 1629);
+            this.textBox_Display.Size = new System.Drawing.Size(1300, 1721);
             this.textBox_Display.TabIndex = 20;
             // 
-            // button_Save
+            // button_Save_File
             // 
-            this.button_Save.Location = new System.Drawing.Point(12, 961);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(212, 51);
-            this.button_Save.TabIndex = 21;
-            this.button_Save.Text = "save";
-            this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save_File.Location = new System.Drawing.Point(9, 1539);
+            this.button_Save_File.Name = "button_Save_File";
+            this.button_Save_File.Size = new System.Drawing.Size(212, 51);
+            this.button_Save_File.TabIndex = 21;
+            this.button_Save_File.Text = "save";
+            this.button_Save_File.UseVisualStyleBackColor = true;
             // 
             // X1_label3
             // 
             this.X1_label3.AutoSize = true;
-            this.X1_label3.Location = new System.Drawing.Point(15, 750);
+            this.X1_label3.Location = new System.Drawing.Point(100, 750);
             this.X1_label3.Name = "X1_label3";
             this.X1_label3.Size = new System.Drawing.Size(169, 29);
             this.X1_label3.TabIndex = 22;
@@ -308,7 +245,7 @@
             // label_MatchesFound
             // 
             this.label_MatchesFound.AutoSize = true;
-            this.label_MatchesFound.Location = new System.Drawing.Point(220, 750);
+            this.label_MatchesFound.Location = new System.Drawing.Point(305, 750);
             this.label_MatchesFound.Name = "label_MatchesFound";
             this.label_MatchesFound.Size = new System.Drawing.Size(24, 29);
             this.label_MatchesFound.TabIndex = 23;
@@ -316,7 +253,7 @@
             // 
             // button_Display
             // 
-            this.button_Display.Location = new System.Drawing.Point(345, 1086);
+            this.button_Display.Location = new System.Drawing.Point(362, 1646);
             this.button_Display.Name = "button_Display";
             this.button_Display.Size = new System.Drawing.Size(212, 51);
             this.button_Display.TabIndex = 24;
@@ -326,7 +263,7 @@
             // checkBox_ShowID
             // 
             this.checkBox_ShowID.AutoSize = true;
-            this.checkBox_ShowID.Location = new System.Drawing.Point(300, 100);
+            this.checkBox_ShowID.Location = new System.Drawing.Point(385, 100);
             this.checkBox_ShowID.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_ShowID.Name = "checkBox_ShowID";
             this.checkBox_ShowID.Size = new System.Drawing.Size(80, 33);
@@ -337,7 +274,7 @@
             // checkBox_ShowAddresses
             // 
             this.checkBox_ShowAddresses.AutoSize = true;
-            this.checkBox_ShowAddresses.Location = new System.Drawing.Point(300, 200);
+            this.checkBox_ShowAddresses.Location = new System.Drawing.Point(385, 200);
             this.checkBox_ShowAddresses.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_ShowAddresses.Name = "checkBox_ShowAddresses";
             this.checkBox_ShowAddresses.Size = new System.Drawing.Size(158, 33);
@@ -348,7 +285,7 @@
             // checkBox_ShowPriority
             // 
             this.checkBox_ShowPriority.AutoSize = true;
-            this.checkBox_ShowPriority.Location = new System.Drawing.Point(300, 250);
+            this.checkBox_ShowPriority.Location = new System.Drawing.Point(385, 250);
             this.checkBox_ShowPriority.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_ShowPriority.Name = "checkBox_ShowPriority";
             this.checkBox_ShowPriority.Size = new System.Drawing.Size(120, 33);
@@ -359,7 +296,7 @@
             // checkBox_Show32bitpgn
             // 
             this.checkBox_Show32bitpgn.AutoSize = true;
-            this.checkBox_Show32bitpgn.Location = new System.Drawing.Point(300, 150);
+            this.checkBox_Show32bitpgn.Location = new System.Drawing.Point(385, 150);
             this.checkBox_Show32bitpgn.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_Show32bitpgn.Name = "checkBox_Show32bitpgn";
             this.checkBox_Show32bitpgn.Size = new System.Drawing.Size(138, 33);
@@ -370,7 +307,7 @@
             // checkBox_Show_Softwareversion
             // 
             this.checkBox_Show_Softwareversion.AutoSize = true;
-            this.checkBox_Show_Softwareversion.Location = new System.Drawing.Point(15, 150);
+            this.checkBox_Show_Softwareversion.Location = new System.Drawing.Point(100, 150);
             this.checkBox_Show_Softwareversion.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox_Show_Softwareversion.Name = "checkBox_Show_Softwareversion";
             this.checkBox_Show_Softwareversion.Size = new System.Drawing.Size(134, 33);
@@ -380,7 +317,7 @@
             // 
             // textBox_Contains_str_Sendingunit
             // 
-            this.textBox_Contains_str_Sendingunit.Location = new System.Drawing.Point(15, 550);
+            this.textBox_Contains_str_Sendingunit.Location = new System.Drawing.Point(100, 600);
             this.textBox_Contains_str_Sendingunit.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Contains_str_Sendingunit.MaxLength = 16;
             this.textBox_Contains_str_Sendingunit.Name = "textBox_Contains_str_Sendingunit";
@@ -389,7 +326,7 @@
             // 
             // textBox_Contains_str_PGN
             // 
-            this.textBox_Contains_str_PGN.Location = new System.Drawing.Point(15, 600);
+            this.textBox_Contains_str_PGN.Location = new System.Drawing.Point(100, 550);
             this.textBox_Contains_str_PGN.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Contains_str_PGN.MaxLength = 16;
             this.textBox_Contains_str_PGN.Name = "textBox_Contains_str_PGN";
@@ -398,7 +335,7 @@
             // 
             // textBox_Contains_str_Configuration
             // 
-            this.textBox_Contains_str_Configuration.Location = new System.Drawing.Point(15, 650);
+            this.textBox_Contains_str_Configuration.Location = new System.Drawing.Point(100, 650);
             this.textBox_Contains_str_Configuration.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Contains_str_Configuration.MaxLength = 16;
             this.textBox_Contains_str_Configuration.Name = "textBox_Contains_str_Configuration";
@@ -407,70 +344,85 @@
             // 
             // textBox_Contains_str_Project
             // 
-            this.textBox_Contains_str_Project.Location = new System.Drawing.Point(15, 700);
+            this.textBox_Contains_str_Project.Location = new System.Drawing.Point(100, 700);
             this.textBox_Contains_str_Project.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Contains_str_Project.MaxLength = 16;
             this.textBox_Contains_str_Project.Name = "textBox_Contains_str_Project";
             this.textBox_Contains_str_Project.Size = new System.Drawing.Size(274, 35);
             this.textBox_Contains_str_Project.TabIndex = 33;
             // 
-            // checkBox_FilterbyProject
+            // X2_lbl_TxUnit
             // 
-            this.checkBox_FilterbyProject.AutoSize = true;
-            this.checkBox_FilterbyProject.Location = new System.Drawing.Point(300, 700);
-            this.checkBox_FilterbyProject.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox_FilterbyProject.Name = "checkBox_FilterbyProject";
-            this.checkBox_FilterbyProject.Size = new System.Drawing.Size(150, 33);
-            this.checkBox_FilterbyProject.TabIndex = 37;
-            this.checkBox_FilterbyProject.Text = "by project";
-            this.checkBox_FilterbyProject.UseVisualStyleBackColor = true;
-            this.checkBox_FilterbyProject.Visible = false;
+            this.X2_lbl_TxUnit.AutoSize = true;
+            this.X2_lbl_TxUnit.Location = new System.Drawing.Point(380, 600);
+            this.X2_lbl_TxUnit.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.X2_lbl_TxUnit.Name = "X2_lbl_TxUnit";
+            this.X2_lbl_TxUnit.Size = new System.Drawing.Size(151, 29);
+            this.X2_lbl_TxUnit.TabIndex = 38;
+            this.X2_lbl_TxUnit.Text = "Sending Unit";
             // 
-            // checkBox_FilterbyConfiguration
+            // X2_lbl_PGN
             // 
-            this.checkBox_FilterbyConfiguration.AutoSize = true;
-            this.checkBox_FilterbyConfiguration.Location = new System.Drawing.Point(300, 650);
-            this.checkBox_FilterbyConfiguration.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox_FilterbyConfiguration.Name = "checkBox_FilterbyConfiguration";
-            this.checkBox_FilterbyConfiguration.Size = new System.Drawing.Size(141, 33);
-            this.checkBox_FilterbyConfiguration.TabIndex = 36;
-            this.checkBox_FilterbyConfiguration.Text = "by config";
-            this.checkBox_FilterbyConfiguration.UseVisualStyleBackColor = true;
-            this.checkBox_FilterbyConfiguration.Visible = false;
+            this.X2_lbl_PGN.AutoSize = true;
+            this.X2_lbl_PGN.Location = new System.Drawing.Point(380, 550);
+            this.X2_lbl_PGN.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.X2_lbl_PGN.Name = "X2_lbl_PGN";
+            this.X2_lbl_PGN.Size = new System.Drawing.Size(65, 29);
+            this.X2_lbl_PGN.TabIndex = 39;
+            this.X2_lbl_PGN.Text = "PGN";
             // 
-            // checkBox_FilterbyPGN
+            // X2_lbl_Config
             // 
-            this.checkBox_FilterbyPGN.AutoSize = true;
-            this.checkBox_FilterbyPGN.Location = new System.Drawing.Point(300, 600);
-            this.checkBox_FilterbyPGN.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox_FilterbyPGN.Name = "checkBox_FilterbyPGN";
-            this.checkBox_FilterbyPGN.Size = new System.Drawing.Size(117, 33);
-            this.checkBox_FilterbyPGN.TabIndex = 35;
-            this.checkBox_FilterbyPGN.Text = "by pgn";
-            this.checkBox_FilterbyPGN.UseVisualStyleBackColor = true;
-            this.checkBox_FilterbyPGN.Visible = false;
+            this.X2_lbl_Config.AutoSize = true;
+            this.X2_lbl_Config.Location = new System.Drawing.Point(380, 650);
+            this.X2_lbl_Config.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.X2_lbl_Config.Name = "X2_lbl_Config";
+            this.X2_lbl_Config.Size = new System.Drawing.Size(156, 29);
+            this.X2_lbl_Config.TabIndex = 40;
+            this.X2_lbl_Config.Text = "Configuration";
             // 
-            // checkBox_FilterbySendingUnit
+            // X2_lbl_Project
             // 
-            this.checkBox_FilterbySendingUnit.AutoSize = true;
-            this.checkBox_FilterbySendingUnit.Location = new System.Drawing.Point(300, 550);
-            this.checkBox_FilterbySendingUnit.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox_FilterbySendingUnit.Name = "checkBox_FilterbySendingUnit";
-            this.checkBox_FilterbySendingUnit.Size = new System.Drawing.Size(147, 33);
-            this.checkBox_FilterbySendingUnit.TabIndex = 34;
-            this.checkBox_FilterbySendingUnit.Text = "by Tx unit";
-            this.checkBox_FilterbySendingUnit.UseVisualStyleBackColor = true;
-            this.checkBox_FilterbySendingUnit.Visible = false;
+            this.X2_lbl_Project.AutoSize = true;
+            this.X2_lbl_Project.Location = new System.Drawing.Point(380, 700);
+            this.X2_lbl_Project.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+            this.X2_lbl_Project.Name = "X2_lbl_Project";
+            this.X2_lbl_Project.Size = new System.Drawing.Size(89, 29);
+            this.X2_lbl_Project.TabIndex = 41;
+            this.X2_lbl_Project.Text = "Project";
+            // 
+            // textBox_FilePath
+            // 
+            this.textBox_FilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_FilePath.Location = new System.Drawing.Point(9, 1328);
+            this.textBox_FilePath.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox_FilePath.Multiline = true;
+            this.textBox_FilePath.Name = "textBox_FilePath";
+            this.textBox_FilePath.ReadOnly = true;
+            this.textBox_FilePath.Size = new System.Drawing.Size(642, 208);
+            this.textBox_FilePath.TabIndex = 42;
+            this.textBox_FilePath.Text = resources.GetString("textBox_FilePath.Text");
+            // 
+            // label_saveFilename
+            // 
+            this.label_saveFilename.AutoSize = true;
+            this.label_saveFilename.Location = new System.Drawing.Point(12, 1273);
+            this.label_saveFilename.Name = "label_saveFilename";
+            this.label_saveFilename.Size = new System.Drawing.Size(196, 29);
+            this.label_saveFilename.TabIndex = 43;
+            this.label_saveFilename.Text = "save filename .txt";
             // 
             // VCPGN_ViewerGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2372, 1721);
-            this.Controls.Add(this.checkBox_FilterbyProject);
-            this.Controls.Add(this.checkBox_FilterbyConfiguration);
-            this.Controls.Add(this.checkBox_FilterbyPGN);
-            this.Controls.Add(this.checkBox_FilterbySendingUnit);
+            this.ClientSize = new System.Drawing.Size(1972, 1721);
+            this.Controls.Add(this.label_saveFilename);
+            this.Controls.Add(this.textBox_FilePath);
+            this.Controls.Add(this.X2_lbl_Project);
+            this.Controls.Add(this.X2_lbl_Config);
+            this.Controls.Add(this.X2_lbl_PGN);
+            this.Controls.Add(this.X2_lbl_TxUnit);
             this.Controls.Add(this.textBox_Contains_str_Project);
             this.Controls.Add(this.textBox_Contains_str_Configuration);
             this.Controls.Add(this.textBox_Contains_str_PGN);
@@ -483,12 +435,11 @@
             this.Controls.Add(this.button_Display);
             this.Controls.Add(this.label_MatchesFound);
             this.Controls.Add(this.X1_label3);
-            this.Controls.Add(this.button_Save);
+            this.Controls.Add(this.button_Save_File);
             this.Controls.Add(this.textBox_Display);
-            this.Controls.Add(this.X1_label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.X3_label_saveFilename);
+            this.Controls.Add(this.textBox_saveFileName);
             this.Controls.Add(this.textBox_Contains);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.X1_label2);
             this.Controls.Add(this.checkBox_Configuration);
             this.Controls.Add(this.checkBox_Project);
@@ -500,10 +451,10 @@
             this.Controls.Add(this.checkBox_ShowDate);
             this.Controls.Add(this.label_totalPgnsInDb);
             this.Controls.Add(this.X1_label1);
+            this.MaximumSize = new System.Drawing.Size(2000, 1800);
+            this.MinimumSize = new System.Drawing.Size(2000, 1800);
             this.Name = "VCPGN_ViewerGUI";
             this.Text = "VCPGN_ViewerGUI";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,16 +473,11 @@
         private System.Windows.Forms.CheckBox checkBox_Configuration;
         private System.Windows.Forms.CheckBox checkBox_Project;
         private System.Windows.Forms.Label X1_label2;
-        private System.Windows.Forms.RadioButton radioButton_FilterbyPGN;
-        private System.Windows.Forms.RadioButton radioButton_FilterbyConfiguration;
-        private System.Windows.Forms.RadioButton radioButton_FilterbyProject;
-        private System.Windows.Forms.RadioButton radioButton_FilterbySendingUnit;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox_Contains;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label X1_label4;
+        private System.Windows.Forms.TextBox textBox_saveFileName;
+        private System.Windows.Forms.Label X3_label_saveFilename;
         private System.Windows.Forms.TextBox textBox_Display;
-        private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.Button button_Save_File;
         private System.Windows.Forms.Label X1_label3;
         private System.Windows.Forms.Label label_MatchesFound;
         private System.Windows.Forms.Button button_Display;
@@ -544,9 +490,11 @@
         private System.Windows.Forms.TextBox textBox_Contains_str_PGN;
         private System.Windows.Forms.TextBox textBox_Contains_str_Configuration;
         private System.Windows.Forms.TextBox textBox_Contains_str_Project;
-        private System.Windows.Forms.CheckBox checkBox_FilterbyProject;
-        private System.Windows.Forms.CheckBox checkBox_FilterbyConfiguration;
-        private System.Windows.Forms.CheckBox checkBox_FilterbyPGN;
-        private System.Windows.Forms.CheckBox checkBox_FilterbySendingUnit;
+        private System.Windows.Forms.Label X2_lbl_TxUnit;
+        private System.Windows.Forms.Label X2_lbl_PGN;
+        private System.Windows.Forms.Label X2_lbl_Config;
+        private System.Windows.Forms.Label X2_lbl_Project;
+        private System.Windows.Forms.TextBox textBox_FilePath;
+        private System.Windows.Forms.Label label_saveFilename;
     }
 }

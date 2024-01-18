@@ -269,6 +269,9 @@
     <Compile Include="VC_PGNS_DIR\VC_UI\VC_PGNjsonGUI.Designer.cs">
       <DependentUpon>VC_PGNjsonGUI.cs</DependentUpon>
     </Compile>
+    <Content Include="_localDataDir\_SavedTextFiles_Root\otfile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="UIz\Formz\CanManipForm.resx">
       <DependentUpon>CanManipForm.cs</DependentUpon>
     </EmbeddedResource>
