@@ -21,11 +21,11 @@ namespace VC_CAN_Simulator.Backend
         }
 
 
-        private static string Get_Local_JSON_pgnDfinitions_fullpath() { 
+        public static string Get_Local_JSON_pgnDfinitions_fullpath() { 
             return   Path.Combine(Application.StartupPath, "_localDataDir", "_Full_descriptions_Root", "__Root_PGN_Definitions_.json");
         }
 
-        private static string Get_Local_TEXT_READONLY_pgnDfinitions_fullpath()
+        public static string Get_Local_TEXT_READONLY_pgnDfinitions_fullpath()
         {
             return Path.Combine(Application.StartupPath, "_localDataDir", "_Full_descriptions_Root", "___Root_PGN_Definitions__READONLY.txt");
         }

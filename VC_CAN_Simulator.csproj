@@ -378,9 +378,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_localDataDir\_Full_descriptions_Root\__Root_PGN_Definitions_.json">
+    <Content Include="_localDataDir\_Full_descriptions_Root\__Root_PGN_Definitions_.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

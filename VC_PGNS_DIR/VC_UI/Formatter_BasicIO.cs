@@ -55,4 +55,47 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
 
 
     }
+
+    public struct FilterData
+    {
+        public bool Filter_bool_Pgn { get; set; }
+        public string Filter_str_Pgn { get; set; }
+        public bool Filter_bool_FromSendingUnit { get; set; }
+        public string Filter_str_From { get; set; }
+        public bool Filter_bool_Configuration { get; set; }
+        public string Filter_str_Configuration { get; set; }
+        public bool Filter_bool_Project { get; set; }
+        public string Filter_str_Project { get; set; }
+    }
+
+    public struct DetailDisplayData {
+
+        public bool Show_bool_Date { get; set; }
+
+        public bool Show_bool_HEAVY { get; set; }
+
+
+        public bool Show_bool_From { get; set; }
+
+        public bool Show_bool_ID { get; set; }
+
+        public bool Show_bool_PGN32bit { get; set; }
+
+        public bool Show_bool_Addresses { get; set; }
+
+        public bool Show_bool_Priority { get; set; }
+
+        public bool Show_bool_SoftwareVersion { get; set; }
+
+
+        public bool Show_bool_Info { get; set; }
+
+        public bool Show_bool_Configuration { get; set; }
+
+        public bool Show_bool_Project { get; set; }
+
+        public bool Show_bool_Bytes { get; set; }
+
+        public bool Show_bool_Bits { get; set; }
+    }
 }
