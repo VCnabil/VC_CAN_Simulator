@@ -21,7 +21,7 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
     {
 
         SeriDeseriSort_BasicIO seriDeseriSort_BasicIO;
-
+        VCPGN_listCTRL thecontrol;
 
         public VC_PGNjsonGUI()
         {
@@ -37,18 +37,31 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
             textBox1.Text = "";
             textBox1.Text = _sourceFilePath_GroudZero;
             textBox2.Text = "";
+
+            btn_ShowFiltered.Click += Btn_ShowFiltered_Click;
+
+            btn_makeText_fromJson.Enabled = false;
+            btn_Gzero_toJson.Enabled = false;
+
+            thecontrol = new VCPGN_listCTRL(_targetFilePath_JSON);
+        }
+
+        private void Btn_ShowFiltered_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = thecontrol.Get_StringOutPut(cb_showdate.Checked, cb_ShowHeavy.Checked, cb_showByteDetail.Checked);
         }
 
         private void Btn_run_makeText_Click(object sender, EventArgs e)
         {
             textBox2.Text = "";
 
-            textBox2.Text = seriDeseriSort_BasicIO.Deserialize_JsonFormat_Sort_by_pgnIn();
+          //textBox2.Text = seriDeseriSort_BasicIO.Deserialize_JsonFormat_Sort_by_pgnIn();
 
         }
         private void Btn_Deserialize(object sender, EventArgs e)
         {
-            seriDeseriSort_BasicIO.Serialize_GroundZeroTextFile_To_JSON();
+           // seriDeseriSort_BasicIO.Serialize_GroundZeroTextFile_To_JSON();
         }
  
     }

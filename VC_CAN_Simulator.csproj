@@ -256,6 +256,13 @@
     </Compile>
     <Compile Include="VC_PGNS_DIR\VC_UI\Formatter_BasicIO.cs" />
     <Compile Include="VC_PGNS_DIR\VC_UI\SeriDeseriSort_BasicIO.cs" />
+    <Compile Include="VC_PGNS_DIR\VC_UI\VCPGN_listCTRL.cs" />
+    <Compile Include="VC_PGNS_DIR\VC_UI\VCPGN_ViewerGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VC_PGNS_DIR\VC_UI\VCPGN_ViewerGUI.Designer.cs">
+      <DependentUpon>VCPGN_ViewerGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VC_PGNS_DIR\VC_UI\VC_PGNjsonGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +362,9 @@
     <EmbeddedResource Include="UIz\UControlz\Builders\PROJECT_Builder_UC.resx">
       <DependentUpon>PROJECT_Builder_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VC_PGNS_DIR\VC_UI\VCPGN_ViewerGUI.resx">
+      <DependentUpon>VCPGN_ViewerGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VC_PGNS_DIR\VC_UI\VC_PGNjsonGUI.resx">
       <DependentUpon>VC_PGNjsonGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +378,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_localDataDir\_Full_descriptions_Root\__Root_PGN_Definitions_.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -384,6 +397,9 @@
     <Content Include="PGNS_notSy.txt" />
     <Content Include="PGNS_SSRS_K12.txt" />
     <Content Include="PGNS_StandardYatchet.txt" />
+    <Content Include="_localDataDir\_Full_descriptions_Root\___Root_PGN_Definitions__READONLY.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

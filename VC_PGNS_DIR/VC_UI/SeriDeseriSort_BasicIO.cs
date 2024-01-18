@@ -438,5 +438,13 @@ Project : N/A
             File.WriteAllLines(fullformatFilePath, listOfAllLinesToBeWrittenToText);
 
         }
+
+
+        public string Do_FormatOutPut() {
+            StringBuilder sb = new StringBuilder();
+
+            return sb.ToString();
+
+        }
     }
 }

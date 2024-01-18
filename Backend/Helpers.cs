@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,16 @@ namespace VC_CAN_Simulator.Backend
             _8_bG = 1,
             _1_By = 2,
             _2_by = 3
+        }
+
+
+        private static string Get_Local_JSON_pgnDfinitions_fullpath() { 
+            return   Path.Combine(Application.StartupPath, "_localDataDir", "_Full_descriptions_Root", "__Root_PGN_Definitions_.json");
+        }
+
+        private static string Get_Local_TEXT_READONLY_pgnDfinitions_fullpath()
+        {
+            return Path.Combine(Application.StartupPath, "_localDataDir", "_Full_descriptions_Root", "___Root_PGN_Definitions__READONLY.txt");
         }
 
         public static string _vcErite_textCanOriginalFormat_FileName = "_OriginalCanTextFormat.txt";
