@@ -1,0 +1,444 @@
+{
+  "Title": "ssrs k12",
+  "AllPgnList": [
+    {
+      "IDpgn": 0,
+      "PGN_int": 419404073,
+      "PGN_strHEX": "18ff9929",
+      "DESCpgn": "commands",
+      "CtrlList": [
+        {
+          "ID": 1,
+          "DESC": "port engin",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 100,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "stbd engin",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 100,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 0,
+      "PGN_int": 1638192,
+      "PGN_strHEX": "0x18FF30",
+      "DESCpgn": "CU Version",
+      "CtrlList": [
+        {
+          "ID": 3,
+          "DESC": "Major",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 18,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Minor",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 86,
+          "INDEXLO": 3,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Rev",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1882,
+          "INDEXLO": 5,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 4,
+      "PGN_int": 1638140,
+      "PGN_strHEX": "0x18FEFC",
+      "DESCpgn": "Noz Buk Eng",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Port Bucket",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Stbd Nozzle",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "Port Nozzle",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "Stbd Bucket",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 127,
+          "INDEXLO": 5,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 6,
+      "PGN_int": 1638217,
+      "PGN_strHEX": "0x18FF49",
+      "DESCpgn": "CU faults",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "sensor faults",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Starboard Bucket Sensor Fault",
+            "1. Port Bucket Sensor Fault",
+            "2. Starboard Nozzle Sensor Fault",
+            "3. Port Nozzle Sensor Fault",
+            "4. Starboard Tab Sensor Fault",
+            "5. Port Tab Sensor Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "NFU faults",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Starboard Bucket NFU Fault",
+            "1. Port Bucket NFU Fault",
+            "2. Starboard Nozzle NFU Fault",
+            "3. Port Nozzle NFU Fault",
+            "4. Starboard Tab NFU Fault",
+            "5. Port Tab NFU Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "sta 1 Comm faults",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 2,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Idle Knob Fault",
+            "1. JoyStick Z Fault",
+            "2. Starboard Lever Fault",
+            "3. Port Lever Fault",
+            "4. Joystick Y Fault",
+            "5. Joystick X Fault",
+            "6. Tiller 2 Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 3,
+          "DESC": "sta 2 comm faults",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 3,
+          "INDEXHI": 3,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Idle Knob Fault",
+            "1. JoyStick Z Fault",
+            "2. Starboard Lever Fault",
+            "3. Port Lever Fault",
+            "4. Joystick Y Fault",
+            "5. Joystick X Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 4,
+          "DESC": "sta 3 comm faults",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 4,
+          "INDEXHI": 4,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Idle Knob Fault",
+            "1. JoyStick Z Fault",
+            "2. Starboard Lever Fault",
+            "3. Port Lever Fault",
+            "4. Joystick Y Fault",
+            "5. Joystick X Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 5,
+          "DESC": "autocal/trim faults",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 5,
+          "INDEXHI": 5,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Port Trim Fault",
+            "1. Port Roll Fault",
+            "2. Autocalibration Fault",
+            "3. Autopilot Out of Range Fault",
+            "4. Starboard Trim Fault",
+            "5. Starboard Roll Fault",
+            "6. Hardware Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 6,
+          "DESC": "doc/interlock fault",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. Docking Mode Interlock Fault",
+            "1. Docking Mode: Clutch Mismatch",
+            "2. Docking Mode: Inboard Clutch Interlock"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 7,
+          "DESC": "-x48---canfault- dec72 01001000",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 72,
+          "INDEXLO": 7,
+          "INDEXHI": 7,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "1. Station 1 Clutch Panel CAN Fault",
+            "2. Station 2 Clutch Panel CAN Fault",
+            "3. Station 3 Clutch Panel CAN Fault",
+            "5. DP LCD CAN Fault",
+            "6. Remote Station Controller CAN Fault",
+            "7. GPS CAN Fault"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 9,
+      "PGN_int": 1638227,
+      "PGN_strHEX": "0x18FF53",
+      "DESCpgn": "STATION IN CTRL",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "sta in ctrl 01 , 11",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 1,
+          "INDEXLO": 1,
+          "INDEXHI": 1,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "0. bit0",
+            "1. bit1"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "tolad 0x46 d70",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    },
+    {
+      "IDpgn": 10,
+      "PGN_int": 1638233,
+      "PGN_strHEX": "0x18FF59",
+      "DESCpgn": "BOW Thrust",
+      "CtrlList": [
+        {
+          "ID": 0,
+          "DESC": "Port Lever pos",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 1,
+          "INDEXHI": 2,
+          "CTRL_TYOE_STR": "_2_by",
+          "ISSLIDER": true,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 1,
+          "DESC": "Buck REV/AHEAD",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 0,
+          "INDEXLO": 6,
+          "INDEXHI": 6,
+          "CTRL_TYOE_STR": "_8_bs",
+          "ISSLIDER": false,
+          "BitsList": [
+            "6. Port Bucket REV AHEAD",
+            "7. Stbd Bucket REV AHEAD"
+          ],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        },
+        {
+          "ID": 2,
+          "DESC": "till + duty cycle",
+          "MIN": 0,
+          "MAX": 255,
+          "DEF": 100,
+          "INDEXLO": 0,
+          "INDEXHI": 0,
+          "CTRL_TYOE_STR": "_1_By",
+          "ISSLIDER": false,
+          "BitsList": [],
+          "Group1List": [],
+          "Group2List": [],
+          "RemoteList": []
+        }
+      ]
+    }
+  ]
+}

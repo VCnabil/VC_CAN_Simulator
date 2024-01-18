@@ -49,7 +49,7 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
 
    
          
-
+        
         #region Filters
  
          List<VC_PGN_Text_Object> GetFilteredby_Boolean( bool arg_byPGN, string argPGNcontains, bool arg_byFrom, string argFROMcontains, bool arg_byConfiguration, string argCONFIGcontains, bool arg_byProject, string argPROJECTcontains)

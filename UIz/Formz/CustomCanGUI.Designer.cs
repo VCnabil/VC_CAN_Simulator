@@ -45,7 +45,7 @@
             // 
             // btn_load
             // 
-            this.btn_load.Location = new System.Drawing.Point(6, 12);
+            this.btn_load.Location = new System.Drawing.Point(1783, 1256);
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(146, 52);
             this.btn_load.TabIndex = 19;
@@ -54,7 +54,7 @@
             // 
             // btn_modify
             // 
-            this.btn_modify.Location = new System.Drawing.Point(469, 12);
+            this.btn_modify.Location = new System.Drawing.Point(1703, 1157);
             this.btn_modify.Name = "btn_modify";
             this.btn_modify.Size = new System.Drawing.Size(226, 52);
             this.btn_modify.TabIndex = 20;
@@ -63,16 +63,17 @@
             // 
             // textBox_fileName
             // 
-            this.textBox_fileName.Location = new System.Drawing.Point(158, 21);
+            this.textBox_fileName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_fileName.Location = new System.Drawing.Point(1416, 1245);
             this.textBox_fileName.Name = "textBox_fileName";
-            this.textBox_fileName.Size = new System.Drawing.Size(297, 35);
+            this.textBox_fileName.Size = new System.Drawing.Size(297, 28);
             this.textBox_fileName.TabIndex = 21;
             this.textBox_fileName.Text = "testpfile";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 90);
+            this.label1.Location = new System.Drawing.Point(1156, 768);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 29);
             this.label1.TabIndex = 22;
@@ -81,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 140);
+            this.label2.Location = new System.Drawing.Point(1156, 818);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 23;
@@ -89,7 +90,7 @@
             // 
             // btn_MKV
             // 
-            this.btn_MKV.Location = new System.Drawing.Point(6, 249);
+            this.btn_MKV.Location = new System.Drawing.Point(1140, 927);
             this.btn_MKV.Name = "btn_MKV";
             this.btn_MKV.Size = new System.Drawing.Size(146, 52);
             this.btn_MKV.TabIndex = 24;
@@ -98,7 +99,7 @@
             // 
             // btn_ERAF
             // 
-            this.btn_ERAF.Location = new System.Drawing.Point(6, 317);
+            this.btn_ERAF.Location = new System.Drawing.Point(1140, 995);
             this.btn_ERAF.Name = "btn_ERAF";
             this.btn_ERAF.Size = new System.Drawing.Size(150, 52);
             this.btn_ERAF.TabIndex = 25;
@@ -107,7 +108,7 @@
             // 
             // btn_WSKI
             // 
-            this.btn_WSKI.Location = new System.Drawing.Point(2, 386);
+            this.btn_WSKI.Location = new System.Drawing.Point(1136, 1064);
             this.btn_WSKI.Name = "btn_WSKI";
             this.btn_WSKI.Size = new System.Drawing.Size(150, 52);
             this.btn_WSKI.TabIndex = 26;
@@ -116,7 +117,7 @@
             // 
             // btn_KA27
             // 
-            this.btn_KA27.Location = new System.Drawing.Point(6, 191);
+            this.btn_KA27.Location = new System.Drawing.Point(1140, 869);
             this.btn_KA27.Name = "btn_KA27";
             this.btn_KA27.Size = new System.Drawing.Size(150, 52);
             this.btn_KA27.TabIndex = 27;
@@ -126,7 +127,7 @@
             // btn_NOMAD
             // 
             this.btn_NOMAD.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NOMAD.Location = new System.Drawing.Point(2, 463);
+            this.btn_NOMAD.Location = new System.Drawing.Point(1136, 1141);
             this.btn_NOMAD.Name = "btn_NOMAD";
             this.btn_NOMAD.Size = new System.Drawing.Size(150, 52);
             this.btn_NOMAD.TabIndex = 28;
@@ -136,7 +137,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(2, 532);
+            this.button1.Location = new System.Drawing.Point(1136, 1210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 52);
             this.button1.TabIndex = 29;
@@ -146,7 +147,7 @@
             // btn_runSsrs3
             // 
             this.btn_runSsrs3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_runSsrs3.Location = new System.Drawing.Point(236, 193);
+            this.btn_runSsrs3.Location = new System.Drawing.Point(1370, 871);
             this.btn_runSsrs3.Name = "btn_runSsrs3";
             this.btn_runSsrs3.Size = new System.Drawing.Size(150, 52);
             this.btn_runSsrs3.TabIndex = 30;
@@ -156,7 +157,7 @@
             // btn_run_PGNjson
             // 
             this.btn_run_PGNjson.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_run_PGNjson.Location = new System.Drawing.Point(469, 191);
+            this.btn_run_PGNjson.Location = new System.Drawing.Point(1603, 869);
             this.btn_run_PGNjson.Name = "btn_run_PGNjson";
             this.btn_run_PGNjson.Size = new System.Drawing.Size(150, 52);
             this.btn_run_PGNjson.TabIndex = 31;
@@ -167,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 728);
+            this.ClientSize = new System.Drawing.Size(1982, 1339);
             this.Controls.Add(this.btn_run_PGNjson);
             this.Controls.Add(this.btn_runSsrs3);
             this.Controls.Add(this.button1);

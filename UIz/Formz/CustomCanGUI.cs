@@ -18,15 +18,17 @@ namespace VC_CAN_Simulator.UIz.Formz
 {
     public partial class CustomCanGUI : Form
     {
-        string path_toDIR= "";
-        string jsonFileName_Exten = ".json";
-        string jsonFileName_noExtension = "";
-        string FULL__PATH_FILENAME_EXT = "";
+        string _newSavedTextFileName_plusExt = "";
+        string _fullpathTo_SavedTextFile = "";
+
+      //  string jsonFileName_Exten = ".json";
+      //  string jsonFileName_noExtension = "";
+     //   string FULL__PATH_FILENAME_EXT = "";
         public CustomCanGUI()
         {
             InitializeComponent();
-            jsonFileName_noExtension = SaveFileName;
-            textBox_fileName.Text = jsonFileName_noExtension+ jsonFileName_Exten;
+           // jsonFileName_noExtension = SaveFileName;
+          //  textBox_fileName.Text = jsonFileName_noExtension+ jsonFileName_Exten;
             label1.Text = "SaveFileName";
 
             btn_load.Click += Btn_loadManip_Click;
@@ -39,24 +41,35 @@ namespace VC_CAN_Simulator.UIz.Formz
             btn_runSsrs3.Click += Btn_runSsrs3_Click;
             btn_run_PGNjson.Click += Btn_run_PGNjsonGUI_Click;
             textBox_fileName.TextChanged += TextBox_fileName_TextChanged;
+
+
+         //   ufc_LoadPreConf_MkV.InitUC("MKV", new MKV_GUI());
         }
 
         private void Btn_runSsrs3_Click(object sender, EventArgs e)
         {
             textBox_fileName.Text = "ssrs3";
-            jsonFileName_noExtension = textBox_fileName.Text;
-            FULL__PATH_FILENAME_EXT = SaveDirPath + jsonFileName_noExtension + jsonFileName_Exten;
-            label1.Text = jsonFileName_noExtension;
-            label2.Text = FULL__PATH_FILENAME_EXT;
-            Set_FullFilePAth(FULL__PATH_FILENAME_EXT);
+        //    jsonFileName_noExtension = textBox_fileName.Text;
+         //   FULL__PATH_FILENAME_EXT = SaveDirPath + jsonFileName_noExtension + jsonFileName_Exten;
+
+
+        //    label1.Text = jsonFileName_noExtension;
+        //    label2.Text = FULL__PATH_FILENAME_EXT;
+
+
+         //   Set_FullFilePAth(FULL__PATH_FILENAME_EXT);---------------------------------------------------------keep
             using (CanManipForm form1 = new CanManipForm())
             {
                 form1.ShowDialog();
             }
         }
+
+
+
+
         private void Btn_run_PGNjsonGUI_Click(object sender, EventArgs e)
         {
-            using (VC_PGNjsonGUI form1 = new VC_PGNjsonGUI())
+            using (VCPGN_ViewerGUI form1 = new VCPGN_ViewerGUI())
             {
                 form1.ShowDialog();
             }
@@ -104,15 +117,15 @@ namespace VC_CAN_Simulator.UIz.Formz
 
         private void TextBox_fileName_TextChanged(object sender, EventArgs e)
         {
-            jsonFileName_noExtension= textBox_fileName.Text;
-            FULL__PATH_FILENAME_EXT = SaveDirPath + jsonFileName_noExtension + jsonFileName_Exten;
-            label1.Text = jsonFileName_noExtension;
-            label2.Text = FULL__PATH_FILENAME_EXT;
+       //     jsonFileName_noExtension= textBox_fileName.Text;
+        //    FULL__PATH_FILENAME_EXT = SaveDirPath + jsonFileName_noExtension + jsonFileName_Exten;
+       //     label1.Text = jsonFileName_noExtension;
+        //    label2.Text = FULL__PATH_FILENAME_EXT;
         }
 
         private void Btn_modCreate_Click(object sender, EventArgs e)
         {
-            Set_FullFilePAth(FULL__PATH_FILENAME_EXT);
+          //  Set_FullFilePAth(FULL__PATH_FILENAME_EXT); ---------------------------------------------------------keep
             using (CreateOrModifyProject form1 = new CreateOrModifyProject())
             {
                 form1.ShowDialog();  
@@ -122,7 +135,7 @@ namespace VC_CAN_Simulator.UIz.Formz
 
         private void Btn_loadManip_Click(object sender, EventArgs e)
         {
-            Set_FullFilePAth(FULL__PATH_FILENAME_EXT);
+        //    Set_FullFilePAth(FULL__PATH_FILENAME_EXT);---------------------------------------------------------keep
             using (CanManipForm form1 = new CanManipForm())
             {
                 form1.ShowDialog();  

@@ -21,6 +21,13 @@ namespace VC_CAN_Simulator.Backend
         }
 
 
+
+        //_CanSimFiles
+        public static string Get_Local_CanSim_Controllers_JSON_Definition()
+        {
+            return Path.Combine(Application.StartupPath, "_localDataDir", "_CanSimFiles");
+        }
+
         public static string Get_Local_JSON_pgnDfinitions_fullpath() { 
             return   Path.Combine(Application.StartupPath, "_localDataDir", "_Full_descriptions_Root", "__Root_PGN_Definitions_.json");
         }
