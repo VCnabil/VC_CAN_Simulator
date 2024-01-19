@@ -76,6 +76,7 @@
     <Compile Include="Backend\CanManager.cs" />
     <Compile Include="Backend\CustGroupdata_Validator.cs" />
     <Compile Include="Backend\CustomGroupObj.cs" />
+    <Compile Include="Backend\EventsManagerLib.cs" />
     <Compile Include="Backend\Helpers.cs" />
     <Compile Include="DataObjects\Ctrl_DataObject.cs" />
     <Compile Include="DataObjects\Pgn_DataObject.cs" />
@@ -187,6 +188,12 @@
     </Compile>
     <Compile Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.Designer.cs">
       <DependentUpon>WSKI_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleGUIs\Foo_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\SingleGUIs\Foo_GUI.Designer.cs">
+      <DependentUpon>Foo_GUI.cs</DependentUpon>
     </Compile>
     <Compile Include="UIz\Formz\TestingForm.cs">
       <SubType>Form</SubType>
@@ -343,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\SingleForm\WskiGui\WSKI_GUI.resx">
       <DependentUpon>WSKI_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\SingleGUIs\Foo_GUI.resx">
+      <DependentUpon>Foo_GUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\TestingForm.resx">
       <DependentUpon>TestingForm.cs</DependentUpon>

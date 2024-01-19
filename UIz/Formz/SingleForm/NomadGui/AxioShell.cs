@@ -261,7 +261,7 @@ namespace VC_CAN_Simulator.UIz.Formz.SingleForm.NomadGui
 
         public void Send_ALL_PS_IO_COMS(int arg_P_I_thrust, int arg_P_I_steer, int arg_S_I_thrust, int arg_S_I_steer, int arg_P_O_thrust, int arg_P_O_steer, int arg_S_O_thrust, int arg_S_O_steer)
         {
-            MessageBox.Show("Send_ALL_PS_IO_COMS");
+           // MessageBox.Show("Send_ALL_PS_IO_COMS");
             // Filter input values
             arg_P_I_thrust = Math.Min(2000, Math.Max(0, arg_P_I_thrust));
             arg_P_I_steer = Math.Min(1000, Math.Max(0, arg_P_I_steer));
@@ -369,7 +369,7 @@ namespace VC_CAN_Simulator.UIz.Formz.SingleForm.NomadGui
 
         public void Send_SORED_sysInfo()
         {
-            MessageBox.Show("Send_SORED_sysInfo");  
+           // MessageBox.Show("Send_SORED_sysInfo");  
             //CANFrame CANFrame = new CANFrame();
             //Array.Clear(CANFrame.Data, 0, CANFrame.Data.Length);
 

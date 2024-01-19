@@ -28,6 +28,8 @@ namespace VC_CAN_Simulator.UIz.Formz.SingleForm.NomadGui
         public NOMAD_GUI()
         {
             InitializeComponent();
+
+            MessageBox.Show("this is not ported to kvaser yet");
             CTRLPANNEL = new CTRL_PannelData();
             INDICPANNEL = new INDIC_PannelData();
             axioInstance = new AxioShell();

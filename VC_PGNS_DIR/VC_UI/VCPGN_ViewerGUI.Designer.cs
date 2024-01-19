@@ -216,12 +216,12 @@
             // 
             this.textBox_Display.Dock = System.Windows.Forms.DockStyle.Right;
             this.textBox_Display.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Display.Location = new System.Drawing.Point(672, 0);
+            this.textBox_Display.Location = new System.Drawing.Point(767, 0);
             this.textBox_Display.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Display.Multiline = true;
             this.textBox_Display.Name = "textBox_Display";
             this.textBox_Display.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_Display.Size = new System.Drawing.Size(1300, 1721);
+            this.textBox_Display.Size = new System.Drawing.Size(1205, 1721);
             this.textBox_Display.TabIndex = 20;
             // 
             // button_Save_File

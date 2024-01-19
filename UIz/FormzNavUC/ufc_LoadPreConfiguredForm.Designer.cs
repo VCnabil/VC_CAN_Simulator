@@ -34,26 +34,28 @@
             // 
             // button_Launch
             // 
+            this.button_Launch.BackColor = System.Drawing.Color.DimGray;
             this.button_Launch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_Launch.Location = new System.Drawing.Point(0, 143);
+            this.button_Launch.Font = new System.Drawing.Font("Miriam CLM", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button_Launch.Location = new System.Drawing.Point(0, 86);
             this.button_Launch.Name = "button_Launch";
-            this.button_Launch.Size = new System.Drawing.Size(600, 77);
+            this.button_Launch.Size = new System.Drawing.Size(350, 34);
             this.button_Launch.TabIndex = 0;
             this.button_Launch.Text = "Run";
-            this.button_Launch.UseVisualStyleBackColor = true;
+            this.button_Launch.UseVisualStyleBackColor = false;
             // 
             // textBox_Info
             // 
             this.textBox_Info.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBox_Info.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Info.Font = new System.Drawing.Font("Miriam CLM", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.textBox_Info.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.textBox_Info.Location = new System.Drawing.Point(0, 0);
             this.textBox_Info.Margin = new System.Windows.Forms.Padding(0);
             this.textBox_Info.Multiline = true;
             this.textBox_Info.Name = "textBox_Info";
             this.textBox_Info.ReadOnly = true;
-            this.textBox_Info.Size = new System.Drawing.Size(600, 143);
+            this.textBox_Info.Size = new System.Drawing.Size(350, 83);
             this.textBox_Info.TabIndex = 43;
             this.textBox_Info.Text = "Launch App preconfigured for mkv 4";
             // 
@@ -61,11 +63,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Maroon;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.Controls.Add(this.textBox_Info);
             this.Controls.Add(this.button_Launch);
             this.Name = "ufc_LoadPreConfiguredForm";
-            this.Size = new System.Drawing.Size(600, 220);
+            this.Size = new System.Drawing.Size(350, 120);
             this.ResumeLayout(false);
             this.PerformLayout();
 

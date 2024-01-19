@@ -313,7 +313,7 @@
             // lbl_sysinfo_byt3_val
             // 
             this.lbl_sysinfo_byt3_val.AutoSize = true;
-            this.lbl_sysinfo_byt3_val.Location = new System.Drawing.Point(649, 8);
+            this.lbl_sysinfo_byt3_val.Location = new System.Drawing.Point(648, 8);
             this.lbl_sysinfo_byt3_val.Name = "lbl_sysinfo_byt3_val";
             this.lbl_sysinfo_byt3_val.Size = new System.Drawing.Size(39, 29);
             this.lbl_sysinfo_byt3_val.TabIndex = 90;
@@ -324,7 +324,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.54546F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.45454F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel7.Controls.Add(this.label_sysinfo_byt4, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.tb_sysinfo_byt4_100, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.lbl_sysinfo_byt4_val, 2, 1);
@@ -356,7 +356,7 @@
             // lbl_sysinfo_byt4_val
             // 
             this.lbl_sysinfo_byt4_val.AutoSize = true;
-            this.lbl_sysinfo_byt4_val.Location = new System.Drawing.Point(649, 8);
+            this.lbl_sysinfo_byt4_val.Location = new System.Drawing.Point(648, 8);
             this.lbl_sysinfo_byt4_val.Name = "lbl_sysinfo_byt4_val";
             this.lbl_sysinfo_byt4_val.Size = new System.Drawing.Size(39, 29);
             this.lbl_sysinfo_byt4_val.TabIndex = 90;
@@ -425,7 +425,7 @@
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.54546F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.45454F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel9.Controls.Add(this.label_sysinfo_byt6, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.tb_sysinfo_byt6_100, 1, 1);
             this.tableLayoutPanel9.Controls.Add(this.lbl_sysinfo_byt6_val, 2, 1);
@@ -457,7 +457,7 @@
             // lbl_sysinfo_byt6_val
             // 
             this.lbl_sysinfo_byt6_val.AutoSize = true;
-            this.lbl_sysinfo_byt6_val.Location = new System.Drawing.Point(649, 8);
+            this.lbl_sysinfo_byt6_val.Location = new System.Drawing.Point(648, 8);
             this.lbl_sysinfo_byt6_val.Name = "lbl_sysinfo_byt6_val";
             this.lbl_sysinfo_byt6_val.Size = new System.Drawing.Size(39, 29);
             this.lbl_sysinfo_byt6_val.TabIndex = 90;
@@ -551,7 +551,7 @@
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.54546F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.45454F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel6.Controls.Add(this.label_sysinfo_byt3, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.tb_sysinfo_byt3_100, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.lbl_sysinfo_byt3_val, 2, 1);
@@ -568,7 +568,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.54546F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.45454F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel3.Controls.Add(this.label_sysinfo_byt2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tb_sysinfo_byt2_100, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.lbl_sysinfo_byt2_val, 2, 1);
@@ -600,7 +600,7 @@
             // lbl_sysinfo_byt2_val
             // 
             this.lbl_sysinfo_byt2_val.AutoSize = true;
-            this.lbl_sysinfo_byt2_val.Location = new System.Drawing.Point(649, 8);
+            this.lbl_sysinfo_byt2_val.Location = new System.Drawing.Point(648, 8);
             this.lbl_sysinfo_byt2_val.Name = "lbl_sysinfo_byt2_val";
             this.lbl_sysinfo_byt2_val.Size = new System.Drawing.Size(39, 29);
             this.lbl_sysinfo_byt2_val.TabIndex = 90;

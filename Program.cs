@@ -18,12 +18,12 @@ namespace VC_CAN_Simulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainGUI());
+           // Application.Run(new MainGUI());
             // Application.Run(new VCPGN_ViewerGUI());
             //Application.Run(new VC_PGNjsonGUI());
             //                            Application.Run(new CustomCanGUI());
             //Application.Run(new CanManipForm());
-            //Application.Run(new TestingForm());
+            Application.Run(new TestingForm());
             // Application.Run(new CanSimForm());
             //Application.Run(new CreateOrModifyProject());
         }
