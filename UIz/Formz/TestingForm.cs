@@ -14,29 +14,19 @@ using VC_CAN_Simulator.UIz.ManipUC;
 using VC_CAN_Simulator.UIz.ManipUC.BuildersManips;
 using VC_CAN_Simulator.UIz.UControlz.Builders;
 using static VC_CAN_Simulator.Backend.Helpers;
-
 namespace VC_CAN_Simulator.UIz.Formz
 {
     public partial class TestingForm : Form
     {
-  
         public TestingForm()
         {
-         
-
             InitializeComponent();
-            // Add these lines inside the InitializeComponent method
-            this.bouton1ToolStripMenuItem.Click += new System.EventHandler(this.bouton1ToolStripMenuItem_Click);
-            this.bouton2ToolStripMenuItem.Click += new System.EventHandler(this.bouton2ToolStripMenuItem_Click);
-            this.bouton3ToolStripMenuItem.Click += new System.EventHandler(this.bouton3ToolStripMenuItem_Click);
+          //  this.bouton1ToolStripMenuItem.Click += new System.EventHandler(this.bouton1ToolStripMenuItem_Click);
             EventsManagerLib.OnHandBroadcast += new EventsManagerLib.EventHandBroadcastHandler(OnHandBroadcastHandler);
-
-
         }
-
         private void OnHandBroadcastHandler(string arg_strval, int arg_intval, bool arg_Bool0)
         {
-            label1.Text = arg_strval; 
+            label1.Text = arg_strval;
             label2.Text = arg_intval.ToString();
             if (arg_Bool0)
             {
@@ -47,25 +37,35 @@ namespace VC_CAN_Simulator.UIz.Formz
                 label2.BackColor = Color.White;
             }
         }
-
         private void bouton1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bouton 1 clicked!");
-
-            Form fooForm= new Foo_GUI();
+            Form fooForm = new Foo_GUI();
             fooForm.ShowDialog();
         }
 
-        private void bouton2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void bouton3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+
+/*
+ 
+
+            this.bouton2ToolStripMenuItem.Click += new System.EventHandler(this.bouton2ToolStripMenuItem_Click);
+            this.bouton3ToolStripMenuItem.Click += new System.EventHandler(this.bouton3ToolStripMenuItem_Click);
+
+//
+         private void bouton2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bouton 2 clicked!");
         }
-
         private void bouton3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bouton 3 clicked!");
         }
 
-
-    }
-}
+ */

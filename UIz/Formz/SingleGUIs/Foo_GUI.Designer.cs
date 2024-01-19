@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 921);
+            this.ClientSize = new System.Drawing.Size(974, 921);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
