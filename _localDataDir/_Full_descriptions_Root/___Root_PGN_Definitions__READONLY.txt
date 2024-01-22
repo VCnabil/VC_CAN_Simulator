@@ -10,7 +10,7 @@ info: cu adrress is 29 A&M 34, heading = heading * 180 / PI / 10000
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xF112    (       GPS HEADING       )
+    0xF112    (        GPS HEADING        )
 
             - Byte0 : N/A
  
@@ -40,7 +40,7 @@ info: cu adrress is 29 A&M 34 GPS is 7f
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xF801    (       GPS POSITION       )
+    0xF801    (        GPS POSITION        )
 
             - Byte0 : pos_32bit_byte0
  
@@ -70,7 +70,7 @@ info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : not SY
 Project : not sure what projects
 ============================================================================
-    0xFEA2    (      Guage Brightness      )
+    0xFEA2    (       Guage Brightness       )
 
             - Byte0 : Gauge Brigthness (0 to 100)
  
@@ -100,7 +100,7 @@ info: Source adreess 21
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFEFC    (      FeedBacks From Control Unit      )
+    0xFEFC    (       FeedBacks From Control Unit       )
 
             - Byte0 : Port Bucket Feedback (0 to 250)
  
@@ -130,7 +130,7 @@ info: .
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFEFC    (      FeedBacks From Control Unit      )
+    0xFEFC    (       FeedBacks From Control Unit       )
 
             - Byte0 : Port Bucket Feedback
  
@@ -160,7 +160,7 @@ info: port is 00 stbd is 01 sent by MKV_GUI
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFEFC    (       FeedBacks From Control Unit       )
+    0xFEFC    (        FeedBacks From Control Unit        )
 
             - Byte0 : Port Bucket Feedback
  
@@ -190,7 +190,7 @@ info: cu adrress is 29 A&M 34
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFEFC    (       Indication       )
+    0xFEFC    (        Indication        )
 
             - Byte0 : Port BucketPos
  
@@ -220,7 +220,7 @@ info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : not SY
 Project : N/A
 ============================================================================
-    0xFEFC    (      FeedBacks From Control Unit      )
+    0xFEFC    (       FeedBacks From Control Unit       )
 
             - Byte0 : Port Bucket Feedback (0 to 250)
  
@@ -250,7 +250,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF00    (      Port Nozzle Feedback Raw Value From Indication Module - GPSI       )
+    0xFF00    (       Port Nozzle Feedback Raw Value From Indication Module - GPSI        )
 
             - Byte0 : Port Nozzle Feedback Raw Value (0-450) LO
  
@@ -280,7 +280,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF01    (      Stbd Nozzle Feedback Raw Value  From Indication Module - GPSI       )
+    0xFF01    (       Stbd Nozzle Feedback Raw Value  From Indication Module - GPSI        )
 
             - Byte0 : Stbd Nozzle Feedback Raw Value (0-450) LO
  
@@ -310,7 +310,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF02    (      Port Bucket Feedback Raw Value  From Indication Module - GPSI       )
+    0xFF02    (       Port Bucket Feedback Raw Value  From Indication Module - GPSI        )
 
             - Byte0 : Port Bucket Feedback Raw Value (0-450) LO
  
@@ -340,7 +340,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF03    (      Stbd Bucket Feedback Raw Value  From Indication Module - GPSI       )
+    0xFF03    (       Stbd Bucket Feedback Raw Value  From Indication Module - GPSI        )
 
             - Byte0 : Stbd Bucket Feedback Raw Value (0-450) LO
  
@@ -370,7 +370,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF04    (      Port Tab Feedback Raw Value  From Indication Module - GPSI       )
+    0xFF04    (       Port Tab Feedback Raw Value  From Indication Module - GPSI        )
 
             - Byte0 : Port Tab Feedback Raw Value (0-450) LO
  
@@ -400,7 +400,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF05    (      Stbd Tab Feedback Raw Value  From Indication Module - GPSI       )
+    0xFF05    (       Stbd Tab Feedback Raw Value  From Indication Module - GPSI        )
 
             - Byte0 : Stbd Tab Feedback Raw Value (0-450) LO
  
@@ -430,7 +430,7 @@ info: 0=None, 1=Station 1, 2=Station 2
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF11    (       Open and Closed Bridge SKIM Module      )
+    0xFF11    (        Open and Closed Bridge SKIM Module       )
 
             - Byte0 : Broacast the Station that is in Control on both CAN channels
  
@@ -460,7 +460,7 @@ info: N/A
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF12    (       Open and Closed Bridge SKIM Module      )
+    0xFF12    (        Open and Closed Bridge SKIM Module       )
 
             - Byte0 : Ack all HPU faults on other LCD 1=YES
  
@@ -490,7 +490,7 @@ info: N/A
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF12    (       Open and Closed Bridge SKIM Module      )
+    0xFF12    (        Open and Closed Bridge SKIM Module       )
 
             - Byte0 : Ack all HPU faults on other LCD (1=YES)
  
@@ -520,7 +520,7 @@ info: this is sent by lcd as fault ack byte values are 1,0,2,3,4,5,6,7,8,9
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFF12    (    LCD fault ACK message     )
+    0xFF12    (     LCD fault ACK message      )
 
             - Byte0 : Ack all HPU faults on other LCD 1=YES
  
@@ -550,7 +550,7 @@ info: N/A
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF13    (         Open and Closed Bridge SKIM Module      )
+    0xFF13    (          Open and Closed Bridge SKIM Module       )
 
             - Byte0 : Ack all propulsion faults on other LCD (1=YES)
  
@@ -580,7 +580,7 @@ info: this is sent by lcd as fault ack byte values are 1,0,2,3,4,5,6,7,8,9
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFF13    (    LCD fault ACK message     )
+    0xFF13    (     LCD fault ACK message      )
 
             - Byte0 : Ack all HPU faults on other LCD 1=YES
  
@@ -610,7 +610,7 @@ info: 0x00 for Port and 0x01 for Stbd.0=Innactive 1=Moving to Stbd  2=Moving to 
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF15    (      Calibration Feedback      )
+    0xFF15    (       Calibration Feedback       )
 
             - Byte0 : Calibration Feedback
  
@@ -640,7 +640,7 @@ info: port is 00 stbd is 01
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFF15    (       Cal FeedBacks From Control Unit       )
+    0xFF15    (        Cal FeedBacks From Control Unit        )
 
             - Byte0 : Calibration Feedback message
  
@@ -670,7 +670,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF17    (      Tab Panel From SKIM Modules      )
+    0xFF17    (       Tab Panel From SKIM Modules       )
 
             - Byte0 : Port Tab Up
  
@@ -700,7 +700,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF18    (      Tab Panel From SKIM Modules      )
+    0xFF18    (       Tab Panel From SKIM Modules       )
 
             - Byte0 : Port Tab down
  
@@ -730,7 +730,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF19    (      Tab Panel From SKIM Modules      )
+    0xFF19    (       Tab Panel From SKIM Modules       )
 
             - Byte0 : Stbd Tab Up
  
@@ -760,7 +760,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF20    (      Tab Panel From SKIM Modules      )
+    0xFF20    (       Tab Panel From SKIM Modules       )
 
             - Byte0 : Stbd Tab down
  
@@ -790,7 +790,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF21    (      Tab Backup Panel / WJ Backup Panel From SKIM Modules      )
+    0xFF21    (       Tab Backup Panel / WJ Backup Panel From SKIM Modules       )
 
             - Byte0 : Port Tab Auto/Backup Switch
  
@@ -820,7 +820,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF22    (      Tab Backup Panel / WJ Backup Panel From SKIM Modules      )
+    0xFF22    (       Tab Backup Panel / WJ Backup Panel From SKIM Modules       )
 
             - Byte0 : Stbd Tab Auto/Backup Switch
  
@@ -850,7 +850,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF23    (      WJ Backup Panel From SKIM Modules      )
+    0xFF23    (       WJ Backup Panel From SKIM Modules       )
 
             - Byte0 : Port Nozzle Auto/Backup Switch
  
@@ -880,7 +880,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF24    (      WJ Backup Panel From SKIM Modules      )
+    0xFF24    (       WJ Backup Panel From SKIM Modules       )
 
             - Byte0 : Port Bucket Auto/Backup Switch
  
@@ -910,7 +910,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF25    (      Engine Backup Panel From SKIM Modules      )
+    0xFF25    (       Engine Backup Panel From SKIM Modules       )
 
             - Byte0 : Port Engine Auto/Backup Switch
  
@@ -940,7 +940,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF26    (      Engine Backup Panel From SKIM Modules      )
+    0xFF26    (       Engine Backup Panel From SKIM Modules       )
 
             - Byte0 : Stbd Nozzle Auto/Backup Switch
  
@@ -970,7 +970,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF27    (      WJ Backup Panel From SKIM Modules      )
+    0xFF27    (       WJ Backup Panel From SKIM Modules       )
 
             - Byte0 : Stbd Bucket Auto/Backup Switch
  
@@ -1000,7 +1000,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF28    (      WJ Backup Panel From SKIM Modules      )
+    0xFF28    (       WJ Backup Panel From SKIM Modules       )
 
             - Byte0 : Stbd Engine Auto/Backup Switch
  
@@ -1030,7 +1030,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF30    (      CU Info From Control Unit      )
+    0xFF30    (       CU Info From Control Unit       )
 
             - Byte0 : Clutch Engagement Permissives
                     - b0 : Stbd Bucket in Neutral Position
@@ -1068,7 +1068,7 @@ info: .
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFF30    (      Clutch Permissives, “Clutch Station” in Control, SW Versions      )
+    0xFF30    (       Clutch Permissives, “Clutch Station” in Control, SW Versions       )
 
             - Byte0 : Clutch Engagement Permissives
                     - b0 : Stbd Bucket in Neutral Position 0 = Stbd buc not innewutral  1= Stbd buc in newutral zone
@@ -1106,7 +1106,7 @@ info: cu adrress is 29 A&M 34
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF30    (      CU Version       )
+    0xFF30    (       CU Version        )
 
             - Byte0 : N/A
  
@@ -1136,7 +1136,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF31    (      Clutch command From Clutch Panel      )
+    0xFF31    (       Clutch command From Clutch Panel       )
 
             - Byte0 : Clutch Commands
                     - b0 : Stbd Clutch Engaged Ahead Fdbk (or Cmd if local feedback)
@@ -1174,7 +1174,7 @@ info: .
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFF31    (      Clutch command From Clutch Panel      )
+    0xFF31    (       Clutch command From Clutch Panel       )
 
             - Byte0 : Clutch Commands
                     - b0 : Stbd Clutch Engaged Ahead Fdbk (or Cmd if local feedback)
@@ -1212,7 +1212,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF32    (      Clutch command From Clutch Panel 2      )
+    0xFF32    (       Clutch command From Clutch Panel 2       )
 
             - Byte0 : Buttons pressed
                     - b0 : Port Engage
@@ -1250,7 +1250,7 @@ info: StandardTachet_info_2.txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF32    (      Clutch command From Clutch Panel 2      )
+    0xFF32    (       Clutch command From Clutch Panel 2       )
 
             - Byte0 : Buttons pressed
                     - b0 : Port Engage
@@ -1288,7 +1288,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF32    (      LED From Clutch Panel 1      )
+    0xFF32    (       LED From Clutch Panel 1       )
 
             - Byte0 : Port Engage LED
  
@@ -1318,7 +1318,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF33    (      LED From Clutch Panel 1      )
+    0xFF33    (       LED From Clutch Panel 1       )
 
             - Byte0 : Port Engage LED
  
@@ -1348,7 +1348,7 @@ info: Same configuration is found in the standardYachet_info_ .txt files
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFF34    (      Clutch command From Clutch Panel3      )
+    0xFF34    (       Clutch command From Clutch Panel3       )
 
             - Byte0 : Buttons pressed
                     - b0 : Port Engage
@@ -1386,7 +1386,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF36    (      Raw values From Remote Station Controller      )
+    0xFF36    (       Raw values From Remote Station Controller       )
 
             - Byte0 : Helm scaled value LO
  
@@ -1424,7 +1424,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF49    (      From Control Unit      )
+    0xFF49    (       From Control Unit       )
 
             - Byte0 : Sensor Faults
                     - b0 : Stbd Bucket
@@ -1518,7 +1518,7 @@ info: cu adrress is 29 A&M 34
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF49    (       Faults       )
+    0xFF49    (        Faults        )
 
             - Byte0 : Sensor Faults
                     - b0 : Stbd Bucket
@@ -1612,7 +1612,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF50    (      Scaled Values From Remote Station Controller      )
+    0xFF50    (       Scaled Values From Remote Station Controller       )
 
             - Byte0 : Helm scaled value LO
  
@@ -1650,7 +1650,7 @@ info: .
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFF50    (       Helm Position and req ctrl      )
+    0xFF50    (        Helm Position and req ctrl       )
 
             - Byte0 : Helm Position LO (0-1000)
  
@@ -1688,7 +1688,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF51    (      Scaled Lever values From Remote Station Controller       )
+    0xFF51    (       Scaled Lever values From Remote Station Controller        )
 
             - Byte0 : Port Lever scaled value LO
  
@@ -1718,7 +1718,7 @@ info: .
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFF51    (      Lever position       )
+    0xFF51    (       Lever position        )
 
             - Byte0 : Port Lever position LO (0 - 1000)
  
@@ -1748,7 +1748,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF53    (      From Control Unit      )
+    0xFF53    (       From Control Unit       )
 
             - Byte0 : Remote Station LED (0=OFF, 1=ON)
  
@@ -1778,7 +1778,7 @@ info: .diff?
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFF53    (      Station in Control      )
+    0xFF53    (       Station in Control       )
 
             - Byte0 : station in control
                     - b0 : sta 3 Take Control status  0 = NOT in ctr 1 is in ctrl
@@ -1816,7 +1816,7 @@ info: cu adrress is 29 A&M 34
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF53    (       System Information       )
+    0xFF53    (        System Information        )
 
             - Byte0 : sta in ctrl 01 , 11 aka a 1 or a 3
  
@@ -1846,7 +1846,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF54    (      From Remote Station Controller      )
+    0xFF54    (       From Remote Station Controller       )
 
             - Byte0 : Helm minimum raw analog input value LO
  
@@ -1876,7 +1876,7 @@ info: .
 Configuration : Standard J1939 Interface P2 ED
 Project : N/A
 ============================================================================
-    0xFF54    (      beacon      )
+    0xFF54    (       beacon       )
 
             - Byte0 : N/A
  
@@ -1906,7 +1906,7 @@ info: THIS IS NOT USED ANYMORE, JUST BIRDON, cu adrress is 29 A&M 34
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF54    (       AM Version       )
+    0xFF54    (        AM Version        )
 
             - Byte0 : N/A
  
@@ -1936,7 +1936,7 @@ info: Standard Yach txt file
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF55    (      From Remote Station Controller       )
+    0xFF55    (       From Remote Station Controller        )
 
             - Byte0 : Port Lever minimum raw analog input value LO
  
@@ -1966,7 +1966,7 @@ info: cu adrress is 29 A&M 34
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF59    (       Raw Switch states       )
+    0xFF59    (        Raw Switch states        )
 
             - Byte0 : N/A
  
@@ -2012,7 +2012,7 @@ info: Should look into how Calstatus is generated
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF64    (       Calibration       )
+    0xFF64    (        Calibration        )
 
             - Byte0 : N/A
  
@@ -2042,7 +2042,7 @@ info: the pv connection is setup using a mask for all pgns, the adress is define
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF65    (       Dynamic Positioning       )
+    0xFF65    (        Dynamic Positioning        )
 
             - Byte0 : DPState
                     - b0 : DPState
@@ -2080,7 +2080,7 @@ info: the pv connection is setup using a mask for all pgns, the adress is define
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF66    (       DP Diagnostics 1       )
+    0xFF66    (        DP Diagnostics 1        )
 
             - Byte0 : JoyX LO
  
@@ -2110,7 +2110,7 @@ info: the pv connection is setup using a mask for all pgns, the adress is define
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF67    (       DP Diagnostics 2       )
+    0xFF67    (        DP Diagnostics 2        )
 
             - Byte0 : Xi_32bit_byte0
  
@@ -2140,7 +2140,7 @@ info: source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF8C    (      Clutch Command      )
+    0xFF8C    (       Clutch Command       )
 
             - Byte0 : Clutch Command
                     - b0 : Port Clutch Command Disengage
@@ -2186,7 +2186,7 @@ info: port is 00 stbd is 01 sent by MKV_GUI  Port and Stbd Enumerated Clutch Com
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFF8C    (        Station in control and clutch info and engin speed       )
+    0xFF8C    (         Station in control and clutch info and engin speed        )
 
             - Byte0 : clutch info
                     - b0 : Port Clutch Cmd DIS
@@ -2232,7 +2232,7 @@ info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF8D    (      Faults      )
+    0xFF8D    (       Faults       )
 
             - Byte0 : Faults
                     - b0 : Calibration Fault
@@ -2302,7 +2302,7 @@ info: port is 00 stbd is 01 sent by MKV_GUI
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFF8D    (        Faults        )
+    0xFF8D    (         Faults         )
 
             - Byte0 : CU Faults
                     - b0 : Calibration fault
@@ -2380,7 +2380,7 @@ info: source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF8E    (      Station 1 CMD      )
+    0xFF8E    (       Station 1 CMD       )
 
             - Byte0 : Station 1 P Trim CMD (0 to 100)
  
@@ -2418,7 +2418,7 @@ info: port is 00 stbd is 01
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFF8E    (       Station 1 Commands       )
+    0xFF8E    (        Station 1 Commands        )
 
             - Byte0 : Port Azimuth Steer CMD
  
@@ -2456,7 +2456,7 @@ info: looks unused looka t ControlUnit code in pv780 -> ParseData is never used
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF8E    (       Station 1 Control Inputs       )
+    0xFF8E    (        Station 1 Control Inputs        )
 
             - Byte0 : N/A
  
@@ -2486,7 +2486,7 @@ info: source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF8F    (      Station 2 CMD      )
+    0xFF8F    (       Station 2 CMD       )
 
             - Byte0 : Station 2 P Trim CMD (0 to 100)
  
@@ -2524,7 +2524,7 @@ info: port is 00 stbd is 01
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFF8F    (       Station 2 Commands       )
+    0xFF8F    (        Station 2 Commands        )
 
             - Byte0 : Port Azimuth Steer CMD
  
@@ -2562,7 +2562,7 @@ info: looks unused looka t ControlUnit code in pv780 -> ParseData is never used
 Configuration : SSRS_K12
 Project : PV780_102_1000
 ============================================================================
-    0xFF8F    (       Station 2 Control Inputs       )
+    0xFF8F    (        Station 2 Control Inputs        )
 
             - Byte0 : N/A
  
@@ -2592,7 +2592,7 @@ info: source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFF90    (      Software Version      )
+    0xFF90    (       Software Version       )
 
             - Byte0 : Sofware Version Major
  
@@ -2622,7 +2622,7 @@ info: port is 00 stbd is 01 sent by MKV_GUI
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFF90    (        Software Version        )
+    0xFF90    (         Software Version         )
 
             - Byte0 : Sofware Version Major
  
@@ -2652,7 +2652,7 @@ info: Source address is 0x01 for Port A&M Unit,  0x02 for the Stbd A&M Unit
 Configuration : Standard Yach EXTRA CAN
 Project : N/A
 ============================================================================
-    0xFFA0    (       Alarm and Monitoring Unit      )
+    0xFFA0    (        Alarm and Monitoring Unit       )
 
             - Byte0 : Major SW Version LO
  
@@ -2682,7 +2682,7 @@ info: port is 01 stbd is 02 sent by MKV_GUI
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFFA0    (       A&M Software Version       )
+    0xFFA0    (        A&M Software Version        )
 
             - Byte0 : A&M Software Major LO
  
@@ -2712,7 +2712,7 @@ info: Source address is 0x01 for Port A&M Unit,  0x02 for the Stbd A&M Unit
 Configuration : Standard Yach EXTRA CAN
 Project : N/A
 ============================================================================
-    0xFFA1    (      Alarms      )
+    0xFFA1    (       Alarms       )
 
             - Byte0 : Alarms
                     - b0 : Pre-High Oil Temperature
@@ -2766,7 +2766,7 @@ info: port is 01 stbd is 02 sent by MKV_GUI
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFFA1    (       A&M HPU Faults and Switch States       )
+    0xFFA1    (        A&M HPU Faults and Switch States        )
 
             - Byte0 : HPU Faults
                     - b0 : Change Over Press
@@ -2820,7 +2820,7 @@ info: port is 01 stbd is 02 sent by MKV_GUI
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFFA2    (       A&M MkV MTU Signals       )
+    0xFFA2    (        A&M MkV MTU Signals        )
 
             - Byte0 : HPU Faults
                     - b0 : Engine running
@@ -2858,7 +2858,7 @@ info: address is 00 sent by MKV_GUI
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFFAA    (        CIM Software Version        )
+    0xFFAA    (         CIM Software Version         )
 
             - Byte0 : CAN1/2 Buffer - Historic Max Size Since Powerup
  
@@ -2888,7 +2888,7 @@ info: Source address of these messages  0x80   Open and Closed Bridge SKIM Modul
 Configuration : Standard Yach EXTRA CAN
 Project : N/A
 ============================================================================
-    0xFFB0    (       Open and Closed Bridge SKIM Module      )
+    0xFFB0    (        Open and Closed Bridge SKIM Module       )
 
             - Byte0 : Closed Bridge (Station 1) Dimming Knob Analog Input  (Range is 0=0V to 250=32V)
  
@@ -2918,7 +2918,7 @@ info: Source address of these messages  0x80   Open and Closed Bridge SKIM Modul
 Configuration : Standard Yach EXTRA CAN
 Project : N/A
 ============================================================================
-    0xFFB1    (       Open and Closed Bridge SKIM Module      )
+    0xFFB1    (        Open and Closed Bridge SKIM Module       )
 
             - Byte0 : Closed Bridge (Station 2) Dimming Knob Analog Input  (Range is 0=0V to 250=32V)
  
@@ -2948,7 +2948,7 @@ info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFFB2    (      Clutch Panel Brigthness sta 1      )
+    0xFFB2    (       Clutch Panel Brigthness sta 1       )
 
             - Byte0 : Station 1 PAHD Clutch Panel Brigthness (0 to 250)
  
@@ -2978,7 +2978,7 @@ info: port is 00 stbd is 01  This one is for station 1 using cu 00 or cu 01
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFFB2    (        Station 1 Dimming Commands        )
+    0xFFB2    (         Station 1 Dimming Commands         )
 
             - Byte0 : Station 1 Dimming Command
  
@@ -3008,7 +3008,7 @@ info: Source address of transmitted messages is 0x00 for Port and 0x01 for Stbd.
 Configuration : Standard Yach
 Project : N/A
 ============================================================================
-    0xFFB3    (      Clutch Panel Brigthness sta 2      )
+    0xFFB3    (       Clutch Panel Brigthness sta 2       )
 
             - Byte0 : Station 2 PAHD Clutch Panel Brigthness (0 to 250)
  
@@ -3038,7 +3038,7 @@ info: port is 00 stbd is 01   This one is for station 2 using cu 00 or cu 01
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFFB3    (        Station 2 Dimming Commands        )
+    0xFFB3    (         Station 2 Dimming Commands         )
 
             - Byte0 : Station 2 Dimming Command
  
@@ -3068,7 +3068,7 @@ info: port is 00 stbd is 01
 Configuration : INFPB
 Project : INFPB_MkV_101_1000
 ============================================================================
-    0xFFFF    (        Debugging messages        )
+    0xFFFF    (         Debugging messages         )
 
             - Byte0 : D0&D1 LO
  
@@ -3085,4 +3085,2752 @@ Project : INFPB_MkV_101_1000
             - Byte6 : D6&D7 LO
  
             - Byte7 : D6&D7 HI
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+VC_PGN_ID : 88
+PGN_32bit : 65313
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xFF21    (  AutoBackup Switches  )
+
+            - Byte0 : Clutch Engagement Permissives
+                    - b0 : Port Drive AutoBackup Switch
+                    - b1 : Port Steer AutoBackup Switch
+                    - b2 : Stbd Drive AutoBackup Switch
+                    - b3 : Stbd Steer AutoBackup Switch
+                    - b4 : Port Engine AutoBackup Switch
+                    - b5 : Stbd Engine AutoBackup Switch
+                    - b6 : N/A
+                    - b7 : Tab AutoBackup Switch
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : VMU
+VC_PGN_ID : 89
+PGN_32bit : 61481
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xF029    (    Joystick pitch roll latency   )
+
+            - Byte0 : PitchAngle 24bit_0
+ 
+            - Byte1 : PitchAngle 24bit_1
+ 
+            - Byte2 : PitchAngle 24bit_2
+ 
+            - Byte3 : RollAngle 24bit_0
+ 
+            - Byte4 : RollAngle 24bit_1
+ 
+            - Byte5 : RollAngle 24bit_2
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : AngleLatency
+ 
+============================================================================
+CAN Messages From : VMU
+VC_PGN_ID : 90
+PGN_32bit : 61482
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xF02A    (     Joystick pitchRate rollRate YawRate latencyRate   )
+
+            - Byte0 : PitchRate LO
+ 
+            - Byte1 : PitchRate HI
+ 
+            - Byte2 : RollRate LO
+ 
+            - Byte3 : RollRate HI
+ 
+            - Byte4 : YawRate LO
+ 
+            - Byte5 : YawRate HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : RateLatency
+ 
+============================================================================
+CAN Messages From : VMU
+VC_PGN_ID : 91
+PGN_32bit : 61485
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xF02D    (     Joystick X_Acceleration Y_Acceleration Z_Acceleration   )
+
+            - Byte0 : YAxisAcceleration LO
+ 
+            - Byte1 : YAxisAcceleration HI
+ 
+            - Byte2 : XAxisAcceleration LO
+ 
+            - Byte3 : XAxisAcceleration HI
+ 
+            - Byte4 : ZAxisAcceleration LO
+ 
+            - Byte5 : ZAxisAcceleration HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 92
+PGN_32bit : 61714
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xF112    (     GPS Heading  CCMNew  )
+
+            - Byte0 : GPS Heading LO
+ 
+            - Byte1 : GPS Heading HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 93
+PGN_32bit : 63489
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xF801    (     GPS Lat Lon  CCMNew  )
+
+            - Byte0 : GPS Latitude 32bit_0
+ 
+            - Byte1 : GPS Latitude 32bit_1
+ 
+            - Byte2 : GPS Latitude 32bit_2
+ 
+            - Byte3 : GPS Latitude 32bit_3
+ 
+            - Byte4 : GPS Longitude 32bit_0
+ 
+            - Byte5 : GPS Longitude 32bit_1
+ 
+            - Byte6 : GPS Longitude 32bit_2
+ 
+            - Byte7 : GPS Longitude 32bit_3
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 94
+PGN_32bit : 61715
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xF113    (     GPS RateOfTurn CCMNew  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : GPS RateOfTurn 32bit_0
+ 
+            - Byte2 : GPS RateOfTurn 32bit_1
+ 
+            - Byte3 : GPS RateOfTurn 32bit_2
+ 
+            - Byte4 : GPS RateOfTurn 32bit_3
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 95
+PGN_32bit : 63490
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xF802    (     GPS Speed Course OverGround CCMNew  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : GPS Speed OverGround LO
+ 
+            - Byte3 : GPS Speed OverGround HI
+ 
+            - Byte4 : GPS Course OverGround LO
+ 
+            - Byte5 : GPS Course OverGround HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 96
+PGN_32bit : 61456
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCMNew
+Configuration : MRADS
+Project : MRADS CCMNew
+============================================================================
+    0xF010    (     GPS Time CCMNew  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : days LO
+ 
+            - Byte3 : days HI
+ 
+            - Byte4 : GPS ticks 32bit_0
+ 
+            - Byte5 : GPS ticks 32bit_1
+ 
+            - Byte6 : GPS ticks 32bit_2
+ 
+            - Byte7 : GPS ticks 32bit_3
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+VC_PGN_ID : 97
+PGN_32bit : 65313
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF21    (   AutoBackup Switch  )
+
+            - Byte0 : Tab AutoBackup Switch
+                    - b0 : Tab AutoBackup Switch
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+VC_PGN_ID : 98
+PGN_32bit : 65315
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF23    (   Port Steer AutoBackup Switch  )
+
+            - Byte0 : Port Steer AutoBackup Switch
+                    - b0 : Port Steer AutoBackup Switch
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+VC_PGN_ID : 99
+PGN_32bit : 65316
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF24    (   Port Drive AutoBackup Switch  )
+
+            - Byte0 : Port Drive AutoBackup Switch
+                    - b0 : Port Drive AutoBackup Switch
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+VC_PGN_ID : 100
+PGN_32bit : 65317
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF25    (   Port Engine AutoBackup Switch  )
+
+            - Byte0 : Port Engine AutoBackup Switch
+                    - b0 : Port Engine AutoBackup Switch
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+VC_PGN_ID : 101
+PGN_32bit : 65318
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF26    (   Stbd Steer AutoBackup Switch  )
+
+            - Byte0 : Stbd Steer AutoBackup Switch
+                    - b0 : Stbd Steer AutoBackup Switch
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+VC_PGN_ID : 102
+PGN_32bit : 65319
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF27    (   Stbd Drive AutoBackup Switch  )
+
+            - Byte0 : Stbd Drive AutoBackup Switch
+                    - b0 : Stbd Drive AutoBackup Switch
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : SKIM Modules
+VC_PGN_ID : 103
+PGN_32bit : 65320
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF28    (   Stbd Engine AutoBackup Switch  )
+
+            - Byte0 : Stbd Engine AutoBackup Switch
+                    - b0 : Stbd Engine AutoBackup Switch
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Engine Controller
+VC_PGN_ID : 104
+PGN_32bit : 43776
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xAB00    (   Actual Shaft RPM  )
+
+            - Byte0 : Actual Shaft RPM LO
+ 
+            - Byte1 : Actual Shaft RPM HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 105
+PGN_32bit : 65328
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF30    (   CU commands and switches  )
+
+            - Byte0 : Stbd Actual Shaft RPM LO
+ 
+            - Byte1 : Stbd Actual Shaft RPM HI
+ 
+            - Byte2 : Port Actual Shaft RPM LO
+ 
+            - Byte3 : Port Actual Shaft RPM HI
+ 
+            - Byte4 : Clutch commands
+                    - b0 : Integrated Stbd Clutch Ahead Command
+                    - b1 : Integrated Port Clutch Ahead Command
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : Integrated Stbd Clutch Reverse Command
+                    - b5 : Integrated Port Clutch Reverse Command
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : Dock Transit Switches
+                    - b0 : Dock Transit Joystick Switch
+                    - b1 : Joystick Tiller Station Switch
+                    - b2 : Throttle Helm Station Switch
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 106
+PGN_32bit : 43786
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xAB0A    (   Port trolling  )
+
+            - Byte0 : Desired Port Trolling DutyCycle LO
+ 
+            - Byte1 : Desired Port Trolling DutyCycle HI
+ 
+            - Byte2 : Desired Port Trolling Shaft RPM LO
+ 
+            - Byte3 : Desired Port Trolling Shaft RPM HI
+ 
+            - Byte4 : Max Port Trolling DutyCycle Adjustment LO
+ 
+            - Byte5 : Max Port Trolling DutyCycle Adjustment HI
+ 
+            - Byte6 : Port Trolling KI LO
+ 
+            - Byte7 : Port Trolling KI HI
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 107
+PGN_32bit : 43787
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xAB0B    (   Stbd trolling  )
+
+            - Byte0 : Desired Stbd Trolling DutyCycle LO
+ 
+            - Byte1 : Desired Stbd Trolling DutyCycle HI
+ 
+            - Byte2 : Desired Stbd Trolling Shaft RPM LO
+ 
+            - Byte3 : Desired Stbd Trolling Shaft RPM HI
+ 
+            - Byte4 : Max Stbd Trolling DutyCycle Adjustment LO
+ 
+            - Byte5 : Max Stbd Trolling DutyCycle Adjustment HI
+ 
+            - Byte6 : Stbd Trolling KI LO
+ 
+            - Byte7 : Stbd Trolling KI HI
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 108
+PGN_32bit : 43788
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xAB0C    (   MAX trolling  )
+
+            - Byte0 : Max Port Trolling DutyCycle LO
+ 
+            - Byte1 : Max Port Trolling DutyCycle HI
+ 
+            - Byte2 : Max Stbd Trolling DutyCycle LO
+ 
+            - Byte3 : Max Stbd Trolling DutyCycle HI
+ 
+            - Byte4 : Tie bar Analog Input LO
+ 
+            - Byte5 : Tie bar Analog Input HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 109
+PGN_32bit : 65416
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF88    (  Scaled Drive Feedback  )
+
+            - Byte0 : Scaled Port Drive Trim Feedback LO
+ 
+            - Byte1 : Scaled Port Drive Trim Feedback HI
+ 
+            - Byte2 : Scaled Port Drive Steer Feedback LO
+ 
+            - Byte3 : Scaled Port Drive Steer Feedback HI
+ 
+            - Byte4 : Scaled Stbd Drive Trim Feedback LO
+ 
+            - Byte5 : Scaled Stbd Drive Trim Feedback HI
+ 
+            - Byte6 : Scaled Stbd Drive Steer Feedback LO
+ 
+            - Byte7 : Scaled Stbd Drive Steer Feedback HI
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 110
+PGN_32bit : 65417
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF89    (          Faults          )
+
+            - Byte0 : Tiller Joystick Faults
+                    - b0 : Tiller Fault
+                    - b1 : JoyX Fault
+                    - b2 : JoyY Fault
+                    - b3 : Navigator Port Trim Joystick Fault
+                    - b4 : Navigator Stbd Trim Joystick Fault
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Lever Faults
+                    - b0 : Port Lever Fault
+                    - b1 : Stbd Lever Fault
+                    - b2 : FwdPanel Port Trim Joystick Fault
+                    - b3 : FwdPanel Stbd Trim Joystick Fault
+                    - b4 : Helm fault
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Joystick Docking zone
+                    - b0 : N/A
+                    - b1 : N/A
+                    - b2 : Joystick Docking zone Fault
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Sensor Faults
+                    - b0 : Stbd Trim Sensor Fault
+                    - b1 : Port Trim Sensor Fault
+                    - b2 : Stbd Steer Sensor Fault
+                    - b3 : Port Steer Sensor Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : Non-Follow-Up Faults
+                    - b0 : Stbd Trim NFU Fault
+                    - b1 : Port Trim NFU Fault
+                    - b2 : Stbd Steer NFU Fault
+                    - b3 : Port Steer NFU Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : Calibration Faults
+                    - b0 : Calibration Fault
+                    - b1 : General Alarm
+                    - b2 : CAN Fault
+                    - b3 : Dockmode Fault
+                    - b4 : Clutch Communication Timeout
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte6 : Communication Timeout
+                    - b0 : Stbd Engine Communication Timeout
+                    - b1 : Port Engine Communication Timeout
+                    - b2 : Stbd Engine Controller Communication Timeout
+                    - b3 : Port Engine Controller Communication Timeout
+                    - b4 : Murphy LCD Communication Timeout
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Switches states
+                    - b0 : Docking Transit State
+                    - b1 : Auto Trim Switch
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 111
+PGN_32bit : 65418
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF8A    (  Scaled Commands  )
+
+            - Byte0 : Scaled Port Engine Command LO
+ 
+            - Byte1 : Scaled Port Engine Command HI
+ 
+            - Byte2 : Scaled Stbd Engine Command LO
+ 
+            - Byte3 : Scaled Stbd Engine Command HI
+ 
+            - Byte4 : Scaled Active Port Throttle Control Input Command LO
+ 
+            - Byte5 : Scaled Active Port Throttle Control Input Command HI
+ 
+            - Byte6 : Scaled Active Stbd Throttle Control Input Command LO
+ 
+            - Byte7 : Scaled Active Stbd Throttle Control Input Command HI
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 112
+PGN_32bit : 65421
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF8D    (   Clucth Interlock and Docking Faults     )
+
+            - Byte0 : Clucth Interlock Faults
+                    - b0 : High Port RPM Clutch Interlock
+                    - b1 : High Stbd RPM Clutch Interlock
+                    - b2 : Disengaged Port Clutch Interlock
+                    - b3 : Disengaged Stbd Clutch Interlock
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Docking Faults
+                    - b0 : Dockmode Fault Due To Sensor Fault
+                    - b1 : Dockmode Fault Due To OFF Trolling Switch
+                    - b2 : Dockmode Fault Due To Low RPM
+                    - b3 : Dockmode Fault Due To JoyX Fault
+                    - b4 : Dockmode Fault Due To Engine Communication
+                    - b5 : Dockmode Fault Due To Engine Controller Communication
+                    - b6 : Dockmode Fault Due To Clutch Communication
+                    - b7 : Dockmode Fault Due To Tiller Fault
+ 
+            - Byte2 : SW Revision LO
+ 
+            - Byte3 : SW Revision HI
+ 
+            - Byte4 : Major SWVersion
+ 
+            - Byte5 : Minor SWVersion LO
+ 
+            - Byte6 : Minor SWVersion HI
+ 
+            - Byte7 : Station In Control
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 113
+PGN_32bit : 65457
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFB1    (  Engine analog Outputs  )
+
+            - Byte0 : Port Engine Analog Output LO
+ 
+            - Byte1 : Port Engine Analog Output HI
+ 
+            - Byte2 : Stbd Engine Analog Output LO
+ 
+            - Byte3 : Stbd Engine Analog Output HI
+ 
+            - Byte4 : JoystickX Analog Input LO
+ 
+            - Byte5 : JoystickX Analog Input HI
+ 
+            - Byte6 : JoystickY Analog Input LO
+ 
+            - Byte7 : JoystickY Analog Input HI
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 114
+PGN_32bit : 65458
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFB2    (  analog Intputs  )
+
+            - Byte0 : Tiller Analog Input LO
+ 
+            - Byte1 : Tiller Analog Input HI
+ 
+            - Byte2 : Navigator Station Port Trim Analog Input LO
+ 
+            - Byte3 : Navigator Station Port Trim Analog Input HI
+ 
+            - Byte4 : Navigator Station Stbd Trim Analog Input LO
+ 
+            - Byte5 : Navigator Station Stbd Trim Analog Input HI
+ 
+            - Byte6 : Port Throttle Analog Input LO
+ 
+            - Byte7 : Port Throttle Analog Input HI
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 115
+PGN_32bit : 65459
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFB3    (  analog Intputs 2  )
+
+            - Byte0 : Stbd Throttle Analog Input LO
+ 
+            - Byte1 : Stbd Throttle Analog Input HI
+ 
+            - Byte2 : Helm Analog Input LO
+ 
+            - Byte3 : Helm Analog Input HI
+ 
+            - Byte4 : Fwd Panel Port Trim Analog Input LO
+ 
+            - Byte5 : Fwd Panel Port Trim Analog Input HI
+ 
+            - Byte6 : Fwd Panel Stbd Trim Analog Input LO
+ 
+            - Byte7 : Fwd Panel Stbd Trim Analog Input HI
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 116
+PGN_32bit : 65460
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFB4    (  analog feedback Intputs  )
+
+            - Byte0 : Port Steer Feedback Analog Input LO
+ 
+            - Byte1 : Port Steer Feedback Analog Input HI
+ 
+            - Byte2 : Stbd Steer Feedback Analog Input LO
+ 
+            - Byte3 : Stbd Steer Feedback Analog Input HI
+ 
+            - Byte4 : Port Trim Feedback Analog Input LO
+ 
+            - Byte5 : Port Trim Feedback Analog Input HI
+ 
+            - Byte6 : Stbd Trim Feedback Analog Input LO
+ 
+            - Byte7 : Stbd Trim Feedback Analog Input HI
+ 
+============================================================================
+CAN Messages From : Drive Control Unit
+VC_PGN_ID : 117
+PGN_32bit : 65461
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFB5    (  analog Outputs  )
+
+            - Byte0 : Port Steer Analog Output LO
+ 
+            - Byte1 : Port Steer Analog Output HI
+ 
+            - Byte2 : Stbd Steer Analog Output LO
+ 
+            - Byte3 : Stbd Steer Analog Output HI
+ 
+            - Byte4 : Port Trim Analog Output LO
+ 
+            - Byte5 : Port Trim Analog Output HI
+ 
+            - Byte6 : Stbd Trim Analog Output LO
+ 
+            - Byte7 : Stbd Trim Analog Output HI
+ 
+============================================================================
+CAN Messages From : Tab Control Unit
+VC_PGN_ID : 118
+PGN_32bit : 65420
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF8C    (  scaled tab feedbacks  )
+
+            - Byte0 : Scaled Port Tab Feedback LO
+ 
+            - Byte1 : Scaled Port Tab Feedback HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Scaled Stbd Tab Feedback LO
+ 
+            - Byte5 : Scaled Stbd Tab Feedback HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Tab Control Unit
+VC_PGN_ID : 119
+PGN_32bit : 65415
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF87    (  Faults  )
+
+            - Byte0 : Faults
+                    - b0 : Navigator Station Roll Joystick Fault
+                    - b1 : Navigator Station Trim Joystick Fault
+                    - b2 : FwdPanel Roll Joystick Fault
+                    - b3 : FwdPanel Trim Joystick Fault
+                    - b4 : Tiller Fault
+                    - b5 : Helm Fault
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : Tab Sensor Faults
+                    - b0 : Stbd Tab Sensor Fault
+                    - b1 : N/A
+                    - b2 : Port Tab Sensor Fault
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : NFU Faults
+                    - b0 : Stbd Tab NFU Fault
+                    - b1 : N/A
+                    - b2 : Port Tab NFU Fault
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : Calibration Faults
+                    - b0 : Calibration Fault
+                    - b1 : General Alarm Fault
+                    - b2 : CAN Fault
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte6 : Communication Timeout Faults
+                    - b0 : Drive Control Unit Communication Timeout
+                    - b1 : Clutch Communication Timeout
+                    - b2 : Port Engine Communication Timeout
+                    - b3 : Stbd Engine Communication Timeout
+                    - b4 : Port Engine Controller Communication Timeout
+                    - b5 : Stbd Engine Controller Communication Timeout
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Integrated Steering Active
+                    - b0 : Integrated Steering Active
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Tab Control Unit
+VC_PGN_ID : 120
+PGN_32bit : 65422
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF8E    (  switches and cu version  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+                    - b0 : Integrated Steering Switch
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : SW Revision LO
+ 
+            - Byte3 : SW Revision HI
+ 
+            - Byte4 : Major SWVersion
+ 
+            - Byte5 : Minor SWVersion LO
+ 
+            - Byte6 : Minor SWVersion HI
+ 
+            - Byte7 : Station In Control
+ 
+============================================================================
+CAN Messages From : Tab Control Unit
+VC_PGN_ID : 121
+PGN_32bit : 65473
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFC1    (  Analog Input  )
+
+            - Byte0 : Tiller Analog Input LO
+ 
+            - Byte1 : Tiller Analog Input HI
+ 
+            - Byte2 : Helm Analog Input LO
+ 
+            - Byte3 : Helm Analog Input HI
+ 
+            - Byte4 : Navigator Roll Joystick Analog Input LO
+ 
+            - Byte5 : Navigator Roll Joystick Analog Input HI
+ 
+            - Byte6 : Navigator Trim Joystick Analog Input LO
+ 
+            - Byte7 : Navigator Trim Joystick Analog Input HI
+ 
+============================================================================
+CAN Messages From : Tab Control Unit
+VC_PGN_ID : 122
+PGN_32bit : 65474
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFC2    (  Analog Input 2  )
+
+            - Byte0 : Fwd Panel Roll Joystick Analog Input LO
+ 
+            - Byte1 : Fwd Panel Roll Joystick Analog Input HI
+ 
+            - Byte2 : Fwd Panel Trim Joystick Analog Input LO
+ 
+            - Byte3 : Fwd Panel Trim Joystick Analog Input HI
+ 
+            - Byte4 : Port Tab Analog Input LO
+ 
+            - Byte5 : Port Tab Analog Input HI
+ 
+            - Byte6 : Stbd Tab Analog Input LO
+ 
+            - Byte7 : Stbd Tab Analog Input HI
+ 
+============================================================================
+CAN Messages From : Tab Control Unit
+VC_PGN_ID : 123
+PGN_32bit : 65475
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFC3    (  Tab Analog Output  )
+
+            - Byte0 : Port Tab Analog Output LO
+ 
+            - Byte1 : Port Tab Analog Output HI
+ 
+            - Byte2 : Stbd Tab Analog Output LO
+ 
+            - Byte3 : Stbd Tab Analog Output HI
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : VMU
+VC_PGN_ID : 124
+PGN_32bit : 65456
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFFB0    (  MRADS Variable Definition  )
+
+            - Byte0 : Roll
+ 
+            - Byte1 : Pitch
+ 
+            - Byte2 : Yaw
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Engine
+VC_PGN_ID : 125
+PGN_32bit : 61445
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658 calculations for CurrentGearAHD CurrentGearREV CurrentGearNEU
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xF005    (  Engine  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : if(124) ->CurrentGearREV, if(126 ||127) -> CurrentGearAHD if not 124,126,127 ->CurrentGearNEU
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Engine
+VC_PGN_ID : 126
+PGN_32bit : 65272
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFEF8    (  Engine  )
+
+            - Byte0 : ClutchPressure
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Transmission Oil Temperature LO
+ 
+            - Byte5 : Transmission Oil Temperature HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Engine
+VC_PGN_ID : 127
+PGN_32bit : 61444
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xF004    (  Engine  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : EngineRPM 5bits
+ 
+            - Byte5 : EngineRPM 3bits
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Engine
+VC_PGN_ID : 128
+PGN_32bit : 65263
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFEEF    (  Engine  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : Engine Oil Pressure
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Engine
+VC_PGN_ID : 129
+PGN_32bit : 65253
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFEE5    (  Engine  )
+
+            - Byte0 : Total Engine Hours 32bit_0
+ 
+            - Byte1 : Total Engine Hours 32bit_1
+ 
+            - Byte2 : Total Engine Hours 32bit_2
+ 
+            - Byte3 : Total Engine Hours 32bit_3
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Engine
+VC_PGN_ID : 130
+PGN_32bit : 65271
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFEF7    (  Engine  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : Battery Voltage LO
+ 
+            - Byte7 : Battery Voltage HI
+ 
+============================================================================
+CAN Messages From : Engine
+VC_PGN_ID : 131
+PGN_32bit : 61443
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xF003    (  Engine  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Engine Load
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Engine
+VC_PGN_ID : 132
+PGN_32bit : 65247
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFEDF    (  Engine  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : DesiredRPM 3bits low
+ 
+            - Byte2 : DesiredRPM 5bits up
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : LCD
+VC_PGN_ID : 133
+PGN_32bit : 65423
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 631 to 658
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF8F    (  LCD  )
+
+            - Byte0 : BoatSpeed
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Clutch Panel
+VC_PGN_ID : 134
+PGN_32bit : 65329
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF31    (  Clutch Panel Switches  )
+
+            - Byte0 : Clutch Panel Switches
+                    - b0 : Trolling ONOFF Switch
+                    - b1 : Backup AutoSwitch
+                    - b2 : Integrated Manual Switch
+                    - b3 : Drive Control Unit Communication Timeout
+                    - b4 : Stbd RPM Stall
+                    - b5 : Port RPM Stall
+                    - b6 : Invalid Clutch Command At Startup
+                    - b7 : N/A
+ 
+            - Byte1 : Major SWVersion
+ 
+            - Byte2 : Minor SWVersion LO
+ 
+            - Byte3 : Minor SWVersion HI
+ 
+            - Byte4 : SWRevision LO
+ 
+            - Byte5 : SWRevision HI
+ 
+            - Byte6 : Clutch Panel Commands
+                    - b0 : Stbd Engage AHD Cmd
+                    - b1 : Port Engage AHD Cmd
+                    - b2 : Stbd Disengage Cmd
+                    - b3 : Port Disengage Cmd
+                    - b4 : Stbd Engage REV Cmd
+                    - b5 : Port Engage REV Cmd
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : Clutch Panel Feedbacks
+                    - b0 : Stbd Engage AHD Feedback
+                    - b1 : Port Engage AHD Feedback
+                    - b2 : Stbd Disengage Feedback
+                    - b3 : Port Disengage Feedback
+                    - b4 : Stbd Engage REV Feedback
+                    - b5 : Port Engage REV Feedback
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : MRADS
+VC_PGN_ID : 135
+PGN_32bit : 65281
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 797 to 798 for creating variables
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF01    (  create bool  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : MRADS
+VC_PGN_ID : 136
+PGN_32bit : 65287
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 802 to 803 for creating variables PDM to float
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF07    (  create float  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : MRADS
+VC_PGN_ID : 137
+PGN_32bit : 65288
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS CCM lines 807 to 808 for creating variables PDM to float
+Configuration : MRADS
+Project : MRADS CCM
+============================================================================
+    0xFF08    (  create float v2  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 138
+PGN_32bit : 65393
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF71    (  Analog Throttle Inputs  )
+
+            - Byte0 : Station1 Throttle Analog Input LO
+ 
+            - Byte1 : Station1 Throttle Analog Input HI
+ 
+            - Byte2 : Station2 Throttle Analog Input LO
+ 
+            - Byte3 : Station2 Throttle Analog Input HI
+ 
+            - Byte4 : Station3 Throttle Analog Input LO
+ 
+            - Byte5 : Station3 Throttle Analog Input HI
+ 
+            - Byte6 : Remote Throttle Analog Input LO
+ 
+            - Byte7 : Remote Throttle Analog Input HI
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 139
+PGN_32bit : 65394
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF72    (  Analog Azimuth Inputs  )
+
+            - Byte0 : Station1 Azimuth Analog Input LO
+ 
+            - Byte1 : Station1 Azimuth Analog Input HI
+ 
+            - Byte2 : Station2 Azimuth Analog Input LO
+ 
+            - Byte3 : Station2 Azimuth Analog Input HI
+ 
+            - Byte4 : Station3 Azimuth Analog Input LO
+ 
+            - Byte5 : Station3 Azimuth Analog Input HI
+ 
+            - Byte6 : Remote Azimuth Analog Input LO
+ 
+            - Byte7 : Remote Azimuth Analog Input HI
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 140
+PGN_32bit : 65395
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF73    (  Analog Feedback Inputs  )
+
+            - Byte0 : CU_A Nozzle Feedback Analog Input LO
+ 
+            - Byte1 : CU_A Nozzle Feedback Analog Input HI
+ 
+            - Byte2 : CU_B Nozzle Feedback Analog Input LO
+ 
+            - Byte3 : CU_B Nozzle Feedback Analog Input HI
+ 
+            - Byte4 : CU_A Bucket Feedback Analog Input LO
+ 
+            - Byte5 : CU_A Bucket Feedback Analog Input HI
+ 
+            - Byte6 : CU_B Bucket Feedback Analog Input LO
+ 
+            - Byte7 : CU_B Bucket Feedback Analog Input HI
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 141
+PGN_32bit : 65396
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF74    (  Digital Inputs and States  )
+
+            - Byte0 : Combined Separate Analog Input LO
+ 
+            - Byte1 : Combined Separate Analog Input HI
+ 
+            - Byte2 : Port Or Stbd Lever AnalogInput LO
+ 
+            - Byte3 : Port Or Stbd Lever AnalogInput HI
+ 
+            - Byte4 : Combined Mode State
+                    - b0 : OnOff CombinedMode State
+                    - b1 : Port Or Stbd Lever Switch State
+                    - b2 : OnOff Remote LeverMode State
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : Jet States
+                    - b0 : Backup Auto Stbd Outboard Jet1 State
+                    - b1 : Backup Auto Stbd Outboard Jet2 State
+                    - b2 : Backup Auto Stbd Outboard Jet3 State
+                    - b3 : Backup Auto Stbd Outboard Jet4 State
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 142
+PGN_32bit : 65397
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips line 50
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF75    (  MRADS CU Param Setup  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 143
+PGN_32bit : 65398
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF76    (   CU Outputs  )
+
+            - Byte0 : CU_A Nozzle Valve Output LO
+ 
+            - Byte1 : CU_A Nozzle Valve Output HI
+ 
+            - Byte2 : CU_B Nozzle Valve Output LO
+ 
+            - Byte3 : CU_B Nozzle Valve Output HI
+ 
+            - Byte4 : CU_A Bucket Valve Output LO
+ 
+            - Byte5 : CU_A Bucket Valve Output HI
+ 
+            - Byte6 : CU_B Bucket Valve Output LO
+ 
+            - Byte7 : CU_B Bucket Valve Output HI
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 144
+PGN_32bit : 65399
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF77    (   Unscaled  Nozzle Commands and Feedbacks  )
+
+            - Byte0 : CU_A Unscaled Nozzle Valve Command LO
+ 
+            - Byte1 : CU_A Unscaled Nozzle Valve Command HI
+ 
+            - Byte2 : CU_A Unscaled Nozzle Valve Feedback LO
+ 
+            - Byte3 : CU_A Unscaled Nozzle Valve Feedback HI
+ 
+            - Byte4 : CU_B Unscaled Nozzle Valve Command LO
+ 
+            - Byte5 : CU_B Unscaled Nozzle Valve Command HI
+ 
+            - Byte6 : CU_B Unscaled Nozzle Valve Feedback LO
+ 
+            - Byte7 : CU_B Unscaled Nozzle Valve Feedback HI
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 145
+PGN_32bit : 65400
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF78    (   Unscaled  Bucket Commands and Feedbacks  )
+
+            - Byte0 : CU_A Unscaled Bucket Valve Command LO
+ 
+            - Byte1 : CU_A Unscaled Bucket Valve Command HI
+ 
+            - Byte2 : CU_A Unscaled Bucket Valve Feedback LO
+ 
+            - Byte3 : CU_A Unscaled Bucket Valve Feedback HI
+ 
+            - Byte4 : CU_B Unscaled Bucket Valve Command LO
+ 
+            - Byte5 : CU_B Unscaled Bucket Valve Command HI
+ 
+            - Byte6 : CU_B Unscaled Bucket Valve Feedback LO
+ 
+            - Byte7 : CU_B Unscaled Bucket Valve Feedback HI
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 146
+PGN_32bit : 65328
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF30    (   CU version and Clutch Permissives  )
+
+            - Byte0 : Clutch Permissives
+                    - b0 : CU_B Clutch Permissive State
+                    - b1 : CU_A Clutch Permissive State
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : Major SW Version
+ 
+            - Byte3 : Minor SW Version LO
+ 
+            - Byte4 : Minor SW Version HI
+ 
+            - Byte5 : SW Revision LO
+ 
+            - Byte6 : SW Revision HI
+ 
+            - Byte7 : Message Counter
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 147
+PGN_32bit : 65296
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF10    (   CU A Scaled Feedbacks  )
+
+            - Byte0 : CU_A Scaled Bucket Feedback
+ 
+            - Byte1 : CU_A Scaled Nozzle Feedback
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 148
+PGN_32bit : 65297
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF11    (   CU B Scaled Feedbacks  )
+
+            - Byte0 : CU_B Scaled Bucket Feedback
+ 
+            - Byte1 : CU_B Scaled Nozzle Feedback
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 149
+PGN_32bit : 65298
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF12    (   CUs Faults  )
+
+            - Byte0 : Station1 Faults
+                    - b0 : Stations 1 Thrust Fault
+                    - b1 : Stations 1 Azimuth Fault
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : Station2 Faults
+                    - b0 : Stations 2 Thrust Fault
+                    - b1 : Stations 2 Azimuth Fault
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : Station3 Faults
+                    - b0 : Stations 3 Thrust Fault
+                    - b1 : Stations 3 Azimuth Fault
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : Feedback Faults
+                    - b0 : CU_B Bucket Fdbk Fault
+                    - b1 : CU_A Bucket Fdbk Fault
+                    - b2 : CU_B Nozzle Fdbk Fault
+                    - b3 : CU_A Nozzle Fdbk Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : NFU Faults
+                    - b0 : CU_B Bucket NFU Fault
+                    - b1 : CU_A Bucket NFU Fault
+                    - b2 : CU_B Nozzle NFU Fault
+                    - b3 : CU_A Nozzle NFU Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : Calibration Faults
+                    - b0 : Calibration Fault
+                    - b1 : GeneralAlarm Fault
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte6 : Clutch Pannel Faults
+                    - b0 : Clutch Panel Comm Fault
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 150
+PGN_32bit : 65299
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF13    (   CUs Scaled Engine Commands  )
+
+            - Byte0 : CU_A Scaled Engine Command
+ 
+            - Byte1 : CU_B Scaled Engine Command
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 151
+PGN_32bit : 65301
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF15    (   Calibration Feedbacks   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : Calibration Fdbk Type
+ 
+            - Byte2 : Calibration Fdbk Operation
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 152
+PGN_32bit : 65302
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF16    (   Station Transfer   )
+
+            - Byte0 : Station Transfer Pending Take Control Thrust Lever LO
+ 
+            - Byte1 : Station Transfer Pending Take Control Thrust Lever HI
+ 
+            - Byte2 : Station Transfer Pending Take Control Azimuth Lever LO
+ 
+            - Byte3 : Station Transfer Pending Take Control Azimuth Lever HI
+ 
+            - Byte4 : Station Transfer Pending Match
+                    - b0 : Station Transfer Pending Match Buckets
+                    - b1 : Station Transfer Pending Match Nozzles
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : Control Unit
+VC_PGN_ID : 153
+PGN_32bit : 65376
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF60    (  Local Station Transfer   )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Local Station Transfer Pending Match
+                    - b0 : Local Station Transfer Permissive
+                    - b1 : Station Transfer Under Fault
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : Station In Control
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : Unit Power Up Complete
+                    - b0 : Unit Power Up Complete
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+============================================================================
+CAN Messages From : Clucth Panel
+VC_PGN_ID : 154
+PGN_32bit : 65329
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF31    (  Clutch Panel fbk states and versions  )
+
+            - Byte0 : Clutch Panel Switches
+                    - b0 : CU_B Clutch Engaged Feedback State
+                    - b1 : CU_A Clutch Engaged Feedback State
+                    - b2 : CU_B Clutch Backflush Feedback State
+                    - b3 : CU_A Clutch Backflush Feedback State
+                    - b4 : Stbd RPM Stall
+                    - b5 : Port RPM Stall
+                    - b6 : Invalid Clutch Command At Startup
+                    - b7 : N/A
+ 
+            - Byte1 : Major SWVersion
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : Can Fault
+                    - b0 : N/A
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : CAN Rx Fault
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : Minor SWVersion
+ 
+            - Byte6 : SWRevision HI
+ 
+            - Byte7 : SWRevision LO
+ 
+============================================================================
+CAN Messages From : Clucth Panel
+VC_PGN_ID : 155
+PGN_32bit : 65331
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF33    (  Clutch Panel LED states  )
+
+            - Byte0 : Clutch Panel Switches
+                    - b0 : CU_A Clutch Panel Engaged LED State
+                    - b1 : CU_B Clutch Panel Engaged LED State
+                    - b2 : CU_A Clutch Panel Backflush LED State
+                    - b3 : CU_B Clutch Panel Backflush LED State
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 156
+PGN_32bit : 61714
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xF112    (     GPS Heading StandardShips  )
+
+            - Byte0 : GPS Heading LO
+ 
+            - Byte1 : GPS Heading HI
+ 
+            - Byte2 : N/A
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 157
+PGN_32bit : 63489
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xF801    (     GPS Lat Lon  StandardShips  )
+
+            - Byte0 : GPS Latitude 32bit_0
+ 
+            - Byte1 : GPS Latitude 32bit_1
+ 
+            - Byte2 : GPS Latitude 32bit_2
+ 
+            - Byte3 : GPS Latitude 32bit_3
+ 
+            - Byte4 : GPS Longitude 32bit_0
+ 
+            - Byte5 : GPS Longitude 32bit_1
+ 
+            - Byte6 : GPS Longitude 32bit_2
+ 
+            - Byte7 : GPS Longitude 32bit_3
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 158
+PGN_32bit : 61715
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xF113    (     GPS RateOfTurn StandardShips )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : GPS RateOfTurn 32bit_0
+ 
+            - Byte2 : GPS RateOfTurn 32bit_1
+ 
+            - Byte3 : GPS RateOfTurn 32bit_2
+ 
+            - Byte4 : GPS RateOfTurn 32bit_3
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 159
+PGN_32bit : 63490
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xF802    (     GPS Speed Course OverGround StandardShips  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : GPS Speed OverGround LO
+ 
+            - Byte3 : GPS Speed OverGround HI
+ 
+            - Byte4 : GPS Course OverGround LO
+ 
+            - Byte5 : GPS Course OverGround HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : GPS
+VC_PGN_ID : 160
+PGN_32bit : 61456
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xF010    (     GPS Time  StandardShips  )
+
+            - Byte0 : N/A
+ 
+            - Byte1 : N/A
+ 
+            - Byte2 : days LO
+ 
+            - Byte3 : days HI
+ 
+            - Byte4 : GPS ticks 32bit_0
+ 
+            - Byte5 : GPS ticks 32bit_1
+ 
+            - Byte6 : GPS ticks 32bit_2
+ 
+            - Byte7 : GPS ticks 32bit_3
+ 
+============================================================================
+CAN Messages From : VMU
+VC_PGN_ID : 161
+PGN_32bit : 61481
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xF029    (    Joystick pitch roll latency StandardShips   )
+
+            - Byte0 : PitchAngle 24bit_0
+ 
+            - Byte1 : PitchAngle 24bit_1
+ 
+            - Byte2 : PitchAngle 24bit_2
+ 
+            - Byte3 : RollAngle 24bit_0
+ 
+            - Byte4 : RollAngle 24bit_1
+ 
+            - Byte5 : RollAngle 24bit_2
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : AngleLatency
+ 
+============================================================================
+CAN Messages From : VMU
+VC_PGN_ID : 162
+PGN_32bit : 61482
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xF02A    (     Joystick pitchRate rollRate YawRate latencyRate StandardShips  )
+
+            - Byte0 : PitchRate LO
+ 
+            - Byte1 : PitchRate HI
+ 
+            - Byte2 : RollRate LO
+ 
+            - Byte3 : RollRate HI
+ 
+            - Byte4 : YawRate LO
+ 
+            - Byte5 : YawRate HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : RateLatency
+ 
+============================================================================
+CAN Messages From : VMU
+VC_PGN_ID : 163
+PGN_32bit : 61485
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xF02D    (     Joystick X_Acceleration Y_Acceleration Z_Acceleration StandardShips  )
+
+            - Byte0 : YAxisAcceleration LO
+ 
+            - Byte1 : YAxisAcceleration HI
+ 
+            - Byte2 : XAxisAcceleration LO
+ 
+            - Byte3 : XAxisAcceleration HI
+ 
+            - Byte4 : ZAxisAcceleration LO
+ 
+            - Byte5 : ZAxisAcceleration HI
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : LCD
+VC_PGN_ID : 164
+PGN_32bit : 65520
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFFF0    (     Init LCD StandardShips  )
+
+            - Byte0 : InitLCD BackupAuto Starboard Outboard
+                    - b0 : Backup Auto State Starboard Outboard
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte1 : InitLCD BackupAuto Port Outboard
+                    - b0 : Backup Auto State Starboard Outboard
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte2 : InitLCD BackupAuto Starboard Inboard
+                    - b0 : Backup Auto State Starboard Inboard
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte3 : InitLCD BackupAuto Port Inboard
+                    - b0 : BackupAutoStatePortInboard
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte4 : InitLCD Water Jet Interface Module Fault
+                    - b0 : WJInterfaceModuleFault
+                    - b1 : N/A
+                    - b2 : N/A
+                    - b3 : N/A
+                    - b4 : N/A
+                    - b5 : N/A
+                    - b6 : N/A
+                    - b7 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
+ 
+============================================================================
+CAN Messages From : VMU
+VC_PGN_ID : 165
+PGN_32bit : 65300
+address Port: 00
+address Stbd: 00
+priority    : 18
+Sending_Unit_Software_version : N/A
+info: found in  MRADS StandardShips
+Configuration : MRADS
+Project : MRADS StandardShips
+============================================================================
+    0xFF14    (     Calibration CMD StandardShips  )
+
+            - Byte0 : Calibration Cmd Destination
+ 
+            - Byte1 : Calibration Cmd Type
+ 
+            - Byte2 : Calibration Cmd Operation
+ 
+            - Byte3 : N/A
+ 
+            - Byte4 : N/A
+ 
+            - Byte5 : N/A
+ 
+            - Byte6 : N/A
+ 
+            - Byte7 : N/A
  

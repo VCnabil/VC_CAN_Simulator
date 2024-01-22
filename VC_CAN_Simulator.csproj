@@ -78,6 +78,7 @@
     <Compile Include="Backend\CustomGroupObj.cs" />
     <Compile Include="Backend\EventsManagerLib.cs" />
     <Compile Include="Backend\Helpers.cs" />
+    <Compile Include="Backend\KvsrManager.cs" />
     <Compile Include="DataObjects\Ctrl_DataObject.cs" />
     <Compile Include="DataObjects\Pgn_DataObject.cs" />
     <Compile Include="DataObjects\Project_DataObject.cs" />

@@ -40,8 +40,8 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
 
             btn_ShowFiltered.Click += Btn_ShowFiltered_Click;
 
-            btn_makeText_fromJson.Enabled = false;
-            btn_Gzero_toJson.Enabled = false;
+            //btn_makeText_fromJson.Enabled = false;
+            //btn_Gzero_toJson.Enabled = false;
 
             thecontrol = new VCPGN_listCTRL(_targetFilePath_JSON);
         }
@@ -56,12 +56,12 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
         {
             textBox2.Text = "";
 
-          //textBox2.Text = seriDeseriSort_BasicIO.Deserialize_JsonFormat_Sort_by_pgnIn();
+         textBox2.Text = seriDeseriSort_BasicIO.Deserialize_JsonFormat_Sort_by_pgnIn();
 
         }
         private void Btn_Deserialize(object sender, EventArgs e)
         {
-           // seriDeseriSort_BasicIO.Serialize_GroundZeroTextFile_To_JSON();
+           seriDeseriSort_BasicIO.Serialize_GroundZeroTextFile_To_JSON();
         }
  
     }

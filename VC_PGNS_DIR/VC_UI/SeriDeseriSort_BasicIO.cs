@@ -83,7 +83,7 @@ Project : N/A
 
             for (int i = 0; i < root_VC_PGN_Text_Object.VC_PGN_Text_Object.Count; i++)
             {
-                //root_VC_PGN_Text_Object.VC_PGN_Text_Object[i].vC_PGN.VC_PGN_ID = i;// -------------------------------------------------sets all id to 0
+          //       root_VC_PGN_Text_Object.VC_PGN_Text_Object[i].vC_PGN.VC_PGN_ID = i;// -------------------------------------------------sets all id to 0
                 string hexString = root_VC_PGN_Text_Object.VC_PGN_Text_Object[i].vC_PGNData.PGN;
                 uint intValue;
 
@@ -331,12 +331,14 @@ Project : N/A
       
         List<VC_PGN_Text_Object> SortVC_PGN_Text_Objects(Root_VC_PGN_Text_Object rootObject)
         {
-            List<VC_PGN_Text_Object> sortedList = rootObject.VC_PGN_Text_Object
-                .OrderBy(item => item.vC_PGN.PGN_32bit)
-                .ToList();
+            //List<VC_PGN_Text_Object> sortedList = rootObject.VC_PGN_Text_Object
+            //    .OrderBy(item => item.vC_PGN.PGN_32bit)
+            //    .ToList();
 
             // The sortedList now contains VC_PGN_Text_Object items sorted by the PGN_32bit property
             // You can further process or use sortedList as needed
+
+            List<VC_PGN_Text_Object> sortedList = rootObject.VC_PGN_Text_Object;
 
             return sortedList;
         }
