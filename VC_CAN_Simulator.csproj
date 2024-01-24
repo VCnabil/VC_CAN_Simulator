@@ -74,8 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\CanManager.cs" />
+    <Compile Include="Backend\CAN_Structures\PGN_messageSTK.cs" />
     <Compile Include="Backend\CustGroupdata_Validator.cs" />
     <Compile Include="Backend\CustomGroupObj.cs" />
+    <Compile Include="Backend\Devices_VCObj\StationCtrlModObj.cs" />
     <Compile Include="Backend\EventsManagerLib.cs" />
     <Compile Include="Backend\Helpers.cs" />
     <Compile Include="Backend\KvsrManager.cs" />
@@ -83,6 +85,18 @@
     <Compile Include="DataObjects\Pgn_DataObject.cs" />
     <Compile Include="DataObjects\Project_DataObject.cs" />
     <Compile Include="ProjectContexts\Projects_PGNDefinitions.cs" />
+    <Compile Include="Translators\FormTranslate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Translators\FormTranslate.Designer.cs">
+      <DependentUpon>FormTranslate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\FormzNavUC\ucf_KvaserCanModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIz\FormzNavUC\ucf_KvaserCanModule.Designer.cs">
+      <DependentUpon>ucf_KvaserCanModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIz\FormzNavUC\ufc_LoadPreConfiguredForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +128,12 @@
     </Compile>
     <Compile Include="UIz\Formz\CustomCanGUI.Designer.cs">
       <DependentUpon>CustomCanGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\Devices_VC\FormStationControlModule_3_78x.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\Devices_VC\FormStationControlModule_3_78x.Designer.cs">
+      <DependentUpon>FormStationControlModule_3_78x.cs</DependentUpon>
     </Compile>
     <Compile Include="UIz\Formz\MainGUI.cs">
       <SubType>Form</SubType>
@@ -201,6 +221,12 @@
     </Compile>
     <Compile Include="UIz\Formz\TestingForm.Designer.cs">
       <DependentUpon>TestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIz\Formz\Test_KvaserManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIz\Formz\Test_KvaserManagerForm.Designer.cs">
+      <DependentUpon>Test_KvaserManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.cs">
       <SubType>UserControl</SubType>
@@ -292,6 +318,12 @@
     <Content Include="_localDataDir\_SavedTextFiles_Root\otfile.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Translators\FormTranslate.resx">
+      <DependentUpon>FormTranslate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\FormzNavUC\ucf_KvaserCanModule.resx">
+      <DependentUpon>ucf_KvaserCanModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIz\FormzNavUC\ufc_LoadPreConfiguredForm.resx">
       <DependentUpon>ufc_LoadPreConfiguredForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\CustomCanGUI.resx">
       <DependentUpon>CustomCanGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\Devices_VC\FormStationControlModule_3_78x.resx">
+      <DependentUpon>FormStationControlModule_3_78x.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>
@@ -357,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\Formz\TestingForm.resx">
       <DependentUpon>TestingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIz\Formz\Test_KvaserManagerForm.resx">
+      <DependentUpon>Test_KvaserManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIz\ManipUC\BuildersManips\UC_PGN_Controller.resx">
       <DependentUpon>UC_PGN_Controller.cs</DependentUpon>

@@ -47,12 +47,22 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
 
         }
 
-   
-         
-        
+
+        public List<VC_PGN_Text_Object> Get_String_FilteredList_OBJ(FilterData argFilterdata)
+        {
+            List<VC_PGN_Text_Object> filteredList = GetFilteredby_Boolean(
+                argFilterdata.Filter_bool_Pgn, argFilterdata.Filter_str_Pgn,
+                argFilterdata.Filter_bool_FromSendingUnit, argFilterdata.Filter_str_From,
+                argFilterdata.Filter_bool_Configuration, argFilterdata.Filter_str_Configuration,
+                argFilterdata.Filter_bool_Project, argFilterdata.Filter_str_Project
+                );
+            PgnsInFilteredList = filteredList.Count;
+            return filteredList;
+        }
+
         #region Filters
- 
-         List<VC_PGN_Text_Object> GetFilteredby_Boolean( bool arg_byPGN, string argPGNcontains, bool arg_byFrom, string argFROMcontains, bool arg_byConfiguration, string argCONFIGcontains, bool arg_byProject, string argPROJECTcontains)
+
+        List<VC_PGN_Text_Object> GetFilteredby_Boolean( bool arg_byPGN, string argPGNcontains, bool arg_byFrom, string argFROMcontains, bool arg_byConfiguration, string argCONFIGcontains, bool arg_byProject, string argPROJECTcontains)
         {
             IEnumerable<VC_PGN_Text_Object> filteredList = vC_PGN_Text_Objects;
 
@@ -78,6 +88,8 @@ namespace VC_CAN_Simulator.VC_PGNS_DIR.VC_UI
 
             return filteredList.ToList();
         }
+
+
 
         public string Get_String_toDisplay(DetailDisplayData argDisplay, FilterData argFilterdata) {
             StringBuilder sbOut = new StringBuilder();

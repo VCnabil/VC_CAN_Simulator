@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VC_CAN_Simulator.Translators;
 using VC_CAN_Simulator.UIz.Formz;
 using VC_CAN_Simulator.VC_PGNS_DIR.VC_UI;
 
@@ -18,13 +19,18 @@ namespace VC_CAN_Simulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new MainGUI());
+
+            Application.Run(new FormTranslate());
+
+            // Application.Run(new MainGUI());
             // Application.Run(new VCPGN_ViewerGUI());
-           //Application.Run(new VC_PGNjsonGUI());
+            //Application.Run(new VC_PGNjsonGUI());
             //                            Application.Run(new CustomCanGUI());
             //Application.Run(new CanManipForm());
-  // Latest 1 22 2024
-   Application.Run(new TestingForm());
+            // Latest 1 22 2024
+            // Application.Run(new TestingForm());
+            // Application.Run(new Test_KvaserManagerForm());
+
             // Application.Run(new CanSimForm());
             //Application.Run(new CreateOrModifyProject());
         }

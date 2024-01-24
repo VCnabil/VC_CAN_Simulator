@@ -1,5 +1,4 @@
-﻿using Kvaser.CanLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,22 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VC_CAN_Simulator.Backend;
-using VC_CAN_Simulator.DataObjects;
-using VC_CAN_Simulator.UIz.Formz.SingleGUIs;
-using VC_CAN_Simulator.UIz.ManipUC;
-using VC_CAN_Simulator.UIz.ManipUC.BuildersManips;
-using VC_CAN_Simulator.UIz.UControlz.Builders;
-using static VC_CAN_Simulator.Backend.Helpers;
-namespace VC_CAN_Simulator.UIz.Formz
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace VC_CAN_Simulator.UIz.FormzNavUC
 {
-    public partial class TestingForm : Form
+    public partial class ucf_KvaserCanModule : UserControl
     {
-       // private bool debugMode = false;
         int frameCount = 0;
-        public TestingForm()
+        public ucf_KvaserCanModule()
         {
             InitializeComponent();
-            EventsManagerLib.OnHandBroadcast += new EventsManagerLib.EventHandBroadcastHandler(OnHandBroadcastHandler);
             timer0_TestForm.Tick += new EventHandler(LOOP_Tick);
             timer0_TestForm.Interval = 400;
             timer0_TestForm.Start();
@@ -33,10 +26,19 @@ namespace VC_CAN_Simulator.UIz.Formz
             checkBox_LoopRunning.CheckedChanged += new EventHandler(checkBox_LoopRunning_CheckedChanged);
             button1_initcan.Click += new EventHandler(button1_initcan_Click);
             button1_KillCan.Click += new EventHandler(button1_KillCan_Click);
+            textBox_Rate.TextChanged += new EventHandler(textBox_Rate_TextChanged);
         }
 
+        private void textBox_Rate_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox_Rate.Text, out int newInterval) && newInterval >= 100 && newInterval <= 6000)
+            {
+                timer0_TestForm.Interval = newInterval;
+            }
+        }
 
-        bool CheckifOnCan() {
+        bool CheckifOnCan()
+        {
             if (KvsrManager.Instance.GetIsOnBus())
             {
                 lbl_bussStatus.BackColor = Color.Green;
@@ -61,24 +63,23 @@ namespace VC_CAN_Simulator.UIz.Formz
 
         private void checkBox_LoopRunning_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox_LoopRunning.Checked)
+            if (checkBox_LoopRunning.Checked)
             {
                 timer0_TestForm.Enabled = true;
             }
             else
             {
                 timer0_TestForm.Enabled = false;
-            }   
+            }
         }
 
         private void LOOP_Tick(object sender, EventArgs e)
         {
-
             label1_errors.Text = KvsrManager.Instance.GetErrorMessage();
             frameCount++;
             label4.Text = frameCount.ToString();
-
-            if (!CheckifOnCan()) {
+            if (!CheckifOnCan())
+            {
                 KvsrManager.Instance.Close();
                 CheckifOnCan();
             }
@@ -86,43 +87,15 @@ namespace VC_CAN_Simulator.UIz.Formz
             byte[] testarra = new byte[8] { 0, 1, 2, 3, 4, 5, 6, 7 };
 
             int stat = KvsrManager.Instance.SendPGN_withStatus(0x18FEEF29, testarra);
-            if(stat != 0)
+            if (stat != 0)
             {
-               // if (debugMode)  MessageBox.Show("Failed to send PGN!!!!1");
                 KvsrManager.Instance.Close();
                 CheckifOnCan();
             }
             label1_errors.Text = "";
 
         }
-       
-    
-        private void OnHandBroadcastHandler(string arg_strval, int arg_intval, bool arg_Bool0)
-        {
-            label1.Text = arg_strval;
-            label2.Text = arg_intval.ToString();
-            if (arg_Bool0)
-            {
-                label2.BackColor = Color.Red;
-            }
-            else
-            {
-                label2.BackColor = Color.White;
-            }
-        }
-        private void bouton1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Bouton 1 clicked!");
-            Form fooForm = new Foo_GUI();
-            fooForm.ShowDialog();
-        }
 
-        private void bouton3ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
-
-
- 

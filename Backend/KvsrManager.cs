@@ -133,7 +133,7 @@ namespace VC_CAN_Simulator.Backend
                 _errormessage ="Manager not on bus cant write" + errorsCnt.ToString();
                 return -1;
             }
-            Canlib.canStatus statusWrite = Canlib.canWrite(handle, pgn, data, data.Length, 0);
+            Canlib.canStatus statusWrite = Canlib.canWrite(handle, pgn, data, data.Length, Kvaser.CanLib.Canlib.canMSG_EXT);
             if (statusWrite != 0)
             {
                 errorsCnt++;
